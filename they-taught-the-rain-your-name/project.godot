@@ -1,0 +1,21 @@
+config_version=5
+
+[application]
+config/name="THEY TAUGHT THE RAIN YOUR NAME"
+run/main_scene="res://scenes/main/rain_name_prototype.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+GameState="*res://scripts/autoload/game_state.gd"
+SceneBus="*res://scripts/autoload/scene_bus.gd"
+AudioManager="*res://scripts/autoload/audio_manager.gd"
+
+[display]
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+
+[rendering]
+renderer/rendering_method="forward_plus"
+environment/defaults/default_clear_color=Color(0.006, 0.009, 0.012, 1)
