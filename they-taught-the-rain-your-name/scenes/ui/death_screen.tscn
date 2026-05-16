@@ -1,0 +1,51 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/death_screen.gd" id="1_death"]
+
+[node name="DeathScreen" type="CanvasLayer"]
+script = ExtResource("1_death")
+visible = false
+
+[node name="Root" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Overlay" type="ColorRect" parent="Root"]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 0.78)
+
+[node name="Title" type="Label" parent="Root"]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 220.0
+offset_right = 1280.0
+offset_bottom = 280.0
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 48
+text = "THE RAIN LEARNED YOU"
+
+[node name="Reason" type="Label" parent="Root"]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 292.0
+offset_right = 1280.0
+offset_bottom = 330.0
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 20
+text = ""
+
+[node name="RestartLabel" type="Label" parent="Root"]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 370.0
+offset_right = 1280.0
+offset_bottom = 410.0
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 22
+text = "Press R or click to restart"
