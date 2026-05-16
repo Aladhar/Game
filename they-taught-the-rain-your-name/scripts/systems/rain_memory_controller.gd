@@ -4,12 +4,12 @@ extends Node
 @export var repeat_interval: float = 10.0
 @export var minimum_memory_to_imitate: float = 4.0
 
-@onready var sound_tracker: Node = $"../SoundEventTracker"
-
+var sound_tracker: Node = null
 var imitation_timer: float = 0.0
 var has_first_imitation_played: bool = false
 
 func _ready() -> void:
+    sound_tracker = get_node_or_null("../SoundEventTracker")
     imitation_timer = first_imitation_delay
 
 func _process(delta: float) -> void:
@@ -22,18 +22,29 @@ func _process(delta: float) -> void:
     imitation_timer -= delta
 
     if imitation_timer <= 0.0:
-        _play_rain_imitation()
+        play_rain_imitation()
         imitation_timer = repeat_interval
 
-func _play_rain_imitation() -> void:
-    if sound_tracker == null or not sound_tracker.has_method("get_most_repeated_type"):
+func play_rain_imitation() -> void:
+    if sound_tracker == null:
         return
 
-    var event_type := sound_tracker.get_most_repeated_type()
-    if event_type == "":
+    if not sound_tracker.has_method("get_most_repeated_type"):
         return
 
-    var event_data := sound_tracker.get_latest_event_of_type(event_type)
+    if not sound_tracker.has_method("get_latest_event_of_type"):
+        return
+
+    var event_type = sound_tracker.call("get_most_repeated_type")
+
+    if str(event_type) == "":
+        return
+
+    var event_data = sound_tracker.call("get_latest_event_of_type", str(event_type))
+
+    if typeof(event_data) != TYPE_DICTIONARY:
+        return
+
     if event_data.is_empty():
         return
 
