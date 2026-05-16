@@ -23,6 +23,7 @@ func _ready() -> void:
 	mouse_slider.value_changed.connect(_on_mouse_sensitivity_changed)
 
 func _on_play_pressed() -> void:
+	print("PLAY PRESSED")
 	var err := get_tree().change_scene_to_file(GAME_SCENE)
 	if err != OK:
 		push_error("Failed to load gameplay scene: " + GAME_SCENE + " error=" + str(err))
