@@ -1,29 +1,43 @@
 [gd_scene load_steps=4 format=3]
 
-[ext_resource type="Script" path="res://scripts/enemies/ritual_enemy_placeholder.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://assets/models/enemies/bell_saint/bell_saint_v2_blockout.glb" id="1_model"]
+[ext_resource type="Script" path="res://scripts/enemies/bell_saint_controller.gd" id="2_script"]
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bell_saint"]
+radius = 0.65
+height = 3.75
 
-[sub_resource type="StandardMaterial3D" id="MatEnemy"]
-albedo_color = Color(0.03, 0.032, 0.038, 1)
-roughness = 0.92
+[node name="BellSaint" type="CharacterBody3D"]
+script = ExtResource("2_script")
+enemy_name = "Bell Saint v2"
 
-[sub_resource type="BoxMesh" id="BodyMesh"]
-size = Vector3(0.90, 4.20, 0.55)
+[node name="ModelRoot" type="Node3D" parent="."]
 
-[sub_resource type="BoxMesh" id="BellHeadMesh"]
-size = Vector3(1.4, 0.8, 0.9)
+[node name="BellSaintV2Blockout" parent="ModelRoot" instance=ExtResource("1_model")]
 
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+position = Vector3(0, 1.85, 0)
+shape = SubResource("CapsuleShape3D_bell_saint")
 
-[node name="BellSaint" type="Node3D"]
-script = ExtResource("1_script")
-enemy_name = "BellSaint"
+[node name="BellGlow" type="OmniLight3D" parent="."]
+position = Vector3(0, 3.15, -0.25)
+light_color = Color(1, 0.54, 0.22, 1)
+light_energy = 1.05
+omni_range = 5.5
 
-[node name="Body" type="MeshInstance3D" parent="."]
-position = Vector3(0, 2.10, 0)
-mesh = SubResource("BodyMesh")
-material_override = SubResource("MatEnemy")
+[node name="BellToneAudio" type="AudioStreamPlayer3D" parent="."]
+unit_size = 8.0
+max_distance = 48.0
 
-[node name="BellHead" type="MeshInstance3D" parent="."]
-position = Vector3(0, 4.65, 0)
-mesh = SubResource("BellHeadMesh")
-material_override = SubResource("MatEnemy")
+[node name="CopiedPrayerAudio" type="AudioStreamPlayer3D" parent="."]
+unit_size = 5.0
+max_distance = 36.0
+
+[node name="WeakPoint_BellHead" type="Marker3D" parent="."]
+position = Vector3(0, 3.25, -0.45)
+
+[node name="WeakPoint_BackBellRail" type="Marker3D" parent="."]
+position = Vector3(0, 3.25, 0.25)
+
+[node name="SoundOrigin" type="Marker3D" parent="."]
+position = Vector3(0, 3.05, -0.2)

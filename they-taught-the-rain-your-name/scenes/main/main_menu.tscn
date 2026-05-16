@@ -10,116 +10,153 @@ anchor_bottom = 1.0
 script = ExtResource("1_menu")
 
 [node name="Background" type="ColorRect" parent="."]
-layout_mode = 0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 1280.0
-offset_bottom = 720.0
-color = Color(0.004, 0.007, 0.011, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.002, 0.005, 0.008, 1)
 
-[node name="RainTint" type="ColorRect" parent="."]
-layout_mode = 0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 1280.0
-offset_bottom = 720.0
-color = Color(0.02, 0.05, 0.08, 0.35)
+[node name="StormTint" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.015, 0.045, 0.065, 0.42)
 
-[node name="Title" type="Label" parent="."]
-layout_mode = 0
-offset_left = 70.0
-offset_top = 90.0
-offset_right = 1210.0
-offset_bottom = 170.0
-theme_override_font_sizes/font_size = 48
+[node name="VignetteLeft" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.48
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.28)
+
+[node name="ContentRoot" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_constants/margin_left = 72
+theme_override_constants/margin_top = 72
+theme_override_constants/margin_right = 72
+theme_override_constants/margin_bottom = 56
+
+[node name="MainLayout" type="VBoxContainer" parent="ContentRoot"]
+layout_mode = 2
+theme_override_constants/separation = 28
+
+[node name="TitleBlock" type="VBoxContainer" parent="ContentRoot/MainLayout"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Title" type="Label" parent="ContentRoot/MainLayout/TitleBlock"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 46
 text = "THEY TAUGHT THE RAIN YOUR NAME"
 
-[node name="Subtitle" type="Label" parent="."]
-layout_mode = 0
-offset_left = 74.0
-offset_top = 166.0
-offset_right = 1000.0
-offset_bottom = 210.0
+[node name="Subtitle" type="Label" parent="ContentRoot/MainLayout/TitleBlock"]
+layout_mode = 2
 theme_override_font_sizes/font_size = 18
 text = "A storm horror prototype where the rain learns what you do."
 
-[node name="ButtonStack" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 78.0
-offset_top = 290.0
-offset_right = 420.0
-offset_bottom = 520.0
-theme_override_constants/separation = 14
+[node name="SpacerA" type="Control" parent="ContentRoot/MainLayout"]
+custom_minimum_size = Vector2(0, 52)
+layout_mode = 2
 
-[node name="PlayButton" type="Button" parent="ButtonStack"]
-custom_minimum_size = Vector2(300, 48)
+[node name="ButtonStack" type="VBoxContainer" parent="ContentRoot/MainLayout"]
+custom_minimum_size = Vector2(340, 0)
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="PlayButton" type="Button" parent="ContentRoot/MainLayout/ButtonStack"]
+custom_minimum_size = Vector2(340, 54)
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "PLAY"
 
-[node name="OptionsButton" type="Button" parent="ButtonStack"]
-custom_minimum_size = Vector2(300, 48)
+[node name="OptionsButton" type="Button" parent="ContentRoot/MainLayout/ButtonStack"]
+custom_minimum_size = Vector2(340, 54)
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "OPTIONS"
 
-[node name="QuitButton" type="Button" parent="ButtonStack"]
-custom_minimum_size = Vector2(300, 48)
+[node name="QuitButton" type="Button" parent="ContentRoot/MainLayout/ButtonStack"]
+custom_minimum_size = Vector2(340, 54)
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "QUIT"
 
+[node name="SpacerB" type="Control" parent="ContentRoot/MainLayout"]
+size_flags_vertical = 3
+layout_mode = 2
+
+[node name="Hint" type="Label" parent="ContentRoot/MainLayout"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Prototype controls: WASD move • Mouse look • Shift sprint • E knock • F6 test damage • R restart after death"
+autowrap_mode = 2
+
+[node name="VersionHint" type="Label" parent="ContentRoot/MainLayout"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "Prototype build — menu cleanup pass"
+modulate = Color(0.72, 0.78, 0.82, 1)
+
 [node name="OptionsPanel" type="PanelContainer" parent="."]
 visible = false
-layout_mode = 0
-offset_left = 500.0
-offset_top = 260.0
-offset_right = 980.0
-offset_bottom = 530.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.0
+offset_top = -160.0
+offset_right = 240.0
+offset_bottom = 160.0
 
-[node name="OptionsVBox" type="VBoxContainer" parent="OptionsPanel"]
+[node name="OptionsMargin" type="MarginContainer" parent="OptionsPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="OptionsVBox" type="VBoxContainer" parent="OptionsPanel/OptionsMargin"]
 layout_mode = 2
 theme_override_constants/separation = 12
 
-[node name="OptionsTitle" type="Label" parent="OptionsPanel/OptionsVBox"]
+[node name="OptionsTitle" type="Label" parent="OptionsPanel/OptionsMargin/OptionsVBox"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 28
 text = "OPTIONS"
 
-[node name="MouseLabel" type="Label" parent="OptionsPanel/OptionsVBox"]
+[node name="MouseLabel" type="Label" parent="OptionsPanel/OptionsMargin/OptionsVBox"]
 layout_mode = 2
 text = "Mouse sensitivity"
 
-[node name="MouseSensitivitySlider" type="HSlider" parent="OptionsPanel/OptionsVBox"]
+[node name="MouseSensitivitySlider" type="HSlider" parent="OptionsPanel/OptionsMargin/OptionsVBox"]
 layout_mode = 2
 min_value = 0.001
 max_value = 0.006
 step = 0.0001
 value = 0.0024
 
-[node name="FullscreenCheck" type="CheckBox" parent="OptionsPanel/OptionsVBox"]
+[node name="FullscreenCheck" type="CheckBox" parent="OptionsPanel/OptionsMargin/OptionsVBox"]
 layout_mode = 2
 text = "Fullscreen"
 
-[node name="VolumeLabel" type="Label" parent="OptionsPanel/OptionsVBox"]
+[node name="VolumeLabel" type="Label" parent="OptionsPanel/OptionsMargin/OptionsVBox"]
 layout_mode = 2
 text = "Master volume"
 
-[node name="VolumeSlider" type="HSlider" parent="OptionsPanel/OptionsVBox"]
+[node name="VolumeSlider" type="HSlider" parent="OptionsPanel/OptionsMargin/OptionsVBox"]
 layout_mode = 2
 min_value = 0.0
 max_value = 1.0
 step = 0.05
 value = 1.0
 
-[node name="BackButton" type="Button" parent="OptionsPanel/OptionsVBox"]
+[node name="BackButton" type="Button" parent="OptionsPanel/OptionsMargin/OptionsVBox"]
+custom_minimum_size = Vector2(0, 42)
 layout_mode = 2
 text = "BACK"
-
-[node name="Hint" type="Label" parent="."]
-layout_mode = 0
-offset_left = 74.0
-offset_top = 640.0
-offset_right = 1150.0
-offset_bottom = 690.0
-text = "Prototype controls: WASD move • Mouse look • Shift sprint • E knock • F6 test damage • R restart after death"
