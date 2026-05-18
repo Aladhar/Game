@@ -1,0 +1,163 @@
+PENANCE DEMO DEBUG PLAYTEST REPORT
+Generated after reading docs/demo.txt
+
+Scope
+- First lit house facade readability
+- Shared neighborhood house blockout language
+- Adversarial progression/state testing from a stubborn player perspective
+- Regression validation after fixes
+
+Pass 1: Start/spawn and first destination read
+
+Issue:
+First lit house facade looked like detached construction panels instead of one believable wall.
+
+What the player does:
+Approaches the first warm house from the road and looks at the entrance.
+
+What breaks / feels wrong:
+The front left/right wall chunks, doorframe pieces, and stacked trim above the doorway read as separate floating blockout slabs.
+
+Why it is bad:
+The first house is the first authored destination. If the entrance reads messy, players may hesitate or think the doorway is blocked.
+
+How severe it is:
+MAJOR
+
+Suggested fix:
+Rebuild the front as a simple structural facade: one lower wall split around the doorway, one clear rectangular doorway, one lintel/header, one second-story face, built-in jambs, and one roof overhang.
+
+Fix applied:
+The first house facade now uses:
+- Facade_FirstStory_LeftOfDoor
+- Facade_FirstStory_RightOfDoor
+- Facade_DoorHeader_OneCleanLintel
+- Facade_SecondStory_ContinuousFace
+- Facade_StoryBreak_SingleTrim
+- EntryFrame_BuiltInLeftJamb
+- EntryFrame_BuiltInRightJamb
+- EntryFrame_BuiltInTopHeader
+- FrontRoofOverhang_CleanRead
+
+Pass 2: Try to ignore the intended objective
+
+Issue:
+First-house hallway scare could fire before the player inspected the photo.
+
+What the player does:
+Enters the first house, ignores the table/photo, and pushes deeper into the hallway.
+
+What breaks / feels wrong:
+The hallway stretch and appearing-door events could trigger before the first-house objective was complete.
+
+Why it is bad:
+It lets the player experience later authored horror beats out of order and weakens the objective "Enter the house and inspect the photo on the table."
+
+How severe it is:
+MAJOR
+
+Suggested fix:
+Gate the hallway stretch and appearing-door triggers behind first_house_complete.
+
+Fix applied:
+Event_FirstHouse_HallwayStretch and Event_FirstHouse_DoorAppearsInWall now require demo_director.first_house_complete before firing.
+
+Pass 3: Try to enter areas early / wrong order
+
+Issue:
+Cul-de-sac lightning could still fire from the cul-de-sac trigger even when the demo state was not ready.
+
+What the player does:
+Attempts to reach or trigger the cul-de-sac before completing the park phase.
+
+What breaks / feels wrong:
+The state did not advance, but the lightning/Penance beat could still fire.
+
+Why it is bad:
+Even if soft blockers should prevent normal access, wrong-order scare feedback makes the world feel brittle when a player finds a route-control gap.
+
+How severe it is:
+MAJOR
+
+Suggested fix:
+Only fire the cul-de-sac authored lightning beat during the PARK_DONE -> CUL_DE_SAC_DONE transition.
+
+Fix applied:
+Removed the wrong-state fallback lightning from Event_CulDeSac_LightningPenanceAngle.
+
+Pass 4: Try to skip the church clue
+
+Issue:
+Church clue could be skipped before entering the basement.
+
+What the player does:
+Reaches the church, ignores the internal-handling notice, and tries to push straight into the basement/tunnel route.
+
+What breaks / feels wrong:
+The player could previously continue toward the basement without reading the clue the objective points them toward.
+
+Why it is bad:
+The route still worked technically, but it weakened the authored story beat and made the objective feel optional/confusing.
+
+How severe it is:
+MAJOR
+
+Suggested fix:
+Require the church notice interaction before opening/allowing basement progression.
+
+Fix applied:
+Added a church_notice_inspected gate. The basement route remains blocked until Interact_Church_InternalHandlingNotice is inspected, and direct tunnel pressure progression now also requires that flag.
+
+Pass 5: Try to replay one-shot events
+
+Issue:
+No remaining replay break found in automated adversarial checks.
+
+What the player does:
+Triggers first-house approach, enters, completes the full route, then backtracks through old triggers.
+
+What breaks / feels wrong:
+No state regression found. The first-house Penance reveal did not replay.
+
+Why it is bad:
+Not currently bad. This pass is tracked because replayable one-shot scares would be a major horror pacing issue.
+
+How severe it is:
+NICE TO HAVE
+
+Suggested fix:
+Keep one-shot flags and fired event dictionaries intact as more events are added.
+
+Pass 6: Collision/path sanity
+
+Issue:
+No new first-house entry collision blocker found after the facade rewrite.
+
+What the player does:
+Approaches from sidewalk to porch/ramp to doorway and enters the first room.
+
+What breaks / feels wrong:
+No player-height blocker was found in the entry lane.
+
+Why it is bad:
+Not currently bad. This pass confirms the cleaner facade did not reintroduce the earlier blocked-house problem.
+
+How severe it is:
+NICE TO HAVE
+
+Suggested fix:
+Keep the doorway opening wide and do not add colliders to decorative doorframe trim.
+
+Validation Run
+- demo_adversarial_playtest_check.gd: PASSED
+- demo_first_house_entry_check.gd: PASSED
+- demo_house_scale_check.gd: PASSED
+- demo_skeleton_smoke_test.gd: PASSED
+- demo_soft_route_blocks_check.gd: PASSED
+- demo_world_bounds_check.gd: PASSED
+- demo_player_systems_check.gd: PASSED
+- demo_audio_check.gd: PASSED
+
+Current Result
+No critical progression-breaking bug was found after fixes.
+The biggest issues found in this pass were authored event ordering problems and a skippable church clue, and they were fixed.

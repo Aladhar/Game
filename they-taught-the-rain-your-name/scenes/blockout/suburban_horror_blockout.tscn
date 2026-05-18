@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/blockout/suburban_horror_blockout.gd" id="1_blockout"]
+[ext_resource type="PackedScene" path="res://scenes/player/player.tscn" id="2_player"]
+[ext_resource type="Script" path="res://scripts/systems/rain_controller.gd" id="3_rain"]
+[ext_resource type="Script" path="res://scripts/blockout/demo_director.gd" id="4_director"]
+
+[node name="SuburbanHorrorBlockout" type="Node3D"]
+script = ExtResource("1_blockout")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+
+[node name="StormLight" type="DirectionalLight3D" parent="."]
+rotation = Vector3(-1.15, 0.42, 0.0)
+light_color = Color(0.38, 0.48, 0.62, 1)
+light_energy = 0.035
+shadow_enabled = true
+
+[node name="DebugVisibilityLight" type="DirectionalLight3D" parent="."]
+rotation = Vector3(-0.95, -0.65, 0.0)
+light_color = Color(0.62, 0.72, 0.82, 1)
+light_energy = 0.85
+shadow_enabled = false
+
+[node name="WorldRoot" type="Node3D" parent="."]
+
+[node name="EventRoot" type="Node3D" parent="."]
+
+[node name="DemoDirector" type="Node" parent="."]
+script = ExtResource("4_director")
+
+[node name="EffectsRoot" type="Node3D" parent="."]
+script = ExtResource("3_rain")
+rain_amount = 1400
+rain_area = Vector3(46, 8, 46)
+
+[node name="Player" parent="." instance=ExtResource("2_player")]
+position = Vector3(0, 1.1, 102)
+rotation = Vector3(0, 3.14159, 0)

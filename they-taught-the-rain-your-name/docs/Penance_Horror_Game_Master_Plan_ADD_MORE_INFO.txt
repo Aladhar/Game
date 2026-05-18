@@ -1,0 +1,3999 @@
+PENANCE HORROR GAME — OBJECTIVE PATH + CUL-DE-SAC CHURCH EVENT MASTER TXT
+================================================================================
+
+================================================================================
+CURRENT GAME DEMO ADDENDUM — SUBURBAN HORROR BLOCKOUT SOURCE OF TRUTH
+================================================================================
+
+This section is for the current GAME DEMO work: the dark rainy suburban
+neighborhood blockout that is now the main project flow.
+
+Current Godot Entry Point
+-------------------------
+The project currently boots directly into:
+
+    res://scenes/blockout/suburban_horror_blockout.tscn
+
+Main implementation script:
+
+    res://scripts/blockout/suburban_horror_blockout.gd
+
+Player scene used by the demo:
+
+    res://scenes/player/player.tscn
+
+Current debug feature:
+
+    F3 toggles temporary debug visibility lighting.
+
+Important rule:
+
+    The new blockout demo is the main source of truth for the current game demo.
+    Older scenes, enemy prototypes, and asset experiments can remain in the
+    project, but they should be treated as optional reference until intentionally
+    reconnected.
+
+================================================================================
+DEMO DESIGN SUMMARY
+================================================================================
+
+Game Type
+---------
+First-person horror demo set in a looping, liminal suburban neighborhood during
+heavy rain at night.
+
+Core Fantasy
+------------
+The player arrives in a neighborhood that looks physically ordinary but behaves
+like it is remembering guilt. Roads loop. Doors appear. Houses repeat. Lights
+lead and betray the player. Penance is visible before he is fully understood.
+
+Current Demo Goal
+-----------------
+Build a playable vertical slice where the player can:
+
+1. Arrive on a dark suburban street.
+2. Follow soft guidance toward the first lit house.
+3. Notice signs that the neighborhood is wrong.
+4. Experience a first Penance sighting.
+5. Move through the neighborhood loop, park, cul-de-sac, church/community center,
+   and storm-drain/basement path.
+6. Understand that the final house was visible the whole time but unreachable.
+7. Unlock the final house route later through a scripted event.
+
+This demo should prove:
+
+- Scale
+- Navigation
+- Sightlines
+- Mood
+- Event timing
+- Penance presence
+- Environmental storytelling
+- Basic player readability
+
+This demo should NOT try to prove:
+
+- Final art quality
+- Final combat/chase complexity
+- Full inventory depth
+- Full dialogue/cutscene system
+- Final Penance model polish
+- Full neighborhood lore database
+
+================================================================================
+LOCKED STORY CANON FROM FOSTER HOUSE ORIGIN LORE
+================================================================================
+
+Source document:
+
+    res://docs/Penance_Foster_House_Origin_Lore_EXPLICIT.txt
+
+Important handling rule:
+
+    This lore is explicit for the developer/writer, but the demo should present it
+    with restraint. Do not show the assault. Do not use the sister's suffering as
+    shock content. The demo should communicate cover-up, control, silence,
+    erased evidence, and guilt through environment, documents, sound, and staging.
+
+Core Story
+----------
+The player returns to a neighborhood controlled by a church that helped cover up
+a violent crime against his sister. The Foster House was presented as a place of
+care, shelter, discipline, and religious guidance, but it became the center of
+the cover-up.
+
+The sister was isolated there after the crime. The church protected reputation
+and power instead of protecting her. The child connected to the cover-up became
+living evidence, then the sister died and the child vanished from records.
+
+The horror is not random evil.
+
+The horror is:
+
+- institutional protection
+- community silence
+- shame used as control
+- truth buried under religious language
+- the player realizing he escaped while his sister did not
+
+One-line theme:
+
+    The worst thing was not only what happened to her. It was that everyone let
+    it happen.
+
+Player Identity
+---------------
+The player is the victim's brother.
+
+He left the neighborhood years ago. He knew something was wrong but did not
+understand the full truth. He heard arguments, saw whispering, saw the church get
+more involved, and saw his sister withdraw. He escaped. She did not.
+
+Player emotional conflict:
+
+- He wants answers.
+- He feels guilty for leaving.
+- He fears he ignored signs.
+- He slowly realizes the town was haunted by what its own people did.
+
+Sister Identity
+---------------
+The sister is the emotional center of the story.
+
+Do not reduce her to a plot device. The Foster House should eventually reveal who
+she was before the institution reduced her to scandal and evidence.
+
+Demo storytelling rule:
+
+    The first demo should not reveal everything, but it must make the player feel
+    that a real person was erased, not that the game is chasing abstract lore.
+
+Foster House Identity
+---------------------
+The "final house" is now canonically the Foster House.
+
+It should remain visible from multiple angles throughout the demo. Early on it is
+unreachable. Later, after the church/basement path, the road remembers it and the
+player can finally approach.
+
+The Foster House represents false safety:
+
+- a home that was a cage
+- care used as control
+- shelter used as isolation
+- religious language used to hide evidence
+
+Penance Identity
+----------------
+Penance is the manifestation of guilt, silence, and punishment.
+
+He is not a random killer. He is the shape the buried sin takes.
+
+Penance exists to force people to face what they allowed.
+
+He represents:
+
+- the sister's erased suffering
+- the child's erased existence
+- the church's hypocrisy
+- the community's silence
+- the player's guilt for leaving
+- the truth hidden inside the Foster House
+
+Penance behavior rule:
+
+    Penance is dragging the player through every place where the truth was hidden.
+
+Silent Child Implication
+------------------------
+There should be a quiet implication that Penance may be the erased child.
+
+Do not state this outright early.
+Do not have a character explain it.
+Do not put a note in the demo that says "Penance is the child."
+
+The implication should come from absence:
+
+- No official birth record survives.
+- The child has no confirmed name.
+- The child has no grave.
+- Photos have missing faces or empty spaces.
+- The Foster House has child evidence but no complete file.
+- Penance is always connected to missing records, locked rooms, old photos, and
+  the Foster House.
+- Penance watches from the Foster House as if he belongs there.
+- Penance feels both like punishment and like proof that the erased life still
+  exists somewhere.
+
+Design rule:
+
+    Penance should be readable as guilt made physical, but players should slowly
+    suspect that the guilt has a more specific shape: the child no record can
+    prove existed.
+
+This is stronger as subtext than exposition. The player should ask:
+
+    "Is Penance what the town created, or is he what the town erased?"
+
+Church Identity
+---------------
+The church is not just a spooky building.
+
+It is the institution that protected itself instead of protecting the victim.
+
+When Penance opens the church door, it means:
+
+    The truth starts here.
+
+Basement / Storm-Drain Identity
+-------------------------------
+The basement and storm-drain path represent buried truth.
+
+Going underground means going below the neighborhood's public story. For the
+demo, the first underground sequence should be survival and pressure, not a full
+explanation of the entire crime.
+
+Gun Identity
+------------
+The gun should not turn the game into an action game.
+
+The gun represents temporary control. It can stagger Penance, damage the body, or
+knock off cloth/wood/visual pieces, but it cannot kill what Penance represents.
+
+For the first demo, the gun can be teased or saved for a later demo cut if scope
+gets too large. If included, it must feel limited and desperate.
+
+================================================================================
+BORDERLINE AAA DEMO TARGET
+================================================================================
+
+AAA-Level Meaning for This Project
+----------------------------------
+"Borderline AAA" does not mean huge scope.
+
+For this demo, it means:
+
+- one polished playable route
+- strong first 10-20 minutes
+- readable objectives without obvious arrows
+- excellent lighting composition
+- strong sound design
+- reliable triggers
+- no softlocks
+- no confusing dead ends
+- high-quality pacing
+- one unforgettable Penance reveal
+- one controlled pressure/chase sequence
+- one clean ending hook
+
+The demo should feel expensive because it is focused, reliable, and staged well,
+not because it has too many features.
+
+Recommended Demo Scope
+----------------------
+Target length:
+
+    15-25 minutes for a first-time player.
+
+Primary route:
+
+    Arrival Street
+        ->
+    First Lit House
+        ->
+    Penance Window / Silhouette
+        ->
+    Neighborhood Loop Shift
+        ->
+    Park Lure
+        ->
+    Cul-de-sac Trap
+        ->
+    Church Opens
+        ->
+    Basement / Storm-Drain Pressure Sequence
+        ->
+    Foster House Reveal / Demo Ending
+
+Optional route complexity:
+
+    Very low. The player can explore a little, but the demo should be tightly
+    controlled. A strong horror demo is better than a loose map.
+
+AAA Demo Pillars
+----------------
+1. Cinematic Environmental Staging
+   - Every major area should have a clear composition.
+   - Use lighting, silhouettes, rain, reflections, and framing.
+   - The player should naturally look where the game needs them to look.
+
+2. Premium Audio Direction
+   - Rain is constant but layered.
+   - Important cues cut through rain clearly.
+   - Silence is used intentionally before major beats.
+   - Penance has a recognizable chain/cloth/low-presence sound identity.
+
+3. Reliable Scripted Horror
+   - Scripted events should feel authored, not random.
+   - Every major scare should have setup, reveal, and aftermath.
+   - Avoid cheap repeated jumpscares.
+
+4. Strong Player Readability
+   - The world can be confusing emotionally, but navigation must be readable.
+   - If the player is lost, it should be for a designed moment, not because the
+     level lacks guidance.
+
+5. Restraint With Sensitive Lore
+   - The demo should imply enough to be disturbing and meaningful.
+   - Save the most explicit truth for later Foster House discovery.
+   - Never make the crime itself spectacle.
+
+6. Technical Cleanliness
+   - No visible broken triggers.
+   - No debug lighting in final demo mode.
+   - No player snagging on blockout geometry.
+   - No Penance spawning in silly or accidental positions.
+   - Restart/failure flow must work.
+
+Demo Ending Target
+------------------
+Recommended first demo ending:
+
+    Player exits or survives the underground pressure sequence.
+    A church monitor, security TV, or rain-glitched screen shows the Foster House.
+    Penance is standing inside the Foster House in the same silhouette language
+    as the first lit-house sighting.
+    The monitor glitches.
+    Outside, the Foster House becomes visually dominant and reachable or almost
+    reachable.
+    Penance turns slightly toward the camera.
+    Cut to black.
+
+Title card:
+
+    PENANCE
+    This was only the first descent.
+
+This ending gives the player a clear completion point while preserving mystery.
+
+================================================================================
+CURRENT IMPLEMENTATION STATUS
+================================================================================
+
+Already Implemented in Current Demo Blockout
+--------------------------------------------
+- Main road loop.
+- Arrival street.
+- 10 simple house blockouts.
+- First enterable house shell/interior.
+- Small park.
+- Cul-de-sac.
+- Church/community center exterior blockout.
+- Underground storm-drain/basement chase path.
+- Final unreachable house silhouette.
+- Final road unlock concept.
+- Puddles and wet-road material pass.
+- Rain particle controller.
+- Fog and low-light environment.
+- Temporary debug visibility mode.
+- Player flashlight.
+- Weak flickering streetlights.
+- Penance far silhouette blockout.
+- Penance motif materials:
+  rotten wood, wet cloth, rusted metal, chains, candles, old photos, water.
+- Event trigger volumes for:
+  road loop teleport, lightning Penance reveal, park flicker, hallway stretch,
+  door appearing, final house unlock.
+
+Partially Implemented
+---------------------
+- Horror events exist as simple scripted prototypes but need better timing,
+  audio, one-shot handling, and player-facing staging.
+- Final house unlock exists mechanically but needs a clearer player goal before
+  it happens.
+- First house interior exists as a blockout but needs a stronger entrance path,
+  window silhouette setup, interactables, and readable clue.
+- Park exists spatially but needs a clear lure, sound source, and objective.
+- Cul-de-sac exists spatially but needs the church transition event.
+- Church exists spatially but needs interior staging, basement access logic, and
+  a ritual/community-story clue.
+- Tunnel path exists spatially but needs chase pacing, turns, hiding beats,
+  drainage details, and exit readability.
+
+Not Implemented Yet
+-------------------
+- Objective director/state machine.
+- Interaction system.
+- Inspectable clues.
+- Door/gate open/lock system.
+- Proper event save/checkpoint state.
+- Audio cue system for guidance.
+- Penance stalking AI.
+- Penance chase AI.
+- Penance visibility rules.
+- Penance first lit-house silhouette event.
+- Church interior.
+- Basement entrance gameplay.
+- Final house interior.
+- Demo ending.
+- UI/objective hint policy.
+- Battery/flashlight resource system.
+- Accessibility/debug options menu for brightness and event reset.
+
+================================================================================
+CURRENT BLOCKOUT MAP PLAN
+================================================================================
+
+Scale Rule
+----------
+Use 1 Godot unit = 1 meter.
+
+Current Coordinate Logic
+------------------------
+The current blockout is built around an approximate 150m x 180m playable area.
+
+Important areas:
+
+- Arrival street:
+  Starts near the player spawn and leads into the loop.
+
+- Main road loop:
+  A rectangular suburban loop that lets the player circle the neighborhood.
+
+- First enterable house:
+  Located near the arrival/main loop connection.
+  This should become the first meaningful objective.
+
+- Park:
+  Off the loop, with wet grass, path, playset, swing, bench, trees, and a storm
+  drain entrance.
+
+- Cul-de-sac:
+  A side loop/terminal space that should feel like a trap and a transition point.
+
+- Church/community center:
+  A larger landmark visible from the road and tied to bells, punishment, and
+  public guilt.
+
+- Storm-drain/basement route:
+  Underground path intended for chase pacing and forced progression.
+
+- Foster House / Final House:
+  Visible from several angles, blocked early, reachable later. This is the real
+  center of the cover-up, not just a spooky destination.
+
+Navigation Design Rules
+-----------------------
+- The player should always have at least one visible landmark.
+- The Foster House should be visible before it is reachable.
+- The church should be visible above or through neighborhood silhouettes.
+- The first lit house should be the most inviting thing early.
+- The park should be found through sound and motion, not UI.
+- The cul-de-sac should feel optional at first, then become unavoidable.
+- The storm drain should feel like a bad idea but also the only forward path.
+
+Sightline Rules
+---------------
+- Keep long views down the main road loop.
+- Use fences, parked cars, trees, and house corners to create partial occlusion.
+- Penance should appear at the end of long views only during controlled moments.
+- Avoid placing too many large blockers in the road loop until the scale feels
+  correct.
+- Do not overfill the blockout with detail before playtesting walking routes.
+
+================================================================================
+CURRENT DEMO OBJECTIVE FLOW
+================================================================================
+
+Phase 0 — Spawn / Arrival
+-------------------------
+Player starts on the arrival street in rain.
+
+Desired player thought:
+
+    "I need to move toward the neighborhood."
+
+Implementation needs:
+
+- Spawn facing the loop.
+- Add an abandoned car or road closure behind the player.
+- Add rain, fog, weak streetlights, and wet-road shine.
+- Keep debug lighting available during development, but tune horror lighting with
+  debug mode off.
+
+Phase 1 — First Lit House
+-------------------------
+One house should be warmer and more readable than the others.
+
+Desired player thought:
+
+    "That house is probably where I should go."
+
+Implementation needs:
+
+- Porch/window light.
+- Light spill on wet sidewalk.
+- Front path clearly readable.
+- Window framing for the first Penance silhouette.
+- Interior clue that triggers the next neighborhood change.
+
+Phase 2 — First Penance Sighting
+--------------------------------
+Penance appears as a silhouette inside or beyond the first lit house.
+
+Desired player thought:
+
+    "Was someone standing there?"
+
+Implementation needs:
+
+- Do not reveal full monster detail.
+- Use backlight, not front light.
+- Silhouette should vanish when the player changes angle or after a short timer.
+- Add quiet audio: low hum, rain muffling, one chain creak.
+- Do not start a chase here.
+
+Phase 3 — Neighborhood Loop Becomes Wrong
+-----------------------------------------
+After the first clue, roads should start misbehaving.
+
+Desired player thought:
+
+    "I came from here, but this is not the same."
+
+Implementation needs:
+
+- One road loops the player back before final-house unlock.
+- Streetlights flicker in the wrong sequence.
+- A door or shrine appears where there was a wall/fence.
+- The final house is visible in the distance during lightning.
+
+Phase 4 — Park Lure
+-------------------
+The park should pull the player through sound and motion.
+
+Desired player thought:
+
+    "Something moved over there."
+
+Implementation needs:
+
+- Swing movement or creak.
+- Flickering park lamp.
+- Wet bench/shrine clue.
+- Storm-drain opening visible but not immediately inviting.
+- Optional environmental clue connecting children/family/community silence to
+  the neighborhood guilt.
+
+Phase 5 — Cul-de-sac Trap
+-------------------------
+The cul-de-sac should feel like a dead end that becomes a ritual space.
+
+Desired player thought:
+
+    "This road should go somewhere, but it does not."
+
+Implementation needs:
+
+- Repeated facades or identical doors.
+- Car parked at wrong angle.
+- Light flicker that briefly shows Penance at a distance.
+- Bell or church sound that redirects player.
+- Road behind player subtly changes or darkens.
+
+Phase 6 — Church / Community Center
+-----------------------------------
+The church is not only religious. It should also feel like the neighborhood's
+public excuse machine: meetings, silence, punishment, missing photos, old rules.
+
+Desired player thought:
+
+    "This place knows what happened."
+
+Implementation needs:
+
+- Door opens after cul-de-sac event.
+- Bell tower as landmark.
+- Notice board with old photos.
+- Candles and rotten wood at threshold.
+- Basement/storm-drain entrance.
+- Clue that frames Penance as judgment, not just a monster.
+
+Phase 7 — Basement / Storm-Drain Chase Path
+-------------------------------------------
+The underground path should be a controlled fear sequence.
+
+Desired player thought:
+
+    "I need to keep moving."
+
+Implementation needs:
+
+- Narrow path, turns, water channel, rusted pipes.
+- Penance audio behind player before visual contact.
+- One forced look-forward moment, not constant backtracking.
+- A clear exit silhouette.
+- Do not overcomplicate AI here yet. A scripted chase is enough for the demo.
+
+Phase 8 — Foster House Becomes Reachable
+----------------------------------------
+After the tunnel event, the road to the Foster House appears/unlocks.
+
+Desired player thought:
+
+    "That house was always there. Now I can reach it."
+
+Implementation needs:
+
+- Gate/barrier disappears or opens.
+- Road extension becomes visible.
+- Penance silhouette relocates closer to the final house.
+- Foster House light changes from distant background to active objective.
+- Demo can end at the front door or inside the first room, depending on scope.
+
+================================================================================
+CHARACTER PLAN
+================================================================================
+
+The Player / Visitor
+--------------------
+Current role:
+
+    The player is an outsider or returning figure entering a neighborhood that
+    should not be accessible anymore.
+
+Design purpose:
+
+- The player gives the audience a reason to learn the place from zero.
+- The player should not fully understand Penance at the start.
+- The player's ignorance lets environmental storytelling do most of the work.
+
+Open character question:
+
+    Is the player a true outsider, a former resident, a family member, or someone
+    connected to the original wrong?
+
+Recommendation for demo:
+
+    Keep the player mostly undefined. Let the demo focus on place, dread, and
+    Penance. Add only one clue implying the player may have been expected.
+
+Possible clue:
+
+    A photo in the first house has the player's face scratched out or left blank.
+
+Penance
+-------
+Current role:
+
+    Penance is the main monster and symbolic judge of the neighborhood.
+
+Core visual identity:
+
+- Tall hooded figure.
+- Crushed door-like mask.
+- Hanging wet cloth.
+- Rusted chains.
+- Rotten wood.
+- Candles/photos/relics.
+- Punishment and religious/community-guilt imagery.
+- Water stains and rain-warped materials.
+
+Core behavior identity:
+
+    Penance should feel less like an animal predator and more like a sentence
+    being carried out.
+
+He should:
+
+- Watch before attacking.
+- Appear where guilt is concentrated.
+- Use doors, bells, roads, and light as signals.
+- Be associated with judgment, locked rooms, hidden basements, and public silence.
+- Feel slow and inevitable until the chase requires speed.
+
+He should NOT:
+
+- Behave like a random zombie.
+- Scream constantly.
+- Chase too early.
+- Appear so often that he becomes normal.
+- Explain himself through dialogue.
+
+Penance Presence Modes
+----------------------
+Use three modes for the demo:
+
+1. Witness Mode
+   - Far silhouette.
+   - Window figure.
+   - Lightning reveal.
+   - No chase.
+
+2. Pressure Mode
+   - Audio behind player.
+   - Door/chain events.
+   - Streetlights fail.
+   - Player knows he is near but cannot always see him.
+
+3. Sentence Mode
+   - Scripted chase.
+   - Used underground or near the final route.
+   - Clear forward path.
+   - Punishes hesitation, not exploration.
+
+Church / Community Figures
+--------------------------
+These do not need full character models yet.
+
+Use them as environmental characters:
+
+- The Pastor / Community Leader
+  Represents public denial, punishment language, and moral cover.
+
+- The Missing Family
+  Represents the private tragedy that the neighborhood ignored.
+
+- The Neighbors
+  Represent silence, watching through curtains, photos turned around, and doors
+  locked from the outside.
+
+- The Children / Park Memory
+  Optional. Use carefully. The park can imply family/community harm without
+  needing explicit shock content.
+
+Implementation recommendation:
+
+    For the demo, represent these characters through photos, notices, signs,
+    chairs, doors, candles, and audio fragments. Do not build NPCs yet.
+
+================================================================================
+ENVIRONMENTAL STORYTELLING PLAN
+================================================================================
+
+Repeated Penance Motifs
+-----------------------
+These should appear across the neighborhood before Penance is fully revealed:
+
+- Rotten wood
+- Wet hanging cloth
+- Rusted metal
+- Chains
+- Doors
+- Bells
+- Candles
+- Old photos
+- Water stains
+- Locked thresholds
+- Repeated porch lights
+- Shrines made from household objects
+
+How to Use Motifs
+-----------------
+First house:
+
+- Warm light corrupted by shadow.
+- Old photos.
+- Door motif.
+- One chain detail.
+
+Park:
+
+- Swing chains.
+- Wet bench.
+- Small shrine or photo left near storm drain.
+
+Cul-de-sac:
+
+- Repeated doors.
+- Chain fence.
+- Bell sound from wrong direction.
+- Cars arranged like a blocked ritual circle.
+
+Church:
+
+- Bells.
+- Candles.
+- Photo board.
+- Doors and public notices.
+- Water stains running down walls.
+
+Tunnel:
+
+- Rusted pipes.
+- Water.
+- Hanging cloth.
+- Chain audio.
+- Candle cluster near exit.
+
+Final house:
+
+- Door-mask facade.
+- Rotten wood.
+- Water-stained walls.
+- Warm windows that feel like eyes.
+- Penance silhouette aligned with the front path.
+
+================================================================================
+IMPLEMENTATION PLAN — NEXT PASSES
+================================================================================
+
+Pass 1 — Make the Demo Playable from Start to End
+-------------------------------------------------
+Goal:
+
+    The player can follow the intended route without external explanation.
+
+Build:
+
+- Objective/state manager for demo phases.
+- One-shot event handling so triggers do not repeat forever.
+- Basic interaction prompt for doors/clues.
+- First house clue pickup/inspect.
+- Park lure event.
+- Cul-de-sac redirection event.
+- Church unlock event.
+- Tunnel chase trigger.
+- Final house unlock.
+- Demo ending trigger.
+
+Suggested Godot structure:
+
+    SuburbanHorrorBlockout
+        WorldEnvironment
+        StormLight
+        DebugVisibilityLight
+        WorldRoot
+        EventRoot
+        EffectsRoot
+        Player
+        DemoDirector
+        ObjectiveState
+        AudioCueController
+        LightEventController
+        PenanceEncounterController
+
+Do not overbuild the architecture yet. These can start as simple nodes/scripts
+inside the blockout scene, then split into reusable systems after the demo flow
+works.
+
+Pass 2 — First Lit House Encounter
+----------------------------------
+Goal:
+
+    Deliver the first real Penance memory moment.
+
+Build:
+
+- Window sightline marker.
+- Penance silhouette position inside/behind first house.
+- Backlight-only reveal.
+- Vanish event.
+- Quiet audio cue.
+- Interior clue after the silhouette disappears.
+
+Implementation note:
+
+    Use a trigger area outside the window plus a camera-facing/visibility check
+    later. For now, simple trigger volume timing is enough.
+
+Pass 3 — Church/Cul-de-sac Setpiece
+-----------------------------------
+Goal:
+
+    Convert the cul-de-sac from a dead end into a guided horror redirection.
+
+Build:
+
+- Trigger when player reaches cul-de-sac.
+- Lights fail around the circle.
+- Bell sound from church direction.
+- Penance lightning silhouette at long sightline.
+- Road back subtly loops or blocks.
+- Church door becomes the only readable next path.
+
+Pass 4 — Tunnel Chase
+---------------------
+Goal:
+
+    Script a short, readable chase that proves Penance can create pressure.
+
+Build:
+
+- Trigger after church/basement clue.
+- Start with audio pressure.
+- Spawn Penance behind player or use silhouette proxy.
+- Add simple forward-only chase path.
+- Add fail condition only after path is readable.
+- End with final house unlock.
+
+For the demo, a scripted moving proxy is acceptable. Full AI can wait.
+
+Pass 5 — Lighting and Readability Pass
+--------------------------------------
+Goal:
+
+    Make horror lighting playable.
+
+Build:
+
+- Keep F3 debug visibility.
+- Tune flashlight range and cone.
+- Add warm/cold contrast.
+- Reduce accidental blackness in important routes.
+- Make puddles and wet roads help guide the eye.
+- Place lights to form a path without obvious arrows.
+
+Pass 6 — Audio Pass
+-------------------
+Goal:
+
+    Use sound as the main objective guide.
+
+Build:
+
+- Rain bed.
+- Distant thunder.
+- Streetlight buzz.
+- Park swing creak.
+- Cul-de-sac bell.
+- First house TV/static hum.
+- Chain creak for Penance.
+- Tunnel water/rust pipe ambience.
+- Low, subtle Penance presence tone.
+
+================================================================================
+IMPLEMENTATION DETAILS TO KEEP CLEAN
+================================================================================
+
+State Flags Needed
+------------------
+Minimum flags for the demo:
+
+- demo_started
+- first_house_seen
+- first_house_clue_taken
+- penance_window_seen
+- park_lure_active
+- park_clue_taken
+- cul_de_sac_event_started
+- church_unlocked
+- church_clue_taken
+- tunnel_chase_started
+- final_house_unlocked
+- demo_complete
+
+Event Rules
+-----------
+- Most horror events should be one-shot.
+- Some ambience events can repeat, but with cooldowns.
+- A horror event should change either player knowledge, space, or route.
+- Avoid events that only make noise without changing the player's understanding.
+
+Interaction Rules
+-----------------
+- Keep interaction range short.
+- Interactables should be visually distinct but not gamey.
+- Use simple text only when necessary.
+- Prefer environmental readability over UI.
+
+Doors and Gates
+---------------
+Need a basic reusable door/gate script:
+
+- locked
+- open
+- required_flag
+- sets_flag_on_open
+- optional_event_on_open
+
+This will help with:
+
+- First house door.
+- Church door.
+- Basement door.
+- Final house gate.
+- Final house front door.
+
+Debug Tools Needed
+------------------
+Keep development practical:
+
+- F3: toggle debug visibility.
+- Future F4: print current demo phase.
+- Future F5: advance to next demo phase.
+- Future F6: reset current scripted event.
+- Future F7: teleport to area test points.
+
+These should be development-only or easy to disable before a public build.
+
+================================================================================
+DEMO SUCCESS CRITERIA
+================================================================================
+
+The demo is working when a new player can:
+
+- Start the project and immediately understand they should move forward.
+- Notice the first lit house without being told.
+- Feel unsafe entering the neighborhood.
+- See or sense Penance before understanding him.
+- Navigate the loop without getting permanently lost.
+- Understand that the park/cul-de-sac/church are important.
+- Reach the tunnel/basement path.
+- Experience one controlled pressure/chase moment.
+- Understand that the final house was the destination.
+- Finish the demo wanting to know what happened there.
+
+The demo is failing if:
+
+- The player wanders for more than a few minutes with no idea where to go.
+- The world is too dark to read.
+- The route only works because the developer explains it.
+- Penance appears too much and stops being scary.
+- The final house feels random instead of inevitable.
+- The player gets stuck on blockout collision.
+- The church feels unrelated to Penance.
+- The tunnel feels like filler instead of escalation.
+
+================================================================================
+LOCKED ANSWERS FOR CURRENT DEMO FLOW
+================================================================================
+
+These answers come from the Foster House origin lore and should guide the demo.
+
+1. Who is the player?
+
+    The player is the victim's brother. He left the neighborhood years ago and
+    carries guilt because he sensed something was wrong but escaped before he
+    understood the full truth.
+
+2. What happened in the neighborhood?
+
+    A powerful man connected to the Foster House harmed the player's sister, and
+    the church/community protected reputation and authority instead of protecting
+    her. She was isolated in the Foster House, the child became hidden evidence,
+    and records were erased.
+
+3. What is Penance enforcing?
+
+    Penance enforces memory, confession, and punishment. He is not trying to kill
+    randomly. He forces the player through places where the truth was hidden.
+    There is also a silent implication that Penance may be the erased child,
+    because the child vanished from all records and Penance is repeatedly tied to
+    missing proof, child evidence, and the Foster House. Keep this as subtext, not
+    a confirmed demo reveal.
+
+4. What is inside the Foster House?
+
+    The Foster House contains the emotional truth:
+
+    - Sister's room
+    - Birth room
+    - Decision room
+    - Child evidence area
+    - documents/photos/proof that the community erased what happened
+
+    The first demo can point toward these rooms without fully exploring them.
+
+5. How should the demo end?
+
+    The demo should end by revealing that the Foster House is the real center of
+    the story. Use a monitor/TV/security-screen reveal or direct sightline reveal,
+    show Penance inside or aligned with the Foster House, then cut to black with a
+    clear title card.
+
+6. What should remain mysterious?
+
+    The demo should not fully explain every detail. It should make the player
+    understand that:
+
+    - the church hid something
+    - the Foster House is the center
+    - Penance is connected to buried guilt
+    - the player's sister matters
+    - the player has personal guilt
+
+    The exact documents, names, timeline, and child evidence can be saved for the
+    full Foster House sequence.
+
+
+Idea - Player feels like the hero… but slowly realizes they weren’t innocent.
+
+That gives you:
+- motivation (hero energy)
+- AND horror (guilt / unease)
+
+================================================================================
+STEP 1 — LOCK PLAYER EXPERIENCE (MOST IMPORTANT)
+================================================================================
+
+Before adding detail, make sure:
+
+- Movement feels good.
+  - Walk speed feels natural.
+  - Sprint feels responsive.
+  - Camera movement feels smooth and not annoying.
+
+- Flashlight works.
+  - Range feels useful but not overpowered.
+  - Flicker feels scary, not broken.
+  - Battery system can be added if wanted, but do not overcomplicate it early.
+
+- Collisions feel right.
+  - No weird clipping.
+  - Player does not get caught on small objects.
+  - Doors, stairs, sidewalks, curbs, and tight hallways feel playable.
+
+- Scale feels correct.
+  - Doors should feel like real doors.
+  - Streets should feel believable.
+  - Rooms should not feel too huge or too tiny.
+  - Church, basement, and neighborhood spaces should feel physically grounded.
+
+If this feels off, EVERYTHING after feels bad.
+
+Purpose
+-------
+This document organizes the full objective-path guidance system and the specific
+cul-de-sac/church/Penance setpiece into one clean plan for Godot.
+
+Core Design Goal
+----------------
+The player should feel lost, but they should actually be quietly guided forward
+the whole time.
+
+The game should NOT feel like random wandering. It should feel confusing,
+unsettling, and scary, but still intentionally designed.
+
+Main Rule
+---------
+At any moment, the player should subconsciously think:
+
+    "I think I should go there..."
+
+Even if the game never explicitly says where to go.
+
+================================================================================
+1. MAIN OBJECTIVE PATH DESIGN
+================================================================================
+
+Best System for This Game
+-------------------------
+Use this combo:
+
+1. Soft Guidance
+   - Primary method.
+   - Guides the player without arrows, UI, or obvious objective markers.
+
+2. Gated Progression
+   - Secondary method.
+   - Controls the order of events by locking/unlocking paths, doors, and areas.
+
+3. Forced Redirection
+   - Used for horror moments.
+   - Manipulates the environment so the player feels lost while still being moved
+     toward the intended path.
+
+================================================================================
+2. SOFT GUIDANCE
+================================================================================
+
+Soft guidance means the environment quietly tells the player where to go.
+Do not rely on arrows or UI.
+
+Use these tools:
+
+A. Light = Direction
+--------------------
+Light tells the player what matters.
+
+Examples:
+- Brighter area = "go here"
+- Flickering light = "important"
+- Total darkness = "not yet"
+- Only one house has a porch light on = player naturally goes there
+
+B. Motion = Attention
+---------------------
+Humans notice movement first.
+
+Use movement to pull the player's eyes toward important areas.
+
+Examples:
+- Swinging object
+- Flickering TV
+- Moving curtain
+- Blinking light
+
+C. Sound = Invisible Arrow
+--------------------------
+Sound can guide the player without visual UI.
+
+Examples:
+- Whisper from a direction
+- Chain dragging
+- TV static
+- Crying
+- Wind
+
+The player naturally follows sound.
+
+D. Contrast = Importance
+------------------------
+Make important things stand out from everything else.
+
+Examples:
+- Everything dark -> one lit window
+- Everything quiet -> one noisy area
+- Everything looks the same -> one different object
+
+E. Landmarking
+--------------
+Always show important locations from multiple angles so the player builds a
+mental map.
+
+Possible landmarks:
+- Final house visible from far away
+- Church visible over rooftops
+- Red light in the distance
+
+The player should always have a mental target, even if they do not fully
+understand it yet.
+
+================================================================================
+3. GATED PROGRESSION
+================================================================================
+
+Gated progression controls flow.
+
+You do not tell the player "go here."
+Instead, you make the correct direction the only path that works.
+
+Examples:
+- Locked door -> player needs a key or note
+- Blocked road -> fallen tree prevents progress
+- Locked fence -> opens after a trigger
+- Door appears only after an event
+- Basement opens after church event
+
+Simple Progression Formula
+--------------------------
+
+    Explore -> Find item -> Trigger event -> Unlock next area
+
+This keeps the game structured without feeling like a checklist.
+
+================================================================================
+4. FORCED REDIRECTION
+================================================================================
+
+Forced redirection is used for horror control.
+This is where the game becomes scary because the world starts manipulating the
+player.
+
+Examples:
+- Player walks forward -> ends up back where they started
+- Player exits a house -> appears in a new location
+- Road loops into cul-de-sac
+- Door disappears behind them
+- Map changes after they turn around
+
+Purpose:
+- The player feels confused.
+- The designer still controls where the player goes.
+- The environment becomes part of the horror.
+
+================================================================================
+5. IDEAL FULL GAME PATH
+================================================================================
+
+Clean Structure
+---------------
+
+    Arrival Street
+        ↓
+    Lit House
+    Only visible light source.
+        ↓
+    Clue Found
+    Triggers neighborhood change.
+        ↓
+    Park
+    Sound + movement attracts player.
+        ↓
+    Cul-de-sac Loop
+    Forces redirection.
+        ↓
+    Church
+    Now unlocked + visible.
+        ↓
+    Basement
+    Forced progression.
+        ↓
+    Final House
+    Visible the whole time, now reachable.
+
+================================================================================
+5A. FIRST LIT-HOUSE PENANCE SILHOUETTE SCENE — EXPANDED EXPLANATION
+================================================================================
+
+Core Purpose
+------------
+This is the player's first real visual encounter with Penance, but it should NOT
+feel like a full monster reveal yet.
+
+The goal is not "big jumpscare." The goal is uncertainty.
+
+The player should go through this exact emotional chain:
+
+    "Wait... someone's inside."
+        ↓
+    "Is that a person?"
+        ↓
+    "Why are they standing like that?"
+        ↓
+    "That is not human."
+        ↓
+    "What the fuck was that?"
+        ↓
+    "Where did it go?"
+
+This moment works because the player is not immediately told what they saw.
+They are forced to question it.
+
+Design Rule
+-----------
+Make Penance look like a person at first glance and a mistake at second glance.
+
+Use this ratio:
+
+    80% person-shaped
+    20% deeply wrong
+
+If he looks too monstrous immediately, the mystery disappears.
+If he looks too normal, the fear disappears.
+
+He should sit right in the uncomfortable middle.
+
+Why This Scene Belongs in the Lit House
+---------------------------------------
+The lit house is already the player's first soft-guidance objective.
+It is the only warm, visible, inviting location in the dark neighborhood.
+
+That makes the moment stronger because the player naturally thinks:
+
+    "That house is probably safe."
+
+Then the silhouette corrupts that assumption.
+
+The house light becomes bait.
+The player is not just finding shelter. They are being pulled into the story.
+
+In-Story Reason Penance Is There
+--------------------------------
+Penance is not randomly wandering around the neighborhood.
+He is guiding, judging, and luring the player.
+
+The best canon explanation:
+
+    The lit house is connected to the first place where the neighborhood ignored
+    something terrible. It represents the beginning of the silence.
+
+Penance appears there because that house is one of the first places where the
+neighborhood's guilt leaks through.
+
+He is not there to kill the player yet.
+He is there to make the player witness.
+
+At this stage, Penance is:
+
+- Warning the player
+- Testing the player
+- Pulling the player deeper
+- Asking whether the player will also look away
+
+Short lore version:
+
+    Penance appears in the lit house because the light is a lure and the house
+    marks the first place the neighborhood ignored the truth. He is not there to
+    attack yet. He is there to pull the player toward the story and judge whether
+    they will look away too.
+
+Symbolic Reason
+---------------
+A lit house normally means safety.
+
+In horror, corrupting something safe is powerful.
+
+So this scene tells the player:
+
+- Safety is fake here.
+- Home is not safe.
+- Warm light does not mean comfort.
+- The neighborhood is wrong from the beginning.
+
+This is why the silhouette should be inside the warm lit room instead of outside
+in the street.
+
+The house should feel normal first, then wrong.
+
+Exact Player Experience
+-----------------------
+The scene should play like this:
+
+1. Player enters the street.
+   - It is raining.
+   - The neighborhood is dark.
+   - Most houses are dead and unlit.
+
+2. One house has a porch light or warm window light.
+   - This quietly tells the player: "go here."
+
+3. As the player approaches, they pass a front or side window.
+   - Inside, the room looks lived-in.
+   - There is a lamp, a chair, maybe curtains, maybe faint TV static.
+
+4. The player notices a figure inside.
+   - At first, it reads like a tall person standing in the room.
+   - It is not moving.
+   - It is fully backlit, so the player only sees the outline.
+
+5. On the second glance, the body feels wrong.
+   - The shoulders are too broad.
+   - The hood/head shape is not normal.
+   - The arms hang too low.
+   - The cloth hangs in an unnatural way.
+   - The head may be slightly tilted too far.
+
+6. A small flicker or lightning flash happens.
+   - Not a loud jumpscare.
+   - Just enough to sharpen the outline for a split second.
+
+7. The player looks again.
+   - The figure is gone.
+
+8. When the player enters the house later, nobody is there.
+   - This makes the player doubt what they saw.
+   - It also makes the house feel haunted without needing a full enemy encounter.
+
+The First Read / Second Read / Third Read
+-----------------------------------------
+This moment should be designed around three reads.
+
+First Read:
+
+    "Someone is inside."
+
+This happens because the silhouette is upright, human-height, and standing in a
+normal room.
+
+Second Read:
+
+    "Something is wrong with them."
+
+This happens because the proportions are slightly off.
+
+Third Read:
+
+    "That was Penance."
+
+This may happen later, after the church door or basement chase, when the player
+recognizes the same hood/shape.
+
+That delayed recognition is important. The player should remember the silhouette
+and think:
+
+    "Wait... that was the thing from the house."
+
+Best Visual Setup
+-----------------
+Use a backlit silhouette.
+
+Inside the room:
+
+- Warm lamp, ceiling light, or hallway light behind Penance
+- Bright enough to outline him
+- Not so bright that the whole room looks overexposed
+
+Outside the room:
+
+- Dark rainy street
+- Player mostly in darkness
+- Window frame visible
+- Light spilling out slightly
+
+Penance:
+
+- Body almost completely black
+- Face not visible
+- No front lighting
+- Only the outline reads
+
+The visual should be:
+
+    bright background + dark figure + readable contour
+
+Best Pose
+---------
+Use a still pose.
+
+Recommended pose:
+
+- Standing in profile or 3/4 angle
+- Head slightly lowered or slightly tilted
+- Shoulders broad
+- Arms hanging low
+- Cloth hanging downward
+- No sudden movement
+
+Why stillness matters:
+
+If Penance waves, lunges, or moves too much, the player instantly reads him as a
+monster.
+
+If he stands still, the player first reads him as a person.
+Then the fear comes from the question:
+
+    "Why is he standing like that?"
+
+Wrong Details to Add
+--------------------
+Do not show full monster detail yet.
+Only add one or two wrong details.
+
+Good wrong details:
+
+- Slightly too tall
+- Shoulders too wide
+- Hood/head shape not normal
+- Arms hanging too long
+- Head tilted too far
+- Cloth hanging where normal clothing should not
+- Chain outline visible for one frame or one angle
+
+Avoid:
+
+- Full face reveal
+- Obvious claws
+- Huge monster proportions
+- Weapon reveal
+- Running animation
+- Screaming jumpscare
+
+The player should not think:
+
+    "Monster enemy detected."
+
+They should think:
+
+    "Was that a person? No... wait... what was that?"
+
+Set Dressing Around the Silhouette
+----------------------------------
+Add normal life details inside the room so the player initially accepts the space
+as a real home.
+
+Good details:
+
+- Lamp on
+- Chair near window
+- Small table
+- Curtains
+- Faint TV static
+- Family photo frames, but hard to read
+- Old wallpaper
+- Slight dust in the light
+
+Why this helps:
+
+Normal objects make Penance feel like he almost belongs there.
+Then the player realizes he does not.
+
+That contrast creates dread.
+
+Audio Direction
+---------------
+Keep this moment quiet.
+
+Use:
+
+- Rain outside
+- Faint indoor hum
+- Maybe faint TV static
+- One tiny chain creak
+- Very soft low bass sting when the player notices the shape
+
+Do NOT use:
+
+- Loud scream
+- Big orchestra hit
+- Chase music
+- Monster roar
+
+This is not a jumpscare.
+This is a "did I just see that?" moment.
+
+Recommended Timing
+------------------
+Use a short reveal.
+
+Suggested timing:
+
+0.0s  Player enters window approach trigger.
+0.2s  Interior light subtly flickers or brightens.
+0.5s  Penance silhouette is visible.
+1.5s  Optional lightning flash / tiny flicker.
+1.8s  Penance disappears.
+2.0s  Room returns to normal.
+
+Total visible time:
+
+    1.0 to 2.0 seconds
+
+Do not leave him visible too long.
+The player should have just enough time to question it, not enough time to study
+it comfortably.
+
+Godot Implementation Concept
+----------------------------
+Use an Area3D trigger outside the window.
+
+Trigger conditions:
+
+- Player enters window approach zone
+- Event has not already played
+- Player is roughly facing the window
+
+Effect:
+
+- Show Penance silhouette mesh
+- Hold for about 1.5 seconds
+- Flicker room light once
+- Hide Penance silhouette
+- Optionally play faint chain creak
+
+Important:
+
+Only trigger this once.
+If repeated, it becomes predictable and loses power.
+
+Simple Pseudocode
+-----------------
+
+var house_silhouette_seen = false
+
+func _on_window_approach_trigger_entered():
+    if house_silhouette_seen:
+        return
+
+    if player_is_facing_window():
+        house_silhouette_seen = true
+        play_house_silhouette_event()
+
+func play_house_silhouette_event():
+    show_penance_silhouette()
+    play_faint_chain_creak()
+    flicker_house_light_once()
+    await get_tree().create_timer(1.5).timeout
+    hide_penance_silhouette()
+
+Practical Godot Node Setup
+--------------------------
+Suggested node structure:
+
+LitHouse
+├── WindowRevealTrigger (Area3D)
+├── InteriorRoomLight (OmniLight3D or SpotLight3D)
+├── WindowFrame / Glass
+├── PenanceSilhouetteMarker (Marker3D)
+├── PenanceSilhouetteMesh (hidden by default)
+├── LightFlickerAnimation (AnimationPlayer)
+└── HouseRevealAudio (AudioStreamPlayer3D)
+
+PenanceSilhouetteMesh should be simple at this stage.
+It does not need full detail because the player only sees the outline.
+
+Use a dark material:
+
+- Almost black albedo
+- Low roughness variation if needed
+- No bright front detail
+- Shape readability matters more than texture
+
+How to Prevent the Player Missing It
+------------------------------------
+Do not force a cutscene, but guide attention.
+
+Use one or more of these:
+
+- The window is on the natural path to the front door.
+- The light flickers exactly when the player is near.
+- A faint chain creak comes from inside the room.
+- The porch light leads the player's eye toward the window.
+- The window frame creates a clear view of the silhouette.
+
+Optional safety method:
+
+If the player enters the trigger but is not facing the window, delay the event
+until they look close enough toward it.
+
+Do not spin the camera hard.
+That feels cheap.
+
+What Happens After the Silhouette
+---------------------------------
+After the figure disappears, the player should still enter the house.
+
+Do not immediately attack them.
+
+Instead:
+
+- The room is empty.
+- The lamp is still on.
+- Maybe there is a note or clue.
+- Maybe the TV is still static.
+- Maybe there is a faint mark or disturbed object where Penance stood.
+
+This keeps the fear psychological.
+
+The player should feel:
+
+    "I know I saw something. So why is there nothing here?"
+
+Connection to Later Game Beats
+------------------------------
+This first silhouette should echo later scenes.
+
+Progression:
+
+1. Lit house silhouette
+   - Player only questions what they saw.
+
+2. Distant sightings / shadows
+   - Player starts recognizing the shape.
+
+3. Cul-de-sac church door opening
+   - Penance clearly interacts with the world.
+
+4. Church interior tension
+   - Penance feels closer.
+
+5. First basement jumpscare/chase
+   - Penance becomes an active threat.
+
+6. Second basement stalking
+   - Penance becomes a hunter.
+
+7. Post-gun encounter
+   - Penance proves the gun does not fully solve the problem.
+
+This pacing prevents the monster from being overexposed too early.
+
+Final House Scene Rule
+----------------------
+For the first lit-house sighting, remember:
+
+    quiet > loud
+    silhouette > detail
+    doubt > explanation
+    stillness > movement
+    wrong proportions > obvious monster design
+
+One-Line Version
+----------------
+The player should think someone is inside the lit house, then slowly realize the
+shape is too still, too wrong, and too impossible to be human.
+
+
+================================================================================
+6. PRACTICAL EXAMPLE IMPLEMENTATION
+================================================================================
+
+Start
+-----
+Player spawns and sees:
+- Dark street
+- Only one house has a light on
+
+Result:
+- Player naturally goes to the lit house.
+
+Inside the Lit House
+--------------------
+Player finds a note.
+Then:
+- Lights flicker
+- Player hears a sound outside
+
+Result:
+- Player exits the house.
+
+Outside After the Note
+----------------------
+The park becomes the next guide.
+
+Use:
+- Flickering park light
+- Moving swing
+- Faint sound
+
+Result:
+- Player goes to the park.
+
+After the Park
+--------------
+The road behind the player becomes blocked.
+The cul-de-sac is the only path.
+
+Result:
+- Player goes toward the cul-de-sac.
+
+Cul-de-sac
+----------
+Use a looping or dead-end mechanic.
+
+Example:
+- Player loops around or reaches the end.
+- After 2 loops, or after the dead-end trigger, the church event becomes active.
+
+Result:
+- Church becomes the new objective.
+
+Church
+------
+The church basement unlocks.
+
+Result:
+- Player is forced into the next horror section.
+
+After Basement
+--------------
+The final house is now lit.
+
+Result:
+- Player goes to the final house.
+
+================================================================================
+7. COMMON MISTAKES TO AVOID
+================================================================================
+
+Avoid these:
+
+1. Big open map with no direction.
+2. Too many enterable buildings.
+3. No landmarks, causing everything to look the same.
+4. No lighting contrast.
+5. No sound cues.
+6. Multiple objectives at once.
+7. Letting the player go everywhere immediately.
+
+================================================================================
+8. SIMPLE GODOT SYSTEM
+================================================================================
+
+Use trigger zones.
+
+Basic Pattern
+-------------
+
+    Player enters area -> run event -> change world
+
+Example
+-------
+
+    Enter house
+        -> play sound
+        -> flicker lights
+        -> unlock park gate
+        -> spawn Penance silhouette
+
+Core Godot Pieces
+-----------------
+- Area3D trigger zones
+- Boolean flags for story progress
+- AnimationPlayer for doors/lights/events
+- AudioStreamPlayer3D for spatial sound
+- Light3D nodes for guidance
+- Fog/particles for atmosphere
+
+================================================================================
+9. FIRST THINGS TO IMPLEMENT NOW
+================================================================================
+
+Start small. Build only this first:
+
+1. Make one house with a light on.
+2. Add a note pickup inside that house.
+3. Make the note pickup trigger an event.
+4. After the note event, make the park become active.
+
+If that works, the objective path is already solid.
+
+================================================================================
+10. CUL-DE-SAC CHURCH EVENT
+================================================================================
+
+Main Setpiece Goal
+------------------
+At the cul-de-sac point:
+
+- The player should feel lost because they reached a dead end.
+- The player should turn around and go backwards.
+- When the player goes back, Penance opens the church door ominously.
+- The church door was previously closed and inactive.
+- The player must have already walked past the church earlier.
+- The player must reach close to the end of the cul-de-sac first.
+- Only after turning back should the church door event happen.
+- A scary/ominous light should appear at the church door.
+
+Player Experience
+-----------------
+The intended emotional sequence:
+
+1. Player walks into the cul-de-sac.
+2. Player thinks: "Okay... dead end?"
+3. Player explores and nothing works.
+4. Player thinks: "I guess I go back..."
+5. Player starts walking back.
+6. Something feels off.
+7. Player looks toward the church.
+8. Penance is there.
+9. Penance slowly opens the door.
+10. Penance did not exist there before.
+11. Light spills out from the doorway.
+12. Player thinks: "I have to go there."
+
+================================================================================
+11. CUL-DE-SAC / CHURCH LAYOUT REQUIREMENT
+================================================================================
+
+The player must pass the church first, then reach the end, then go back.
+
+Layout
+------
+
+    Main Road
+        ↓
+    Church
+    Locked, dark, unimportant-looking at first.
+        ↓
+    Cul-de-sac Circle
+    Dead end.
+        ↓
+    Dead Tree / Blocked Exit / Nothing Works
+
+Key Rule
+--------
+The church is visible on the way in, but it looks inactive.
+
+Before the event:
+- Church door is closed.
+- No scary light.
+- No obvious reason to enter.
+- Penance is not visible.
+
+After the event:
+- Penance appears at the church door.
+- Door opens slowly.
+- Ominous light spills out.
+- Church becomes the new objective.
+
+================================================================================
+12. GODOT IMPLEMENTATION PLAN FOR CUL-DE-SAC EVENT
+================================================================================
+
+You need two main trigger zones.
+
+Trigger 1: Deep Cul-de-sac Trigger
+----------------------------------
+Name:
+
+    CulDeSac_End
+
+Placement:
+- Near the end of the cul-de-sac.
+- Far enough that the player clearly passed the church and reached the dead end.
+
+Condition:
+- Player enters the trigger zone.
+
+Effect:
+
+    player_reached_dead_end = true
+
+Purpose:
+- Confirms the player reached the dead end before the church event can happen.
+
+Trigger 2: Return Trigger
+-------------------------
+Name:
+
+    CulDeSac_Return
+
+Placement:
+- Between the cul-de-sac and the church.
+- Positioned so it triggers when the player is walking back toward the church.
+
+Condition:
+
+    player_reached_dead_end == true
+    event_triggered == false
+
+Optional extra condition:
+
+    player is moving back toward church
+
+Effect:
+
+    start_church_event()
+
+Purpose:
+- Makes sure the church moment only happens after the player turns back.
+
+================================================================================
+13. PENANCE CHURCH EVENT DETAILS
+================================================================================
+
+This should be a fake cutscene.
+It happens in-game, not as a full cinematic.
+
+Event Sequence
+--------------
+
+1. Spawn Penance.
+2. Slow or briefly lock the player.
+3. Play the church door animation.
+4. Turn on the doorway light.
+5. Play audio layers.
+6. Let Penance react.
+7. Unlock the church.
+
+Step 1: Spawn Penance
+---------------------
+Position:
+- At the church door.
+
+Rotation:
+- Facing the door at first.
+- Not facing the player initially.
+
+Animation:
+
+    idle -> reach -> open door
+
+Step 2: Slow or Lock Player Movement
+------------------------------------
+Optional, but useful.
+
+Options:
+- Disable input for about 2 seconds.
+- Or heavily reduce player movement speed.
+
+Purpose:
+- Forces the player to notice the door opening.
+- Makes the moment feel cinematic without needing a cutscene.
+
+Step 3: Door Animation
+----------------------
+Timeline:
+
+    0.0s -> door starts closed
+    1.0s -> door begins slow creak open
+    3.0s -> door fully open
+
+Add:
+- Creaking wood sound
+- Chain drag
+- Low bass rumble
+
+Step 4: Light Turns On
+----------------------
+This is critical.
+The light is what guides the player.
+
+Timing:
+- Turn on the light at the same time the door starts opening.
+
+Look:
+- Strong warm/orange light from inside the church
+- Fog or light spill outward
+- Slight flicker
+
+Visual Idea:
+- The church should feel like a mouth opening.
+
+Step 5: Penance Behavior After Door Opens
+-----------------------------------------
+Option A — Better Horror:
+- Penance stands still for 1 to 2 seconds.
+- Penance slowly turns head toward the player.
+- Penance disappears.
+
+Option B:
+- Penance walks inside slowly.
+- Penance vanishes in darkness.
+
+Recommended:
+- Use Option A.
+- It is creepier because the player feels noticed.
+
+================================================================================
+14. CHURCH LIGHTING SETUP
+================================================================================
+
+Before Event
+------------
+The church should be:
+- Very dark
+- No active light
+- Visually inactive
+- Easy to ignore, but still visible as a landmark
+
+During Event
+------------
+Add:
+- SpotLight3D or OmniLight3D inside the doorway
+- Warm orange/yellow color
+- High intensity but soft edges
+- Volumetric fog if possible
+- Slight flicker
+- Optional dust or mist particles
+
+Suggested Godot Light Direction
+-------------------------------
+Place the light just inside the church doorway, pointing outward.
+
+It should create:
+- A glowing doorway
+- Long shadows
+- Light spill onto the ground
+- Silhouette visibility for Penance
+
+================================================================================
+15. AUDIO SETUP
+================================================================================
+
+Audio sells the event.
+
+Layer these sounds:
+
+Before Event
+------------
+- Distant thunder
+- Quiet wind
+- Maybe very faint ambience
+
+Right Before Trigger
+--------------------
+- Sudden silence
+
+During Door Opening
+-------------------
+- Slow heavy door creak
+- Chain dragging
+- Low sub-bass rumble
+- Faint whisper, optional
+
+Purpose
+-------
+The player should feel that the world is reacting to them.
+
+================================================================================
+16. COMPLETE LOGIC FLOW
+================================================================================
+
+Full Flow
+---------
+
+    Player enters cul-de-sac
+        ↓
+    Player hits dead end
+        ↓
+    player_reached_dead_end = true
+        ↓
+    Player turns around and walks back
+        ↓
+    Return trigger fires
+        ↓
+    Player input slows or stops
+        ↓
+    Penance spawns at church
+        ↓
+    Door slowly opens
+        ↓
+    Light spills out
+        ↓
+    Penance reacts
+        ↓
+    Penance disappears or walks inside
+        ↓
+    Church is now unlocked
+        ↓
+    Church becomes the new objective
+
+================================================================================
+17. IMPORTANT DETAILS NOT TO SKIP
+================================================================================
+
+1. Do Not Trigger Too Early
+---------------------------
+The player must reach the dead end first.
+
+If the event triggers too early, the moment feels forced.
+
+The player needs time to think:
+
+    "Wait... this is a dead end."
+
+Then they turn back, and the scare happens.
+
+2. Make the Player Look at the Church
+-------------------------------------
+Use at least one of these:
+
+- Subtle camera turn
+- Sound from the church direction
+- Lightning flash revealing the silhouette
+- Door creak from the church direction
+- Ominous light suddenly turning on
+
+3. Do Not Overuse Penance
+-------------------------
+This works because the player has not seen Penance clearly too many times.
+
+Keep Penance rare.
+Make each appearance feel intentional.
+
+================================================================================
+18. QUICK PSEUDOCODE
+================================================================================
+
+var reached_dead_end = false
+var event_triggered = false
+
+func _on_culdesac_end_entered():
+    reached_dead_end = true
+
+func _on_return_trigger_entered():
+    if reached_dead_end and not event_triggered:
+        event_triggered = true
+        start_church_event()
+
+func start_church_event():
+    slow_player()
+    spawn_penance()
+    play_door_animation()
+    enable_church_light()
+    play_audio()
+
+================================================================================
+19. POSSIBLE GODOT NODE STRUCTURE
+================================================================================
+
+Neighborhood
+├── Player
+├── ObjectiveManager
+├── Church
+│   ├── Door
+│   ├── DoorAnimationPlayer
+│   ├── DoorwayLight
+│   ├── FogParticles
+│   ├── ChurchAudio
+│   └── PenanceSpawnPoint
+├── CulDeSac
+│   ├── CulDeSac_End_Area3D
+│   └── CulDeSac_Return_Area3D
+├── Park
+│   ├── ParkLight
+│   ├── Swing
+│   └── ParkAudio
+└── LitHouse
+    ├── PorchLight
+    ├── NotePickup
+    └── HouseEventTrigger
+
+================================================================================
+20. OBJECTIVE MANAGER FLAGS
+================================================================================
+
+Recommended flags:
+
+var found_first_note = false
+var park_active = false
+var reached_dead_end = false
+var church_event_triggered = false
+var church_unlocked = false
+var basement_unlocked = false
+var final_house_active = false
+
+Why use flags:
+- Prevents events from firing out of order.
+- Prevents repeated scares.
+- Keeps the level progression clean.
+- Avoids spaghetti logic.
+
+================================================================================
+21. CLEAN DEVELOPMENT CHECKLIST
+================================================================================
+
+Phase 1 — Basic Path
+--------------------
+[ ] Build arrival street.
+[ ] Add one lit house.
+[ ] Make other houses dark/inactive.
+[ ] Add note pickup inside lit house.
+[ ] Note pickup triggers lights/sound.
+[ ] Park becomes active after note.
+
+Phase 2 — Park Guidance
+-----------------------
+[ ] Add flickering park light.
+[ ] Add moving swing.
+[ ] Add faint sound source at park.
+[ ] Add trigger that blocks old path or guides toward cul-de-sac.
+
+Phase 3 — Cul-de-sac Setup
+--------------------------
+[ ] Place church before cul-de-sac.
+[ ] Church starts locked/dark.
+[ ] Player must pass church first.
+[ ] Cul-de-sac feels like a dead end.
+[ ] Add dead tree, blocked road, fence, or empty loop.
+[ ] Add CulDeSac_End trigger near the deep end.
+[ ] Add CulDeSac_Return trigger on the way back.
+
+Phase 4 — Penance Church Event
+------------------------------
+[ ] Spawn Penance at church door.
+[ ] Penance starts facing the door, not the player.
+[ ] Slow or briefly lock player movement.
+[ ] Animate church door opening slowly.
+[ ] Turn on warm ominous doorway light.
+[ ] Add fog/light spill from inside church.
+[ ] Add door creak audio.
+[ ] Add chain drag audio.
+[ ] Add bass rumble.
+[ ] Penance turns head toward player.
+[ ] Penance disappears or walks inside.
+[ ] Church becomes unlocked.
+
+Phase 5 — After Church
+----------------------
+[ ] Church basement unlocks.
+[ ] Basement becomes forced progression.
+[ ] Final house becomes lit after basement.
+[ ] Final house becomes reachable.
+
+================================================================================
+22. FINAL RESULT / TARGET FEELING
+================================================================================
+
+If done right, the player should feel this:
+
+    "Wait... that door wasn't open before...
+     Did something just OPEN it for me?"
+
+That is the exact horror vibe this sequence should create.
+
+The player should feel lost, watched, and guided at the same time.
+================================================================================
+23. OUTLAST-STYLE STEALTH / CHASE LOOP
+================================================================================
+
+Design Direction
+----------------
+Use an Outlast-style chase and stealth loop, but keep the AI simple and believable.
+Do not over-engineer the monster.
+
+Core rule:
+- If Penance sees the player, Penance chases.
+- If the player cuts line of sight, Penance does not instantly know their exact
+  location forever.
+- After losing line of sight, Penance searches based on the last known position
+  and any noises the player makes.
+
+Important Game Phase Rule
+-------------------------
+The game stays Outlast-style until the player acquires a gun.
+
+Before gun:
+- No real combat.
+- Player survives by running, hiding, crouching, breaking line of sight, and
+  managing stamina.
+- Fear comes from being helpless.
+
+After gun:
+- The game can shift into a survival/action hybrid.
+- The gun should not instantly remove fear.
+- Recommended: gun slows, stuns, interrupts, or delays Penance rather than fully
+  killing him easily.
+
+================================================================================
+24. PENANCE AI STATE MACHINE
+================================================================================
+
+Use a finite state machine.
+Keep it clean:
+
+    IDLE -> PATROL/STALK -> CHASE -> SEARCH -> STALK/CHASE
+
+Recommended States
+------------------
+
+1. IDLE
+   - Penance is inactive or hidden.
+   - Used before the player triggers major horror sequences.
+
+2. PATROL / STALK
+   - Penance moves around the environment using interest points.
+   - This should feel less like a guard route and more like a haunting presence.
+
+3. CHASE
+   - Penance has confirmed line of sight on the player.
+   - Penance runs directly toward the player.
+
+4. SEARCH
+   - Penance lost line of sight.
+   - Penance moves toward the last known player position.
+   - Penance listens for noise.
+   - If the player makes noise, Penance updates its target.
+
+CHASE State
+-----------
+Condition:
+
+    player is inside vision cone
+    AND player is within detection range
+    AND no wall blocks line of sight
+
+Behavior:
+- Run directly at the player.
+- Play aggressive audio.
+- Increase tension.
+- Update last_seen_position while the player is visible.
+
+LOST LINE OF SIGHT TIMER
+------------------------
+As soon as the player breaks line of sight:
+
+Full game:
+
+    los_timer_max = 3.5 seconds
+
+Demo:
+
+    los_timer_max = 2.5 seconds
+
+Rules:
+- If the player reappears before the timer ends -> return to CHASE.
+- If the timer finishes -> enter SEARCH.
+
+SEARCH State
+------------
+Search is what makes Penance feel smart without cheating.
+
+Behavior:
+- Move to last known player position.
+- Look around.
+- Move slower than chase speed.
+- React to sound.
+- Wander slightly around the last known position.
+- If the player makes a loud noise, update the target position.
+
+The player should feel:
+
+    "It lost me, but it is still looking."
+
+================================================================================
+25. LINE OF SIGHT SYSTEM
+================================================================================
+
+Use two checks:
+
+1. Vision cone / angle check.
+2. Raycast check from Penance to player.
+
+Detection Conditions
+--------------------
+Penance detects the player when:
+
+    distance_to_player < detection_range
+    AND player is inside vision_angle
+    AND raycast from Penance to player is not blocked by wall
+
+Suggested Detection Values
+--------------------------
+
+Full game:
+- Detection range: 12-16 meters
+- Vision angle: 90-110 degrees
+- Too-close instant detect: under 3 meters
+
+Demo:
+- Detection range: 10-13 meters
+- Recommended demo value: 12 meters
+- Vision angle can stay the same
+- Too-close instant detect can stay under 3 meters
+
+Important Rule
+--------------
+Penance should not always know the player's exact position.
+Use:
+- Current position only when player is visible.
+- Last seen position when line of sight is broken.
+- Noise position when player makes sound.
+
+Avoid:
+- Enemy always tracking player perfectly through walls.
+- Enemy vision being so wide that players feel helpless.
+
+================================================================================
+26. PLAYER MOVEMENT SYSTEM: WALK, SPRINT, CROUCH
+================================================================================
+
+Reminder
+--------
+Add player implementation for:
+- Crouching
+- Running/sprinting
+- Sprint stamina bar
+
+Core Player Speeds
+------------------
+Use real-world metric scale:
+
+    1 Godot unit = 1 meter
+
+Lock these values for both the demo and the full game.
+Do not change the core movement feel later.
+
+Player Speeds
+-------------
+
+Walk:
+
+    2.5 m/s
+
+Feel:
+- Cautious exploration.
+- Realistic enough for horror pacing.
+
+Sprint:
+
+    5.5 m/s
+
+Feel:
+- Panic run.
+- Fast enough to escape if the player manages stamina well.
+
+Crouch:
+
+    1.4 m/s
+
+Feel:
+- Slow and stealthy.
+- Slow enough to matter, but not so slow that it becomes annoying.
+
+Stamina System
+--------------
+
+Max stamina:
+
+    5 seconds of full sprint
+
+Drain rate:
+
+    20 stamina per second
+
+Regen delay:
+
+    1.5 seconds after stopping sprint
+
+Regen rate:
+
+    12 stamina per second
+
+Low Stamina Behavior
+--------------------
+When stamina is below 20%:
+- Play heavy breathing.
+- Add slight camera shake.
+- Reduce sprint speed from 5.5 m/s to about 4.8 m/s.
+
+Purpose:
+- Makes panic feel real.
+- Teaches player not to spam sprint.
+- Makes stamina management part of survival.
+
+Sprint Rules
+------------
+- Player can sprint for about 5 seconds max.
+- No sprint if stamina is 0.
+- If the player spams sprint, they get punished.
+- If the player manages stamina, they can escape.
+
+Crouch Rules
+------------
+When crouching:
+- Movement speed becomes 1.4 m/s.
+- Noise becomes very low.
+- Player is better at hiding after breaking line of sight.
+
+When standing/walking:
+- Movement speed is 2.5 m/s.
+- Noise is low to medium.
+
+When sprinting:
+- Movement speed is 5.5 m/s.
+- Noise is high.
+
+================================================================================
+27. PLAYER NOISE SYSTEM
+================================================================================
+
+Noise is critical for the Outlast-style system.
+Do not build complex sound physics yet.
+Fake it with noise events and radius values.
+
+Noise Rule
+----------
+When the player makes noise:
+
+    enemy_target_position = player_position
+
+If Penance is in SEARCH:
+
+    move toward noise position
+
+If the noise is very loud and close enough:
+
+    SEARCH -> CHASE or SEARCH -> INVESTIGATE
+
+Noise Values
+------------
+
+Full Game Noise Radius
+----------------------
+Crouch walk:
+
+    2-3 meters
+
+Normal walk:
+
+    6-8 meters
+
+Sprint:
+
+    12-15 meters
+
+Door/object interaction:
+
+    medium, around 6-10 meters depending on object
+
+Splashing water:
+
+    18+ meters
+
+Demo Noise Radius
+-----------------
+Make demo slightly more forgiving.
+
+Sprint noise:
+
+    10-12 meters
+
+Why:
+- Lets players experiment without instantly getting punished.
+- Makes the demo feel fair.
+
+Noise Design Goal
+-----------------
+The player should understand:
+
+    Sprint = fast but loud.
+    Crouch = slow but quiet.
+    Hiding works only if they stop making noise.
+
+================================================================================
+28. ENEMY SPEED TUNING
+================================================================================
+
+Keep these speeds locked for both demo and full game.
+Do not change the enemy/player core speed relationship later.
+
+Enemy Speeds
+------------
+
+Patrol/Search:
+
+    2.2 m/s
+
+Purpose:
+- Slower than player walking.
+- Lets careful players reposition.
+- Creates tension without feeling unfair.
+
+Chase:
+
+    4.8 m/s
+
+Purpose:
+- Slower than player sprint.
+- Faster than player walk/crouch.
+- Player can escape only by sprinting smartly and breaking line of sight.
+
+Aggro Burst, Optional:
+
+    5.6 m/s for 1-2 seconds
+
+Trigger:
+- When Penance is very close, around under 4 meters.
+
+Purpose:
+- Creates panic at the end of a chase.
+- Prevents players from feeling completely safe once close to escape.
+
+Speed Relationship
+------------------
+
+Player sprint:
+
+    5.5 m/s
+
+Enemy chase:
+
+    4.8 m/s
+
+Meaning:
+- Player can escape if they use stamina well.
+- Player gets caught if careless.
+
+Important Balance Rule
+----------------------
+The player should escape by decision-making, not just raw speed.
+
+If players say:
+- "I got caught instantly" -> enemy is too fast or detection is too harsh.
+- "I always escape easily" -> enemy is too slow or search is too weak.
+- "I do not need crouch" -> noise system is broken or too forgiving.
+
+================================================================================
+29. DEMO VS FULL GAME TUNING
+================================================================================
+
+Important Demo Philosophy
+-------------------------
+This is a demo, but the player speeds and enemy speeds should stay the same as
+full game.
+
+Reason:
+- The game feel should stay consistent.
+- Players should not feel scammed later because movement changed.
+- Muscle memory should carry from demo to full game.
+
+What Stays the Same in Demo and Full Game
+-----------------------------------------
+
+Player:
+- Walk: 2.5 m/s
+- Sprint: 5.5 m/s
+- Crouch: 1.4 m/s
+- Stamina: about 5 seconds full sprint
+- Same stamina drain/regen behavior
+
+Enemy:
+- Chase: 4.8 m/s
+- Search: 2.2 m/s
+- Optional burst: 5.6 m/s for 1-2 seconds
+
+What Changes for Demo
+---------------------
+
+LOS break timer:
+
+    Full game: 3.5 seconds
+    Demo: 2.5 seconds
+
+Search duration:
+
+    Full game: 6-10 seconds
+    Demo: 5-7 seconds
+    Recommended demo value: 6 seconds
+
+Detection range:
+
+    Full game: 12-16 meters
+    Demo: 10-13 meters
+    Recommended demo value: 12 meters
+
+Sprint noise:
+
+    Full game: 12-15 meters
+    Demo: 10-12 meters
+
+Why This Works
+--------------
+The demo gives players more success moments.
+They feel smart instead of punished.
+
+The player should think:
+
+    "Oh no, it saw me. Run.
+     I turned the corner.
+     Wait, it lost me.
+     I can actually survive this."
+
+The player should NOT think:
+
+    "I got caught instantly. This sucks."
+
+Key Rule
+--------
+Never change core movement feel.
+Only change how forgiving the enemy perception is.
+
+If 2.5 seconds LOS is too easy:
+- Keep the 2.5 second timer.
+- Make Penance move more aggressively toward the last seen position during the
+  LOS timer.
+- Do not change player movement speeds.
+
+================================================================================
+30. CHASE FLOW EXAMPLE
+================================================================================
+
+Basement Chase Flow
+-------------------
+
+1. Jumpscare hits.
+2. Player turns around.
+3. Penance is behind them.
+4. CHASE begins.
+5. Player sprints.
+6. Sprinting creates loud noise.
+7. Penance follows.
+8. Player turns a corner and breaks line of sight.
+9. LOS timer starts.
+10. If player keeps sprinting, noise helps Penance reacquire.
+11. If player crouches or hides, Penance enters SEARCH.
+12. Penance moves to last known position.
+13. Penance listens.
+14. If player makes noise, Penance moves toward the noise.
+15. If Penance sees player again, CHASE restarts.
+
+Player Choices During Chase
+---------------------------
+
+Sprint straight:
+- Fast, but loud.
+- Good for gaining distance.
+- Bad if the player never hides.
+
+Crouch in corner:
+- Slow, but quiet.
+- Good after breaking line of sight.
+- Bad if Penance is already too close.
+
+Hide behind object:
+- Breaks line of sight.
+- Works best if the player stops moving or crouches.
+
+Stop moving:
+- High survival chance if line of sight is already broken.
+- Dangerous if Penance is close or the player is in open space.
+
+Target Feel
+-----------
+The player should be able to escape without simply outrunning Penance forever.
+Escape should come from:
+- Breaking line of sight.
+- Stopping noise.
+- Crouching.
+- Hiding.
+- Managing stamina.
+
+================================================================================
+31. SIMPLE AI PSEUDOCODE
+================================================================================
+
+enum State { IDLE, STALK, CHASE, SEARCH }
+
+var state = IDLE
+var last_seen_position
+var noise_target_position
+var los_timer = 0.0
+var los_timer_max = 2.5 # demo value; use 3.5 for full game
+
+func update(delta):
+    if can_see_player():
+        state = CHASE
+        last_seen_position = player.position
+        los_timer = 0.0
+
+    elif state == CHASE:
+        los_timer += delta
+        if los_timer > los_timer_max:
+            state = SEARCH
+
+    if state == CHASE:
+        move_toward(player.position, chase_speed)
+
+    elif state == SEARCH:
+        move_toward(last_seen_position, search_speed)
+        listen_for_noise()
+
+    elif state == STALK:
+        stalk_near_player()
+
+func on_player_noise(noise_position, noise_radius):
+    if distance_to(noise_position) <= noise_radius:
+        noise_target_position = noise_position
+        if state == SEARCH or state == STALK:
+            move_toward(noise_target_position, search_speed)
+
+================================================================================
+32. GUN REVEAL / BASEMENT PHASE STRUCTURE
+================================================================================
+
+Main Goal
+---------
+Use the gun reveal as a reward and phase shift, not an instant power fantasy.
+
+Target Loop
+-----------
+
+    Church entry
+        ↓
+    Fear builds
+        ↓
+    Jumpscare
+        ↓
+    CHASE, first basement
+        ↓
+    Escape
+        ↓
+    Return upstairs
+        ↓
+    Gun revealed through monitor or hint
+        ↓
+    Find key
+        ↓
+    Player chooses to go back down
+        ↓
+    Basement is quieter and more tense
+        ↓
+    Penance stalks
+        ↓
+    Reach security room
+        ↓
+    Get gun
+        ↓
+    Penance reacts
+        ↓
+    New phase begins
+
+Design Goals
+------------
+This structure creates:
+- Fear -> reward loop
+- Player choice
+- Emotional payoff
+- Replayable tension
+
+Before Gun
+----------
+The player is vulnerable.
+Gameplay is mostly:
+- Explore.
+- Run.
+- Hide.
+- Break line of sight.
+- Crouch.
+- Avoid noise.
+
+After Gun
+---------
+The player has more agency, but Penance should still be scary.
+Recommended gun behavior:
+- Stuns Penance.
+- Slows Penance.
+- Interrupts an attack.
+- Creates distance.
+- Uses very limited ammo.
+
+Avoid:
+- Gun instantly kills Penance easily.
+- Gun makes stealth irrelevant.
+- Gun removes tension too early.
+
+Recommended timing:
+- Gun appears late, around 60-70% through the game or demo/full game arc.
+- In the demo, the gun can be teased, revealed, or obtained near the end as a
+  strong hook.
+
+================================================================================
+33. PENANCE PATROL / STALKING DESIGN
+================================================================================
+
+Core Rule
+---------
+Penance should control space, not follow fixed patrol paths.
+
+Avoid:
+
+    Walk A -> B -> C -> loop forever
+
+Use:
+
+    Zone-based presence + dynamic movement + interest points
+
+Why
+---
+Fixed patrol routes become predictable.
+Dynamic stalking makes Penance feel alive, supernatural, and tied to the space.
+
+================================================================================
+34. THREE MODES OF PENANCE PRESENCE
+================================================================================
+
+1. DORMANT
+----------
+Before the player triggers major fear, Penance is mostly not physically present.
+
+Use implied presence:
+- Distant silhouettes.
+- Lightning flashes.
+- Reflections.
+- Shadows.
+- Sounds with no visible source.
+
+Purpose:
+- Builds fear before real AI appears.
+- Makes Penance feel mythic and rare.
+
+2. STALKING
+-----------
+This is the most important mode, especially during the second basement visit.
+
+Penance moves between invisible interest points instead of fixed patrol routes.
+
+Interest Point Examples:
+- Hallway corners.
+- Doorways.
+- End of corridors.
+- Behind obstacles.
+- Intersections.
+- Near objectives.
+- Near the security room.
+
+Behavior:
+- Pick a nearby interest point.
+- Move there quietly.
+- Pause.
+- Maybe appear briefly.
+- Despawn, relocate, or move again.
+
+The player should feel:
+
+    "It is not chasing me right now...
+     but it is definitely here."
+
+3. CHASING
+----------
+Chase begins when:
+- Penance confirms line of sight.
+- Or the player makes loud noise nearby.
+
+Then:
+
+    STALKING -> CHASE -> SEARCH -> STALKING or CHASE
+
+================================================================================
+35. INTEREST POINT SYSTEM
+================================================================================
+
+Basement Example Layout
+-----------------------
+
+    Stairs
+        ↓
+    Main Hall              [Interest Point]
+        ↓
+    Corner A               [Interest Point]
+        ↓
+    Flooded Hall           [Interest Point]
+        ↓
+    Side Corridor          [Interest Point]
+        ↓
+    Security Room          [High-Priority Interest Point]
+
+How Many Points
+---------------
+For the second basement visit:
+
+    6-10 interest points
+
+Recommended first implementation:
+
+    6-8 interest points
+
+Placement Rules
+---------------
+Place interest points:
+- Around corners.
+- Behind objects.
+- Near doorways.
+- Near intersections.
+- Near objective paths.
+- Near the security room.
+- Slightly outside direct player view.
+
+Do not place points:
+- In direct open view.
+- Too close to the player.
+- In spots where Penance appears unfairly.
+- In places where the player sees Penance teleport.
+
+Simple Stalking Logic
+---------------------
+
+    pick_random_interest_point_near_player()
+
+    if player_looking_at_point:
+        delay_spawn()
+
+    spawn_penance_at_point()
+
+    wait 1-3 seconds
+
+    despawn_or_move()
+
+Key Trick
+---------
+Never spawn Penance in direct view.
+
+Instead spawn:
+- Just outside the player's vision.
+- Behind the player.
+- Around a corner.
+- In darkness.
+
+================================================================================
+36. PHASE-BY-PHASE PENANCE LOCATION PLAN
+================================================================================
+
+Phase 1: Before Church Door
+---------------------------
+Penance should not be active as normal AI yet.
+
+Use only visual tricks:
+- Distant shape.
+- Shadow.
+- Reflection.
+- Sound.
+- Very rare silhouette.
+
+Purpose:
+- Builds dread.
+- Keeps Penance mysterious.
+
+Phase 2: Church Interior
+------------------------
+Use rare stalking appearances.
+
+Rules:
+- Very short appearances.
+- Mostly psychological.
+- Do not overexpose Penance.
+
+Purpose:
+- Makes the church feel unsafe.
+- Still saves the real chase for the basement.
+
+Phase 3: First Basement Visit
+-----------------------------
+Use mostly scripted horror and one major chase.
+
+Rules:
+- No full patrol system yet.
+- Player experiences a jumpscare.
+- Penance starts the first chase.
+- Player escapes.
+
+Purpose:
+- Teaches the player that Penance is dangerous.
+- Introduces the chase/LOS system.
+
+Phase 4: Second Basement Visit
+------------------------------
+This is where stalking/patrol matters most.
+
+Setup:
+- 6-10 interest points.
+- Weighted toward the player direction and objective route.
+- Security room gets high priority.
+
+Behavior:
+- Penance stays roughly 10-20 meters from the player.
+- Penance moves between points.
+- Penance occasionally reveals itself.
+- Penance reacts to noise.
+- Penance can transition into chase.
+
+Purpose:
+- Basement feels alive and unsafe.
+- Player feels watched even when not being chased.
+
+================================================================================
+37. STALKING POINT WEIGHTING
+================================================================================
+
+Use simple weighting to make Penance feel smart without advanced AI.
+
+Rules
+-----
+
+If player is moving fast:
+
+    bias_points_ahead_of_player()
+
+Meaning:
+- Penance feels like it is cutting the player off.
+
+If player is crouching:
+
+    bias_points_behind_player()
+
+Meaning:
+- Penance feels like it is quietly stalking.
+
+If player is near objective:
+
+    increase_spawn_chance_near_objective()
+
+Meaning:
+- Penance protects important spaces.
+
+If player makes noise:
+
+    move_or_spawn_near_noise_position()
+
+Meaning:
+- Noise matters.
+
+If player is looking directly at a spawn point:
+
+    delay_spawn_or_choose_new_point()
+
+Meaning:
+- Prevents unfair visible teleporting.
+
+================================================================================
+38. PENANCE STALKING AUDIO
+================================================================================
+
+Sound Integration
+-----------------
+When Penance is stalking, use audio to imply location and movement.
+
+Possible sounds:
+- Faint chains.
+- Slow footsteps.
+- Wet cloth dragging.
+- Breathing.
+- Wood creaks.
+- Metal scrape.
+- Distant whisper.
+
+Important Trick
+---------------
+Audio can be slightly misleading.
+
+Examples:
+- Chains faintly heard from the next interest point.
+- Footsteps echo slightly off-position.
+- Sound comes from darkness near a corner.
+
+Purpose:
+- Player feels surrounded.
+- Player cannot perfectly predict Penance.
+- Tension builds even without direct sight.
+
+================================================================================
+39. PATROL / STALKING COMMON MISTAKES
+================================================================================
+
+Avoid these:
+
+1. Fixed patrol routes.
+   - Too predictable.
+
+2. Enemy always visible.
+   - Removes mystery.
+
+3. Enemy too far away.
+   - Removes pressure.
+
+4. Enemy always behind player.
+   - Becomes repetitive and cheap.
+
+5. Instant teleport in front of player.
+   - Feels unfair.
+
+6. Too frequent appearances.
+   - Overexposes Penance.
+
+7. Spawning in direct view.
+   - Breaks immersion.
+
+8. Enemy always knowing exact player location.
+   - Feels like cheating.
+
+================================================================================
+40. IMPLEMENTATION ORDER FOR AI / PLAYER SYSTEMS
+================================================================================
+
+Do not build everything at once.
+Build in this order.
+
+Step 1: Basic Player Movement
+-----------------------------
+[ ] Walk at 2.5 m/s.
+[ ] Sprint at 5.5 m/s.
+[ ] Crouch at 1.4 m/s.
+[ ] Add stamina bar.
+[ ] Add 5-second sprint limit.
+[ ] Add stamina drain.
+[ ] Add stamina regen delay.
+[ ] Add stamina regen.
+[ ] Add heavy breathing under 20% stamina.
+
+Step 2: Basic Enemy Chase
+-------------------------
+[ ] Add Penance character controller/nav agent.
+[ ] Add LOS detection.
+[ ] Add vision cone.
+[ ] Add raycast wall check.
+[ ] If Penance sees player, chase at 4.8 m/s.
+
+Step 3: LOS Break -> Search
+---------------------------
+[ ] Add LOS timer.
+[ ] Demo timer = 2.5 seconds.
+[ ] Full game timer = 3.5 seconds.
+[ ] After timer ends, enter SEARCH.
+[ ] Search moves to last known position at 2.2 m/s.
+[ ] Search lasts 5-7 seconds in demo.
+[ ] Search lasts 6-10 seconds in full game.
+
+Step 4: Noise System
+--------------------
+[ ] Crouch noise radius = 2-3m.
+[ ] Walk noise radius = 6-8m.
+[ ] Sprint noise radius = 10-12m in demo.
+[ ] Sprint noise radius = 12-15m in full game.
+[ ] Interaction noise radius = about 6-10m.
+[ ] Splash noise radius = 18m+.
+[ ] If Penance is searching/stalking and hears noise, move toward noise.
+
+Step 5: Stalking / Interest Points
+----------------------------------
+[ ] Place 6-8 interest points in the basement first.
+[ ] Later expand to 6-10 if needed.
+[ ] Pick points near player every 3-6 seconds.
+[ ] Do not spawn Penance in direct view.
+[ ] If player looks at point, delay or choose a new point.
+[ ] Spawn Penance briefly for 1-3 seconds.
+[ ] Despawn or move after the reveal.
+[ ] If player makes loud noise, update target.
+
+Step 6: Gun Phase
+-----------------
+[ ] Keep no-combat Outlast style before gun.
+[ ] Reveal gun through monitor or hint after first escape.
+[ ] Require key before returning to basement/security room.
+[ ] Let player choose to go back down.
+[ ] Make second basement quieter and more tense.
+[ ] Use stalking system heavily before gun pickup.
+[ ] After gun pickup, start a new phase.
+[ ] Gun should stun/slow/interrupt, not instantly remove fear.
+
+================================================================================
+41. FINAL LOCKED VALUES SUMMARY
+================================================================================
+
+World Scale
+-----------
+
+    1 Godot unit = 1 meter
+
+Player Speeds
+-------------
+
+    Walk:   2.5 m/s
+    Sprint: 5.5 m/s
+    Crouch: 1.4 m/s
+
+Player Stamina
+--------------
+
+    Full sprint time: 5 seconds
+    Drain rate: 20 per second
+    Regen delay: 1.5 seconds
+    Regen rate: 12 per second
+    Low stamina threshold: 20%
+    Low stamina sprint speed: 4.8 m/s
+
+Enemy Speeds
+------------
+
+    Search/Patrol: 2.2 m/s
+    Chase:         4.8 m/s
+    Optional burst: 5.6 m/s for 1-2 seconds under 4m distance
+
+LOS Timer
+---------
+
+    Demo:      2.5 seconds
+    Full game: 3.5 seconds
+
+Search Duration
+---------------
+
+    Demo:      5-7 seconds, recommended 6 seconds
+    Full game: 6-10 seconds
+
+Detection Range
+---------------
+
+    Demo:      10-13m, recommended 12m
+    Full game: 12-16m
+
+Vision Angle
+------------
+
+    90-110 degrees
+
+Instant Detect Distance
+-----------------------
+
+    Under 3m
+
+Noise Radius
+------------
+
+    Crouch:      2-3m
+    Walk:        6-8m
+    Sprint demo: 10-12m
+    Sprint full: 12-15m
+    Interaction: 6-10m
+    Splash:      18m+
+
+Penance Stalking Distance
+-------------------------
+
+    Second basement: roughly 10-20m from player
+
+Interest Points
+---------------
+
+    First pass: 6-8 basement points
+    Expanded pass: 6-10 basement points
+
+================================================================================
+42. FINAL TARGET FEEL
+================================================================================
+
+The player should feel:
+
+    "I can survive this if I stay calm."
+
+But also:
+
+    "If I panic, run loudly, or waste stamina, Penance will find me."
+
+Before the gun:
+- Fear comes from helplessness.
+- Player survives through movement, stealth, and decisions.
+
+After the gun:
+- Player gets emotional payoff.
+- Player has more agency.
+- Penance still remains dangerous.
+
+The system should create:
+- Fear -> reward loop.
+- Player choice.
+- Emotional payoff.
+- Replayable tension.
+- A demo that feels fair and polished.
+
+
+================================================================================
+43. DEMO POLISH / RELIABILITY CHECKLIST — WHAT ELSE TO WORRY ABOUT
+================================================================================
+
+At this stage, the demo should NOT be about adding more random features.
+The main goal now is making sure the experience does not break.
+
+The demo succeeds because of:
+
+- polish
+- pacing
+- reliability
+- clear player guidance
+- strong audio/lighting
+- clean fail/retry flow
+
+The demo fails if the player feels confused, scammed, stuck, or like the systems are broken.
+
+Core Rule
+---------
+
+Before adding anything else, ask:
+
+    "Can a random player finish the demo without me explaining anything?"
+
+If the answer is no, fix that before adding more content.
+
+-------------------------------------------------------------------------------
+1. GAME-BREAKING / IMMERSION-BREAKING ISSUES — TOP PRIORITY
+-------------------------------------------------------------------------------
+
+These matter more than extra scares, lore, models, or new mechanics.
+
+Check for:
+
+- Player gets stuck on geometry.
+- Player clips into props, walls, stairs, fences, or doorframes.
+- Doors do not open correctly.
+- Locked doors stay locked after they should unlock.
+- Triggers fire twice.
+- Triggers never fire.
+- Penance spawns directly in front of the player awkwardly.
+- Penance appears in a way that looks like a bug instead of horror.
+- Chase path can be broken.
+- Player can escape the scripted chase route.
+- Player can miss the key and get softlocked.
+- Player can miss the gun and get softlocked.
+- Player can trigger events out of order.
+- Player can leave an area before the event finishes and break progression.
+
+Most Important Rule
+-------------------
+
+The player should ALWAYS be able to finish the demo without confusion or bugs.
+
+A scary demo with one softlock feels worse than a simpler demo that works cleanly.
+
+-------------------------------------------------------------------------------
+2. PLAYER ALWAYS KNOWS WHAT TO DO NEXT
+-------------------------------------------------------------------------------
+
+The game should not use obvious UI arrows, but the player still needs direction.
+
+At every moment, ask:
+
+    "If I was a random player, would I know where to go?"
+
+The player should feel like they discovered the next path naturally.
+They should not feel like they are wandering randomly.
+
+Use soft guidance:
+
+Lighting
+--------
+
+- Bright area = go here.
+- Flickering light = important.
+- Ominous light = danger/objective.
+- Darkness = not yet / unsafe / blocked.
+
+Sound
+-----
+
+- Noise from a direction pulls the player forward.
+- Bell, chain, whisper, TV static, rain shift, or door creak can guide attention.
+
+Framing
+-------
+
+- Put important doors/windows in the player's natural view.
+- Center the church door after the cul-de-sac return.
+- Frame the security room clearly when the player gets close.
+
+Motion
+------
+
+- Flicker lights.
+- Move curtains.
+- Swing objects.
+- Let a door slowly open.
+
+Good Demo Feeling
+-----------------
+
+The player should think:
+
+    "I think I should go there."
+
+Not:
+
+    "Where the hell am I supposed to go?"
+
+-------------------------------------------------------------------------------
+3. PACING — THIS IS HUGE
+-------------------------------------------------------------------------------
+
+The demo pacing should feel like:
+
+    Calm -> Weird -> Uneasy -> Scared -> PANIC -> Relief -> Scared again -> End
+
+This pacing is more important than adding more monsters or more mechanics.
+
+Common Mistakes
+---------------
+
+Too much nothing:
+- Player walks for too long with no change.
+- No sound cue.
+- No visual event.
+- No objective feeling.
+
+Too many scares too fast:
+- Player gets numb.
+- Penance stops feeling special.
+- The demo becomes noisy instead of scary.
+
+How to Fix Slow Sections
+------------------------
+
+If a section feels boring, add one small atmospheric signal:
+
+- sound cue
+- tiny movement
+- light flicker
+- environmental change
+- shadow crossing a window
+- distant bell
+- door creak
+- monitor flicker
+
+Do NOT always add a jumpscare.
+Small tension is often better.
+
+How to Fix Overly Intense Sections
+----------------------------------
+
+If the player is overwhelmed, add breathing space:
+
+- quiet hallway
+- slower walk moment
+- temporary safety
+- readable objective
+- short pause before the next event
+
+Important Rule
+--------------
+
+Scares need quiet space around them.
+If everything is intense, nothing feels intense.
+
+-------------------------------------------------------------------------------
+4. VISIBILITY / DARKNESS BALANCE
+-------------------------------------------------------------------------------
+
+This can ruin horror demos if tuned badly.
+
+Bad Darkness
+------------
+
+- Player sees nothing.
+- Player gets lost.
+- Player misses doors.
+- Player walks into walls.
+- Player thinks the game is broken.
+
+Bad Brightness
+--------------
+
+- Player sees everything.
+- Penance loses mystery.
+- The environment stops feeling dangerous.
+
+Good Horror Visibility
+----------------------
+
+The player should see just enough.
+
+Test these questions:
+
+- Can the player clearly see doorways?
+- Can the player barely see down long hallways?
+- Does the flashlight feel useful?
+- Is the flashlight not too overpowered?
+- Can the player read the church entrance?
+- Can the player identify the basement exit/security room?
+- Can the player see enough during the chase to react?
+
+Lighting Goal
+-------------
+
+Make darkness scary, not annoying.
+
+-------------------------------------------------------------------------------
+5. AUDIO CONSISTENCY
+-------------------------------------------------------------------------------
+
+Audio sells the whole demo.
+A simple scene with strong audio feels polished.
+A detailed scene with broken audio feels cheap.
+
+Make sure:
+
+- Footsteps always play.
+- Rain is consistent.
+- Indoor/outdoor audio transitions are smooth.
+- Penance sounds feel directional.
+- Chase audio starts and ends cleanly.
+- Gunshot sounds impactful.
+- Door creaks and chain sounds are synced with animation.
+- The bell sound is clear and memorable.
+- No accidental silence happens.
+
+Silence Rule
+------------
+
+Silence should feel intentional, not like a bug.
+
+Good silence examples:
+
+- right before Penance opens the church door
+- right after the basement door closes
+- right before the post-gun false relief scare
+- right before the demo ending monitor flicker
+
+Bad silence examples:
+
+- footsteps stop for no reason
+- rain cuts out randomly
+- chase music disappears mid-chase
+- ambience stops because of a trigger bug
+
+-------------------------------------------------------------------------------
+6. PLAYER CONTROL FEEL
+-------------------------------------------------------------------------------
+
+If movement feels bad, everything feels bad.
+
+Check:
+
+- Turning is not too slow.
+- Turning is not too fast.
+- Sprint responds instantly.
+- Crouch feels intentional.
+- Sprint bar/stamina feedback is readable.
+- Low stamina breathing is clear.
+- No input delay.
+- Player does not slide too much.
+- Player does not stop on tiny geometry.
+- Stairs feel smooth.
+
+Locked Movement Values
+----------------------
+
+Keep these consistent for demo and full game:
+
+    Walk:   2.5 m/s
+    Sprint: 5.5 m/s
+    Crouch: 1.4 m/s
+
+Do not change the core movement feel between demo and final.
+Only change enemy perception/tuning if the demo needs to be easier.
+
+-------------------------------------------------------------------------------
+7. CAMERA FEEL
+-------------------------------------------------------------------------------
+
+Camera feel is subtle, but it affects whether the game feels polished.
+
+Recommended Camera Additions
+----------------------------
+
+- Slight head bob while walking.
+- Stronger but still controlled movement while sprinting.
+- Small camera shake on major events.
+- Slight camera reaction during door slam/door close/gunshot.
+- Tighter camera feel in narrow basement/crawl spaces.
+
+Avoid:
+
+- excessive head bob
+- motion sickness
+- huge random camera shake
+- forced camera movement too often
+- taking control away from the player for too long
+
+Rule
+----
+
+Use camera effects to support fear, not fight the player.
+
+-------------------------------------------------------------------------------
+8. FAIL + RETRY FLOW
+-------------------------------------------------------------------------------
+
+Players will get caught.
+That is fine.
+The retry flow must be clean.
+
+Make sure:
+
+- Death/failure is clear.
+- Player understands they were caught.
+- Restart is fast.
+- No long reload screens.
+- The game resets triggers correctly.
+- Penance does not remain in a broken state after retry.
+- Doors reset correctly.
+- Key/gun states reset correctly if needed.
+- Chase music stops and restarts correctly.
+
+Good Retry Feeling
+------------------
+
+The player should think:
+
+    "I messed up. I want to try again."
+
+Not:
+
+    "The game broke."
+
+-------------------------------------------------------------------------------
+9. DEMO ENDING CLARITY
+-------------------------------------------------------------------------------
+
+The player should KNOW the demo is finished.
+
+Do not leave them wandering after the final scare.
+
+Recommended Ending
+------------------
+
+After the player escapes the basement and sees the security monitor/TV:
+
+- monitor flickers
+- Penance appears somewhere impossible
+- Penance turns slightly toward the camera
+- screen glitches
+- cut to black
+- title card appears
+
+Ending Text Options
+-------------------
+
+Option A:
+
+    PENANCE
+    This was only the first descent.
+
+Option B:
+
+    DEMO COMPLETE
+    PENANCE
+
+Option C:
+
+    PENANCE
+    The door was never open for you.
+
+Best Pick
+---------
+
+Use a strong title card instead of overexplaining.
+The demo should end with mystery, but the player should still understand the demo is over.
+
+-------------------------------------------------------------------------------
+10. PLAYTEST WITH SOMEONE WHO KNOWS NOTHING
+-------------------------------------------------------------------------------
+
+This is one of the most important steps.
+
+Do this:
+
+- Let someone play without explaining anything.
+- Do not guide them.
+- Do not tell them where to go.
+- Do not explain the mechanics.
+- Watch what they naturally do.
+
+Look for:
+
+- where they get lost
+- where they get bored
+- where they get scared
+- where they break the system
+- where they miss important cues
+- where they misunderstand objectives
+- where they do something unexpected
+
+Playtest Rule
+-------------
+
+If one player gets confused, watch carefully.
+If multiple players get confused in the same spot, the design is the problem.
+
+-------------------------------------------------------------------------------
+11. THINGS NOT TO WORRY ABOUT YET
+-------------------------------------------------------------------------------
+
+Do NOT waste demo time on:
+
+- perfect AAA textures
+- full lore system
+- multiple endings
+- advanced UI
+- full save system
+- full combat polish
+- extra enemies
+- huge open map
+- too many explorable houses
+- complicated inventory
+- advanced enemy AI everywhere
+- full final-game balance
+
+The demo does not need to prove every feature.
+The demo needs to prove the core experience.
+
+Core Demo Promise
+-----------------
+
+The player should leave thinking:
+
+    "That was scary, polished, and I want to know what happens next."
+
+-------------------------------------------------------------------------------
+12. FINAL PRE-DEMO CHECKLIST
+-------------------------------------------------------------------------------
+
+Before calling the demo done, verify:
+
+[ ] Player never gets stuck.
+[ ] Player always knows where to go.
+[ ] All triggers fire correctly.
+[ ] No trigger fires twice unless intended.
+[ ] Penance never spawns awkwardly.
+[ ] First lit-house silhouette works.
+[ ] Cul-de-sac dead-end flow works.
+[ ] Church door opening setpiece works.
+[ ] First basement scripted chase works 100% of the time.
+[ ] Second basement stalking moment works.
+[ ] Basement door close moment works.
+[ ] Key pickup cannot be missed in a softlocking way.
+[ ] Gun reveal is clear.
+[ ] Gun pickup works.
+[ ] Gun shot reaction works.
+[ ] Post-gun scare works.
+[ ] Audio is consistent.
+[ ] Lighting guides the player.
+[ ] Darkness is scary but playable.
+[ ] Restart after death works.
+[ ] Ending hits clearly.
+[ ] Title card/demo end is obvious.
+
+Honest Take
+-----------
+
+You are not missing features anymore.
+
+At this point, demo success depends on:
+
+    polish, pacing, and reliability — not more ideas.
+
+A smaller demo that works perfectly is better than a bigger demo that breaks.
+
+================================================================================
+END OF FILE
+================================================================================

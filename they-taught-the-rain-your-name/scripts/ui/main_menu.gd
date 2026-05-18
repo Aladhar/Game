@@ -1,6 +1,7 @@
 extends Control
 
 @onready var play_button: Button = $ContentRoot/MainLayout/ButtonStack/PlayButton
+@onready var legacy_button: Button = $ContentRoot/MainLayout/ButtonStack/LegacyPrototypeButton
 @onready var options_button: Button = $ContentRoot/MainLayout/ButtonStack/OptionsButton
 @onready var quit_button: Button = $ContentRoot/MainLayout/ButtonStack/QuitButton
 
@@ -10,12 +11,14 @@ extends Control
 @onready var volume_slider: HSlider = $OptionsPanel/OptionsMargin/OptionsVBox/VolumeSlider
 @onready var mouse_slider: HSlider = $OptionsPanel/OptionsMargin/OptionsVBox/MouseSensitivitySlider
 
-const GAME_SCENE: String = "res://scenes/main/rain_name_prototype.tscn"
+const GAME_SCENE: String = "res://scenes/blockout/suburban_horror_blockout.tscn"
+const LEGACY_SCENE: String = "res://scenes/main/rain_name_prototype.tscn"
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 	play_button.pressed.connect(_on_play_pressed)
+	legacy_button.pressed.connect(_on_legacy_pressed)
 	options_button.pressed.connect(_on_options_pressed)
 	quit_button.pressed.connect(_on_quit_pressed)
 	back_button.pressed.connect(_on_back_pressed)
@@ -28,6 +31,11 @@ func _on_play_pressed() -> void:
 	var err: Error = get_tree().change_scene_to_file(GAME_SCENE)
 	if err != OK:
 		push_error("Failed to load gameplay scene: " + GAME_SCENE + " error=" + str(err))
+
+func _on_legacy_pressed() -> void:
+	var err: Error = get_tree().change_scene_to_file(LEGACY_SCENE)
+	if err != OK:
+		push_error("Failed to load legacy prototype scene: " + LEGACY_SCENE + " error=" + str(err))
 
 func _on_options_pressed() -> void:
 	options_panel.visible = true

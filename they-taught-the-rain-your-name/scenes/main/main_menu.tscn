@@ -1,107 +1,123 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene format=3 uid="uid://dk2qvjiw05rla"]
 
-[ext_resource type="Script" path="res://scripts/ui/main_menu.gd" id="1_menu"]
+[ext_resource type="Script" uid="uid://bdutw6ejwbfck" path="res://scripts/ui/main_menu.gd" id="1_menu"]
 
-[node name="MainMenu" type="Control"]
+[node name="MainMenu" type="Control" unique_id=527688006]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_menu")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="." unique_id=1205079794]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color(0.002, 0.005, 0.008, 1)
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
-[node name="StormTint" type="ColorRect" parent="."]
+[node name="StormTint" type="ColorRect" parent="." unique_id=366540776]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0.015, 0.045, 0.065, 0.42)
 
-[node name="VignetteLeft" type="ColorRect" parent="."]
+[node name="VignetteLeft" type="ColorRect" parent="." unique_id=1699824616]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.48
 anchor_bottom = 1.0
 color = Color(0, 0, 0, 0.28)
 
-[node name="ContentRoot" type="MarginContainer" parent="."]
+[node name="ContentRoot" type="MarginContainer" parent="." unique_id=1279919389]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/margin_left = 72
 theme_override_constants/margin_top = 72
 theme_override_constants/margin_right = 72
 theme_override_constants/margin_bottom = 56
 
-[node name="MainLayout" type="VBoxContainer" parent="ContentRoot"]
+[node name="MainLayout" type="VBoxContainer" parent="ContentRoot" unique_id=858285810]
 layout_mode = 2
 theme_override_constants/separation = 28
 
-[node name="TitleBlock" type="VBoxContainer" parent="ContentRoot/MainLayout"]
+[node name="TitleBlock" type="VBoxContainer" parent="ContentRoot/MainLayout" unique_id=5752391]
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="Title" type="Label" parent="ContentRoot/MainLayout/TitleBlock"]
+[node name="Title" type="Label" parent="ContentRoot/MainLayout/TitleBlock" unique_id=1662835714]
 layout_mode = 2
 theme_override_font_sizes/font_size = 46
 text = "THEY TAUGHT THE RAIN YOUR NAME"
 
-[node name="Subtitle" type="Label" parent="ContentRoot/MainLayout/TitleBlock"]
+[node name="Subtitle" type="Label" parent="ContentRoot/MainLayout/TitleBlock" unique_id=449990696]
 layout_mode = 2
 theme_override_font_sizes/font_size = 18
 text = "A storm horror prototype where the rain learns what you do."
 
-[node name="SpacerA" type="Control" parent="ContentRoot/MainLayout"]
+[node name="SpacerA" type="Control" parent="ContentRoot/MainLayout" unique_id=1804751145]
 custom_minimum_size = Vector2(0, 52)
 layout_mode = 2
 
-[node name="ButtonStack" type="VBoxContainer" parent="ContentRoot/MainLayout"]
+[node name="ButtonStack" type="VBoxContainer" parent="ContentRoot/MainLayout" unique_id=1990931050]
 custom_minimum_size = Vector2(340, 0)
 layout_mode = 2
 theme_override_constants/separation = 12
 
-[node name="PlayButton" type="Button" parent="ContentRoot/MainLayout/ButtonStack"]
+[node name="PlayButton" type="Button" parent="ContentRoot/MainLayout/ButtonStack" unique_id=1024385403]
 custom_minimum_size = Vector2(340, 54)
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "PLAY"
 
-[node name="OptionsButton" type="Button" parent="ContentRoot/MainLayout/ButtonStack"]
+[node name="LegacyPrototypeButton" type="Button" parent="ContentRoot/MainLayout/ButtonStack" unique_id=1165035310]
+custom_minimum_size = Vector2(340, 46)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "LEGACY PROTOTYPE"
+
+[node name="OptionsButton" type="Button" parent="ContentRoot/MainLayout/ButtonStack" unique_id=687619688]
 custom_minimum_size = Vector2(340, 54)
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "OPTIONS"
 
-[node name="QuitButton" type="Button" parent="ContentRoot/MainLayout/ButtonStack"]
+[node name="QuitButton" type="Button" parent="ContentRoot/MainLayout/ButtonStack" unique_id=1706594911]
 custom_minimum_size = Vector2(340, 54)
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "QUIT"
 
-[node name="SpacerB" type="Control" parent="ContentRoot/MainLayout"]
-size_flags_vertical = 3
+[node name="SpacerB" type="Control" parent="ContentRoot/MainLayout" unique_id=2063209630]
 layout_mode = 2
+size_flags_vertical = 3
 
-[node name="Hint" type="Label" parent="ContentRoot/MainLayout"]
+[node name="Hint" type="Label" parent="ContentRoot/MainLayout" unique_id=1418242878]
 layout_mode = 2
 theme_override_font_sizes/font_size = 15
-text = "Prototype controls: WASD move • Mouse look • Shift sprint • E knock • F6 test damage • R restart after death"
+text = "Blockout controls: WASD move • Mouse look • Shift sprint • E interact • Esc release mouse"
 autowrap_mode = 2
 
-[node name="VersionHint" type="Label" parent="ContentRoot/MainLayout"]
+[node name="VersionHint" type="Label" parent="ContentRoot/MainLayout" unique_id=1486218342]
+modulate = Color(0.72, 0.78, 0.82, 1)
 layout_mode = 2
 theme_override_font_sizes/font_size = 13
-text = "Prototype build — menu cleanup pass"
-modulate = Color(0.72, 0.78, 0.82, 1)
+text = "Graybox neighborhood blockout — legacy prototype kept as an option"
 
-[node name="OptionsPanel" type="PanelContainer" parent="."]
+[node name="OptionsPanel" type="PanelContainer" parent="." unique_id=1429409836]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -113,50 +129,51 @@ offset_left = -240.0
 offset_top = -160.0
 offset_right = 240.0
 offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="OptionsMargin" type="MarginContainer" parent="OptionsPanel"]
+[node name="OptionsMargin" type="MarginContainer" parent="OptionsPanel" unique_id=1717330652]
 layout_mode = 2
 theme_override_constants/margin_left = 24
 theme_override_constants/margin_top = 24
 theme_override_constants/margin_right = 24
 theme_override_constants/margin_bottom = 24
 
-[node name="OptionsVBox" type="VBoxContainer" parent="OptionsPanel/OptionsMargin"]
+[node name="OptionsVBox" type="VBoxContainer" parent="OptionsPanel/OptionsMargin" unique_id=1461004047]
 layout_mode = 2
 theme_override_constants/separation = 12
 
-[node name="OptionsTitle" type="Label" parent="OptionsPanel/OptionsMargin/OptionsVBox"]
+[node name="OptionsTitle" type="Label" parent="OptionsPanel/OptionsMargin/OptionsVBox" unique_id=1430784233]
 layout_mode = 2
 theme_override_font_sizes/font_size = 28
 text = "OPTIONS"
 
-[node name="MouseLabel" type="Label" parent="OptionsPanel/OptionsMargin/OptionsVBox"]
+[node name="MouseLabel" type="Label" parent="OptionsPanel/OptionsMargin/OptionsVBox" unique_id=1347353160]
 layout_mode = 2
 text = "Mouse sensitivity"
 
-[node name="MouseSensitivitySlider" type="HSlider" parent="OptionsPanel/OptionsMargin/OptionsVBox"]
+[node name="MouseSensitivitySlider" type="HSlider" parent="OptionsPanel/OptionsMargin/OptionsVBox" unique_id=1024022427]
 layout_mode = 2
 min_value = 0.001
 max_value = 0.006
 step = 0.0001
-value = 0.0024
+value = 0.0024000000000000002
 
-[node name="FullscreenCheck" type="CheckBox" parent="OptionsPanel/OptionsMargin/OptionsVBox"]
+[node name="FullscreenCheck" type="CheckBox" parent="OptionsPanel/OptionsMargin/OptionsVBox" unique_id=1393251614]
 layout_mode = 2
 text = "Fullscreen"
 
-[node name="VolumeLabel" type="Label" parent="OptionsPanel/OptionsMargin/OptionsVBox"]
+[node name="VolumeLabel" type="Label" parent="OptionsPanel/OptionsMargin/OptionsVBox" unique_id=1532743585]
 layout_mode = 2
 text = "Master volume"
 
-[node name="VolumeSlider" type="HSlider" parent="OptionsPanel/OptionsMargin/OptionsVBox"]
+[node name="VolumeSlider" type="HSlider" parent="OptionsPanel/OptionsMargin/OptionsVBox" unique_id=1627986003]
 layout_mode = 2
-min_value = 0.0
 max_value = 1.0
 step = 0.05
 value = 1.0
 
-[node name="BackButton" type="Button" parent="OptionsPanel/OptionsMargin/OptionsVBox"]
+[node name="BackButton" type="Button" parent="OptionsPanel/OptionsMargin/OptionsVBox" unique_id=917344103]
 custom_minimum_size = Vector2(0, 42)
 layout_mode = 2
 text = "BACK"

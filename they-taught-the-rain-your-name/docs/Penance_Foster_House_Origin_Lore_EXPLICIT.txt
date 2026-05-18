@@ -1,0 +1,464 @@
+PENANCE — FOSTER HOUSE ORIGIN LORE
+EXPLICIT VERSION
+
+Purpose of this document:
+This version removes the vague/implied wording and explains the actual story logic clearly. The story can still avoid showing graphic scenes in-game, but the writer/developer should know exactly what happened, who was responsible, why Penance exists, and why the player is being pulled back.
+
+============================================================
+1. CORE STORY IDENTITY
+============================================================
+
+The game is about a neighborhood, a church, and a Foster House that covered up a violent crime against the player’s sister.
+
+The worst thing was not only the assault itself.
+The worst thing was that the people who had power knew about it, protected themselves, controlled the victim, and forced everyone else to stay silent.
+
+Penance exists because the truth was buried.
+Penance is not random.
+Penance is the supernatural punishment created by silence, guilt, institutional control, and the community’s refusal to protect the victim.
+
+One-line theme:
+The worst thing wasn’t only what happened to her. It was that everyone let it happen.
+
+============================================================
+2. WHO THE PLAYER IS
+============================================================
+
+The player is the brother of the victim.
+
+Recommended version:
+The player is the brother who left the neighborhood years ago.
+
+He knew something was wrong before he left, but he did not understand the full truth at the time. He heard arguments, saw people whispering, noticed his sister becoming withdrawn, and saw the church suddenly become more involved in his family’s life.
+
+He left because he wanted to escape the neighborhood, the church pressure, and the feeling that something was wrong there.
+
+The tragedy is this:
+He escaped.
+His sister did not.
+
+The player is not the main villain, but he carries guilt because he was close enough to notice something was wrong and still left.
+
+His emotional conflict:
+- He wants answers.
+- He feels guilty for leaving.
+- He is afraid he ignored signs that his sister needed help.
+- He slowly realizes the town was not haunted by evil from outside; it was haunted by what its own people did.
+
+============================================================
+3. WHO THE SISTER IS
+============================================================
+
+The sister is the emotional center of the story.
+
+She was a young woman/girl living in a strict religious neighborhood where the church controlled social life, reputation, family pressure, and moral judgment.
+
+She was assaulted by a powerful man connected to the church and the Foster House.
+
+Recommended explicit canon:
+The abuser was the man who ran or controlled the Foster House, and he was protected by the church.
+
+He was not a random stranger.
+He was someone the community trusted.
+He had status.
+He had access.
+He had protection.
+
+That is why the crime was hidden instead of exposed.
+
+============================================================
+4. WHAT THE FOSTER HOUSE IS
+============================================================
+
+The Foster House is not just a creepy house.
+It is the center of the cover-up.
+
+The Foster House was presented publicly as a place of care, shelter, discipline, and religious guidance.
+
+In reality, it became the place where the church hid problems it did not want the outside world to see.
+
+The Foster House is where:
+- the sister was isolated after the assault
+- the church controlled what she could say
+- decisions were made about her body, pregnancy, and future
+- the community’s silence became permanent
+- the key tragedy escalated
+
+The Foster House represents false safety.
+It looks like a home, but it was used as a cage.
+
+============================================================
+5. WHAT HAPPENED TO THE SISTER
+============================================================
+
+Explicit story version:
+
+The sister was raped by the man connected to the Foster House and protected by the church.
+
+After the assault, she became pregnant.
+
+Because the area was controlled by strict religious beliefs and restrictive laws, she was not allowed to get an abortion. The church also pressured her not to report the crime, not to seek outside help, and not to speak publicly about what happened.
+
+Instead of treating her as a victim, the church treated her pregnancy as a scandal that had to be managed.
+
+The church’s goal was not justice.
+The church’s goal was silence.
+
+They isolated her in the Foster House under the excuse of “care,” “protection,” or “spiritual recovery.”
+
+What they actually did:
+- kept her away from people who might help her
+- controlled who she could talk to
+- prevented police involvement
+- protected the man responsible
+- protected the church’s reputation
+- made the family feel ashamed instead of angry
+- pressured the neighborhood to stay quiet
+
+The sister was forced to carry the pregnancy even though the pregnancy came from violence.
+
+The baby became part of the cover-up because the baby was living evidence of what had happened.
+
+============================================================
+6. WHAT HAPPENED AFTER THE BABY WAS BORN
+============================================================
+
+This is the turning point that creates Penance.
+
+Recommended explicit canon:
+The child was born inside the Foster House, not in a normal hospital setting.
+
+The birth was hidden because the church did not want records, questions, or outside attention.
+
+After the birth, something went wrong.
+
+Strong version:
+The sister died in the Foster House because the people controlling her delayed or denied proper medical help.
+
+The child either died shortly after, disappeared, or was secretly taken away by the church.
+
+Best horror version:
+The sister died, and the child vanished from all official records.
+
+This gives the final house emotional weight because the player is not only finding out that his sister was assaulted; he is finding out that an entire life was erased afterward.
+
+Silent implication:
+Penance may be the erased child.
+
+This should not be confirmed directly at the start of the game.
+The implication exists because the child has no surviving records, no public name, no confirmed grave, and no accepted place in the town's history.
+
+The town tried to erase the child as evidence.
+Penance may be the shape that erased life takes after being denied by every institution that should have recorded and protected it.
+
+Do not make this a blunt exposition reveal too early.
+Let the player suspect it through missing records, empty photo spaces, child evidence in the Foster House, and Penance's connection to locked rooms, old photos, and the final house.
+
+The church then covered up her death by framing it as illness, disappearance, runaway behavior, or moral failure.
+
+The community accepted the lie because accepting the truth would mean admitting they all helped bury it.
+
+============================================================
+7. WHY THE NEIGHBORHOOD IS HAUNTED
+============================================================
+
+The neighborhood is haunted because the truth was suppressed by everyone.
+
+Different people played different roles:
+
+The abuser:
+Committed the crime and used his power to avoid consequences.
+
+The church leaders:
+Protected the abuser, controlled the victim, and avoided police involvement.
+
+The Foster House caretakers:
+Kept the sister isolated and helped hide what happened.
+
+The neighbors:
+Heard rumors, saw signs, and chose not to interfere.
+
+The family:
+May have been pressured, scared, ashamed, or manipulated into silence.
+
+The player:
+Left the neighborhood and later realizes he ignored warning signs.
+
+The haunting is not random punishment.
+It is the buried truth forcing itself back into the world.
+
+============================================================
+8. WHAT PENANCE IS
+============================================================
+
+Penance is the manifestation of guilt, silence, and punishment.
+
+He is not just a monster.
+He is the shape the neighborhood’s buried sin takes.
+
+Penance exists to force people to face what they allowed.
+
+He represents:
+- the sister’s erased suffering
+- the child’s erased existence
+- the church’s hypocrisy
+- the community’s silence
+- the player’s guilt for leaving
+- the truth that was hidden inside the Foster House
+
+There is a silent implication that Penance may be more than a general symbol.
+Because the child was erased from records, Penance may also be the supernatural return of that missing child.
+
+Important:
+Keep this ambiguous.
+Penance should work both ways:
+- as the punishment created by the neighborhood's buried guilt
+- as the possible body/voice/presence of the child the town tried to erase
+
+The game should make the player suspect this before it ever confirms or denies it.
+
+Penance does not behave like a normal killer because his goal is not simply to kill the player.
+
+His goal is to pull the player through the truth step by step.
+
+That is why he appears early as a silhouette instead of attacking immediately.
+That is why he opens the church door.
+That is why he traps the player in the basement.
+That is why he watches from the Foster House.
+
+He is guiding the player toward the truth, but in a terrifying and punishing way.
+
+============================================================
+9. WHY PENANCE APPEARS IN THE LIT HOUSE
+============================================================
+
+The lit house is bait.
+
+The player sees one house lit in a dark neighborhood and naturally thinks:
+“That is where I should go.”
+
+The light suggests safety, but it is false safety.
+
+Penance appears inside the lit house because he is pulling the player into the story.
+
+Explicit meaning:
+The lit house is connected to the first stage of the cover-up. It is one of the places where people saw signs that something was wrong and chose not to act.
+
+Penance standing inside tells the player:
+“You are entering the place where everyone looked away.”
+
+He does not attack there because this is not the hunt yet.
+This is the invitation.
+
+Player reaction goal:
+First read: “Wait, someone’s inside.”
+Second read: “Is that human?”
+Third read: “What the fuck was that?”
+
+Visual rule:
+Make Penance look like a person at first glance and a mistake at second glance.
+
+Use:
+- backlit silhouette
+- human-like upright posture
+- slightly wrong height
+- shoulders too broad
+- head/hood shape not normal
+- arms hanging too low
+- complete stillness
+- disappearance after flicker or lightning
+
+Do not reveal his face here.
+Do not have him chase here.
+Do not explain him here.
+This moment is the first sign that the neighborhood’s “safe home” image is corrupted.
+
+============================================================
+10. WHY THE CHURCH MATTERS
+============================================================
+
+The church is not just a scary building.
+It is the institution that protected itself instead of protecting the victim.
+
+The church matters because:
+- people trusted it
+- it controlled morality in the neighborhood
+- it pressured people to stay silent
+- it treated the sister’s trauma as a scandal
+- it helped hide the pregnancy and birth
+- it protected the abuser
+- it turned faith into control
+
+When Penance opens the church door, it means the player is being invited into the institution’s role in the crime.
+
+The church door opening is not random.
+It means:
+“The truth starts here.”
+
+============================================================
+11. WHY THE BASEMENT MATTERS
+============================================================
+
+The basement represents buried truth.
+
+The player going underground is symbolic:
+He is going below the surface of the neighborhood’s story.
+
+First basement visit:
+The player experiences fear and escape.
+This is mostly about survival and introducing Penance as a direct threat.
+
+Second basement visit:
+The player chooses to go back down because he wants the gun, answers, or access to the next area.
+This is stronger because he is no longer just being pushed forward; he is choosing to return to the buried truth.
+
+The basement door closing behind him matters because it tells him:
+“You came back down here. Now you have to face it.”
+
+============================================================
+12. WHY THE GUN MATTERS
+============================================================
+
+The gun is not meant to turn the game into pure action.
+
+The gun represents the player finally getting a tool that feels like control.
+
+But the horror twist is:
+Control is limited.
+
+The gun can hurt, stagger, or damage Penance’s body, but it cannot erase what Penance represents.
+
+Demo version:
+- bullets can stagger Penance
+- bullets can knock off cloth/wood/visual pieces
+- Penance reacts but does not truly die
+
+Meaning:
+The player can fight the monster physically, but the real enemy is the buried truth.
+
+The gun should feel useful, but not powerful enough to make the player feel safe.
+
+============================================================
+13. WHAT IS INSIDE THE FINAL FOSTER HOUSE
+============================================================
+
+The Foster House should contain the emotional truth of the game.
+
+Key rooms:
+
+1. Sister’s Room
+This room shows who she was before the church reduced her to a scandal.
+Use personal items, notes, photos, clothing, and small details that make her feel like a real person.
+
+2. Birth Room
+This is where the child was born in secrecy.
+Do not make it graphic.
+Make it heavy through environment:
+- old bed or couch
+- stained sheets implied through grime, not gore focus
+- medical items
+- religious objects nearby
+- records hidden or burned
+
+3. Decision Room
+This is where church/community members decided what to do.
+It should feel cold and administrative.
+Use:
+- table
+- chairs
+- folders
+- handwritten notes
+- church documents
+- crossed-out names
+- references to “handling the matter internally”
+
+4. Child Evidence Area
+This area proves the child existed.
+Use:
+- small blanket
+- birth record fragment
+- toy
+- photograph with the face scratched out or missing
+- locked box
+
+The point is not gore.
+The point is proof.
+The player should realize:
+“This was not a ghost story. This was a cover-up.”
+
+============================================================
+14. DEMO ENDING CONNECTION
+============================================================
+
+The demo should not reveal the entire backstory yet, but it should clearly point toward the Foster House.
+
+Recommended ending:
+
+Player escapes basement after getting the gun.
+Player passes a flickering security monitor or church TV.
+On the screen, they see the Foster House.
+Penance is standing inside the Foster House, in the same type of silhouette pose from the early lit-house scene.
+The monitor glitches.
+The outside world changes: rain gets harder, the neighborhood looks worse, and the Foster House becomes more visually prominent.
+Penance turns slightly toward the camera.
+Cut to black.
+Title card:
+PENANCE
+“This was only the first descent.”
+
+Meaning:
+The demo ends by telling the player that the first part was only an introduction. The real truth is inside the Foster House.
+
+============================================================
+15. WHAT TO AVOID
+============================================================
+
+Do not make the story feel exploitative.
+
+Avoid:
+- showing the assault
+- using sexual violence as a cheap jumpscare
+- making the sister only a plot device
+- overexplaining everything through long notes
+- making the church cartoonishly evil without believable social pressure
+- turning the gun into a power fantasy
+
+The story is strongest when the horror comes from:
+- silence
+- control
+- shame
+- cover-up
+- institutional protection
+- evidence slowly becoming undeniable
+
+============================================================
+16. SIMPLE FULL TIMELINE
+============================================================
+
+1. The sister lives in the neighborhood with the player and family.
+2. The church has major power over the neighborhood.
+3. The man connected to the Foster House assaults the sister.
+4. She becomes pregnant from the assault.
+5. The church refuses outside involvement and pressures everyone to stay quiet.
+6. Because of religious control and restrictive laws, she is forced to carry the pregnancy.
+7. She is isolated in the Foster House.
+8. The baby is born secretly in the Foster House.
+9. The sister dies because the people controlling her deny or delay proper help.
+10. The child disappears, dies, or is erased from records.
+11. The church and community cover everything up.
+12. The player leaves or has already left, carrying guilt without knowing the full truth.
+13. Years later, the player returns.
+14. Penance appears because the buried truth is forcing the player back through the places connected to the cover-up.
+15. The demo leads the player from the lit house, to church, to basement, to gun, to the reveal that the Foster House is the real center of the story.
+
+============================================================
+17. ONE-PARAGRAPH CANON SUMMARY
+============================================================
+
+The player returns to a neighborhood controlled by a church that once covered up the rape of his sister by the man connected to the Foster House. After she became pregnant, the church protected its reputation by isolating her, preventing outside help, and forcing her to carry the pregnancy under religious and social pressure. The child was born in secrecy inside the Foster House, where the situation ended in death, disappearance, and erased records. Penance is the supernatural form of that buried guilt, punishing the people who looked away and forcing the player to face the truth he escaped years ago.
+
+============================================================
+18. ONE-LINE DESIGN RULE
+============================================================
+
+Penance is not chasing the player because he is random evil. Penance is dragging the player through every place where the truth was hidden.

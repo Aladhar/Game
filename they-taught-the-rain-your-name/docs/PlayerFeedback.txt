@@ -1,0 +1,116 @@
+🎯 What’s ACTUALLY missing
+Right now, your problem is likely:
+player doesn’t understand they can enter
+entry point isn’t clear
+interior isn’t readable
+interaction (photo) isn’t obvious
+That’s a design + clarity problem, not a graphics problem.
+🧱 Fix this FIRST (before upgrading assets)
+1. Make entering the house OBVIOUS
+Don’t rely on “they’ll try it”
+Do this:
+Door is slightly open OR opens automatically when close
+Interior has visible light contrast
+Frame the doorway in the player’s view
+👉 Player should think:
+“I can go in there”
+2. Make the interior instantly readable
+Inside the house:
+Keep it SIMPLE
+One main room only for demo
+Layout:
+Door
+↓
+Open room
+↓
+Table (center or slightly offset)
+↓
+Photo on table (MAIN focus)
+3. Make the photo THE focus
+This is your real goal.
+Right now, likely issues:
+blends into table
+too small
+not lit
+player doesn’t know it’s interactable
+Fix it like this:
+Visual:
+Slight spotlight or lamp on table
+Photo slightly angled toward player
+Table placed where player naturally looks
+Contrast:
+everything else dim
+table slightly brighter
+👉 Not “gamey bright”, just noticeably different
+4. Add INTERACTION feedback
+This is probably your biggest missing piece.
+When player looks at photo:
+small UI text:
+“Inspect”
+OR slight highlight
+OR subtle sound cue
+When interacting:
+zoom camera slightly
+show photo clearly
+maybe small breathing audio
+👉 This makes it feel intentional
+🔥 Minimal “high quality” upgrade (what you ACTUALLY need)
+You do NOT need full AAA.
+You need:
+1. Better lighting (biggest impact)
+warm interior light
+soft shadows
+contrast with outside darkness
+2. 2–3 key props only
+For demo:
+table
+chair
+lamp
+photo
+That’s it.
+3. Decent materials (not perfect)
+wood texture on table
+slightly worn walls
+subtle dirt/grime
+👉 Good enough is enough
+⚠️ Common mistake you’re about to make
+“Let me rebuild the whole house environment first”
+DON’T.
+Instead:
+Build this:
+1 room
+1 table
+1 photo
+1 light
+1 door
+Make THAT perfect interaction-wise.
+🎮 What the player experience should feel like
+When they approach:
+“This house is different”
+“I can go inside”
+“That table… something’s there”
+“Oh, I can inspect this”
+“What is this photo…?”
+If any of those steps fail → fix design, not graphics.
+🧠 Quick checklist for your issue
+ Can player clearly see entrance?
+ Does door allow entry easily?
+ Is there ONE focal point inside?
+ Is photo visually emphasized?
+ Is interaction obvious?
+ Does inspect feel intentional?
+💬 Honest take
+You don’t need a better environment yet.
+You need:
+a controlled, readable micro-environment
+Once that works, THEN you upgrade visuals.
+✅ What you should do RIGHT NOW
+Make a 1-room house
+Add:
+table
+photo
+light
+Add:
+“Inspect” interaction
+Test:
+can a random player find + inspect it?
