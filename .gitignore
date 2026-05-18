@@ -1,0 +1,11 @@
+# Unreal Engine generated files
+they-taught-the-rain-your-name-ue/Binaries/
+they-taught-the-rain-your-name-ue/Build/
+they-taught-the-rain-your-name-ue/Builds/
+they-taught-the-rain-your-name-ue/DerivedDataCache/
+they-taught-the-rain-your-name-ue/Intermediate/
+they-taught-the-rain-your-name-ue/Saved/
+
+# Local editor/OS noise
+.DS_Store
+Thumbs.db

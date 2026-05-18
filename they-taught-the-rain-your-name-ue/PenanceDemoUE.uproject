@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "5.7",
+	"EngineAssociation": "5.6",
 	"Category": "Games",
 	"Description": "Unreal import target for the Penance suburban horror demo blockout.",
 	"Plugins": [
@@ -10,6 +10,10 @@
 		},
 		{
 			"Name": "EditorScriptingUtilities",
+			"Enabled": true
+		},
+		{
+			"Name": "EnhancedInput",
 			"Enabled": true
 		}
 	]

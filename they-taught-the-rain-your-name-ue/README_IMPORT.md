@@ -23,7 +23,33 @@ The import is intentionally editable blockout geometry, not a baked mesh. It rec
 
 Those systems should be rebuilt natively in Unreal after the blockout arrives.
 
-## Refresh Import
+## Windows UE 5.6 Rebuild
+
+This checkout is configured for the installed Windows engine at:
+
+`C:\Program Files\Epic Games\UE_5.6`
+
+To rebuild the Unreal content from the exported JSON, verify the imported level, and package a Win64 development build:
+
+```powershell
+.\Scripts\Build_Unreal_Windows.ps1
+```
+
+The packaged build is written to:
+
+`Builds\Win64`
+
+To open the project in Unreal Editor after the import has been rebuilt:
+
+```powershell
+.\Scripts\Open_Unreal_Editor.ps1
+```
+
+The imported level is:
+
+`/Game/Maps/Penance_Suburban_Blockout`
+
+## Refresh Import From Godot
 
 From the Godot project:
 
@@ -33,8 +59,8 @@ From the Godot project:
 
 Then run the Unreal importer:
 
-```sh
-"/Users/Shared/Epic Games/UE_5.7/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor" "/Users/amritladhar/Documents/GitHub/Game/they-taught-the-rain-your-name-ue/PenanceDemoUE.uproject" -run=pythonscript -script="/Users/amritladhar/Documents/GitHub/Game/they-taught-the-rain-your-name-ue/Scripts/import_penance_blockout.py" -unattended -nop4
+```powershell
+.\Scripts\Build_Unreal_Windows.ps1 -SkipPackage
 ```
 
 The imported level is:
@@ -43,8 +69,12 @@ The imported level is:
 
 ## Verify Import
 
-```sh
-"/Users/Shared/Epic Games/UE_5.7/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor" "/Users/amritladhar/Documents/GitHub/Game/they-taught-the-rain-your-name-ue/PenanceDemoUE.uproject" -run=pythonscript -script="/Users/amritladhar/Documents/GitHub/Game/they-taught-the-rain-your-name-ue/Scripts/verify_penance_import.py" -unattended -nop4
+```powershell
+& "C:\Program Files\Epic Games\UE_5.6\Engine\Binaries\Win64\UnrealEditor-Cmd.exe" `
+  ".\PenanceDemoUE.uproject" `
+  -run=pythonscript `
+  -script=".\Scripts\verify_penance_import.py" `
+  -unattended -nop4 -NullRHI -NoSplash -DDC-ForceMemoryCache
 ```
 
 The latest verification report is written to:

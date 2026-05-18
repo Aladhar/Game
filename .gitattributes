@@ -1,2 +1,9 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Unreal Engine assets are binary packages. Never line-normalize them.
+*.uasset binary
+*.umap binary
+*.ubulk binary
+*.uexp binary
+*.locres binary
