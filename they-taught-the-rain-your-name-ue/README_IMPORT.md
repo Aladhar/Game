@@ -40,3 +40,13 @@ Then run the Unreal importer:
 The imported level is:
 
 `/Game/Maps/Penance_Suburban_Blockout`
+
+## Verify Import
+
+```sh
+"/Users/Shared/Epic Games/UE_5.7/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor" "/Users/amritladhar/Documents/GitHub/Game/they-taught-the-rain-your-name-ue/PenanceDemoUE.uproject" -run=pythonscript -script="/Users/amritladhar/Documents/GitHub/Game/they-taught-the-rain-your-name-ue/Scripts/verify_penance_import.py" -unattended -nop4
+```
+
+The latest verification report is written to:
+
+`Saved/PenanceImportVerify.txt`

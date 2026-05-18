@@ -37,6 +37,15 @@ def godot_color_to_linear(color):
     )
 
 
+def godot_color_to_unreal_color(color):
+    return unreal.Color(
+        int(max(0.0, min(1.0, float(color.get("r", 0.5)))) * 255.0),
+        int(max(0.0, min(1.0, float(color.get("g", 0.5)))) * 255.0),
+        int(max(0.0, min(1.0, float(color.get("b", 0.5)))) * 255.0),
+        int(max(0.0, min(1.0, float(color.get("a", 1.0)))) * 255.0),
+    )
+
+
 def ensure_directory(path):
     if not unreal.EditorAssetLibrary.does_directory_exist(path):
         unreal.EditorAssetLibrary.make_directory(path)
@@ -223,7 +232,7 @@ def spawn_lights(data):
             component.set_editor_property("attenuation_radius", float(light.get("range", 12.0)) * 100.0)
 
         set_label_and_folder(actor, light["name"], "PenanceImported/Lights")
-        component.set_editor_property("light_color", godot_color_to_linear(light.get("color", {})))
+        component.set_editor_property("light_color", godot_color_to_unreal_color(light.get("color", {})))
         component.set_editor_property("intensity", max(10.0, float(light.get("energy", 1.0)) * 950.0))
         actor.set_is_temporarily_hidden_in_editor(not light.get("visible", True))
 
