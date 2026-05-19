@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3]
 
-[ext_resource type="PackedScene" path="res://assets/models/enemies/penance_carrier/penance_carrier_end_goal_v10_slim_wrapped_body.glb" id="1_model"]
+[ext_resource type="PackedScene" uid="uid://cjtth0eb27bpt" path="res://assets/models/enemies/penance_carrier/penance_carrier_end_goal_v21_multi_region_reference_baseline.glb" id="1_model"]
 [ext_resource type="Script" path="res://scripts/enemies/penance_carrier_controller.gd" id="2_script"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_penance"]
@@ -9,12 +9,12 @@ height = 3.8
 
 [node name="PenanceCarrier" type="CharacterBody3D"]
 script = ExtResource("2_script")
-enemy_name = "Penance Carrier End Goal V10"
+enemy_name = "Penance Carrier End Goal V21"
 
 [node name="ModelRoot" type="Node3D" parent="."]
 position = Vector3(0, 0, 0)
 
-[node name="PenanceCarrierEndGoalV10" parent="ModelRoot" instance=ExtResource("1_model")]
+[node name="PenanceCarrierEndGoalV21" parent="ModelRoot" instance=ExtResource("1_model")]
 scale = Vector3(1, 1, 1)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

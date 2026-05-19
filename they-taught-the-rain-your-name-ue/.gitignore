@@ -1,0 +1,9 @@
+Binaries/
+Intermediate/Build/
+Intermediate/Mac/
+Intermediate/TargetInfo.json
+Saved/UnrealBuildTool/
+Saved/Config/CrashReportClient/UECC-Mac-*/
+Saved/SourceControl/
+Saved/PenanceAssetImportReport.txt
+Saved/PenanceAssetVerify.txt

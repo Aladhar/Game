@@ -1,5 +1,6 @@
-[gd_scene format=3 uid="uid://4781260omkhd"]
+[gd_scene load_steps=4 format=3 uid="uid://4781260omkhd"]
 
+[ext_resource type="PackedScene" uid="uid://cke5r3ksdav6e" path="res://assets/models/enemies/bell_saint/bell_saint_v6h_final_form_pass.glb" id="1_model"]
 [ext_resource type="Script" uid="uid://ci1xx063dp7vv" path="res://scripts/enemies/bell_saint_controller.gd" id="2_script"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bell_saint"]
@@ -8,11 +9,11 @@ height = 4.35
 
 [node name="BellSaint" type="CharacterBody3D" unique_id=739651847]
 script = ExtResource("2_script")
-enemy_name = "Bell Saint v3"
+enemy_name = "Bell Saint v6h"
 
 [node name="ModelRoot" type="Node3D" parent="." unique_id=318846529]
 
-[node name="BellSaintV3Blockout" parent="ModelRoot" unique_id=41015046]
+[node name="BellSaintV6HFinalForm" parent="ModelRoot" unique_id=41015046 instance=ExtResource("1_model")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1297601346]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.15, 0)

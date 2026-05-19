@@ -18,10 +18,29 @@ The import is intentionally editable blockout geometry, not a baked mesh. It rec
 ## What Does Not Import Automatically
 
 - Godot GDScript gameplay/state logic.
-- Godot UI, stamina/crouch controller, AudioManager, rain particle controller, and one-shot event code.
+- Godot UI, AudioManager, rain particle controller, and one-shot event code.
 - Final detailed Penance assets beyond whatever is represented in the current blockout primitives.
 
 Those systems should be rebuilt natively in Unreal after the blockout arrives.
+
+## Native Unreal Gameplay Added
+
+- `APenancePlayerCharacter` ports the Godot player rules into native Unreal C++: grounded first-person movement, no jump/fly, sprint stamina, low-stamina sprint speed, crouch camera/capsule changes, mouse look, and Blueprint events for stamina, crouch, and player noise.
+- `APenanceDemoGameMode` is configured as the default game mode so Play-in-Editor spawns the grounded player pawn instead of Unreal's default floating pawn.
+
+## Import Native Unreal Assets
+
+The blockout importer handles level geometry. Enemy art assets are imported separately from the Godot asset folder:
+
+```sh
+"/Users/Shared/Epic Games/UE_5.7/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor" "/Users/amritladhar/Documents/GitHub/Game/they-taught-the-rain-your-name-ue/PenanceDemoUE.uproject" -run=pythonscript -script="/Users/amritladhar/Documents/GitHub/Game/they-taught-the-rain-your-name-ue/Scripts/import_penance_assets.py" -unattended -nop4 -NoSourceControl -stdout -FullStdOutLogOutput
+```
+
+Then verify imported assets:
+
+```sh
+"/Users/Shared/Epic Games/UE_5.7/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor" "/Users/amritladhar/Documents/GitHub/Game/they-taught-the-rain-your-name-ue/PenanceDemoUE.uproject" -run=pythonscript -script="/Users/amritladhar/Documents/GitHub/Game/they-taught-the-rain-your-name-ue/Scripts/verify_penance_assets.py" -unattended -nop4 -NoSourceControl -stdout -FullStdOutLogOutput
+```
 
 ## Refresh Import
 

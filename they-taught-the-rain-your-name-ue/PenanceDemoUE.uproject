@@ -3,6 +3,13 @@
 	"EngineAssociation": "5.7",
 	"Category": "Games",
 	"Description": "Unreal import target for the Penance suburban horror demo blockout.",
+	"Modules": [
+		{
+			"Name": "PenanceDemoUE",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
 	"Plugins": [
 		{
 			"Name": "PythonScriptPlugin",
