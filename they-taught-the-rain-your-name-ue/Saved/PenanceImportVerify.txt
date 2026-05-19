@@ -1,5 +1,5 @@
 PENANCE_IMPORT_VERIFY
-Imported actors: 794
-Geometry actors: 729
+Imported actors: 3922
+Geometry actors: 706
 Marker actors: 17
 Light actors: 46

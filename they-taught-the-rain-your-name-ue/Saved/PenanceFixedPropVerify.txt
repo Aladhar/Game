@@ -1,0 +1,6 @@
+PENANCE_FIXED_PROP_VERIFY
+Actor labels scanned: 3922
+Required fixed label checks: 10
+Missing fixed labels: 0
+Stale placeholder labels: 0
+Approx fixed prop label count: 8
