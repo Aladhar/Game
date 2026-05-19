@@ -1,0 +1,12 @@
+PENANCE_ROUGHDRAFT_RENDER
+Source GLB: /Users/amritladhar/Documents/GitHub/Game/Penance/Content/PenanceAssets/Enemies/PenanceCarrier/PenanceRoughDraft.glb
+Import destination: /Game/PenanceAssets/Enemies/PenanceCarrier/PenanceRoughDraft
+Preview level: /Game/Maps/PenanceRoughDraft_Render
+Screenshot requested: skipped: commandlet uses NullRHI
+Imported paths: 4
+/Game/PenanceAssets/Enemies/PenanceCarrier/PenanceRoughDraft/PenanceRoughDraft/Materials/PenanceRoughDraft_material_0.PenanceRoughDraft_material_0
+/Game/PenanceAssets/Enemies/PenanceCarrier/PenanceRoughDraft/PenanceRoughDraft/StaticMeshes/PenanceRoughDraft.PenanceRoughDraft
+/Game/PenanceAssets/Enemies/PenanceCarrier/PenanceRoughDraft/PenanceRoughDraft/Textures/PenanceRoughDraft_texture_0.PenanceRoughDraft_texture_0
+/Game/PenanceAssets/Enemies/PenanceCarrier/PenanceRoughDraft/PenanceRoughDraft/Textures/PenanceRoughDraft_texture_1.PenanceRoughDraft_texture_1
+Static meshes: 1
+/Game/PenanceAssets/Enemies/PenanceCarrier/PenanceRoughDraft/PenanceRoughDraft/StaticMeshes/PenanceRoughDraft.PenanceRoughDraft
