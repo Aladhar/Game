@@ -1,0 +1,6 @@
+PENANCE_POST_STEP8_ASSETS_VERIFY
+Edited level: /Game/Maps/Penance_Suburban_Blockout
+Imported church actors in level: 25
+Imported road actors in level: 1
+Required support actors: 6
+Failures: 0

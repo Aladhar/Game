@@ -1,0 +1,18 @@
+PENANCE_POST_STEP8_ASSETS
+Edited level: /Game/Maps/Penance_Suburban_Blockout
+Scope: post-Step-8 placeholder/test setup only; original roads are not replaced.
+Imported church actors verified/foldered: 25
+Imported road actors verified/foldered: 1
+Fallback church anchor created: False
+Actors organized this run: 30
+Church test/support actors: 5
+Road GLTF imported this run: False
+Road test actor: Road_Test_ImportedAsset_SmallPatch
+Road test mesh: /Game/Map_Assets/Road/gltf/source/scene/StaticMeshes/Material2.Material2
+Reserved church exterior center: x=28m z=1m
+Created/updated test support actors:
+- Church_Approach_CrackedPath_TestAsset at x=28.0 y=0.0 z=8.0
+- Church_Exterior_LeftSightlineBlocker at x=18.0 y=1.2 z=5.0
+- Church_Exterior_RightSightlineBlocker at x=36.5 y=1.2 z=4.5
+- Church_Exterior_ForecourtFogBand at x=28.0 y=0.1 z=11.0
+- Church_Reserve_BoundsMarker at x=28.0 y=0.1 z=1.0

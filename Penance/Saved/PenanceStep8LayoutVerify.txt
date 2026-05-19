@@ -1,7 +1,7 @@
 PENANCE_STEP8_LAYOUT_VERIFY
 Edited level: /Game/Maps/Penance_Suburban_Blockout
 Backup exists: True
-Actors scanned: 3929
+Actors scanned: 4158
 Position checks: 8
 Scale checks: 5
 Folder checks: 6
@@ -12,15 +12,18 @@ park_to_cul_de_sac: 30.6m
 cul_de_sac_to_church: 82.5m
 church_to_final_route: 84.8m
 Folder counts:
-00_Persistent: 57
+00_Persistent: 56
 01_Player: 1
-02_GameplayFlow: 23
-03_Environment/ChurchExterior: 21
+02_GameplayFlow: 22
+03_Environment/ChurchExterior: 25
+03_Environment/ChurchExterior/ImportedChurchTest: 25
 03_Environment/Neighborhood: 161
 03_Environment/Park: 24
-03_Environment/Roads: 65
-04_Lighting: 1088
+03_Environment/Roads: 43
+03_Environment/Roads/ImportedRoadTest: 51
+04_Lighting: 1086
 07_Encounters: 2145
-09_Blockers_Gates: 343
+09_Blockers_Gates: 319
 10_Debug: 1
+None: 199
 Failures: 0
