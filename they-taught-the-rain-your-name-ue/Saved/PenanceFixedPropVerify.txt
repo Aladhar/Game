@@ -1,6 +1,14 @@
 PENANCE_FIXED_PROP_VERIFY
-Actor labels scanned: 3922
+Actor labels scanned: 3929
 Required fixed label checks: 10
 Missing fixed labels: 0
+Required hinged door checks: 5
+Missing hinged doors: 0
+Required pickup checks: 5
+Missing pickups: 0
 Stale placeholder labels: 0
 Approx fixed prop label count: 8
+Hinged door actor count: 14
+Pickup actor count: 5
+Bad Penance folders: 0
+Bad hinged door folders: 0

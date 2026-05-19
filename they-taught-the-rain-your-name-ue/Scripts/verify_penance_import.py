@@ -14,7 +14,19 @@ def main():
     imported = [actor for actor in actors if actor.get_actor_label().startswith("Penance_")]
     lights = [actor for actor in imported if "Lights" in str(actor.get_folder_path())]
     markers = [actor for actor in imported if "EventAndInteractableMarkers" in str(actor.get_folder_path())]
-    geometry = [actor for actor in imported if "Geometry" in str(actor.get_folder_path())]
+    mesh_actor_classes = {"StaticMeshActor", "PenanceHingedDoor", "PenancePickupItem"}
+    geometry = [
+        actor
+        for actor in imported
+        if actor.get_class().get_name() in mesh_actor_classes
+        and "PenanceImported/" in str(actor.get_folder_path())
+        and "Lights" not in str(actor.get_folder_path())
+        and "EventAndInteractableMarkers" not in str(actor.get_folder_path())
+    ]
+    hinged_doors = [actor for actor in imported if actor.get_class().get_name() == "PenanceHingedDoor"]
+    pickups = [actor for actor in imported if actor.get_class().get_name() == "PenancePickupItem"]
+    progression_managers = [actor for actor in imported if actor.get_class().get_name() == "PenanceProgressionManager"]
+    progression_triggers = [actor for actor in imported if actor.get_class().get_name() == "PenanceProgressionTrigger"]
 
     report = "\n".join(
         [
@@ -23,6 +35,10 @@ def main():
             f"Geometry actors: {len(geometry)}",
             f"Marker actors: {len(markers)}",
             f"Light actors: {len(lights)}",
+            f"Hinged door actors: {len(hinged_doors)}",
+            f"Pickup actors: {len(pickups)}",
+            f"Progression managers: {len(progression_managers)}",
+            f"Progression triggers: {len(progression_triggers)}",
         ]
     )
     unreal.log(report)
@@ -34,6 +50,10 @@ def main():
         raise RuntimeError("Expected at least 15 event/interactable markers.")
     if len(lights) < 40:
         raise RuntimeError("Expected at least 40 imported lights.")
+    if len(progression_managers) != 1:
+        raise RuntimeError("Expected exactly one progression manager.")
+    if len(progression_triggers) != 17:
+        raise RuntimeError("Expected exactly 17 progression triggers.")
 
 
 if __name__ == "__main__":

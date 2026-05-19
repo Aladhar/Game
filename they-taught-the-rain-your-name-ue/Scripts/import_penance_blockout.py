@@ -41,6 +41,49 @@ PLACEHOLDER_MESH_PREFIXES_TO_REPLACE = (
     "TunnelPenance_Chains_",
 )
 
+PICKUP_SPECS = [
+    {
+        "name": "Pickup_BlankFamilyPhoto",
+        "label": "Blank family photo",
+        "description": "One face is scraped away. The dust outline is smaller than the others.",
+        "source": "FirstHouse_Clue_BlankFamilyPhoto_Inspectable",
+        "type": "Note",
+        "size": (0.9, 0.05, 0.62),
+    },
+    {
+        "name": "Pickup_HandwrittenNote",
+        "label": "Handwritten note",
+        "description": "The same phrase repeats in shaky ink: handle this internally.",
+        "position": {"x": 26.14, "y": 1.05, "z": 36.18},
+        "type": "Note",
+        "size": (0.62, 0.03, 0.46),
+    },
+    {
+        "name": "Pickup_WetChildBlanket",
+        "label": "Wet child blanket",
+        "description": "A soaked blanket tagged FH intake. The name line is torn away.",
+        "source": "Park_Clue_WetChildBlanket",
+        "type": "Item",
+        "size": (1.0, 0.08, 0.7),
+    },
+    {
+        "name": "Pickup_RustedRecordTag",
+        "label": "Rusted record tag",
+        "description": "A corroded tag from a file no one wanted to keep.",
+        "source": "Park_Clue_RustedRecordTag",
+        "type": "Item",
+        "size": (0.35, 0.04, 0.22),
+    },
+    {
+        "name": "Pickup_InternalHandlingNotice",
+        "label": "Internal handling notice",
+        "description": "The notice repeats one phrase: handle this internally.",
+        "source": "Church_Clue_InternalHandlingNotice",
+        "type": "Note",
+        "size": (1.2, 0.06, 0.8),
+    },
+]
+
 
 def sanitize_name(value):
     value = re.sub(r"[^A-Za-z0-9_]+", "_", str(value))
@@ -182,9 +225,64 @@ def clear_imported_actors():
             unreal.EditorLevelLibrary.destroy_actor(actor)
 
 
+def append_actor_tag(actor, tag):
+    tags = list(actor.tags)
+    name = unreal.Name(str(tag))
+    if name not in tags:
+        tags.append(name)
+        actor.tags = tags
+
+
 def set_label_and_folder(actor, label, folder):
     actor.set_actor_label(f"Penance_{sanitize_name(label)}")
     actor.set_folder_path(folder)
+    append_actor_tag(actor, "PenanceImported")
+    append_actor_tag(actor, f"ImportedName_{sanitize_name(label)}")
+
+
+def set_import_hidden(actor, hidden):
+    actor.set_is_temporarily_hidden_in_editor(hidden)
+    actor.set_actor_hidden_in_game(hidden)
+
+
+def is_openable_door(item):
+    name = item.get("name", "")
+    if name.endswith("_Door_Motif"):
+        return True
+    return name in {
+        "House_01_FirstEnterable_OpenDoor_ParkedLeft",
+        "FirstHouse_NewDoor_AppearsWhereWallWas",
+        "CommunityChurch_Doors",
+        "CommunityChurch_BasementDoor",
+        "FinalHouse_DoorMaskFacade",
+    }
+
+
+def folder_for_mesh_item(item):
+    name = item.get("name", "")
+    if is_openable_door(item):
+        return "PenanceImported/Doors/Hinged"
+    if "Penance" in name and "PenanceRelics" not in name:
+        return "PenanceImported/Penance"
+    if "Couch" in name or "Sofa" in name or "Table" in name or "Chair" in name or "Lamp" in name:
+        return "PenanceImported/Interior/Furniture"
+    if "Clue" in name or "Photo" in name or "Notice" in name or "Blanket" in name or "RecordTag" in name:
+        return "PenanceImported/Clues"
+    if "Door" in name:
+        return "PenanceImported/Doors/StaticAndRelics"
+    if "Window" in name:
+        return "PenanceImported/Architecture/Windows"
+    if "House" in name or "Church" in name or "Tunnel" in name:
+        return "PenanceImported/Architecture"
+    if "Road" in name or "Sidewalk" in name or "Ground" in name or "Puddle" in name:
+        return "PenanceImported/World/GroundAndRoads"
+    if "Fence" in name or "RouteGate" in name or "SoftBlock" in name or "SoftFunnel" in name:
+        return "PenanceImported/Gameplay/RouteBlockers"
+    if "Tree" in name:
+        return "PenanceImported/World/Trees"
+    if "Candle" in name or "Chain" in name or "Relic" in name:
+        return "PenanceImported/Relics"
+    return "PenanceImported/Geometry"
 
 
 def spawn_static_mesh_actor(mesh_asset, name, location, rotation, scale, material, folder, collision):
@@ -200,6 +298,42 @@ def spawn_static_mesh_actor(mesh_asset, name, location, rotation, scale, materia
         component.set_collision_enabled(
             unreal.CollisionEnabled.QUERY_AND_PHYSICS if collision else unreal.CollisionEnabled.NO_COLLISION
         )
+    return actor
+
+
+def get_first_static_mesh_component(actor):
+    return actor.get_component_by_class(unreal.StaticMeshComponent)
+
+
+def spawn_hinged_door_actor(cube_mesh, item, material):
+    if not hasattr(unreal, "PenanceHingedDoor"):
+        raise RuntimeError("PenanceHingedDoor class is not available. Build the C++ module before importing doors.")
+
+    size = item["shape"]["size"]
+    width = float(size["x"])
+    hinge_position = add_godot_vec(item["position"], rotated_godot_offset(godot_vec(-width * 0.5, 0.0, 0.0), item["rotation_degrees"]["y"]))
+    actor = unreal.EditorLevelLibrary.spawn_actor_from_class(
+        unreal.PenanceHingedDoor,
+        godot_to_unreal_location(hinge_position),
+        godot_to_unreal_rotation(item["rotation_degrees"]),
+    )
+    set_label_and_folder(actor, item["name"], folder_for_mesh_item(item))
+
+    component = get_first_static_mesh_component(actor)
+    if component:
+        component.set_static_mesh(cube_mesh)
+        component.set_editor_property("relative_location", unreal.Vector(0.0, width * 50.0, 0.0))
+        component.set_editor_property("relative_scale3d", unreal.Vector(float(size["z"]), width, float(size["y"])))
+        if material:
+            component.set_material(0, material)
+        component.set_collision_enabled(unreal.CollisionEnabled.QUERY_AND_PHYSICS)
+
+    actor.set_actor_enable_collision(True)
+    if item["name"] == "House_01_FirstEnterable_OpenDoor_ParkedLeft":
+        try:
+            actor.set_editor_property("b_starts_open", True)
+        except Exception:
+            pass
     return actor
 
 
@@ -237,9 +371,14 @@ def spawn_meshes(data, material_cache):
         else:
             continue
 
-        folder = "PenanceImported/Geometry/HiddenAtStart" if not item.get("visible", True) else "PenanceImported/Geometry"
-        actor = spawn_static_mesh_actor(mesh, item["name"], location, rotation, scale, material, folder, collision)
-        actor.set_is_temporarily_hidden_in_editor(not item.get("visible", True))
+        if item["type"] == "box" and is_openable_door(item):
+            actor = spawn_hinged_door_actor(cube_mesh, item, material)
+        else:
+            folder = folder_for_mesh_item(item)
+            if not item.get("visible", True):
+                folder += "/HiddenAtStart"
+            actor = spawn_static_mesh_actor(mesh, item["name"], location, rotation, scale, material, folder, collision)
+        set_import_hidden(actor, not item.get("visible", True))
 
 
 def fixed_material(material_cache, name, color, roughness=0.85, metallic=0.0, emission=None, emission_energy=0.0):
@@ -408,6 +547,47 @@ def spawn_fixed_first_house_small_props(cube_mesh, material_cache, data):
         )
 
 
+def spawn_pickup_actor(cube_mesh, material_cache, spec, data):
+    if not hasattr(unreal, "PenancePickupItem"):
+        raise RuntimeError("PenancePickupItem class is not available. Build the C++ module before importing pickups.")
+
+    source = find_mesh_entry(data, spec["source"]) if spec.get("source") else None
+    position = spec.get("position") or (source["position"] if source else godot_vec(0.0, 0.0, 0.0))
+    rotation = source["rotation_degrees"] if source else godot_vec(0.0, 0.0, 0.0)
+    size = spec.get("size", (0.45, 0.08, 0.45))
+
+    actor = unreal.EditorLevelLibrary.spawn_actor_from_class(
+        unreal.PenancePickupItem,
+        godot_to_unreal_location(position),
+        godot_to_unreal_rotation(rotation),
+    )
+    set_label_and_folder(actor, spec["name"], "PenanceImported/Pickups")
+    actor.set_editor_property("item_name", spec["label"])
+    actor.set_editor_property("item_description", spec["description"])
+    actor.set_editor_property("pickup_name", unreal.Name(spec["name"]))
+    try:
+        actor.set_editor_property("b_is_note", spec.get("type") == "Note")
+    except Exception:
+        try:
+            actor.set_editor_property("is_note", spec.get("type") == "Note")
+        except Exception:
+            pass
+
+    component = get_first_static_mesh_component(actor)
+    if component:
+        component.set_static_mesh(cube_mesh)
+        component.set_editor_property("relative_scale3d", unreal.Vector(float(size[2]), float(size[0]), float(size[1])))
+        component.set_material(0, fixed_material_for_name(material_cache, "paper" if spec.get("type") == "Note" else "metal"))
+        component.set_collision_enabled(unreal.CollisionEnabled.QUERY_AND_PHYSICS)
+
+    return actor
+
+
+def spawn_pickups(cube_mesh, material_cache, data):
+    for spec in PICKUP_SPECS:
+        spawn_pickup_actor(cube_mesh, material_cache, spec, data)
+
+
 def spawn_penance_static_meshes(base_name, base_position, yaw, scale, hidden):
     asset_paths = list(unreal.EditorAssetLibrary.list_assets(PENANCE_CARRIER_MESH_ROOT, recursive=True, include_folder=False))
     static_mesh_paths = [path for path in asset_paths if "/StaticMeshes/" in path]
@@ -426,16 +606,16 @@ def spawn_penance_static_meshes(base_name, base_position, yaw, scale, hidden):
             godot_to_unreal_rotation(godot_vec(0.0, yaw, 0.0)),
             unreal.Vector(scale, scale, scale),
             None,
-            f"{FIXED_PROP_FOLDER}/PenanceCarrier",
+            "PenanceImported/Penance/AuthoredCarrier",
             False,
         )
-        actor.set_is_temporarily_hidden_in_editor(hidden)
+        set_import_hidden(actor, hidden)
         count += 1
     return count
 
 
 def spawn_penance_proxy(cube_mesh, cylinder_mesh, material_cache, base_name, origin, yaw, scale=1.0, hidden=False):
-    folder = f"{FIXED_PROP_FOLDER}/PenanceProxy"
+    folder = "PenanceImported/Penance/ReadableProxy"
     parts = [
         ("HunchedWetClothTorso", godot_vec(0, 2.05 * scale, 0), godot_vec(1.25 * scale, 3.45 * scale, 0.7 * scale), "wet_cloth"),
         ("LeftShoulderRag", godot_vec(-0.58 * scale, 3.25 * scale, -0.02 * scale), godot_vec(0.62 * scale, 1.35 * scale, 0.48 * scale), "wet_cloth"),
@@ -448,19 +628,19 @@ def spawn_penance_proxy(cube_mesh, cylinder_mesh, material_cache, base_name, ori
     ]
     for suffix, offset, size, material_name in parts:
         actor = spawn_fixed_box(cube_mesh, material_cache, f"{base_name}_{suffix}", origin, offset, size, material_name, yaw, False, folder)
-        actor.set_is_temporarily_hidden_in_editor(hidden)
+        set_import_hidden(actor, hidden)
     for x in (-0.32, 0.32):
         actor = spawn_fixed_box(cube_mesh, material_cache, f"{base_name}_FrontRustedChain_{x}", origin, godot_vec(x * scale, 2.65 * scale, -0.58 * scale), godot_vec(0.08 * scale, 2.0 * scale, 0.08 * scale), "metal", yaw, False, folder)
-        actor.set_is_temporarily_hidden_in_editor(hidden)
+        set_import_hidden(actor, hidden)
     bell = spawn_fixed_cylinder(cylinder_mesh, material_cache, f"{base_name}_DeadBell", origin, godot_vec(-0.68 * scale, 1.0 * scale, -0.52 * scale), 0.18 * scale, 0.34 * scale, "metal", yaw, False, folder)
-    bell.set_is_temporarily_hidden_in_editor(hidden)
+    set_import_hidden(bell, hidden)
 
 
 def spawn_fixed_penance_appearances(cube_mesh, cylinder_mesh, material_cache):
     appearances = [
         ("Penance_FarLightning_AuthoredCarrier", godot_vec(4.0, 0.0, -88.0), 0.0, 1.0, False),
         ("Penance_FirstHouseDoorway_AuthoredCarrier", godot_vec(24.0, 0.0, 37.55), 180.0, 0.88, False),
-        ("Penance_TunnelPressure_AuthoredCarrier", godot_vec(-34.0, -4.0, -9.0), 0.0, 0.92, False),
+        ("Penance_TunnelPressure_AuthoredCarrier", godot_vec(-34.0, -4.0, -9.0), 0.0, 0.92, True),
     ]
     for base_name, position, yaw, scale, hidden in appearances:
         spawned = spawn_penance_static_meshes(base_name, position, yaw, scale, hidden)
@@ -479,10 +659,28 @@ def spawn_fixed_scene_props(data, material_cache):
     spawn_fixed_couch(cube_mesh, material_cache, data)
     spawn_fixed_table(cube_mesh, material_cache, data)
     spawn_fixed_first_house_small_props(cube_mesh, material_cache, data)
+    spawn_pickups(cube_mesh, material_cache, data)
     spawn_fixed_penance_appearances(cube_mesh, cylinder_mesh, material_cache)
 
 
+def spawn_progression_manager():
+    if not hasattr(unreal, "PenanceProgressionManager"):
+        raise RuntimeError("PenanceProgressionManager class is not available. Build the C++ module before importing progression.")
+
+    actor = unreal.EditorLevelLibrary.spawn_actor_from_class(
+        unreal.PenanceProgressionManager,
+        unreal.Vector(0.0, 0.0, 220.0),
+        unreal.Rotator(0.0, 0.0, 0.0),
+    )
+    set_label_and_folder(actor, "ProgressionManager", "PenanceImported/Gameplay")
+    append_actor_tag(actor, "PenanceProgressionManager")
+    return actor
+
+
 def spawn_area_markers(data, material_cache):
+    if not hasattr(unreal, "PenanceProgressionTrigger"):
+        raise RuntimeError("PenanceProgressionTrigger class is not available. Build the C++ module before importing progression triggers.")
+
     trigger_material = create_or_get_material(
         {
             "name": "Trigger_Marker",
@@ -498,21 +696,28 @@ def spawn_area_markers(data, material_cache):
 
     for area in data.get("areas", []):
         size = area["size"]
-        actor = spawn_static_mesh_actor(
-            cube_mesh,
-            area["name"],
+        actor = unreal.EditorLevelLibrary.spawn_actor_from_class(
+            unreal.PenanceProgressionTrigger,
             godot_to_unreal_location(area["position"]),
             godot_to_unreal_rotation(area["rotation_degrees"]),
-            unreal.Vector(float(size["z"]), float(size["x"]), float(size["y"])),
-            trigger_material,
-            "PenanceImported/EventAndInteractableMarkers",
-            False,
         )
+        set_label_and_folder(actor, area["name"], "PenanceImported/EventAndInteractableMarkers")
+        actor.set_editor_property("trigger_name", unreal.Name(area["name"]))
+        bounds = actor.get_component_by_class(unreal.BoxComponent)
+        if bounds:
+            bounds.set_editor_property("box_extent", unreal.Vector(float(size["z"]) * 50.0, float(size["x"]) * 50.0, float(size["y"]) * 50.0))
+            bounds.set_collision_enabled(unreal.CollisionEnabled.QUERY_ONLY)
+        component = get_first_static_mesh_component(actor)
+        if component:
+            component.set_static_mesh(cube_mesh)
+            component.set_editor_property("relative_scale3d", unreal.Vector(float(size["z"]), float(size["x"]), float(size["y"])))
+            component.set_material(0, trigger_material)
+            component.set_collision_enabled(unreal.CollisionEnabled.NO_COLLISION)
         actor.set_editor_property("is_spatially_loaded", True)
-        if area.get("prompt"):
-            actor.tags = [unreal.Name("Interactable"), unreal.Name(sanitize_name(area["prompt"]))]
+        if area["name"].startswith("Interact_"):
+            append_actor_tag(actor, "InteractableMarker")
         else:
-            actor.tags = [unreal.Name("ScriptedEvent")]
+            append_actor_tag(actor, "ScriptedEvent")
 
 
 def spawn_lights(data):
@@ -536,7 +741,7 @@ def spawn_lights(data):
         set_label_and_folder(actor, light["name"], "PenanceImported/Lights")
         component.set_editor_property("light_color", godot_color_to_unreal_color(light.get("color", {})))
         component.set_editor_property("intensity", max(10.0, float(light.get("energy", 1.0)) * 950.0))
-        actor.set_is_temporarily_hidden_in_editor(not light.get("visible", True))
+        set_import_hidden(actor, not light.get("visible", True))
 
 
 def spawn_player_start(data):
@@ -577,6 +782,7 @@ def main():
     material_cache = {}
     spawn_meshes(data, material_cache)
     spawn_fixed_scene_props(data, material_cache)
+    spawn_progression_manager()
     spawn_area_markers(data, material_cache)
     spawn_lights(data)
     spawn_player_start(data)

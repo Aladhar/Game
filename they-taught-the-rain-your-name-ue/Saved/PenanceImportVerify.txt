@@ -1,5 +1,9 @@
 PENANCE_IMPORT_VERIFY
-Imported actors: 3922
-Geometry actors: 706
+Imported actors: 3928
+Geometry actors: 3862
 Marker actors: 17
 Light actors: 46
+Hinged door actors: 14
+Pickup actors: 5
+Progression managers: 1
+Progression triggers: 17

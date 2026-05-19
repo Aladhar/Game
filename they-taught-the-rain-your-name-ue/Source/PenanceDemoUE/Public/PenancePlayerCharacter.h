@@ -5,6 +5,8 @@
 #include "PenancePlayerCharacter.generated.h"
 
 class UCameraComponent;
+class APenanceHingedDoor;
+class APenancePickupItem;
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FPenanceStaminaChangedSignature, float, CurrentStamina, float, MaxStamina);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FPenanceCrouchChangedSignature, bool, bIsCrouching);
@@ -50,6 +52,9 @@ public:
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Penance|Movement")
     float MouseLookSensitivity = 1.0f;
 
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Penance|Movement")
+    float JumpVelocity = 420.0f;
+
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Penance|Stamina")
     float MaxStamina = 100.0f;
 
@@ -86,6 +91,25 @@ public:
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Penance|Crouch")
     float CrouchTransitionSpeed = 10.0f;
 
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Penance|Interaction")
+    float InteractionDistance = 280.0f;
+
+    UFUNCTION(BlueprintCallable, Category = "Penance|Inventory")
+    void AddInventoryEntry(const FText& ItemName, const FText& ItemDescription, bool bIsNote);
+
+    UFUNCTION(BlueprintCallable, Category = "Penance|Inventory")
+    void ToggleInventory();
+
+    UFUNCTION(BlueprintCallable, Category = "Penance|Inventory")
+    bool IsInventoryOpen() const { return bInventoryOpen; }
+
+    UFUNCTION(BlueprintCallable, Category = "Penance|Stamina")
+    float GetStaminaRatio() const;
+
+    const TArray<FString>& GetInventoryItems() const { return InventoryItems; }
+    const TArray<FString>& GetCollectedNotes() const { return CollectedNotes; }
+    FText GetCurrentInteractionHint() const { return CurrentInteractionHint; }
+
 protected:
     virtual bool CanJumpInternal_Implementation() const override;
 
@@ -103,17 +127,23 @@ private:
     void UpdateMovementRules(float DeltaSeconds);
     void UpdateCrouchRules(float DeltaSeconds);
     void UpdateNoiseRules(float DeltaSeconds);
+    void UpdateInteractionFocus();
     void BroadcastStaminaIfNeeded();
     void ForceGroundedMovementMode();
     float GetCameraRelativeHeightForCurrentCapsule(float EyeHeight) const;
     bool HasMovementInput() const;
+    bool GetInteractionTrace(FHitResult& OutHit) const;
 
     FVector2D MoveInput = FVector2D::ZeroVector;
     bool bWantsSprint = false;
     bool bWantsCrouch = false;
     bool bWasCrouching = false;
+    bool bInventoryOpen = false;
     float StaminaRegenTimer = 0.0f;
     float LastBroadcastStaminaRatio = -1.0f;
     float SprintNoiseTimer = 0.0f;
     float SilenceTimer = 0.0f;
+    FText CurrentInteractionHint;
+    TArray<FString> InventoryItems;
+    TArray<FString> CollectedNotes;
 };

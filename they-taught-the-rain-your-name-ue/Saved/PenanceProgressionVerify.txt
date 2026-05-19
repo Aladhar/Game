@@ -1,0 +1,8 @@
+PENANCE_PROGRESSION_VERIFY
+Progression managers: 1
+Progression triggers: 17
+Required trigger checks: 14
+Missing trigger checks: 0
+Required imported actor checks: 9
+Missing imported actor checks: 0
+Failures: 0

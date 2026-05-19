@@ -6,6 +6,8 @@
 #include "GameFramework/PlayerController.h"
 #include "GameFramework/PlayerInput.h"
 #include "Camera/PlayerCameraManager.h"
+#include "PenanceHingedDoor.h"
+#include "PenancePickupItem.h"
 
 APenancePlayerCharacter::APenancePlayerCharacter()
 {
@@ -32,12 +34,12 @@ APenancePlayerCharacter::APenancePlayerCharacter()
     Movement->BrakingDecelerationWalking = 2200.0f;
     Movement->GroundFriction = 8.0f;
     Movement->GravityScale = 1.0f;
-    Movement->JumpZVelocity = 0.0f;
-    Movement->AirControl = 0.0f;
+    Movement->JumpZVelocity = JumpVelocity;
+    Movement->AirControl = 0.22f;
     Movement->NavAgentProps.bCanCrouch = true;
     Movement->SetCrouchedHalfHeight(CrouchingCapsuleHeight * 0.5f);
 
-    JumpMaxCount = 0;
+    JumpMaxCount = 1;
     BaseEyeHeight = GetCameraRelativeHeightForCurrentCapsule(StandingCameraHeight);
     CrouchedEyeHeight = GetCameraRelativeHeightForCurrentCapsule(CrouchingCameraHeight);
 }
@@ -76,6 +78,7 @@ void APenancePlayerCharacter::Tick(float DeltaSeconds)
     UpdateMovementRules(DeltaSeconds);
     UpdateCrouchRules(DeltaSeconds);
     UpdateNoiseRules(DeltaSeconds);
+    UpdateInteractionFocus();
     BroadcastStaminaIfNeeded();
 }
 
@@ -93,15 +96,19 @@ void APenancePlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerI
     PlayerInputComponent->BindAction(TEXT("Crouch"), IE_Pressed, this, &APenancePlayerCharacter::StartCrouchInput);
     PlayerInputComponent->BindAction(TEXT("Crouch"), IE_Released, this, &APenancePlayerCharacter::StopCrouchInput);
     PlayerInputComponent->BindAction(TEXT("Interact"), IE_Pressed, this, &APenancePlayerCharacter::Interact);
+    PlayerInputComponent->BindAction(TEXT("Jump"), IE_Pressed, this, &APenancePlayerCharacter::Jump);
+    PlayerInputComponent->BindAction(TEXT("Inventory"), IE_Pressed, this, &APenancePlayerCharacter::ToggleInventory);
 }
 
 void APenancePlayerCharacter::Jump()
 {
+    Super::Jump();
+    OnPlayerNoise.Broadcast(TEXT("jump"), GetActorLocation(), 0.85f);
 }
 
 bool APenancePlayerCharacter::CanJumpInternal_Implementation() const
 {
-    return false;
+    return Super::CanJumpInternal_Implementation();
 }
 
 void APenancePlayerCharacter::MoveForward(float Value)
@@ -164,7 +171,49 @@ void APenancePlayerCharacter::StopCrouchInput()
 
 void APenancePlayerCharacter::Interact()
 {
+    FHitResult Hit;
+    if (GetInteractionTrace(Hit))
+    {
+        if (APenanceHingedDoor* Door = Cast<APenanceHingedDoor>(Hit.GetActor()))
+        {
+            Door->Interact(this);
+            OnPlayerNoise.Broadcast(TEXT("door"), Door->GetActorLocation(), 0.8f);
+            return;
+        }
+
+        if (APenancePickupItem* Pickup = Cast<APenancePickupItem>(Hit.GetActor()))
+        {
+            Pickup->Interact(this);
+            OnPlayerNoise.Broadcast(TEXT("pickup"), Pickup->GetActorLocation(), 0.35f);
+            return;
+        }
+    }
+
     OnPlayerNoise.Broadcast(TEXT("knock"), GetActorLocation(), 0.7f);
+}
+
+void APenancePlayerCharacter::AddInventoryEntry(const FText& ItemName, const FText& ItemDescription, bool bIsNote)
+{
+    const FString Name = ItemName.IsEmpty() ? FString(TEXT("Unknown")) : ItemName.ToString();
+    const FString Description = ItemDescription.IsEmpty() ? FString() : FString(TEXT(" - ")) + ItemDescription.ToString();
+    if (bIsNote)
+    {
+        CollectedNotes.Add(Name + Description);
+    }
+    else
+    {
+        InventoryItems.Add(Name + Description);
+    }
+}
+
+void APenancePlayerCharacter::ToggleInventory()
+{
+    bInventoryOpen = !bInventoryOpen;
+}
+
+float APenancePlayerCharacter::GetStaminaRatio() const
+{
+    return MaxStamina > 0.0f ? FMath::Clamp(Stamina / MaxStamina, 0.0f, 1.0f) : 0.0f;
 }
 
 void APenancePlayerCharacter::UpdateMovementRules(float DeltaSeconds)
@@ -254,6 +303,26 @@ void APenancePlayerCharacter::UpdateNoiseRules(float DeltaSeconds)
     }
 }
 
+void APenancePlayerCharacter::UpdateInteractionFocus()
+{
+    CurrentInteractionHint = FText::GetEmpty();
+
+    FHitResult Hit;
+    if (!GetInteractionTrace(Hit) || !Hit.GetActor())
+    {
+        return;
+    }
+
+    if (Cast<APenanceHingedDoor>(Hit.GetActor()))
+    {
+        CurrentInteractionHint = FText::FromString(TEXT("E - Open / close door"));
+    }
+    else if (APenancePickupItem* Pickup = Cast<APenancePickupItem>(Hit.GetActor()))
+    {
+        CurrentInteractionHint = FText::FromString(FString::Printf(TEXT("E - Pick up %s"), *Pickup->ItemName.ToString()));
+    }
+}
+
 void APenancePlayerCharacter::BroadcastStaminaIfNeeded()
 {
     const float Ratio = MaxStamina > 0.0f ? Stamina / MaxStamina : 0.0f;
@@ -284,4 +353,17 @@ float APenancePlayerCharacter::GetCameraRelativeHeightForCurrentCapsule(float Ey
 bool APenancePlayerCharacter::HasMovementInput() const
 {
     return MoveInput.SizeSquared() > KINDA_SMALL_NUMBER;
+}
+
+bool APenancePlayerCharacter::GetInteractionTrace(FHitResult& OutHit) const
+{
+    if (!FirstPersonCamera)
+    {
+        return false;
+    }
+
+    const FVector Start = FirstPersonCamera->GetComponentLocation();
+    const FVector End = Start + FirstPersonCamera->GetForwardVector() * InteractionDistance;
+    FCollisionQueryParams Params(SCENE_QUERY_STAT(PenanceInteractTrace), false, this);
+    return GetWorld() && GetWorld()->LineTraceSingleByChannel(OutHit, Start, End, ECC_Visibility, Params);
 }
