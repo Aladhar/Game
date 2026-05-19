@@ -1,0 +1,55 @@
+PENANCE_STEP8_LAYOUT_REFINEMENT
+Edited level: /Game/Maps/Penance_Suburban_Blockout
+Backup level: /Game/Maps/Penance_Suburban_Blockout_Step8_Backup
+Backup created this run: False
+Scope: layout, spacing, scale, navigation only; no church/road/GLB replacements.
+Design changes:
+- Reduced neighborhood ground from roughly 150x180m to 105x145m while keeping edge margin for start/final approach.
+- Tightened main road loop from roughly 104x80m to 68x56m.
+- Pulled first house/player approach closer together.
+- Pulled park, cul-de-sac, church approach, final-house/Penance route inward.
+- Kept church area as placeholder with reserved exterior space.
+- Reorganized actors into Step 8 outliner folders.
+Actors scanned: 3929
+Actors moved: 392
+Actors scaled: 11
+Actors foldered: 3929
+Scaled actors:
+NeighborhoodGround_150m_x_180m
+MainLoop_Road_South
+MainLoop_Road_North
+MainLoop_Road_West
+MainLoop_Road_East
+ParkLoop_Path_NorthSouth
+ParkLoop_Path_EastWest
+CulDeSac_ConnectorRoad
+CulDeSac_RoadCircle_32m
+FinalHouse_Unreachable_RoadStub_Locked
+FinalHouse_RoadExtension_AppearsLater
+Prefix-move actors left in place because they were not in PenanceBlockoutExport.json: 3151
+Skipped prefix-move sample:
+FirstHouse_Couch_SaggingSeat
+FirstHouse_Couch_TallBack
+FirstHouse_Couch_LeftArm
+FirstHouse_Couch_RightArm
+FirstHouse_Couch_LeftSplitCushion
+FirstHouse_Couch_RightSplitCushion
+FirstHouse_Couch_LeftFrontWoodFoot
+FirstHouse_Couch_RightFrontWoodFoot
+FirstHouse_Table_ThickTop
+FirstHouse_Table_LowerShelf
+FirstHouse_Table_Leg_0_62_0_42
+FirstHouse_Table_Leg_0_62_0_42
+FirstHouse_Table_Leg_0_62_0_42
+FirstHouse_Table_Leg_0_62_0_42
+FirstHouse_Table_DarkDrawerFace
+FirstHouse_RightDiningChair_Seat
+FirstHouse_RightDiningChair_BackPanel
+FirstHouse_RightDiningChair_TopRail
+FirstHouse_RightDiningChair_Leg_0_3_0_26
+FirstHouse_RightDiningChair_Leg_0_3_0_26
+FirstHouse_RightDiningChair_Leg_0_3_0_26
+FirstHouse_RightDiningChair_Leg_0_3_0_26
+FirstHouse_RightDiningChair_BrokenCrossBrace
+FirstHouse_PulledOutDiningChair_Seat
+FirstHouse_PulledOutDiningChair_BackPanel
