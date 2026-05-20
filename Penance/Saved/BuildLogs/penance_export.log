@@ -1,0 +1,10 @@
+Blender 4.5.8 LTS (hash d7359176d0d3 built 2026-03-17 01:30:47)
+Read blend: "/Users/amritladhar/Documents/GitHub/Game/Penance/Built/Blender/Penance_adaptive_BUILT.blend"
+Error: Engine 'BLENDER_EEVEE' not available for scene 'SK_Penance' (an add-on may need to be installed or enabled)
+Selected for FBX export: ['SK_Penance_Armature', 'PenanceRoughDraft_Mesh']
+
+FBX export starting... '/Users/amritladhar/Documents/GitHub/Game/Penance/Built/FBX/SK_Penance_Adaptive_BUILT.fbx'
+export finished in 0.0712 sec.
+EXPORTED FBX: /Users/amritladhar/Documents/GitHub/Game/Penance/Built/FBX/SK_Penance_Adaptive_BUILT.fbx
+
+Blender quit

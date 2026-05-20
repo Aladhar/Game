@@ -1,6 +1,315 @@
 PENANCE HORROR GAME — OBJECTIVE PATH + CUL-DE-SAC CHURCH EVENT MASTER TXT
 ================================================================================
 
+CURRENT ENGINE SOURCE OF TRUTH
+This version is now Unreal Engine.
+Old Godot paths are legacy reference only.
+Current active work:
+- Unreal map/level
+- Blender source files
+- FBX skeletal exports
+- Unreal Blueprints
+- Unreal Content folder assets
+
+===============================================================================================
+CURRENT PRIORITY ORDER
+
+1. Fix Player animation deformation.
+2. Make player movement feel good.
+3. Replace roads with the new road asset.
+4. Make the map smaller and denser.
+5. Build reusable door interaction.
+6. Make church exterior + church door event.
+7. Add first lit-house Penance silhouette.
+8. Add park lure.
+9. Add cul-de-sac return trigger.
+10. Add basement/chase path.
+11. Add Foster House reveal ending.
+========================================================================================
+DO NOT IMPLEMENT YET
+
+- Full gun combat
+- Full inventory
+- Full dialogue system
+- Full Penance AI everywhere
+- Full church interior
+- Full Foster House interior
+- Complex NPCs
+- Complex save system
+- Full lore database
+- Too many enterable houses
+
+===========================================================================
+DEMO ACCEPTANCE TEST
+
+A new player must be able to:
+- spawn and know where to walk
+- notice the first lit house
+- reach the park without being told
+- understand the cul-de-sac is a dead end
+- notice the church door event
+- enter the church/basement route
+- survive one pressure/chase sequence
+- understand the Foster House is the final destination
+
+Fail conditions:
+- player gets lost for more than 2 minutes
+- player misses the church event
+- player cannot tell where to go after park
+- player gets stuck on roads/curbs/doors
+- Penance appears too often and stops being scary
+- final house feels random
+
+====================================
+Arrival Street:
+one working streetlight + road shine
+
+First Lit House:
+warm porch light + window glow
+
+Park:
+moving swing + flickering lamp
+
+Cul-de-sac:
+dead tree / blocked car / no-exit shape
+
+Church:
+bell tower silhouette + door light
+
+Basement:
+water reflection + exit light
+
+Foster House:
+one impossible warm window visible early
+========================================
+(5) Make the Foster House visible earlier
+1. Arrival street, very far away
+2. First lit house window angle
+3. Park, between trees
+4. Cul-de-sac, during lightning
+5. Church monitor/security screen
+6. Final road unlock
+
+
+================
+(7) Add “player guilt breadcrumbs”
+Since the player is the brother and slowly realizes he was not innocent, add small personal clues. Your doc already says the player feels like the hero but slowly realizes they were not innocent.
+Examples:
+- A photo where the player's face is scratched out.
+- A voicemail/answering machine: “You said you’d come back.”
+- A childlike drawing with two siblings, one crossed out.
+- A church notice saying “family counseling completed” but names are redacted.
+- A bedroom object the player recognizes but cannot explain yet.
+Do not explain them. Let them feel wrong.
+
+==============================
+Door system improvements
+8. Make doors the backbone of progression
+Your doc already says doors/gates need locked/open/required flag/set flag logic. Keep that, but make it Unreal-friendly:
+BP_InteractableDoor
+
+Variables:
+- bStartsLocked
+- bIsOpen
+- RequiredFlag
+- FlagSetOnOpen
+- OpenAngle
+- OpenSpeed
+- DoorCreakSound
+- LockedSound
+- bTriggerEventOnOpen
+- EventName
+Use it for:
+First house door
+Church door
+Basement door
+Final house gate
+Foster House front door
+Then every scary door is not custom spaghetti.
+
+===================
+9. Add “door personality”
+Not every door should behave the same.
+Normal door:
+opens when pressing E
+
+Church door:
+Penance opens it, not the player
+
+Basement door:
+opens after clue/event
+
+Final house door:
+does not open in demo, or opens then cuts to black
+
+Locked door:
+rattles, plays sound, gives no big UI
+make all doors rattle that u can't get into
+===========================================
+6. Add “Penance rarity rules”
+Add strict rules:
+Penance should not appear more than:
+- 1 clear silhouette before church
+- 1 church door appearance
+- 1 basement/chase appearance
+- 1 Foster House ending appearance
+Use sound/shadows/reflections between those moments instead of full appearance. Ie:
+============================================
+Road/map improvements
+10. Roads should guide, not just decorate
+When you replace roads, use them as objective guidance.
+Add road rules:
+Main road:
+slightly wider, readable, wet reflection path
+
+Road to first house:
+subtle light spill, less clutter
+
+Road to park:
+narrower, darker, guided by sound
+
+Road to cul-de-sac:
+feels wrong, slightly too repetitive
+
+Road to Foster House:
+visible but blocked early, clean reveal later
+Also make the map smaller and houses closer together. Empty walking kills horror pacing.
+==========================================================================================================
+Penance AI improvement
+11. Keep AI simple, but make it feel authored
+Your doc has a good Outlast-style chase/search loop: see player → chase, lose line of sight → search last known position, react to noise.
+For the demo, I would not build full AI everywhere. Use this split:
+Before basement:
+scripted Penance only
+
+Basement:
+simple chase/search AI
+
+After basement:
+scripted Foster House ending
+This gives the illusion of depth without overbuilding.
+
+====================================================
+12. Delay the gun
+The gun can ruin the tone if added too early. Your doc already says it should not turn the game into action and should only stagger/slow/stun Penance, not kill what he represents.
+For the first demo, I’d do:
+Option A:
+tease the gun on a monitor/security room but do not give it yet 
+
+
+=============================================
+Best additions for scariness
+Add these small details:
+- Curtains moving when no window is open
+- TV static that briefly shows Foster House
+- Church bell sound coming from wrong direction
+- Photos where one face is missing
+- Child-height handprints on windows
+- Water stains shaped like hanging cloth
+- Repeated porch lights turning off behind player
+- Doors that are locked from the outside
+- A swing moving before the player hears anything
+- A house light turning on only after the player looks away
+These fit your themes: cover-up, silence, erased records, guilt, false safety.
+
+
+==========
+My biggest recommendation
+Focus the next build around this exact chain:
+Player animation fixed
+→ road replacement done
+→ smaller denser map
+→ first lit house
+→ Penance silhouette
+→ park lure
+→ cul-de-sac dead end
+→ Penance opens church door
+→ church/basement pressure
+→ Foster House reveal
+
+=========
+Note on MicroJumpscares:
+Yes, but only as tiny atmospheric hits, not “monster pops in your face” scares.
+Your own plan says pacing should be:
+
+Calm → Weird → Uneasy → Scared → PANIC → Relief → Scared again → End
+and warns that too many scares too fast makes the player numb and makes Penance feel less special. It also says if a section is boring, add a small atmospheric signal, not always a jumpscare.
+My answer
+Add micro-scares, not more full jumpscares.
+Use them to support your 11-step route:
+
+1. Player animation / movement — no scares yet
+2. Roads / smaller map — no scares yet
+3. Door system — tiny door/audio tests only
+4. Church exterior — atmosphere only
+5. First lit-house Penance silhouette — major scare, keep subtle
+6. Park lure — micro-scare
+7. Cul-de-sac return — micro-scare into bigger church event
+8. Basement/chase — real panic scare
+9. Foster House reveal — final dread scare
+Good micro-scares for your game
+Use things like:
+- porch light flickers once when player passes
+- curtain moves behind a window
+- swing creaks once, then stops
+- door handle rattles from the other side
+- TV static briefly shows Foster House
+- church bell rings once from the wrong direction
+- footsteps upstairs, but no one is there
+- child-height shadow crosses a window
+- locked door opens one inch, then stops
+- player turns around and a light that was on is now off
+These fit your game better than loud jumpscares because the horror is about silence, guilt, erased evidence, and being guided through the truth.
+Where I’d place them
+First lit house
+Use one micro-scare before Penance:
+TV static pops for half a second
+or curtain twitches
+or chain creak inside the room
+Then the silhouette happens. Do not stack 4 scares here. The lit-house scene is supposed to create uncertainty, not a huge jumpscare; the goal is for the player to wonder if they saw a person, then realize something was wrong.
+Park lure
+Use 2 small scares:
+swing moves by itself
+park lamp flickers
+small splash near storm drain
+No Penance full reveal here.
+Cul-de-sac return
+Use 1 directional scare:
+church bell hits once
+streetlights behind player shut off in sequence
+door creak comes from church direction
+Then the bigger event: Penance opens the church door. Your plan already says Penance should be rare and intentional, especially around the church event.
+Basement/chase
+This is where you can use the strongest scare:
+Penance audio behind player
+shadow crosses tunnel wall
+then actual chase starts
+This should be the panic moment.
+Foster House ending
+No cheap jump. Use dread:
+monitor flicker
+Penance standing inside the house
+slow head turn
+cut to black
+Rule I’d use
+For a 15–25 minute demo:
+Micro-scares: 6–10 total
+Major Penance moments: 3–4 total
+Actual loud jumpscares: 1–2 max
+Micro-scares should be 1 second or less and should usually do one of these:
+guide the player
+confirm the world changed
+make the player look somewhere important
+warn that Penance is near
+What to avoid
+Do not add:
+- random scream stingers
+- Penance teleporting in front of player constantly
+- fake jumpscares every hallway
+- loud noises that do not guide or teach anything
+- repeated window faces
+- repeated door slams
+That will make the demo feel cheap.
 ================================================================================
 CURRENT GAME DEMO ADDENDUM — SUBURBAN HORROR BLOCKOUT SOURCE OF TRUTH
 ================================================================================
@@ -3526,7 +3835,7 @@ The demo succeeds because of:
 - strong audio/lighting
 - clean fail/retry flow
 
-The demo fails if the player feels confused, scammed, stuck, or like the systems are broken.
+The demo fails if the player feels confused, scammed, stuck, or like the systems are broken. BIG ON THE PLAYER BEING CONFUSED.
 
 Core Rule
 ---------
@@ -3659,6 +3968,7 @@ If a section feels boring, add one small atmospheric signal:
 - distant bell
 - door creak
 - monitor flicker
+- small jumpscares,
 
 Do NOT always add a jumpscare.
 Small tension is often better.

@@ -1,0 +1,18 @@
+Blender 4.5.8 LTS (hash d7359176d0d3 built 2026-03-17 01:30:47)
+Read blend: "/Users/amritladhar/Documents/GitHub/Game/Penance/Built/Blender/Penance_adaptive_BUILT.blend"
+Warning: region type 11 missing in space type "Action" (id: 12) - removing region
+Warning: region type 14 missing in space type "Node" (id: 16) - removing region
+regiondata free error
+Warning: region type 15 missing in space type "Node" (id: 16) - removing region
+Warning: region type 11 missing in space type "Action" (id: 12) - removing region
+Warning: region type 14 missing in space type "Node" (id: 16) - removing region
+regiondata free error
+Warning: region type 15 missing in space type "Node" (id: 16) - removing region
+Warning: region type 14 missing in space type "Node" (id: 16) - removing region
+Warning: region type 15 missing in space type "Node" (id: 16) - removing region
+Warning: region type 11 missing in space type "Action" (id: 12) - removing region
+Warning: region type 11 missing in space type "Action" (id: 12) - removing region
+Warning: region type 11 missing in space type "Action" (id: 12) - removing region
+Warning: region type 14 missing in space type "Node" (id: 16) - removing region
+Warning: region type 15 missing in space type "Node" (id: 16) - removing region
+Error: Engine 'BLENDER_EEVEE' not available for scene 'SK_Penance' (an add-on may need to be installed or enabled)

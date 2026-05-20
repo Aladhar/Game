@@ -1,23 +1,16 @@
-BLEND_CHARACTER_SHAPE_REPORT
-Source: /Users/amritladhar/Player.blend
+MODEL_ADAPTED_CONTROLS_AND_WALK_REPORT
+Kind: player
+Blend: /Users/amritladhar/Documents/GitHub/Game/Penance/Built/Blender/Player_adaptive_REBUILT_ANIM.blend
 Armature: SK_Player_Armature
-Total bones: 44
-Deform bones: 34
-Helper/non-deform bones: 10
-Helper names: camera, jaw, eye_l, eye_r, weapon_l, weapon_r, ik_hand_l, ik_hand_r, ik_foot_l, ik_foot_r
+Total bones: 47
+Deform bones: 36
+Helper/non-deform bones: 11
+Removed controls: none
+Created controls: none
+Walk action: AN_Player_CautiousWalk_32f.001
 Mesh: PlayerRoughDraft_Mesh
-Vertices: 99932
-Bounds min=(-0.2091,-0.1111,-0.0017) max=(0.2091,0.1110,0.9983)
-Size x=0.4182 y=0.2220 z=1.0000
-Vertex groups: 34
-Vertex group names: pelvis, spine_01, spine_02, neck_01, head, clavicle_l, upperarm_l, lowerarm_l, hand_l, clavicle_r, upperarm_r, lowerarm_r, hand_r, thigh_l, calf_l, foot_l, thigh_r, calf_r, foot_r, root, lowerarm_twist_l, upperarm_twist_l, lowerarm_twist_r, upperarm_twist_r, calf_twist_l, thigh_twist_l, calf_twist_r, thigh_twist_r, cloth_front_l, cloth_front_r, cloth_back_l, cloth_back_r, coat_side_l, coat_side_r
-Cross sections:
-z_pct=0.05 vertices=5266 width_x=0.2925 depth_y=0.1794 x=(-0.1470,0.1455) y=(-0.1111,0.0684)
-z_pct=0.12 vertices=3788 width_x=0.2717 depth_y=0.0940 x=(-0.1348,0.1369) y=(-0.0255,0.0684)
-z_pct=0.20 vertices=3215 width_x=0.2601 depth_y=0.0893 x=(-0.1304,0.1297) y=(-0.0224,0.0669)
-z_pct=0.32 vertices=3453 width_x=0.2325 depth_y=0.1004 x=(-0.1137,0.1188) y=(-0.0476,0.0528)
-z_pct=0.45 vertices=6005 width_x=0.4101 depth_y=0.1378 x=(-0.2054,0.2047) y=(-0.0680,0.0698)
-z_pct=0.58 vertices=6480 width_x=0.4006 depth_y=0.1906 x=(-0.1989,0.2018) y=(-0.0949,0.0957)
-z_pct=0.72 vertices=5404 width_x=0.3263 depth_y=0.1796 x=(-0.1614,0.1649) y=(-0.0815,0.0982)
-z_pct=0.86 vertices=4789 width_x=0.1564 depth_y=0.1869 x=(-0.0767,0.0797) y=(-0.0830,0.1039)
-z_pct=0.95 vertices=3961 width_x=0.1294 depth_y=0.1604 x=(-0.0646,0.0648) y=(-0.0820,0.0784)
+Vertex groups: 36
+Deform bone names:
+root, pelvis, spine_01, spine_02, neck_01, head, hair_front_l, hair_front_r, hood_collar_l, hood_collar_r, clavicle_l, upperarm_l, lowerarm_l, hand_l, lowerarm_twist_l, upperarm_twist_l, clavicle_r, upperarm_r, lowerarm_r, hand_r, lowerarm_twist_r, upperarm_twist_r, jacket_front_l, jacket_front_r, thigh_l, calf_l, foot_l, calf_twist_l, thigh_twist_l, thigh_r, calf_r, foot_r, calf_twist_r, thigh_twist_r, jacket_hem_l, jacket_hem_r
+Helper/non-deform bone names:
+camera, jaw, eye_l, eye_r, look_at, weapon_l, weapon_r, ik_hand_l, ik_hand_r, ik_foot_l, ik_foot_r

@@ -1,0 +1,11 @@
+Blender 4.5.8 LTS (hash d7359176d0d3 built 2026-03-17 01:30:47)
+Read blend: "/Users/amritladhar/Documents/GitHub/Game/Penance/Built/Blender/Player_adaptive_BUILT.blend"
+Error: Engine 'BLENDER_EEVEE' not available for scene 'SK_Player' (an add-on may need to be installed or enabled)
+Selected for FBX export: ['SK_Player_Armature', 'PlayerRoughDraft_Mesh']
+
+FBX export starting... '/Users/amritladhar/Documents/GitHub/Game/Penance/Built/FBX/SK_Player_Adaptive_BUILT.fbx'
+(bpy.data.armatures['SK_Player_Armature'], 'POSE')
+export finished in 0.3461 sec.
+EXPORTED FBX: /Users/amritladhar/Documents/GitHub/Game/Penance/Built/FBX/SK_Player_Adaptive_BUILT.fbx
+
+Blender quit
