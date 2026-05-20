@@ -1,0 +1,26 @@
+FBX_RIG_INSPECT /Users/amritladhar/Documents/GitHub/Game/Penance/Content/Player/SK_Player.fbx
+Meshes: 1
+Mesh PlayerRoughDraft_Mesh: min=(-0.209,-0.111,-0.000) max=(0.209,0.111,1.000) verts=99932 groups=19
+Vertex groups: pelvis, spine_01, spine_02, neck_01, head, clavicle_l, upperarm_l, lowerarm_l, hand_l, clavicle_r, upperarm_r, lowerarm_r, hand_r, thigh_l, calf_l, foot_l, thigh_r, calf_r, foot_r
+Armatures: 1
+Armature SK_Player_Armature: bones=20
+Bone root: head=(0.000,0.000,0.000) tail=(0.000,0.000,0.460) parent=None
+Bone pelvis: head=(0.000,0.000,0.460) tail=(0.000,0.000,0.558) parent=root
+Bone spine_01: head=(0.000,0.000,0.620) tail=(0.000,0.000,0.760) parent=pelvis
+Bone spine_02: head=(0.000,0.000,0.760) tail=(0.000,0.000,0.793) parent=spine_01
+Bone neck_01: head=(0.000,0.000,0.860) tail=(0.000,0.000,0.980) parent=spine_02
+Bone head: head=(0.000,0.000,0.980) tail=(0.000,0.000,1.100) parent=neck_01
+Bone clavicle_l: head=(0.000,0.000,0.760) tail=(-0.121,0.000,0.760) parent=spine_02
+Bone upperarm_l: head=(-0.121,0.000,0.760) tail=(-0.199,0.000,0.580) parent=clavicle_l
+Bone lowerarm_l: head=(-0.199,0.000,0.580) tail=(-0.251,0.000,0.420) parent=upperarm_l
+Bone hand_l: head=(-0.251,0.000,0.420) tail=(-0.292,0.000,0.257) parent=lowerarm_l
+Bone clavicle_r: head=(0.000,0.000,0.760) tail=(0.121,0.000,0.760) parent=spine_02
+Bone upperarm_r: head=(0.121,0.000,0.760) tail=(0.199,0.000,0.580) parent=clavicle_r
+Bone lowerarm_r: head=(0.199,0.000,0.580) tail=(0.251,0.000,0.420) parent=upperarm_r
+Bone hand_r: head=(0.251,0.000,0.420) tail=(0.292,0.000,0.257) parent=lowerarm_r
+Bone thigh_l: head=(-0.067,0.000,0.460) tail=(-0.067,0.000,0.240) parent=pelvis
+Bone calf_l: head=(-0.067,0.000,0.240) tail=(-0.067,0.000,0.040) parent=thigh_l
+Bone foot_l: head=(-0.067,0.000,0.040) tail=(-0.067,0.200,0.040) parent=calf_l
+Bone thigh_r: head=(0.067,0.000,0.460) tail=(0.067,0.000,0.240) parent=pelvis
+Bone calf_r: head=(0.067,0.000,0.240) tail=(0.067,0.000,0.040) parent=thigh_r
+Bone foot_r: head=(0.067,0.000,0.040) tail=(0.067,0.200,0.040) parent=calf_r

@@ -1,0 +1,11 @@
+PENANCE_RIGGED_CHARACTER_IMPORT_REPORT
+Imported path count: 2
+Imported: SkeletalMesh /Game/PenanceAssets/Enemies/PenanceCarrier/Skeletal/SK_Penance.SK_Penance
+Imported: SkeletalMesh /Game/Player/Skeletal/SK_Player.SK_Player
+Destination assets:
+- MaterialInstanceConstant /Game/PenanceAssets/Enemies/PenanceCarrier/Skeletal/Material_0.Material_0
+- SkeletalMesh /Game/PenanceAssets/Enemies/PenanceCarrier/Skeletal/SK_Penance.SK_Penance
+- Skeleton /Game/PenanceAssets/Enemies/PenanceCarrier/Skeletal/SK_Penance_Skeleton.SK_Penance_Skeleton
+- MaterialInstanceConstant /Game/Player/Skeletal/Material_0.Material_0
+- SkeletalMesh /Game/Player/Skeletal/SK_Player.SK_Player
+- Skeleton /Game/Player/Skeletal/SK_Player_Skeleton.SK_Player_Skeleton

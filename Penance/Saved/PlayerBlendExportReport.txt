@@ -1,0 +1,9 @@
+BLEND_CHARACTER_EXPORT_REPORT
+Source: /Users/amritladhar/Player.blend
+FBX: /Users/amritladhar/Documents/GitHub/Game/Penance/Content/Player/BlenderSource/SK_Player_FromBlend.fbx
+Status: OK
+Exported object count: 2
+- ARMATURE SK_Player_Armature bones=20
+  deform_bones=20
+- MESH PlayerRoughDraft_Mesh verts=99932 groups=19 modifiers=ARMATURE
+  vertex_groups=pelvis,spine_01,spine_02,neck_01,head,clavicle_l,upperarm_l,lowerarm_l,hand_l,clavicle_r,upperarm_r,lowerarm_r,hand_r,thigh_l,calf_l,foot_l,thigh_r,calf_r,foot_r
