@@ -3,7 +3,7 @@ Source: /Users/amritladhar/Penance.blend
 FBX: /Users/amritladhar/Documents/GitHub/Game/Penance/Content/PenanceAssets/Enemies/PenanceCarrier/BlenderSource/SK_Penance_FromBlend.fbx
 Status: OK
 Exported object count: 2
-- ARMATURE SK_Penance_Armature bones=20
-  deform_bones=20
-- MESH PenanceRoughDraft_Mesh verts=114780 groups=19 modifiers=ARMATURE
-  vertex_groups=pelvis,spine_01,spine_02,neck_01,head,clavicle_l,upperarm_l,lowerarm_l,hand_l,clavicle_r,upperarm_r,lowerarm_r,hand_r,thigh_l,calf_l,foot_l,thigh_r,calf_r,foot_r
+- ARMATURE SK_Penance_Armature bones=44
+  deform_bones=34
+- MESH PenanceRoughDraft_Mesh verts=114780 groups=34 modifiers=ARMATURE
+  vertex_groups=pelvis,spine_01,spine_02,neck_01,head,clavicle_l,upperarm_l,lowerarm_l,hand_l,clavicle_r,upperarm_r,lowerarm_r,hand_r,thigh_l,calf_l,foot_l,thigh_r,calf_r,foot_r,root,lowerarm_twist_l,upperarm_twist_l,lowerarm_twist_r,upperarm_twist_r,calf_twist_l,thigh_twist_l,calf_twist_r,thigh_twist_r,cloth_front_l,cloth_front_r,cloth_back_l,cloth_back_r,coat_side_l,coat_side_r

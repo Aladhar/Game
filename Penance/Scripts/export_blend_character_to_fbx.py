@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import sys
 import traceback
+import os
 from pathlib import Path
 
 import bpy
@@ -126,7 +127,8 @@ def main() -> None:
 
     write_report(report, src, out, objects, "OK")
     print(f"EXPORTED_BLEND_CHARACTER_TO_FBX: {out}")
-    bpy.ops.wm.quit_blender()
+    sys.stdout.flush()
+    os._exit(0)
 
 
 main()

@@ -2,18 +2,33 @@
 
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
+#include "Components/SkeletalMeshComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/PlayerController.h"
 #include "GameFramework/PlayerInput.h"
 #include "Camera/PlayerCameraManager.h"
 #include "PenanceHingedDoor.h"
 #include "PenancePickupItem.h"
+#include "UObject/ConstructorHelpers.h"
 
 APenancePlayerCharacter::APenancePlayerCharacter()
 {
     PrimaryActorTick.bCanEverTick = true;
 
     GetCapsuleComponent()->InitCapsuleSize(CapsuleRadius, StandingCapsuleHeight * 0.5f);
+
+    USkeletalMeshComponent* PlayerMeshComponent = GetMesh();
+    static ConstructorHelpers::FObjectFinder<USkeletalMesh> PlayerMeshAsset(TEXT("/Game/Player/Skeletal/SK_Player.SK_Player"));
+    if (PlayerMeshAsset.Succeeded())
+    {
+        PlayerMeshComponent->SetSkeletalMesh(PlayerMeshAsset.Object);
+    }
+    PlayerMeshComponent->SetupAttachment(GetCapsuleComponent());
+    PlayerMeshComponent->SetRelativeLocation(FVector(0.0f, 0.0f, -StandingCapsuleHeight * 0.5f));
+    PlayerMeshComponent->SetRelativeRotation(FRotator(0.0f, -90.0f, 0.0f));
+    PlayerMeshComponent->SetRelativeScale3D(FVector(1.65f));
+    PlayerMeshComponent->SetOwnerNoSee(true);
+    PlayerMeshComponent->bCastHiddenShadow = true;
 
     FirstPersonCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("FirstPersonCamera"));
     FirstPersonCamera->SetupAttachment(GetCapsuleComponent());

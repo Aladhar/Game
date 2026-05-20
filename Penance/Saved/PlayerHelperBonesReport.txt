@@ -1,0 +1,14 @@
+HELPER_BONES_REPORT
+Source: /Users/amritladhar/Player.blend
+Saved: /Users/amritladhar/Player.blend
+Armature: SK_Player_Armature
+Total bones: 44
+Deform bones: 34
+Helper/non-deform bones: 10
+Created this run: upperarm_twist_l, upperarm_twist_r, lowerarm_twist_l, lowerarm_twist_r, thigh_twist_l, thigh_twist_r, calf_twist_l, calf_twist_r, ik_hand_l, ik_hand_r, ik_foot_l, ik_foot_r, camera, jaw, eye_l, eye_r, cloth_front_l, cloth_front_r, cloth_back_l, cloth_back_r, coat_side_l, coat_side_r, weapon_r, weapon_l
+Mesh: PlayerRoughDraft_Mesh
+Mesh vertex groups: 34
+Deform bone names:
+root, pelvis, spine_01, spine_02, neck_01, head, clavicle_l, upperarm_l, lowerarm_l, hand_l, lowerarm_twist_l, upperarm_twist_l, clavicle_r, upperarm_r, lowerarm_r, hand_r, lowerarm_twist_r, upperarm_twist_r, thigh_l, calf_l, foot_l, calf_twist_l, thigh_twist_l, thigh_r, calf_r, foot_r, calf_twist_r, thigh_twist_r, cloth_front_l, cloth_front_r, cloth_back_l, cloth_back_r, coat_side_l, coat_side_r
+Helper/non-deform bone names:
+camera, jaw, eye_l, eye_r, weapon_l, weapon_r, ik_hand_l, ik_hand_r, ik_foot_l, ik_foot_r
