@@ -17,12 +17,12 @@ import bpy
 from mathutils import Vector
 
 
-def args_after_separator() -> tuple[Path, Path, Path]:
+def args_after_separator() -> tuple[Path, Path, Path, dict[str, float]]:
     if "--" not in sys.argv:
-        raise SystemExit("Expected arguments after --: SRC.blend OUT.blend REPORT.txt")
+        raise SystemExit("Expected arguments after --: SRC.blend OUT.blend REPORT.txt [key=value ...]")
     args = sys.argv[sys.argv.index("--") + 1 :]
-    if len(args) != 3:
-        raise SystemExit("Expected arguments after --: SRC.blend OUT.blend REPORT.txt")
+    if len(args) < 3:
+        raise SystemExit("Expected arguments after --: SRC.blend OUT.blend REPORT.txt [key=value ...]")
     src = Path(args[0]).expanduser().resolve()
     out = Path(args[1]).expanduser().resolve()
     report = Path(args[2]).expanduser().resolve()
@@ -30,7 +30,17 @@ def args_after_separator() -> tuple[Path, Path, Path]:
         raise SystemExit(f"Blend does not exist: {src}")
     out.parent.mkdir(parents=True, exist_ok=True)
     report.parent.mkdir(parents=True, exist_ok=True)
-    return src, out, report
+    params = {
+        "z_pct": 0.18,
+        "y_min_pct": -0.05,
+        "y_max_pct": 1.05,
+    }
+    for raw in args[3:]:
+        key, _, value = raw.partition("=")
+        if key not in params or not value:
+            raise SystemExit(f"Unsupported parameter: {raw}")
+        params[key] = float(value)
+    return src, out, report, params
 
 
 def character_mesh() -> bpy.types.Object:
@@ -69,13 +79,13 @@ def local_to_world(mesh: bpy.types.Object, index: int) -> Vector:
     return mesh.matrix_world @ mesh.data.vertices[index].co
 
 
-def select_foot_vertices(mesh: bpy.types.Object, side: str) -> list[int]:
+def select_foot_vertices(mesh: bpy.types.Object, side: str, params: dict[str, float]) -> list[int]:
     min_v, max_v = mesh_bounds(mesh)
     size = max_v - min_v
-    z_max = min_v.z + size.z * 0.18
+    z_max = min_v.z + size.z * params["z_pct"]
     z_min = min_v.z - size.z * 0.02
-    y_front = min_v.y + size.y * 0.18
-    y_back = max_v.y + size.y * 0.05
+    y_front = min_v.y + size.y * params["y_min_pct"]
+    y_back = min_v.y + size.y * params["y_max_pct"]
     center_x = (min_v.x + max_v.x) * 0.5
 
     candidates: list[int] = []
@@ -106,6 +116,18 @@ def select_foot_vertices(mesh: bpy.types.Object, side: str) -> list[int]:
             candidates.append(vertex.index)
 
     return candidates
+
+
+def selected_bounds(mesh: bpy.types.Object, indices: list[int]) -> str:
+    if not indices:
+        return "none"
+    points = [local_to_world(mesh, index) for index in indices]
+    minimum = Vector((min(p.x for p in points), min(p.y for p in points), min(p.z for p in points)))
+    maximum = Vector((max(p.x for p in points), max(p.y for p in points), max(p.z for p in points)))
+    return (
+        f"min=({minimum.x:.5f},{minimum.y:.5f},{minimum.z:.5f}) "
+        f"max=({maximum.x:.5f},{maximum.y:.5f},{maximum.z:.5f})"
+    )
 
 
 def remove_from_all_groups(mesh: bpy.types.Object, indices: list[int]) -> None:
@@ -211,6 +233,7 @@ def write_report(
     right_bone: str,
     left: list[int],
     right: list[int],
+    params: dict[str, float],
     verification: list[str],
 ) -> None:
     sample_left = left[:8]
@@ -223,8 +246,11 @@ def write_report(
         f"Armature: {armature.name}",
         f"Left foot bone: {left_bone}",
         f"Right foot bone: {right_bone}",
+        f"Selection params: z_pct={params['z_pct']} y_min_pct={params['y_min_pct']} y_max_pct={params['y_max_pct']}",
         f"Left shoe/foot vertices fixed: {len(left)}",
         f"Right shoe/foot vertices fixed: {len(right)}",
+        f"Left fixed bounds: {selected_bounds(mesh, left)}",
+        f"Right fixed bounds: {selected_bounds(mesh, right)}",
         f"Left sample vertex weights: {[weights_for(mesh, i) for i in sample_left]}",
         f"Right sample vertex weights: {[weights_for(mesh, i) for i in sample_right]}",
     ]
@@ -233,15 +259,15 @@ def write_report(
 
 
 def main() -> None:
-    src, out, report = args_after_separator()
+    src, out, report, params = args_after_separator()
     bpy.ops.wm.open_mainfile(filepath=str(src))
     mesh = character_mesh()
     armature = character_armature(mesh)
     left_bone = bone_name(armature, ["foot.L", "foot_l", "Foot.L", "foot_l"])
     right_bone = bone_name(armature, ["foot.R", "foot_r", "Foot.R", "foot_r"])
 
-    left = select_foot_vertices(mesh, "left")
-    right = select_foot_vertices(mesh, "right")
+    left = select_foot_vertices(mesh, "left", params)
+    right = select_foot_vertices(mesh, "right", params)
     if len(left) < 25 or len(right) < 25:
         raise SystemExit(f"Not enough foot vertices found: left={len(left)} right={len(right)}")
 
@@ -251,7 +277,7 @@ def main() -> None:
     assign_to_group(mesh, right, right_bone)
     normalize_all(mesh)
     verification = verify_rigidity(mesh, armature, left, right)
-    write_report(report, src, out, mesh, armature, left_bone, right_bone, left, right, verification)
+    write_report(report, src, out, mesh, armature, left_bone, right_bone, left, right, params, verification)
     bpy.ops.wm.save_as_mainfile(filepath=str(out))
     print(f"FIXED_FOOT_WEIGHTS_AND_VERIFIED: {out}")
     os._exit(0)

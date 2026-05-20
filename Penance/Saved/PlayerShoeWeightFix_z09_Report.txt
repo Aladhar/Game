@@ -1,0 +1,30 @@
+FOOT_WEIGHT_FIX_REPORT
+Source: /Users/amritladhar/Documents/GitHub/Game/Penance/Built/Blender/Player_shoe_iter_z09.blend
+Saved: /Users/amritladhar/Documents/GitHub/Game/Penance/Built/Blender/Player_shoe_iter_z09.blend
+Mesh: PlayerRoughDraft_Mesh
+Armature: SK_Player_Armature
+Left foot bone: foot_l
+Right foot bone: foot_r
+Selection params: z_pct=0.09 y_min_pct=-0.05 y_max_pct=1.05
+Left shoe/foot vertices fixed: 5080
+Right shoe/foot vertices fixed: 5094
+Left fixed bounds: min=(-0.14703,-0.11106,-0.00168) max=(-0.05980,0.06840,0.08832)
+Right fixed bounds: min=(0.05845,-0.11096,-0.00163) max=(0.14545,0.06851,0.08832)
+Left sample vertex weights: [{'foot_l': 1.0}, {'foot_l': 1.0}, {'foot_l': 1.0}, {'foot_l': 1.0}, {'foot_l': 1.0}, {'foot_l': 1.0}, {'foot_l': 1.0}, {'foot_l': 1.0}]
+Right sample vertex weights: [{'foot_r': 1.0}, {'foot_r': 1.0}, {'foot_r': 1.0}, {'foot_r': 1.0}, {'foot_r': 1.0}, {'foot_r': 1.0}, {'foot_r': 1.0}, {'foot_r': 1.0}]
+Walk action tested: AN_Player_CautiousWalk_32f.001
+Frames sampled: [1, 8, 16, 24, 32]
+left frame=1 centroid=(-0.10402,0.22124,0.05694) max_radius=0.099924 avg_radius=0.059577 drift=0.00000000
+right frame=1 centroid=(0.10483,-0.05115,0.05647) max_radius=0.101037 avg_radius=0.059056 drift=0.00000000
+left frame=8 centroid=(-0.10285,0.01726,0.03490) max_radius=0.099923 avg_radius=0.059577 drift=0.00000025
+right frame=8 centroid=(0.09849,-0.03168,0.03105) max_radius=0.101037 avg_radius=0.059056 drift=0.00000002
+left frame=16 centroid=(-0.10488,-0.06624,0.06274) max_radius=0.099923 avg_radius=0.059577 drift=0.00000027
+right frame=16 centroid=(0.10495,0.19920,0.05393) max_radius=0.101036 avg_radius=0.059056 drift=0.00000050
+left frame=24 centroid=(-0.10446,-0.03159,0.03268) max_radius=0.099923 avg_radius=0.059577 drift=0.00000022
+right frame=24 centroid=(0.10021,0.01086,0.03383) max_radius=0.101037 avg_radius=0.059056 drift=0.00000007
+left frame=32 centroid=(-0.10402,0.22124,0.05694) max_radius=0.099924 avg_radius=0.059577 drift=0.00000000
+right frame=32 centroid=(0.10483,-0.05115,0.05647) max_radius=0.101037 avg_radius=0.059056 drift=0.00000000
+Rigidity threshold: 0.0005
+Left max radius drift: 0.00000027
+Right max radius drift: 0.00000050
+Rigid verification: PASSED
