@@ -307,6 +307,11 @@ def write_report(
 def main() -> None:
     kind, src, report = args_after_separator()
     bpy.ops.wm.open_mainfile(filepath=str(src))
+    for scene in bpy.data.scenes:
+        try:
+            scene.render.engine = "BLENDER_WORKBENCH"
+        except Exception:
+            pass
     armature = first_armature()
     mesh = first_mesh()
     if kind == "player":

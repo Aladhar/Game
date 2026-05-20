@@ -310,6 +310,14 @@ Do not add:
 - repeated window faces
 - repeated door slams
 That will make the demo feel cheap.
+
+=======================
+Create Penance-specific animations that fit his character style:
+
+1. Attack animation
+2. Walking animation
+3. Patrolling animation
+4. Chasing animation
 ================================================================================
 CURRENT GAME DEMO ADDENDUM — SUBURBAN HORROR BLOCKOUT SOURCE OF TRUTH
 ================================================================================

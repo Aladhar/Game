@@ -1,0 +1,421 @@
+Intial Rules: 
+Your allowed to update Game/Penance/Penance_Horror_Game_Master_Plan_ADD_MORE_INFO.txt to be all in in the unreal contextually instead of godot (the legacy/deprecated version).
+Also your allowed to add more in that file.
+
+
+We are implementing the visible first-person full-body Player setup now.
+
+Important current decision:
+Use a full-body first-person setup ONLY if the head/face is hidden from the owner camera.
+
+Do NOT delete the original head/face model permanently.
+Save and preserve the full player model with head/face for future implementation and refinement.
+
+Future implementation notes:
+- Player model will later be refined more.
+- Penance model will later be refined more.
+- Church asset will later be refined more.
+- Foster homes are still needed.
+- Road system can be refined further later.
+
+Current implementation focus:
+1. Use the most recent fixed Player model/animation build.
+2. Make the Player body/feet visible in first-person.
+3. Hide head/face from the player camera so it does not clip.
+4. Make walking animation match movement speed.
+5. Make stopping stop the animation.
+6. Make turning look correct, not broken or foot-sliding.
+7. Keep the full model with head/face saved for future use.
+
+Most recent Player model/animation files to prioritize:
+- Penance/Built/Blender/Player_adaptive_REBUILT_ANIM.blend
+- Penance/Built/FBX/SK_Player_Adaptive_REBUILT_ANIM.fbx
+
+If those files do not exist or are outdated, inspect:
+- Penance/Built/Blender/
+- Penance/Built/FBX/
+and use the newest Player adaptive/rebuilt file with fixed foot/shoe animation.
+
+==================================================
+STEP 1 — PRESERVE FULL PLAYER MODEL
+==================================================
+
+Goal:
+Keep a full version of the Player model with head/face/hair/hood intact for future use.
+
+Tasks:
+1. Locate the newest fixed Player Blender file.
+2. Duplicate/save a full master copy:
+   Player_FullBody_WithHead_MASTER.blend
+3. Do not delete the head/face/hair from this master copy.
+4. Keep this version for future:
+   - cutscenes
+   - mirrors
+   - third-person debug
+   - model refinement
+   - screenshots
+   - possible body/face polish
+
+Expected output:
+- Full preserved Blender model with head/face:
+  Penance/Built/Blender/Player_FullBody_WithHead_MASTER.blend
+
+Optional FBX:
+- Penance/Built/FBX/SK_Player_FullBody_WithHead_MASTER.fbx
+
+==================================================
+STEP 2 — CREATE FIRST-PERSON BODY VERSION
+==================================================
+
+Goal:
+Create/use a version of the Player mesh that works in first-person without the camera clipping into the head/face.
+
+Recommended method:
+Use two versions:
+1. Full-body master with head/face saved.
+2. First-person body version with head/face hidden or removed only for owner/player view.
+
+Preferred Unreal setup:
+BP_PlayerCharacter
+├── CapsuleComponent
+├── CameraComponent
+├── Mesh_FP_Body
+│   └── visible only to owner / first-person player
+└── optional Mesh_FullBody
+    └── hidden from owner, saved for future mirror/cutscene/external view
+
+If using only one mesh:
+- Hide head/face/hair bones or material sections from the owner camera.
+- Make sure hiding the head does not break the neck/collar/hood silhouette too badly.
+- If the hood/collar blocks the camera, hide or adjust those sections too.
+
+Important:
+- Do not permanently destroy the full model.
+- The first-person version should show:
+  - torso/lower jacket if visible
+  - pants
+  - legs
+  - shoes/feet
+- The first-person version should NOT show:
+  - face/head clipping into camera
+  - hair clipping into camera
+  - inside of mouth/eyes
+  - hood/collar blocking view
+
+Expected output:
+- First-person body Blender file:
+  Penance/Built/Blender/Player_FirstPersonBody.blend
+
+- First-person body FBX:
+  Penance/Built/FBX/SK_Player_FirstPersonBody.fbx
+
+==================================================
+STEP 3 — ATTACH PLAYER BODY TO ACTUAL PLAYER CHARACTER
+==================================================
+
+Goal:
+The body/feet must move with the player camera because the player is the user.
+
+Do not place the mesh as a separate actor in the level.
+Attach the Skeletal Mesh to the active Player Character Blueprint.
+
+Tasks:
+1. Find the active GameMode.
+2. Find the active Player Character / Pawn Blueprint.
+3. Find the active CameraComponent.
+4. Add or update the visible first-person body mesh component.
+5. Assign the newest fixed Player Skeletal Mesh.
+6. Assign the correct Animation Blueprint.
+7. Position the mesh relative to capsule/camera.
+
+Required result:
+- Press Play.
+- Player spawns at PlayerStart.
+- Camera is in the correct first-person position.
+- Looking down shows body/legs/feet.
+- Body follows movement.
+- No duplicate body stays behind at spawn.
+
+Outliner organization:
+01_Player
+- PlayerStart
+- BP_PlayerCharacter
+- Camera helpers
+- Player mesh debug actors if any
+
+==================================================
+STEP 4 — USE THE FIXED ANIMATION MODEL
+==================================================
+
+Goal:
+Use the most recent fixed Player animation/model, not old broken versions.
+
+Use:
+- SK_Player_Adaptive_REBUILT_ANIM.fbx
+or the newest equivalent fixed Player FBX.
+
+Confirm:
+- It imports as Skeletal Mesh, not Static Mesh.
+- Walk animation exists.
+- Foot/shoe deformation is fixed.
+- Shoes are rigidly weighted to foot bones.
+- IK/CTRL/helper bones do not deform the mesh.
+
+If needed, reimport into Unreal:
+Import Settings:
+- Skeletal Mesh: ON
+- Import Mesh: ON
+- Import Animations: ON
+- Skeleton: use existing Player skeleton if compatible, otherwise create new one
+- Do not import as Static Mesh
+
+==================================================
+STEP 5 — WALK / IDLE ANIMATION LOGIC
+==================================================
+
+Goal:
+When the player walks, the feet animate.
+When the player stops, the walking animation stops.
+
+Create/update:
+ABP_Player
+
+Variables:
+- Speed
+- Direction
+- bIsMoving
+- bIsSprinting
+- bIsCrouching
+- bIsGrounded
+- TurnYawDelta
+- bIsTurningInPlace
+
+Animation update logic:
+1. Get Velocity.
+2. Use VectorLengthXY for Speed.
+3. If Speed > 5 to 10 UU/s:
+   bIsMoving = true
+4. If Speed <= 5 to 10 UU/s:
+   bIsMoving = false
+5. If bIsMoving false:
+   play Idle
+6. If bIsMoving true:
+   play Walk / locomotion blendspace
+
+Movement speed targets:
+- Walk: 250 UU/s
+- Sprint: 550 UU/s
+- Crouch: 140 UU/s
+
+Reason:
+Unreal uses centimeters.
+1 Unreal Unit = 1 centimeter.
+2.5 m/s = 250 UU/s.
+5.5 m/s = 550 UU/s.
+1.4 m/s = 140 UU/s.
+
+==================================================
+STEP 6 — TURNING MUST BE TAKEN INTO CONSIDERATION
+==================================================
+
+Goal:
+Turning should not look broken.
+The player should not slide, twist weirdly, or keep using only forward walk when rotating.
+
+Need to handle two types of turning:
+
+A. Turning while moving
+B. Turning in place while standing
+
+----------------------------------------
+A. Turning while moving
+----------------------------------------
+
+Use Direction variable:
+Direction = Calculate Direction(Velocity, ActorRotation)
+
+Use a 2D locomotion BlendSpace if possible:
+BS_Player_Locomotion_2D
+
+BlendSpace axes:
+- Speed
+- Direction
+
+Suggested Direction values:
+- -180 = backward
+- -90 = strafe left
+- 0 = forward
+- 90 = strafe right
+- 180 = backward
+
+If only forward walk animation exists:
+- Use forward walk for now.
+- Still calculate Direction so the system is ready.
+- Avoid extreme sideways foot sliding by rotating character toward movement direction or limiting visible strafe movement.
+
+Recommended first implementation:
+- Use CharacterMovement orient/rotation settings consistently.
+- If first-person uses controller yaw, keep body aligned with camera yaw or smoothly follow camera yaw.
+- Do not let the body face a different direction than the camera for too long.
+
+----------------------------------------
+B. Turning in place
+----------------------------------------
+
+When Speed is near 0 but camera/controller yaw changes:
+- The upper body/camera turns immediately.
+- The lower body should not look like it is walking.
+- Optional: play a turn-in-place animation later.
+
+For now:
+If Speed <= 10 UU/s:
+- stay in Idle
+- rotate body smoothly toward camera/control yaw
+- do not play walk animation
+
+Future if turn animations exist:
+- TurnLeft_90
+- TurnRight_90
+- TurnLeft_180
+- TurnRight_180
+
+Turn-in-place logic:
+1. Store body yaw.
+2. Compare camera/control yaw to body yaw.
+3. TurnYawDelta = normalized yaw difference.
+4. If abs(TurnYawDelta) > 45 degrees and Speed < 10:
+   bIsTurningInPlace = true
+5. Play left/right turn-in-place animation if available.
+6. If no turn animation exists, smoothly rotate body root toward camera yaw.
+
+Important:
+Do not make the feet walk in place just because the player rotates the mouse.
+Mouse turning should rotate orientation, not trigger walk animation.
+
+==================================================
+STEP 7 — FOOT SLIDING / PLAY RATE
+==================================================
+
+Goal:
+Foot movement should match actual movement speed.
+
+If using in-place walk:
+- CharacterMovement moves the player.
+- Animation visually matches movement.
+- Root motion should be OFF unless intentionally using root motion.
+
+Use animation play rate:
+Base walk speed = 250 UU/s
+
+WalkPlayRate = Speed / 250.0
+Clamp:
+- minimum 0.75
+- maximum 1.25
+
+If Speed is low:
+- blend toward idle instead of playing walk slowly forever.
+
+Foot sliding checks:
+- Walk forward at normal speed.
+- Shoes should not slide too much.
+- Stop moving.
+- Feet should stop.
+- Turn mouse while standing.
+- Feet should not start walking.
+- Turn while walking.
+- Body should not twist unnaturally.
+
+==================================================
+STEP 8 — CAMERA / BODY OFFSET
+==================================================
+
+Goal:
+Player sees body/feet naturally without camera clipping.
+
+Suggested approach:
+- Camera is attached to capsule/head-height location.
+- First-person body mesh is offset down/back slightly from camera.
+- Hide head/face/hair from owner view.
+- Keep arms/torso/legs visible only if they look good.
+
+Check:
+- Looking down shows feet.
+- Looking straight does not show inside head/face.
+- Looking left/right does not clip into collar/hood.
+- Walking does not make body jitter through camera.
+- Crouching later should move camera/body consistently.
+
+If the model is a boy:
+- Camera height should be lower than adult FPS if appropriate.
+- Do not use giant adult scale if the model is clearly younger.
+
+==================================================
+STEP 9 — FUTURE ASSET NOTES
+==================================================
+
+Add TODO notes for future implementation:
+
+Player:
+- refine model proportions
+- improve first-person body mesh
+- add better turn animations
+- add crouch/sprint animations
+- add head/face back for mirrors/cutscenes only
+
+Penance:
+- refine character model
+- create attack animation
+- create walking animation
+- create patrolling animation
+- create chasing animation
+- add carrier/strip/bell controls
+
+Church:
+- refine exterior asset
+- create heavier scary church area
+- later split exterior/interior for performance
+
+Foster homes:
+- still need foster home exterior assets
+- create/modularize foster-home variants
+- make the main Foster House visually distinct and story-important
+
+Road system:
+- current road replacement can be refined further
+- improve intersections
+- improve road width/curbs/sidewalks
+- make roads guide player toward objectives
+
+==================================================
+DELIVERABLE
+==================================================
+
+When done, report:
+
+- Which Player model file was used
+- Which full head/face master model was saved
+- Which first-person body mesh was created/used
+- Which Unreal Player Blueprint was edited
+- Which Skeletal Mesh was assigned
+- Which Animation Blueprint was assigned
+- Whether head/face is hidden from owner camera
+- Whether feet are visible when looking down
+- Whether walk animation starts only while moving
+- Whether walk animation stops when player stops
+- How turning is handled
+- Whether turning in place avoids walk animation
+- Whether foot deformation is fixed
+- Whether foot sliding is acceptable
+- Movement speeds used
+- Any remaining TODOs
+
+
+
+
+If your curious how i got the math:
+1 Unreal Unit = 1 centimeter
+1 meter = 100 Unreal Units
+So the correct Unreal values are:
+Walk:   2.5 m/s × 100 = 250 UU/s
+Sprint: 5.5 m/s × 100 = 550 UU/s
+Crouch: 1.4 m/s × 100 = 140 UU/s

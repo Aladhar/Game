@@ -1,0 +1,16 @@
+VERTEX_GROUP_INSPECTION
+Blend: /Users/amritladhar/Documents/GitHub/Game/Penance/Built/Blender/Penance_walkfix_base.blend
+Mesh: PenanceRoughDraft_Mesh
+foot_l: count=11331 min=(-0.06300,-0.28641,-0.07349) max=(0.34057,0.17115,0.24364)
+foot_r: count=8751 min=(-0.01956,-0.15445,-0.07349) max=(0.37352,0.17445,0.24364)
+calf_l: count=35928 min=(-0.06300,-0.28641,-0.07349) max=(0.32990,0.17115,0.35890)
+calf_r: count=33080 min=(-0.01050,-0.28329,-0.07349) max=(0.38657,0.17445,0.36091)
+thigh_l: count=54822 min=(-0.06300,-0.28641,-0.04940) max=(0.30516,0.17115,0.53946)
+thigh_r: count=50127 min=(0.01826,-0.24391,-0.05188) max=(0.38657,0.17445,0.53715)
+strip_front_l: count=0 none
+strip_front_c: count=0 none
+strip_front_r: count=0 none
+strip_back_l: count=0 none
+strip_back_r: count=0 none
+carrier_root: count=0 none
+bell_l: count=0 none

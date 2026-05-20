@@ -1,0 +1,16 @@
+MODEL_ADAPTED_CONTROLS_AND_WALK_REPORT
+Kind: penance
+Blend: /Users/amritladhar/Documents/GitHub/Game/Penance/Built/Blender/Penance_walkfix_base.blend
+Armature: SK_Penance_Armature
+Total bones: 50
+Deform bones: 46
+Helper/non-deform bones: 4
+Removed controls: camera, eye_l, eye_r, jaw, weapon_l, weapon_r
+Created controls: hunch_spine_upper, hunch_spine_lower, carrier_root, carrier_top, carrier_side_l, carrier_side_r, strip_front_l, strip_front_c, strip_front_r, strip_back_l, strip_back_r, bell_l
+Walk action: AN_Penance_HunchedStalk_48f
+Mesh: PenanceRoughDraft_Mesh
+Vertex groups: 46
+Deform bone names:
+root, pelvis, spine_01, spine_02, neck_01, head, clavicle_l, upperarm_l, lowerarm_l, hand_l, bell_l, lowerarm_twist_l, upperarm_twist_l, clavicle_r, upperarm_r, lowerarm_r, hand_r, lowerarm_twist_r, upperarm_twist_r, hunch_spine_upper, carrier_root, carrier_top, carrier_side_l, carrier_side_r, strip_front_l, strip_front_c, strip_front_r, strip_back_l, strip_back_r, hunch_spine_lower, thigh_l, calf_l, foot_l, calf_twist_l, thigh_twist_l, thigh_r, calf_r, foot_r, calf_twist_r, thigh_twist_r, cloth_front_l, cloth_front_r, cloth_back_l, cloth_back_r, coat_side_l, coat_side_r
+Helper/non-deform bone names:
+ik_hand_l, ik_hand_r, ik_foot_l, ik_foot_r

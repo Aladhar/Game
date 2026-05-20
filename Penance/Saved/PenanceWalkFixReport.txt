@@ -1,0 +1,23 @@
+PENANCE_WALK_FIX_REPORT
+Source: /Users/amritladhar/Documents/GitHub/Game/Penance/Built/Blender/Penance_walkfix_candidate.blend
+Saved: /Users/amritladhar/Documents/GitHub/Game/Penance/Built/Blender/Penance_walkfix_candidate.blend
+Action: AN_Penance_WalkFix_GroundedStalk_64f
+Left actual-foot vertices fixed: 2643
+Right actual-foot vertices fixed: 2061
+Left bounds: min=(-0.06049,-0.14899,-0.07349) max=(0.19741,0.15547,0.09644)
+Right bounds: min=(0.16014,-0.08269,-0.07104) max=(0.36709,0.15535,0.09639)
+Frames sampled: [1, 17, 33, 49, 64]
+left frame=1 max_radius=0.196064 avg_radius=0.108110 drift=0.00000000
+right frame=1 max_radius=0.165204 avg_radius=0.093429 drift=0.00000000
+left frame=17 max_radius=0.196064 avg_radius=0.108110 drift=0.00000000
+right frame=17 max_radius=0.165204 avg_radius=0.093429 drift=0.00000000
+left frame=33 max_radius=0.196064 avg_radius=0.108110 drift=0.00000000
+right frame=33 max_radius=0.165204 avg_radius=0.093429 drift=0.00000000
+left frame=49 max_radius=0.196064 avg_radius=0.108110 drift=0.00000000
+right frame=49 max_radius=0.165204 avg_radius=0.093429 drift=0.00000000
+left frame=64 max_radius=0.196064 avg_radius=0.108110 drift=0.00000000
+right frame=64 max_radius=0.165204 avg_radius=0.093429 drift=0.00000000
+Rigidity threshold: 0.0005
+Left max radius drift: 0.00000000
+Right max radius drift: 0.00000000
+Rigid foot verification: PASSED
