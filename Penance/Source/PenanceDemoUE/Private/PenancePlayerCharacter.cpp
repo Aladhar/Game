@@ -1,8 +1,10 @@
 #include "PenancePlayerCharacter.h"
 
+#include "ABP_Player.h"
 #include "Animation/AnimSequence.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
+#include "Components/SceneComponent.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/PlayerController.h"
@@ -41,7 +43,7 @@ APenancePlayerCharacter::APenancePlayerCharacter()
     }
     PlayerMeshComponent->SetupAttachment(GetCapsuleComponent());
     PlayerMeshComponent->SetRelativeLocation(FVector(0.0f, 0.0f, -StandingCapsuleHeight * 0.5f));
-    PlayerMeshComponent->SetRelativeRotation(FRotator(0.0f, -90.0f, 0.0f));
+    PlayerMeshComponent->SetRelativeRotation(FRotator(0.0f, PlayerMeshVisualYawOffsetDegrees, 0.0f));
     PlayerMeshComponent->SetRelativeScale3D(FVector(1.65f));
     PlayerMeshComponent->SetOwnerNoSee(true);
     PlayerMeshComponent->bCastHiddenShadow = true;
@@ -60,38 +62,48 @@ APenancePlayerCharacter::APenancePlayerCharacter()
     static ConstructorHelpers::FObjectFinder<UAnimSequence> FirstPersonVerifyWalkAnimAsset(TEXT("/Game/Player/FirstPerson/AN_Player_Walk_Verify.AN_Player_Walk_Verify"));
     if (FirstPersonVerifyWalkAnimAsset.Succeeded())
     {
-        FirstPersonWalkAnimation = FirstPersonVerifyWalkAnimAsset.Object;
+        FirstPersonForwardWalkAnimation = FirstPersonVerifyWalkAnimAsset.Object;
+        FirstPersonBackwardWalkAnimation = FirstPersonVerifyWalkAnimAsset.Object;
     }
     else
     {
         static ConstructorHelpers::FObjectFinder<UAnimSequence> FirstPersonImportedWalkAnimAsset(TEXT("/Game/Player/FirstPerson/SK_Player_FirstPersonBody_Anim.SK_Player_FirstPersonBody_Anim"));
         if (FirstPersonImportedWalkAnimAsset.Succeeded())
         {
-            FirstPersonWalkAnimation = FirstPersonImportedWalkAnimAsset.Object;
+            FirstPersonForwardWalkAnimation = FirstPersonImportedWalkAnimAsset.Object;
+            FirstPersonBackwardWalkAnimation = FirstPersonImportedWalkAnimAsset.Object;
         }
     }
-    FirstPersonBodyMesh->SetRelativeLocation(FVector(0.0f, 0.0f, -StandingCapsuleHeight * 0.5f));
-    FirstPersonBodyMesh->SetRelativeRotation(FRotator(0.0f, -90.0f, 0.0f));
-    FirstPersonBodyMesh->SetRelativeScale3D(FVector(1.65f));
-    FirstPersonBodyMesh->SetAnimationMode(EAnimationMode::AnimationSingleNode);
-    if (FirstPersonWalkAnimation)
+    if (UAnimSequence* ForwardLoopAnimation = LoadObject<UAnimSequence>(nullptr, TEXT("/Game/Player/FirstPerson/AN_Player_Walk_Forward_Loop.AN_Player_Walk_Forward_Loop"), nullptr, LOAD_NoWarn))
     {
-        FirstPersonBodyMesh->SetAnimation(FirstPersonWalkAnimation);
-        FirstPersonBodyMesh->SetPosition(0.0f, false);
-        FirstPersonBodyMesh->Stop();
+        FirstPersonForwardWalkAnimation = ForwardLoopAnimation;
     }
+    if (UAnimSequence* BackwardLoopAnimation = LoadObject<UAnimSequence>(nullptr, TEXT("/Game/Player/FirstPerson/AN_Player_Walk_Backward_Loop.AN_Player_Walk_Backward_Loop"), nullptr, LOAD_NoWarn))
+    {
+        FirstPersonBackwardWalkAnimation = BackwardLoopAnimation;
+    }
+    FirstPersonBodyMesh->SetRelativeLocation(FVector(0.0f, 0.0f, -StandingCapsuleHeight * 0.5f));
+    FirstPersonBodyMesh->SetRelativeRotation(FRotator(0.0f, PlayerMeshVisualYawOffsetDegrees, 0.0f));
+    FirstPersonBodyMesh->SetRelativeScale3D(FVector(1.65f));
+    FirstPersonBodyMesh->SetAnimationMode(EAnimationMode::AnimationBlueprint);
+    FirstPersonBodyMesh->SetAnimInstanceClass(UABP_Player::StaticClass());
     FirstPersonBodyMesh->SetOnlyOwnerSee(true);
     FirstPersonBodyMesh->SetOwnerNoSee(false);
     FirstPersonBodyMesh->SetCastShadow(false);
     FirstPersonBodyMesh->bCastHiddenShadow = false;
 
+    FirstPersonCameraRoot = CreateDefaultSubobject<USceneComponent>(TEXT("FirstPersonCameraRoot"));
+    FirstPersonCameraRoot->SetupAttachment(GetCapsuleComponent());
+    FirstPersonCameraRoot->SetRelativeLocation(FVector(0.0f, 0.0f, GetCameraRelativeHeightForCurrentCapsule(StandingCameraHeight)));
+
     FirstPersonCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("FirstPersonCamera"));
-    FirstPersonCamera->SetupAttachment(GetCapsuleComponent());
-    FirstPersonCamera->SetRelativeLocation(FVector(0.0f, 0.0f, GetCameraRelativeHeightForCurrentCapsule(StandingCameraHeight)));
+    FirstPersonCamera->SetupAttachment(FirstPersonCameraRoot);
+    FirstPersonCamera->SetRelativeLocation(FVector::ZeroVector);
+    FirstPersonCamera->SetRelativeRotation(FRotator::ZeroRotator);
     FirstPersonCamera->bUsePawnControlRotation = true;
     FirstPersonCamera->FieldOfView = 78.0f;
 
-    bUseControllerRotationYaw = true;
+    bUseControllerRotationYaw = false;
     bUseControllerRotationPitch = false;
     bUseControllerRotationRoll = false;
 
@@ -130,15 +142,21 @@ void APenancePlayerCharacter::BeginPlay()
     UE_LOG(
         LogPenancePlayerBody,
         Log,
-        TEXT("Player body initialized. Mesh=%s FPBody=%s OwnerOnly=%s OwnerNoSeeExternal=%s Walk=%.1f Sprint=%.1f Crouch=%.1f CameraRelative=%s"),
+        TEXT("Player body initialized. Mesh=%s FPBody=%s AnimClass=%s OwnerOnly=%s OwnerNoSeeExternal=%s ForwardAnim=%s BackwardAnim=%s Walk=%.1f Sprint=%.1f Crouch=%.1f CameraRootRelative=%s CameraRelative=%s MeshVisualYawOffset=%.1f BodyYawFollow=%.1f"),
         GetMesh() && GetMesh()->GetSkeletalMeshAsset() ? *GetMesh()->GetSkeletalMeshAsset()->GetPathName() : TEXT("None"),
         FirstPersonBodyMesh && FirstPersonBodyMesh->GetSkinnedAsset() ? *FirstPersonBodyMesh->GetSkinnedAsset()->GetPathName() : TEXT("None"),
+        FirstPersonBodyMesh && FirstPersonBodyMesh->GetAnimInstance() ? *FirstPersonBodyMesh->GetAnimInstance()->GetClass()->GetName() : TEXT("None"),
         FirstPersonBodyMesh && FirstPersonBodyMesh->bOnlyOwnerSee ? TEXT("true") : TEXT("false"),
         GetMesh() && GetMesh()->bOwnerNoSee ? TEXT("true") : TEXT("false"),
+        FirstPersonForwardWalkAnimation ? *FirstPersonForwardWalkAnimation->GetPathName() : TEXT("None"),
+        FirstPersonBackwardWalkAnimation ? *FirstPersonBackwardWalkAnimation->GetPathName() : TEXT("None"),
         WalkSpeed,
         SprintSpeed,
         CrouchSpeed,
-        *FirstPersonCamera->GetRelativeLocation().ToString());
+        FirstPersonCameraRoot ? *FirstPersonCameraRoot->GetRelativeLocation().ToString() : TEXT("None"),
+        FirstPersonCamera ? *FirstPersonCamera->GetRelativeLocation().ToString() : TEXT("None"),
+        PlayerMeshVisualYawOffsetDegrees,
+        BodyYawFollowSpeed);
 
     if (APlayerController* PlayerController = Cast<APlayerController>(Controller))
     {
@@ -169,6 +187,7 @@ void APenancePlayerCharacter::Tick(float DeltaSeconds)
     UpdateCrouchRules(DeltaSeconds);
     UpdateNoiseRules(DeltaSeconds);
     UpdateInteractionFocus();
+    UpdateCameraDrivenBodyYaw(DeltaSeconds);
     UpdateFirstPersonBody(DeltaSeconds);
     UpdatePlayerBodySelfTest(DeltaSeconds);
     BroadcastStaminaIfNeeded();
@@ -379,15 +398,42 @@ void APenancePlayerCharacter::UpdateCrouchRules(float DeltaSeconds)
     const bool bIsCrouching = bIsCrouched;
     const float TargetEyeHeight = bIsCrouching ? CrouchingCameraHeight : StandingCameraHeight;
     const float TargetRelativeZ = GetCameraRelativeHeightForCurrentCapsule(TargetEyeHeight);
-    const FVector CameraLocation = FirstPersonCamera->GetRelativeLocation();
-    const float NewRelativeZ = FMath::FInterpTo(CameraLocation.Z, TargetRelativeZ, DeltaSeconds, CrouchTransitionSpeed);
-    FirstPersonCamera->SetRelativeLocation(FVector(CameraLocation.X, CameraLocation.Y, NewRelativeZ));
+    if (FirstPersonCameraRoot)
+    {
+        const FVector CameraRootLocation = FirstPersonCameraRoot->GetRelativeLocation();
+        const float NewRelativeZ = FMath::FInterpTo(CameraRootLocation.Z, TargetRelativeZ, DeltaSeconds, CrouchTransitionSpeed);
+        FirstPersonCameraRoot->SetRelativeLocation(FVector(CameraRootLocation.X, CameraRootLocation.Y, NewRelativeZ));
+    }
 
     if (bIsCrouching != bWasCrouching)
     {
         bWasCrouching = bIsCrouching;
         OnCrouchChanged.Broadcast(bIsCrouching);
     }
+}
+
+void APenancePlayerCharacter::UpdateCameraDrivenBodyYaw(float DeltaSeconds)
+{
+    if (!Controller)
+    {
+        BodyYaw = GetActorRotation().Yaw;
+        CameraYaw = BodyYaw;
+        AimPitch = 0.0f;
+        FirstPersonTurnYawDelta = 0.0f;
+        return;
+    }
+
+    const FRotator ControlRotation = Controller->GetControlRotation();
+    CameraYaw = ControlRotation.Yaw;
+    AimPitch = FMath::FindDeltaAngleDegrees(0.0f, ControlRotation.Pitch);
+
+    const FRotator CurrentActorRotation = GetActorRotation();
+    const FRotator TargetYawOnlyRotation(0.0f, CameraYaw, 0.0f);
+    const FRotator NewYawOnlyRotation = FMath::RInterpTo(CurrentActorRotation, TargetYawOnlyRotation, DeltaSeconds, BodyYawFollowSpeed);
+    SetActorRotation(FRotator(0.0f, NewYawOnlyRotation.Yaw, 0.0f));
+
+    BodyYaw = GetActorRotation().Yaw;
+    FirstPersonTurnYawDelta = FMath::FindDeltaAngleDegrees(BodyYaw, CameraYaw);
 }
 
 void APenancePlayerCharacter::UpdateNoiseRules(float DeltaSeconds)
@@ -451,21 +497,45 @@ void APenancePlayerCharacter::UpdateFirstPersonBody(float DeltaSeconds)
         return;
     }
 
-    const float HorizontalSpeed = FVector(GetVelocity().X, GetVelocity().Y, 0.0f).Size();
+    const FVector Velocity2D(GetVelocity().X, GetVelocity().Y, 0.0f);
+    const float HorizontalSpeed = Velocity2D.Size();
+    FirstPersonForwardSpeed = FVector::DotProduct(Velocity2D, GetActorForwardVector());
+    FirstPersonRightSpeed = FVector::DotProduct(Velocity2D, GetActorRightVector());
     const bool bHasMoveIntent = HasMovementInput() || (GetCharacterMovement() && GetCharacterMovement()->GetCurrentAcceleration().SizeSquared2D() > KINDA_SMALL_NUMBER);
     const bool bIsMovingForAnimation = HorizontalSpeed > 10.0f && bHasMoveIntent;
+    EPenanceFirstPersonLocomotionState DesiredState = EPenanceFirstPersonLocomotionState::Idle;
+    if (bIsMovingForAnimation)
+    {
+        DesiredState = FirstPersonForwardSpeed < -10.0f
+            ? EPenanceFirstPersonLocomotionState::WalkBackward
+            : EPenanceFirstPersonLocomotionState::WalkForward;
+    }
     bFirstPersonBodyWalking = bIsMovingForAnimation;
 
     const float CapsuleHalfHeight = GetCapsuleComponent()->GetUnscaledCapsuleHalfHeight();
-    const float DirectionSign = GetFirstPersonMovementDirectionSign(HorizontalSpeed);
-    const FVector Velocity2D(GetVelocity().X, GetVelocity().Y, 0.0f);
-    const float LocalRightAmount = HorizontalSpeed > 10.0f ? FVector::DotProduct(Velocity2D.GetSafeNormal(), GetActorRightVector()) : 0.0f;
+    const float LocalRightAmount = HorizontalSpeed > 10.0f ? FirstPersonRightSpeed / FMath::Max(HorizontalSpeed, 1.0f) : 0.0f;
     const float TargetYawOffset = bIsMovingForAnimation ? FMath::Clamp(LocalRightAmount * FirstPersonMovementYawOffsetDegrees, -FirstPersonMovementYawOffsetDegrees, FirstPersonMovementYawOffsetDegrees) : 0.0f;
     FirstPersonBodyYawOffset = FMath::FInterpTo(FirstPersonBodyYawOffset, TargetYawOffset, DeltaSeconds, 8.0f);
     FirstPersonBodyMesh->SetRelativeLocation(FVector(0.0f, 0.0f, -CapsuleHalfHeight - 4.0f));
-    FirstPersonBodyMesh->SetRelativeRotation(FRotator(0.0f, -90.0f + FirstPersonBodyYawOffset, 0.0f));
+    FirstPersonBodyMesh->SetRelativeRotation(FRotator(0.0f, PlayerMeshVisualYawOffsetDegrees + FirstPersonBodyYawOffset, 0.0f));
 
-    ApplyFirstPersonBodyAnimation(DeltaSeconds, bIsMovingForAnimation, HorizontalSpeed, DirectionSign);
+    if (const UABP_Player* PlayerAnim = Cast<UABP_Player>(FirstPersonBodyMesh->GetAnimInstance()))
+    {
+        FirstPersonWalkCycleTime = PlayerAnim->ActiveAssetTime;
+        FirstPersonLastPlayRate = PlayerAnim->WalkPlayRate;
+        if (PlayerAnim->LocomotionState == EPenancePlayerAnimState::WalkBackward)
+        {
+            FirstPersonLocomotionState = EPenanceFirstPersonLocomotionState::WalkBackward;
+        }
+        else if (PlayerAnim->bIsMoving)
+        {
+            FirstPersonLocomotionState = EPenanceFirstPersonLocomotionState::WalkForward;
+        }
+        else
+        {
+            FirstPersonLocomotionState = EPenanceFirstPersonLocomotionState::Idle;
+        }
+    }
 
     if (!bIsMovingForAnimation && bFirstPersonBodyWalking != bFirstPersonBodyWasWalking)
     {
@@ -485,93 +555,14 @@ void APenancePlayerCharacter::UpdateFirstPersonBody(float DeltaSeconds)
         UE_LOG(
             LogPenancePlayerBody,
             Verbose,
-            TEXT("First-person body walk animation starting. Animation=%s Speed=%.2f MoveInput=%s Velocity=%s DirectionSign=%.1f"),
-            FirstPersonWalkAnimation ? *FirstPersonWalkAnimation->GetPathName() : TEXT("None"),
+            TEXT("First-person body ABP walk starting. State=%d Speed=%.2f Forward=%.2f Right=%.2f MoveInput=%s Velocity=%s"),
+            static_cast<int32>(DesiredState),
             HorizontalSpeed,
+            FirstPersonForwardSpeed,
+            FirstPersonRightSpeed,
             *MoveInput.ToString(),
-            *GetVelocity().ToString(),
-            DirectionSign);
+            *GetVelocity().ToString());
     }
-}
-
-void APenancePlayerCharacter::ApplyFirstPersonBodyAnimation(float DeltaSeconds, bool bShouldWalk, float HorizontalSpeed, float DirectionSign)
-{
-    if (!FirstPersonBodyMesh)
-    {
-        return;
-    }
-
-    if (FirstPersonWalkAnimation)
-    {
-        FirstPersonBodyMesh->SetAnimationMode(EAnimationMode::AnimationSingleNode);
-
-        if (bShouldWalk)
-        {
-            if (!FirstPersonBodyMesh->IsPlaying())
-            {
-                FirstPersonBodyMesh->SetAnimation(FirstPersonWalkAnimation);
-                FirstPersonBodyMesh->SetPosition(GetFirstPersonIdlePoseTime(), false);
-                FirstPersonBodyMesh->Play(true);
-            }
-
-            FirstPersonWalkBlendAlpha = FMath::Min(1.0f, FirstPersonWalkBlendAlpha + DeltaSeconds / FMath::Max(FirstPersonWalkBlendInTime, KINDA_SMALL_NUMBER));
-            const float BlendedRateScale = FMath::InterpEaseInOut(0.0f, 1.0f, FirstPersonWalkBlendAlpha, 2.0f);
-            const float SignedDirection = DirectionSign < 0.0f ? -1.0f : 1.0f;
-            FirstPersonLastSignedPlayRate = FMath::Clamp(HorizontalSpeed / WalkSpeed, 0.75f, 1.25f) * SignedDirection;
-            FirstPersonBodyMesh->SetPlayRate(FirstPersonLastSignedPlayRate * BlendedRateScale);
-        }
-        else if (FirstPersonWalkBlendAlpha > 0.0f && FirstPersonBodyMesh->IsPlaying())
-        {
-            FirstPersonWalkBlendAlpha = FMath::Max(0.0f, FirstPersonWalkBlendAlpha - DeltaSeconds / FMath::Max(FirstPersonWalkBlendOutTime, KINDA_SMALL_NUMBER));
-            const float BlendedRateScale = FMath::InterpEaseInOut(0.0f, 1.0f, FirstPersonWalkBlendAlpha, 2.0f);
-            FirstPersonBodyMesh->SetPlayRate(FirstPersonLastSignedPlayRate * BlendedRateScale);
-
-            if (FirstPersonWalkBlendAlpha <= KINDA_SMALL_NUMBER)
-            {
-                ResetFirstPersonBodyPose();
-            }
-        }
-        else
-        {
-            ResetFirstPersonBodyPose();
-        }
-    }
-
-    FirstPersonWalkCycleTime = FirstPersonBodyMesh->GetPosition();
-}
-
-float APenancePlayerCharacter::GetFirstPersonIdlePoseTime() const
-{
-    if (!FirstPersonWalkAnimation)
-    {
-        return 0.0f;
-    }
-
-    const float Length = FirstPersonWalkAnimation->GetPlayLength();
-    switch (FirstPersonIdlePoseMode)
-    {
-    case EPenanceFirstPersonIdlePoseMode::LeftFootForward:
-        return 0.0f;
-    case EPenanceFirstPersonIdlePoseMode::RightFootForward:
-        return Length * 0.5f;
-    case EPenanceFirstPersonIdlePoseMode::FeetTogether:
-    default:
-        return Length * 0.25f;
-    }
-}
-
-float APenancePlayerCharacter::GetFirstPersonMovementDirectionSign(float HorizontalSpeed) const
-{
-    if (HorizontalSpeed <= 10.0f)
-    {
-        return 1.0f;
-    }
-
-    const FVector Velocity2D(GetVelocity().X, GetVelocity().Y, 0.0f);
-    const FVector VelocityDirection = Velocity2D.GetSafeNormal();
-    const float ForwardAmount = FVector::DotProduct(VelocityDirection, GetActorForwardVector());
-    const float RightAmount = FVector::DotProduct(VelocityDirection, GetActorRightVector());
-    return ForwardAmount < -0.35f && FMath::Abs(ForwardAmount) >= FMath::Abs(RightAmount) ? -1.0f : 1.0f;
 }
 
 void APenancePlayerCharacter::ResetFirstPersonBodyPose()
@@ -581,16 +572,10 @@ void APenancePlayerCharacter::ResetFirstPersonBodyPose()
         return;
     }
 
-    if (FirstPersonWalkAnimation)
-    {
-        FirstPersonBodyMesh->SetAnimationMode(EAnimationMode::AnimationSingleNode);
-        FirstPersonBodyMesh->SetAnimation(FirstPersonWalkAnimation);
-        FirstPersonBodyMesh->SetPosition(GetFirstPersonIdlePoseTime(), false);
-        FirstPersonBodyMesh->Stop();
-        FirstPersonWalkBlendAlpha = 0.0f;
-        FirstPersonLastSignedPlayRate = 1.0f;
-        FirstPersonWalkCycleTime = FirstPersonBodyMesh->GetPosition();
-    }
+    FirstPersonWalkBlendAlpha = 0.0f;
+    FirstPersonLastPlayRate = 1.0f;
+    FirstPersonWalkCycleTime = 0.0f;
+    FirstPersonLocomotionState = EPenanceFirstPersonLocomotionState::Idle;
 }
 
 void APenancePlayerCharacter::HideOwnerCameraClippingBones()
@@ -619,13 +604,21 @@ void APenancePlayerCharacter::StartPlayerBodySelfTest()
     PlayerBodySelfTestPhaseTime = 0.0f;
     PlayerBodySelfTestInitialCycle = FirstPersonWalkCycleTime;
     PlayerBodySelfTestTurnCycleDelta = 0.0f;
+    PlayerBodySelfTestMaxTurnYawDelta = 0.0f;
+    PlayerBodySelfTestPitchCycleDelta = 0.0f;
+    PlayerBodySelfTestMaxBodyPitch = 0.0f;
     PlayerBodySelfTestMoveStartCycle = 0.0f;
     PlayerBodySelfTestMoveMaxSpeed = 0.0f;
     PlayerBodySelfTestMoveCycleDelta = 0.0f;
+    PlayerBodySelfTestBackwardMaxSpeed = 0.0f;
+    PlayerBodySelfTestBackwardCycleDelta = 0.0f;
     PlayerBodySelfTestStopMinSpeed = TNumericLimits<float>::Max();
     bPlayerBodySelfTestSawWalking = false;
+    bPlayerBodySelfTestSawBackwardWalking = false;
     bPlayerBodySelfTestTurnAnimationPlaying = false;
+    bPlayerBodySelfTestPitchAnimationPlaying = false;
     bPlayerBodySelfTestSawAnimationPlaying = false;
+    bPlayerBodySelfTestSawBackwardAnimationPlaying = false;
     PlayerBodySelfTestLines.Reset();
     PlayerBodySelfTestErrors.Reset();
 
@@ -635,9 +628,16 @@ void APenancePlayerCharacter::StartPlayerBodySelfTest()
     PlayerBodySelfTestLines.Add(FString::Printf(TEXT("Location: %s"), *GetActorLocation().ToString()));
     PlayerBodySelfTestLines.Add(FString::Printf(TEXT("External mesh: %s"), GetMesh() && GetMesh()->GetSkeletalMeshAsset() ? *GetMesh()->GetSkeletalMeshAsset()->GetPathName() : TEXT("None")));
     PlayerBodySelfTestLines.Add(FString::Printf(TEXT("First-person body mesh: %s"), *GetFirstPersonBodyMeshPath()));
-    PlayerBodySelfTestLines.Add(FString::Printf(TEXT("First-person walk animation: %s"), FirstPersonWalkAnimation ? *FirstPersonWalkAnimation->GetPathName() : TEXT("None")));
+    const UABP_Player* PlayerAnim = FirstPersonBodyMesh ? Cast<UABP_Player>(FirstPersonBodyMesh->GetAnimInstance()) : nullptr;
+    PlayerBodySelfTestLines.Add(FString::Printf(TEXT("First-person anim instance: %s"), PlayerAnim ? *PlayerAnim->GetClass()->GetName() : TEXT("None")));
+    PlayerBodySelfTestLines.Add(FString::Printf(TEXT("Idle_FeetTogether: %s"), PlayerAnim && PlayerAnim->IdleFeetTogether ? *PlayerAnim->IdleFeetTogether->GetPathName() : TEXT("None")));
+    PlayerBodySelfTestLines.Add(FString::Printf(TEXT("Walk_Forward_Loop: %s"), PlayerAnim && PlayerAnim->WalkForwardLoop ? *PlayerAnim->WalkForwardLoop->GetPathName() : TEXT("None")));
+    PlayerBodySelfTestLines.Add(FString::Printf(TEXT("Walk_Backward_Loop: %s"), PlayerAnim && PlayerAnim->WalkBackwardLoop ? *PlayerAnim->WalkBackwardLoop->GetPathName() : TEXT("None")));
+    PlayerBodySelfTestLines.Add(FString::Printf(TEXT("Camera root relative location: %s"), FirstPersonCameraRoot ? *FirstPersonCameraRoot->GetRelativeLocation().ToString() : TEXT("None")));
     PlayerBodySelfTestLines.Add(FString::Printf(TEXT("Camera relative location: %s"), FirstPersonCamera ? *FirstPersonCamera->GetRelativeLocation().ToString() : TEXT("None")));
     PlayerBodySelfTestLines.Add(FString::Printf(TEXT("Body relative location: %s"), FirstPersonBodyMesh ? *FirstPersonBodyMesh->GetRelativeLocation().ToString() : TEXT("None")));
+    PlayerBodySelfTestLines.Add(FString::Printf(TEXT("Body relative rotation: %s"), FirstPersonBodyMesh ? *FirstPersonBodyMesh->GetRelativeRotation().ToString() : TEXT("None")));
+    PlayerBodySelfTestLines.Add(FString::Printf(TEXT("Mesh visual yaw offset: %.3f"), PlayerMeshVisualYawOffsetDegrees));
     PlayerBodySelfTestLines.Add(FString::Printf(TEXT("Speeds: Walk=%.1f Sprint=%.1f Crouch=%.1f"), WalkSpeed, SprintSpeed, CrouchSpeed));
 
     if (APlayerController* PlayerController = Cast<APlayerController>(Controller))
@@ -657,6 +657,14 @@ void APenancePlayerCharacter::UpdatePlayerBodySelfTest(float DeltaSeconds)
 
     PlayerBodySelfTestPhaseTime += DeltaSeconds;
     const float HorizontalSpeed = FVector(GetVelocity().X, GetVelocity().Y, 0.0f).Size();
+    const UABP_Player* PlayerAnim = FirstPersonBodyMesh ? Cast<UABP_Player>(FirstPersonBodyMesh->GetAnimInstance()) : nullptr;
+    const bool bABPActive = PlayerAnim && PlayerAnim->IsActivelyPlayingLocomotion();
+    const bool bABPWalkingState = PlayerAnim && (
+        PlayerAnim->LocomotionState == EPenancePlayerAnimState::StartWalkForward
+        || PlayerAnim->LocomotionState == EPenancePlayerAnimState::WalkForward
+        || PlayerAnim->LocomotionState == EPenancePlayerAnimState::WalkBackward
+        || PlayerAnim->LocomotionState == EPenancePlayerAnimState::StopWalkForward);
+    const bool bABPBackwardState = PlayerAnim && PlayerAnim->LocomotionState == EPenancePlayerAnimState::WalkBackward;
 
     if (PlayerBodySelfTestPhase == 0)
     {
@@ -664,10 +672,17 @@ void APenancePlayerCharacter::UpdatePlayerBodySelfTest(float DeltaSeconds)
         if (PlayerBodySelfTestPhaseTime >= 0.35f)
         {
             PlayerBodySelfTestLines.Add(FString::Printf(
-                TEXT("Initial: Speed=%.3f Walking=%s AnimPlaying=%s Cycle=%.5f"),
+                TEXT("Initial: Speed=%.3f ForwardSpeed=%.3f RightSpeed=%.3f CameraYaw=%.3f BodyYaw=%.3f AimPitch=%.3f TurnYawDelta=%.3f State=%d Walking=%s AnimPlaying=%s Cycle=%.5f"),
                 HorizontalSpeed,
+                FirstPersonForwardSpeed,
+                FirstPersonRightSpeed,
+                CameraYaw,
+                BodyYaw,
+                AimPitch,
+                FirstPersonTurnYawDelta,
+                static_cast<int32>(FirstPersonLocomotionState),
                 bFirstPersonBodyWalking ? TEXT("true") : TEXT("false"),
-                FirstPersonBodyMesh && FirstPersonBodyMesh->IsPlaying() ? TEXT("true") : TEXT("false"),
+                bABPActive ? TEXT("true") : TEXT("false"),
                 FirstPersonWalkCycleTime));
             PlayerBodySelfTestPhase = 1;
             PlayerBodySelfTestPhaseTime = 0.0f;
@@ -683,12 +698,20 @@ void APenancePlayerCharacter::UpdatePlayerBodySelfTest(float DeltaSeconds)
             PlayerController->SetControlRotation(FRotator(-72.0f, Yaw, 0.0f));
         }
         PlayerBodySelfTestTurnCycleDelta = FMath::Max(PlayerBodySelfTestTurnCycleDelta, FMath::Abs(FirstPersonWalkCycleTime - PlayerBodySelfTestInitialCycle));
-        bPlayerBodySelfTestTurnAnimationPlaying = bPlayerBodySelfTestTurnAnimationPlaying || (FirstPersonBodyMesh && FirstPersonBodyMesh->IsPlaying());
+        PlayerBodySelfTestMaxTurnYawDelta = FMath::Max(PlayerBodySelfTestMaxTurnYawDelta, FMath::Abs(FirstPersonTurnYawDelta));
+        bPlayerBodySelfTestTurnAnimationPlaying = bPlayerBodySelfTestTurnAnimationPlaying || bABPWalkingState;
         if (PlayerBodySelfTestPhaseTime >= 1.2f)
         {
             PlayerBodySelfTestLines.Add(FString::Printf(
-                TEXT("TurnOnly: Speed=%.3f Walking=%s AnimPlayingSeen=%s CycleDelta=%.5f"),
+                TEXT("YawTurnOnly: Speed=%.3f ForwardSpeed=%.3f RightSpeed=%.3f CameraYaw=%.3f BodyYaw=%.3f MaxYawDelta=%.3f AimPitch=%.3f State=%d Walking=%s AnimPlayingSeen=%s CycleDelta=%.5f"),
                 HorizontalSpeed,
+                FirstPersonForwardSpeed,
+                FirstPersonRightSpeed,
+                CameraYaw,
+                BodyYaw,
+                PlayerBodySelfTestMaxTurnYawDelta,
+                AimPitch,
+                static_cast<int32>(FirstPersonLocomotionState),
                 bFirstPersonBodyWalking ? TEXT("true") : TEXT("false"),
                 bPlayerBodySelfTestTurnAnimationPlaying ? TEXT("true") : TEXT("false"),
                 PlayerBodySelfTestTurnCycleDelta));
@@ -701,19 +724,30 @@ void APenancePlayerCharacter::UpdatePlayerBodySelfTest(float DeltaSeconds)
 
     if (PlayerBodySelfTestPhase == 2)
     {
-        MoveForward(1.0f);
-        PlayerBodySelfTestMoveMaxSpeed = FMath::Max(PlayerBodySelfTestMoveMaxSpeed, HorizontalSpeed);
-        PlayerBodySelfTestMoveCycleDelta = FMath::Max(PlayerBodySelfTestMoveCycleDelta, FMath::Abs(FirstPersonWalkCycleTime - PlayerBodySelfTestMoveStartCycle));
-        bPlayerBodySelfTestSawWalking = bPlayerBodySelfTestSawWalking || bFirstPersonBodyWalking;
-        bPlayerBodySelfTestSawAnimationPlaying = bPlayerBodySelfTestSawAnimationPlaying || (FirstPersonBodyMesh && FirstPersonBodyMesh->IsPlaying());
-        if (PlayerBodySelfTestPhaseTime >= 1.8f)
+        if (APlayerController* PlayerController = Cast<APlayerController>(Controller))
+        {
+            const float Pitch = FMath::Sin(PlayerBodySelfTestPhaseTime * UE_TWO_PI) * 65.0f;
+            PlayerController->SetControlRotation(FRotator(Pitch, CameraYaw, 0.0f));
+        }
+        PlayerBodySelfTestPitchCycleDelta = FMath::Max(PlayerBodySelfTestPitchCycleDelta, FMath::Abs(FirstPersonWalkCycleTime - PlayerBodySelfTestInitialCycle));
+        PlayerBodySelfTestMaxBodyPitch = FMath::Max(PlayerBodySelfTestMaxBodyPitch, FirstPersonBodyMesh ? FMath::Abs(FirstPersonBodyMesh->GetRelativeRotation().Pitch) : 999.0f);
+        bPlayerBodySelfTestPitchAnimationPlaying = bPlayerBodySelfTestPitchAnimationPlaying || bABPWalkingState;
+        if (PlayerBodySelfTestPhaseTime >= 1.0f)
         {
             PlayerBodySelfTestLines.Add(FString::Printf(
-                TEXT("Move: MaxSpeed=%.3f WalkingSeen=%s AnimPlayingSeen=%s CycleDelta=%.5f"),
-                PlayerBodySelfTestMoveMaxSpeed,
-                bPlayerBodySelfTestSawWalking ? TEXT("true") : TEXT("false"),
-                bPlayerBodySelfTestSawAnimationPlaying ? TEXT("true") : TEXT("false"),
-                PlayerBodySelfTestMoveCycleDelta));
+                TEXT("PitchOnly: Speed=%.3f ForwardSpeed=%.3f RightSpeed=%.3f CameraYaw=%.3f BodyYaw=%.3f AimPitch=%.3f MaxBodyPitch=%.3f State=%d Walking=%s AnimPlayingSeen=%s CycleDelta=%.5f"),
+                HorizontalSpeed,
+                FirstPersonForwardSpeed,
+                FirstPersonRightSpeed,
+                CameraYaw,
+                BodyYaw,
+                AimPitch,
+                PlayerBodySelfTestMaxBodyPitch,
+                static_cast<int32>(FirstPersonLocomotionState),
+                bFirstPersonBodyWalking ? TEXT("true") : TEXT("false"),
+                bPlayerBodySelfTestPitchAnimationPlaying ? TEXT("true") : TEXT("false"),
+                PlayerBodySelfTestPitchCycleDelta));
+            PlayerBodySelfTestMoveStartCycle = FirstPersonWalkCycleTime;
             PlayerBodySelfTestPhase = 3;
             PlayerBodySelfTestPhaseTime = 0.0f;
         }
@@ -721,6 +755,53 @@ void APenancePlayerCharacter::UpdatePlayerBodySelfTest(float DeltaSeconds)
     }
 
     if (PlayerBodySelfTestPhase == 3)
+    {
+        MoveForward(1.0f);
+        PlayerBodySelfTestMoveMaxSpeed = FMath::Max(PlayerBodySelfTestMoveMaxSpeed, HorizontalSpeed);
+        PlayerBodySelfTestMoveCycleDelta = FMath::Max(PlayerBodySelfTestMoveCycleDelta, FMath::Abs(FirstPersonWalkCycleTime - PlayerBodySelfTestMoveStartCycle));
+        bPlayerBodySelfTestSawWalking = bPlayerBodySelfTestSawWalking || bFirstPersonBodyWalking;
+        bPlayerBodySelfTestSawAnimationPlaying = bPlayerBodySelfTestSawAnimationPlaying || bABPActive;
+        if (PlayerBodySelfTestPhaseTime >= 1.8f)
+        {
+            PlayerBodySelfTestLines.Add(FString::Printf(
+                TEXT("ForwardMove: MaxSpeed=%.3f ForwardSpeed=%.3f State=%d WalkingSeen=%s AnimPlayingSeen=%s CycleDelta=%.5f"),
+                PlayerBodySelfTestMoveMaxSpeed,
+                FirstPersonForwardSpeed,
+                static_cast<int32>(FirstPersonLocomotionState),
+                bPlayerBodySelfTestSawWalking ? TEXT("true") : TEXT("false"),
+                bPlayerBodySelfTestSawAnimationPlaying ? TEXT("true") : TEXT("false"),
+                PlayerBodySelfTestMoveCycleDelta));
+            PlayerBodySelfTestPhase = 4;
+            PlayerBodySelfTestPhaseTime = 0.0f;
+            PlayerBodySelfTestMoveStartCycle = FirstPersonWalkCycleTime;
+        }
+        return;
+    }
+
+    if (PlayerBodySelfTestPhase == 4)
+    {
+        MoveForward(-1.0f);
+        PlayerBodySelfTestBackwardMaxSpeed = FMath::Max(PlayerBodySelfTestBackwardMaxSpeed, HorizontalSpeed);
+        PlayerBodySelfTestBackwardCycleDelta = FMath::Max(PlayerBodySelfTestBackwardCycleDelta, FMath::Abs(FirstPersonWalkCycleTime - PlayerBodySelfTestMoveStartCycle));
+        bPlayerBodySelfTestSawBackwardWalking = bPlayerBodySelfTestSawBackwardWalking || (bFirstPersonBodyWalking && bABPBackwardState);
+        bPlayerBodySelfTestSawBackwardAnimationPlaying = bPlayerBodySelfTestSawBackwardAnimationPlaying || bABPActive;
+        if (PlayerBodySelfTestPhaseTime >= 1.5f)
+        {
+            PlayerBodySelfTestLines.Add(FString::Printf(
+                TEXT("BackwardMove: MaxSpeed=%.3f ForwardSpeed=%.3f State=%d WalkingSeen=%s AnimPlayingSeen=%s CycleDelta=%.5f"),
+                PlayerBodySelfTestBackwardMaxSpeed,
+                FirstPersonForwardSpeed,
+                static_cast<int32>(FirstPersonLocomotionState),
+                bPlayerBodySelfTestSawBackwardWalking ? TEXT("true") : TEXT("false"),
+                bPlayerBodySelfTestSawBackwardAnimationPlaying ? TEXT("true") : TEXT("false"),
+                PlayerBodySelfTestBackwardCycleDelta));
+            PlayerBodySelfTestPhase = 5;
+            PlayerBodySelfTestPhaseTime = 0.0f;
+        }
+        return;
+    }
+
+    if (PlayerBodySelfTestPhase == 5)
     {
         MoveForward(0.0f);
         MoveRight(0.0f);
@@ -731,11 +812,13 @@ void APenancePlayerCharacter::UpdatePlayerBodySelfTest(float DeltaSeconds)
         if (PlayerBodySelfTestPhaseTime >= 2.0f)
         {
             PlayerBodySelfTestLines.Add(FString::Printf(
-                TEXT("Stop: Speed=%.3f MinSpeedAfterBrake=%.3f Walking=%s AnimPlaying=%s Cycle=%.5f"),
+                TEXT("Stop: Speed=%.3f ForwardSpeed=%.3f MinSpeedAfterBrake=%.3f State=%d Walking=%s AnimPlaying=%s Cycle=%.5f"),
                 HorizontalSpeed,
+                FirstPersonForwardSpeed,
                 PlayerBodySelfTestStopMinSpeed,
+                static_cast<int32>(FirstPersonLocomotionState),
                 bFirstPersonBodyWalking ? TEXT("true") : TEXT("false"),
-                FirstPersonBodyMesh && FirstPersonBodyMesh->IsPlaying() ? TEXT("true") : TEXT("false"),
+                bABPActive ? TEXT("true") : TEXT("false"),
                 FirstPersonWalkCycleTime));
             FinishPlayerBodySelfTest();
         }
@@ -763,12 +846,17 @@ void APenancePlayerCharacter::FinishPlayerBodySelfTest()
 
     PlayerBodySelfTestLines.Add(TEXT(""));
     PlayerBodySelfTestLines.Add(TEXT("Acceptance checks:"));
+    const UABP_Player* PlayerAnim = FirstPersonBodyMesh ? Cast<UABP_Player>(FirstPersonBodyMesh->GetAnimInstance()) : nullptr;
     AppendPlayerBodySelfTestCheck(TEXT("player spawns correctly"), IsValid(this) && Controller != nullptr);
     AppendPlayerBodySelfTestCheck(TEXT("single player character in runtime world"), PlayerCharacterCount == 1);
+    AppendPlayerBodySelfTestCheck(TEXT("camera root component exists"), FirstPersonCameraRoot != nullptr);
     AppendPlayerBodySelfTestCheck(TEXT("camera component exists"), FirstPersonCamera != nullptr);
     AppendPlayerBodySelfTestCheck(TEXT("first-person body component exists"), FirstPersonBodyMesh != nullptr);
+    AppendPlayerBodySelfTestCheck(TEXT("camera is attached to camera root"), FirstPersonCamera && FirstPersonCameraRoot && FirstPersonCamera->GetAttachParent() == FirstPersonCameraRoot);
+    AppendPlayerBodySelfTestCheck(TEXT("first-person body is attached to capsule root"), FirstPersonBodyMesh && FirstPersonBodyMesh->GetAttachParent() == GetCapsuleComponent());
     AppendPlayerBodySelfTestCheck(TEXT("first-person body uses fixed imported mesh"), GetFirstPersonBodyMeshPath().Contains(TEXT("/Game/Player/FirstPerson/SK_Player_FirstPersonBody")));
-    AppendPlayerBodySelfTestCheck(TEXT("first-person walk-in-place animation is loaded"), FirstPersonWalkAnimation && FirstPersonWalkAnimation->GetPathName().Contains(TEXT("/Game/Player/FirstPerson/AN_Player_Walk_Verify")));
+    AppendPlayerBodySelfTestCheck(TEXT("ABP_Player anim instance is assigned"), PlayerAnim != nullptr);
+    AppendPlayerBodySelfTestCheck(TEXT("ABP_Player required locomotion assets are loaded"), PlayerAnim && PlayerAnim->AreRequiredAssetsLoaded());
     AppendPlayerBodySelfTestCheck(TEXT("external full body is hidden from owner"), GetMesh() && GetMesh()->bOwnerNoSee);
     AppendPlayerBodySelfTestCheck(TEXT("first-person body is owner-only"), FirstPersonBodyMesh && FirstPersonBodyMesh->bOnlyOwnerSee);
     AppendPlayerBodySelfTestCheck(TEXT("first-person body remains visible to owner"), FirstPersonBodyMesh && !FirstPersonBodyMesh->bOwnerNoSee);
@@ -776,9 +864,13 @@ void APenancePlayerCharacter::FinishPlayerBodySelfTest()
     AppendPlayerBodySelfTestCheck(TEXT("walk speed is 250 UU/s"), FMath::IsNearlyEqual(WalkSpeed, 250.0f));
     AppendPlayerBodySelfTestCheck(TEXT("sprint speed is 550 UU/s"), FMath::IsNearlyEqual(SprintSpeed, 550.0f));
     AppendPlayerBodySelfTestCheck(TEXT("crouch speed is 140 UU/s"), FMath::IsNearlyEqual(CrouchSpeed, 140.0f));
+    AppendPlayerBodySelfTestCheck(TEXT("mesh visual yaw offset is applied to first-person body"), FirstPersonBodyMesh && FMath::IsNearlyEqual(FirstPersonBodyMesh->GetRelativeRotation().Yaw, PlayerMeshVisualYawOffsetDegrees + FirstPersonBodyYawOffset, 0.5f));
+    AppendPlayerBodySelfTestCheck(TEXT("camera yaw drives body yaw"), PlayerBodySelfTestMaxTurnYawDelta <= 25.0f);
     AppendPlayerBodySelfTestCheck(TEXT("turning in place does not trigger walking"), PlayerBodySelfTestTurnCycleDelta <= 0.001f && !bPlayerBodySelfTestTurnAnimationPlaying);
-    AppendPlayerBodySelfTestCheck(TEXT("moving starts walk cycle"), bPlayerBodySelfTestSawWalking && bPlayerBodySelfTestSawAnimationPlaying && PlayerBodySelfTestMoveCycleDelta > 0.01f && PlayerBodySelfTestMoveMaxSpeed > 25.0f);
-    AppendPlayerBodySelfTestCheck(TEXT("stopping stops walking"), PlayerBodySelfTestStopMinSpeed < 15.0f && !bFirstPersonBodyWalking && FirstPersonBodyMesh && !FirstPersonBodyMesh->IsPlaying());
+    AppendPlayerBodySelfTestCheck(TEXT("camera pitch does not rotate legs or trigger walking"), PlayerBodySelfTestMaxBodyPitch <= 0.1f && PlayerBodySelfTestPitchCycleDelta <= 0.001f && !bPlayerBodySelfTestPitchAnimationPlaying);
+    AppendPlayerBodySelfTestCheck(TEXT("forward movement starts walk cycle"), bPlayerBodySelfTestSawWalking && bPlayerBodySelfTestSawAnimationPlaying && PlayerBodySelfTestMoveCycleDelta > 0.01f && PlayerBodySelfTestMoveMaxSpeed > 25.0f);
+    AppendPlayerBodySelfTestCheck(TEXT("backward movement uses backward state without negative play rate"), bPlayerBodySelfTestSawBackwardWalking && bPlayerBodySelfTestSawBackwardAnimationPlaying && PlayerBodySelfTestBackwardCycleDelta > 0.01f && PlayerBodySelfTestBackwardMaxSpeed > 25.0f && FirstPersonLastPlayRate >= 0.0f);
+    AppendPlayerBodySelfTestCheck(TEXT("stopping stops walking"), PlayerBodySelfTestStopMinSpeed < 15.0f && !bFirstPersonBodyWalking && PlayerAnim && !PlayerAnim->IsActivelyPlayingLocomotion());
 
     PlayerBodySelfTestLines.Add(TEXT(""));
     PlayerBodySelfTestLines.Add(TEXT("Errors:"));

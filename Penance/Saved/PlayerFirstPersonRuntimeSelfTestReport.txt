@@ -4,22 +4,34 @@ Pawn: PenancePlayerCharacter_0
 Location: X=-10190.000 Y=10.000 Z=88.650
 External mesh: /Game/Player/BlenderSource/SK_Player_FromBlend.SK_Player_FromBlend
 First-person body mesh: /Game/Player/FirstPerson/SK_Player_FirstPersonBody.SK_Player_FirstPersonBody
-First-person walk animation: /Game/Player/FirstPerson/AN_Player_Walk_Verify.AN_Player_Walk_Verify
-Camera relative location: X=0.000 Y=0.000 Z=72.500
+First-person anim instance: ABP_Player
+Idle_FeetTogether: /Game/Player/FirstPerson/AN_Player_Idle_FeetTogether.AN_Player_Idle_FeetTogether
+Walk_Forward_Loop: /Game/Player/FirstPerson/AN_Player_Walk_Forward_Loop.AN_Player_Walk_Forward_Loop
+Walk_Backward_Loop: /Game/Player/FirstPerson/AN_Player_Walk_Backward_Loop.AN_Player_Walk_Backward_Loop
+Camera root relative location: X=0.000 Y=0.000 Z=72.500
+Camera relative location: X=0.000 Y=0.000 Z=0.000
 Body relative location: X=0.000 Y=0.000 Z=-82.500
+Body relative rotation: P=0.000000 Y=-90.000000 R=0.000000
+Mesh visual yaw offset: -90.000
 Speeds: Walk=250.0 Sprint=550.0 Crouch=140.0
-Initial: Speed=0.000 Walking=false AnimPlaying=false Cycle=0.32292
-TurnOnly: Speed=0.000 Walking=false AnimPlayingSeen=false CycleDelta=0.00000
-Move: MaxSpeed=250.000 WalkingSeen=true AnimPlayingSeen=true CycleDelta=0.96842
-Stop: Speed=0.000 MinSpeedAfterBrake=0.000 Walking=false AnimPlaying=false Cycle=0.32292
+Initial: Speed=0.000 ForwardSpeed=0.000 RightSpeed=0.000 CameraYaw=90.000 BodyYaw=90.125 AimPitch=-72.000 TurnYawDelta=-0.125 State=0 Walking=false AnimPlaying=false Cycle=0.00000
+YawTurnOnly: Speed=0.000 ForwardSpeed=0.000 RightSpeed=0.000 CameraYaw=233.941 BodyYaw=-132.666 MaxYawDelta=6.607 AimPitch=-72.000 State=0 Walking=false AnimPlayingSeen=false CycleDelta=0.00000
+PitchOnly: Speed=0.000 ForwardSpeed=0.000 RightSpeed=0.000 CameraYaw=234.001 BodyYaw=-126.011 AimPitch=-0.197 MaxBodyPitch=0.000 State=0 Walking=false AnimPlayingSeen=false CycleDelta=0.00000
+ForwardMove: MaxSpeed=250.000 ForwardSpeed=250.000 State=1 WalkingSeen=true AnimPlayingSeen=true CycleDelta=1.76464
+BackwardMove: MaxSpeed=250.000 ForwardSpeed=-250.000 State=2 WalkingSeen=true AnimPlayingSeen=true CycleDelta=1.76464
+Stop: Speed=0.000 ForwardSpeed=0.000 MinSpeedAfterBrake=0.000 State=0 Walking=false AnimPlaying=false Cycle=0.00000
 
 Acceptance checks:
 PASS - player spawns correctly
 PASS - single player character in runtime world
+PASS - camera root component exists
 PASS - camera component exists
 PASS - first-person body component exists
+PASS - camera is attached to camera root
+PASS - first-person body is attached to capsule root
 PASS - first-person body uses fixed imported mesh
-PASS - first-person walk-in-place animation is loaded
+PASS - ABP_Player anim instance is assigned
+PASS - ABP_Player required locomotion assets are loaded
 PASS - external full body is hidden from owner
 PASS - first-person body is owner-only
 PASS - first-person body remains visible to owner
@@ -27,8 +39,12 @@ PASS - owner camera clipping bones are hidden
 PASS - walk speed is 250 UU/s
 PASS - sprint speed is 550 UU/s
 PASS - crouch speed is 140 UU/s
+PASS - mesh visual yaw offset is applied to first-person body
+PASS - camera yaw drives body yaw
 PASS - turning in place does not trigger walking
-PASS - moving starts walk cycle
+PASS - camera pitch does not rotate legs or trigger walking
+PASS - forward movement starts walk cycle
+PASS - backward movement uses backward state without negative play rate
 PASS - stopping stops walking
 
 Errors:

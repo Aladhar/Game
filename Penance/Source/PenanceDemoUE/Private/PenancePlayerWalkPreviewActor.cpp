@@ -95,7 +95,8 @@ void APenancePlayerWalkPreviewActor::SetPreviewWalking(bool bShouldWalk, float H
 
         PreviewWalkBlendAlpha = FMath::Min(1.0f, PreviewWalkBlendAlpha + GetWorld()->GetDeltaSeconds() / 0.18f);
         const float BlendedRateScale = FMath::InterpEaseInOut(0.0f, 1.0f, PreviewWalkBlendAlpha, 2.0f);
-        PreviewLastSignedPlayRate = FMath::Clamp(HorizontalSpeed / 250.0f, 0.75f, 1.25f) * (DirectionSign < 0.0f ? -1.0f : 1.0f);
+        const float MaxPlayRate = DirectionSign < 0.0f ? 1.15f : 1.25f;
+        PreviewLastSignedPlayRate = FMath::Clamp(HorizontalSpeed / 250.0f, 0.75f, MaxPlayRate);
         PreviewMesh->SetPlayRate(PreviewLastSignedPlayRate * BlendedRateScale);
     }
     else if (PreviewWalkBlendAlpha > 0.0f && PreviewMesh->IsPlaying())

@@ -8,13 +8,13 @@ SampledKeys: 32
 InitialActorLocation: X=260.000 Y=0.000 Z=0.000
 InitialAnimationTime: 0.32292
 CurrentAnimationTime: 0.32292
-MaxAnimationTimeDelta: 0.96865
+MaxAnimationTimeDelta: 0.96843
 ComponentIsPlaying: false
 MovePhaseStartLocation: X=260.000 Y=0.000 Z=0.000
-ReversePhaseStartLocation: X=111.888 Y=203.836 Z=0.000
-FinalActorLocation: X=243.577 Y=22.602 Z=0.000
-ForwardDistance2D: 251.965
-ReverseDistance2D: 224.026
+ReversePhaseStartLocation: X=408.122 Y=-203.872 Z=0.000
+FinalActorLocation: X=276.458 Y=-22.652 Z=0.000
+ForwardDistance2D: 252.000
+ReverseDistance2D: 224.000
 IdlePhaseAnimationPlayed: false
 TurnOnlyPhaseAnimationPlayed: false
 MovePhaseAnimationPlayed: true

@@ -1,0 +1,15 @@
+PLAYER_LOCOMOTION_ASSET_IMPORT_REPORT
+Source FBX: /Users/amritladhar/Documents/GitHub/Game/Penance/Built/FBX/SK_Player_FirstPersonBody.fbx
+Skeleton: /Game/Player/FirstPerson/SK_Player_FirstPersonBody_Skeleton
+Source animation duplicated: /Game/Player/FirstPerson/AN_Player_Walk_Verify
+Note: Blender 4.5 crashed before Python startup on this Mac, so this pass creates valid named AnimSequence assets from the current fixed Player verify animation. ABP_Player already selects separate forward/backward/start/stop/turn asset slots so improved authored clips can replace these one-for-one.
+Assets:
+- AN_Player_Idle_FeetTogether: purpose=held at the existing feet-together pose by ABP_Player path=/Game/Player/FirstPerson/AN_Player_Idle_FeetTogether class=AnimSequence length=1.2916666269302368
+- AN_Player_Idle_Staggered: purpose=optional idle source placeholder path=/Game/Player/FirstPerson/AN_Player_Idle_Staggered class=AnimSequence length=1.2916666269302368
+- AN_Player_StartWalk_Forward: purpose=forward start source path=/Game/Player/FirstPerson/AN_Player_StartWalk_Forward class=AnimSequence length=1.2916666269302368
+- AN_Player_Walk_Forward_Loop: purpose=forward loop source path=/Game/Player/FirstPerson/AN_Player_Walk_Forward_Loop class=AnimSequence length=1.2916666269302368
+- AN_Player_Walk_Backward_Loop: purpose=backward loop source path=/Game/Player/FirstPerson/AN_Player_Walk_Backward_Loop class=AnimSequence length=1.2916666269302368
+- AN_Player_StopWalk_Forward: purpose=forward stop source path=/Game/Player/FirstPerson/AN_Player_StopWalk_Forward class=AnimSequence length=1.2916666269302368
+- AN_Player_TurnInPlace_Left: purpose=turn-left source, ABP can keep idle if not good path=/Game/Player/FirstPerson/AN_Player_TurnInPlace_Left class=AnimSequence length=1.2916666269302368
+- AN_Player_TurnInPlace_Right: purpose=turn-right source, ABP can keep idle if not good path=/Game/Player/FirstPerson/AN_Player_TurnInPlace_Right class=AnimSequence length=1.2916666269302368
+Created ABP shell: /Game/Player/FirstPerson/ABP_Player

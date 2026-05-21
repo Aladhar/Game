@@ -7,6 +7,7 @@
 class UCameraComponent;
 class UAnimSequence;
 class USkeletalMeshComponent;
+class USceneComponent;
 class APenanceHingedDoor;
 class APenancePickupItem;
 
@@ -20,6 +21,14 @@ enum class EPenanceFirstPersonIdlePoseMode : uint8
     FeetTogether UMETA(DisplayName = "Feet Together"),
     LeftFootForward UMETA(DisplayName = "Left Foot Forward"),
     RightFootForward UMETA(DisplayName = "Right Foot Forward")
+};
+
+UENUM(BlueprintType)
+enum class EPenanceFirstPersonLocomotionState : uint8
+{
+    Idle UMETA(DisplayName = "Idle"),
+    WalkForward UMETA(DisplayName = "Walk Forward"),
+    WalkBackward UMETA(DisplayName = "Walk Backward")
 };
 
 UCLASS()
@@ -48,6 +57,9 @@ public:
     TObjectPtr<UCameraComponent> FirstPersonCamera;
 
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Penance|Player")
+    TObjectPtr<USceneComponent> FirstPersonCameraRoot;
+
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Penance|Player")
     TObjectPtr<USkeletalMeshComponent> FirstPersonBodyMesh;
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Penance|Player Animation")
@@ -61,6 +73,12 @@ public:
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Penance|Player Animation", meta = (ClampMin = "0.00", ClampMax = "30.00"))
     float FirstPersonMovementYawOffsetDegrees = 10.0f;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Penance|Player Camera", meta = (ClampMin = "-180.00", ClampMax = "180.00"))
+    float PlayerMeshVisualYawOffsetDegrees = -90.0f;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Penance|Player Camera", meta = (ClampMin = "0.10", ClampMax = "60.00"))
+    float BodyYawFollowSpeed = 18.0f;
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Penance|Movement")
     float WalkSpeed = 250.0f;
@@ -138,6 +156,27 @@ public:
     float GetFirstPersonWalkCycleTime() const { return FirstPersonWalkCycleTime; }
 
     UFUNCTION(BlueprintPure, Category = "Penance|Debug")
+    float GetFirstPersonForwardSpeed() const { return FirstPersonForwardSpeed; }
+
+    UFUNCTION(BlueprintPure, Category = "Penance|Debug")
+    float GetFirstPersonRightSpeed() const { return FirstPersonRightSpeed; }
+
+    UFUNCTION(BlueprintPure, Category = "Penance|Debug")
+    EPenanceFirstPersonLocomotionState GetFirstPersonLocomotionState() const { return FirstPersonLocomotionState; }
+
+    UFUNCTION(BlueprintPure, Category = "Penance|Debug")
+    float GetCameraYaw() const { return CameraYaw; }
+
+    UFUNCTION(BlueprintPure, Category = "Penance|Debug")
+    float GetBodyYaw() const { return BodyYaw; }
+
+    UFUNCTION(BlueprintPure, Category = "Penance|Debug")
+    float GetTurnYawDelta() const { return FirstPersonTurnYawDelta; }
+
+    UFUNCTION(BlueprintPure, Category = "Penance|Debug")
+    float GetAimPitch() const { return AimPitch; }
+
+    UFUNCTION(BlueprintPure, Category = "Penance|Debug")
     FString GetFirstPersonBodyMeshPath() const;
 
     UFUNCTION(BlueprintPure, Category = "Penance|Debug")
@@ -165,11 +204,9 @@ private:
     void UpdateCrouchRules(float DeltaSeconds);
     void UpdateNoiseRules(float DeltaSeconds);
     void UpdateInteractionFocus();
+    void UpdateCameraDrivenBodyYaw(float DeltaSeconds);
     void UpdateFirstPersonBody(float DeltaSeconds);
     void ResetFirstPersonBodyPose();
-    void ApplyFirstPersonBodyAnimation(float DeltaSeconds, bool bShouldWalk, float HorizontalSpeed, float DirectionSign);
-    float GetFirstPersonIdlePoseTime() const;
-    float GetFirstPersonMovementDirectionSign(float HorizontalSpeed) const;
     void HideOwnerCameraClippingBones();
     void UpdatePlayerBodySelfTest(float DeltaSeconds);
     void StartPlayerBodySelfTest();
@@ -192,26 +229,42 @@ private:
     float SilenceTimer = 0.0f;
     float FirstPersonWalkCycleTime = 0.0f;
     float FirstPersonWalkBlendAlpha = 0.0f;
-    float FirstPersonLastSignedPlayRate = 1.0f;
+    float FirstPersonLastPlayRate = 1.0f;
     float FirstPersonBodyYawOffset = 0.0f;
+    float FirstPersonForwardSpeed = 0.0f;
+    float FirstPersonRightSpeed = 0.0f;
+    float FirstPersonTurnYawDelta = 0.0f;
+    float CameraYaw = 0.0f;
+    float BodyYaw = 0.0f;
+    float AimPitch = 0.0f;
     bool bFirstPersonBodyWalking = false;
     bool bFirstPersonBodyWasWalking = false;
+    EPenanceFirstPersonLocomotionState FirstPersonLocomotionState = EPenanceFirstPersonLocomotionState::Idle;
     bool bPlayerBodySelfTestActive = false;
     bool bOwnerCameraClippingBonesHidden = false;
     int32 PlayerBodySelfTestPhase = 0;
     float PlayerBodySelfTestPhaseTime = 0.0f;
     float PlayerBodySelfTestInitialCycle = 0.0f;
     float PlayerBodySelfTestTurnCycleDelta = 0.0f;
+    float PlayerBodySelfTestMaxTurnYawDelta = 0.0f;
+    float PlayerBodySelfTestPitchCycleDelta = 0.0f;
+    float PlayerBodySelfTestMaxBodyPitch = 0.0f;
     float PlayerBodySelfTestMoveStartCycle = 0.0f;
     float PlayerBodySelfTestMoveMaxSpeed = 0.0f;
     float PlayerBodySelfTestMoveCycleDelta = 0.0f;
+    float PlayerBodySelfTestBackwardMaxSpeed = 0.0f;
+    float PlayerBodySelfTestBackwardCycleDelta = 0.0f;
     float PlayerBodySelfTestStopMinSpeed = TNumericLimits<float>::Max();
     bool bPlayerBodySelfTestSawWalking = false;
+    bool bPlayerBodySelfTestSawBackwardWalking = false;
     bool bPlayerBodySelfTestTurnAnimationPlaying = false;
+    bool bPlayerBodySelfTestPitchAnimationPlaying = false;
     bool bPlayerBodySelfTestSawAnimationPlaying = false;
+    bool bPlayerBodySelfTestSawBackwardAnimationPlaying = false;
     TArray<FString> PlayerBodySelfTestLines;
     TArray<FString> PlayerBodySelfTestErrors;
-    TObjectPtr<UAnimSequence> FirstPersonWalkAnimation;
+    TObjectPtr<UAnimSequence> FirstPersonForwardWalkAnimation;
+    TObjectPtr<UAnimSequence> FirstPersonBackwardWalkAnimation;
     FText CurrentInteractionHint;
     TArray<FString> InventoryItems;
     TArray<FString> CollectedNotes;
