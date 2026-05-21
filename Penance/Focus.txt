@@ -419,3 +419,276 @@ So the correct Unreal values are:
 Walk:   2.5 m/s × 100 = 250 UU/s
 Sprint: 5.5 m/s × 100 = 550 UU/s
 Crouch: 1.4 m/s × 100 = 140 UU/s
+
+
+Implement a smoother Player locomotion animation flow for the visible first-person body.
+
+Current problem:
+The Player currently visually walks backwards only. This happens when walking forward or backward. The current walk animation/logic is not direction-aware enough.
+
+Goal:
+Create a clean player locomotion flow:
+Idle → StartWalk → WalkLoop → StopWalk → Idle
+Also handle turning in place, forward movement, backward movement, and smooth transitions.
+
+Use the most recent fixed Player model/animation build:
+- Penance/Built/Blender/Player_adaptive_REBUILT_ANIM.blend
+- Penance/Built/FBX/SK_Player_Adaptive_REBUILT_ANIM.fbx
+or the newest equivalent fixed Player file.
+
+==================================================
+PART 1 — FIX FORWARD/BACKWARD DIRECTION
+==================================================
+
+First inspect the model forward direction.
+
+Unreal rule:
+- Character forward should be +X in Unreal.
+- Pressing W should move the character forward.
+- Player feet should visually step forward when moving forward.
+- Pressing S should use backward walking logic, not the same broken forward animation.
+
+Check:
+1. Is the mesh facing the correct direction in Unreal?
+2. Is the skeleton/root facing the correct direction?
+3. Is the walk animation authored backwards?
+4. Is the Animation Blueprint using the same walk animation for forward and backward?
+
+If the mesh or skeleton is rotated 180 degrees incorrectly:
+- Fix the mesh/component relative rotation or export orientation.
+- Do not hack the animation unless the model forward axis is correct first.
+
+If the animation itself is backwards:
+- Create a corrected Walk_Forward_Loop.
+- Create a separate Walk_Backward_Loop.
+- Do not use the backwards-looking walk for both W and S.
+
+==================================================
+PART 2 — CREATE IDLE OPTIONS
+==================================================
+
+Create or verify these idle animations:
+
+1. Idle_FeetTogether
+- Default idle.
+- Feet under hips.
+- Toes forward.
+- Knees slightly bent.
+- Body relaxed.
+- This should not look like the player froze mid-step.
+
+2. Idle_Staggered
+- Optional variation.
+- One foot slightly forward.
+- One foot slightly back.
+- Subtle horror/nervous stance.
+- Use only as idle variation, not the default every time.
+
+The player should usually stop into Idle_FeetTogether unless the current stop pose naturally chooses another idle.
+
+==================================================
+PART 3 — CREATE WALK TRANSITION ANIMATIONS
+==================================================
+
+Create or verify:
+
+StartWalk_Forward
+- starts from Idle_FeetTogether
+- first foot lifts naturally
+- transitions into Walk_Forward_Loop
+
+Walk_Forward_Loop
+- in-place forward walk
+- believable at 250 UU/s
+- feet do not deform
+- shoes remain rigid
+- does not visually move backward
+
+Walk_Backward_Loop
+- in-place backward walk
+- smaller cautious backward steps
+- should feel like the player is backing away in horror
+- not just the forward animation played wrong
+
+StopWalk_Forward
+- transitions from walk loop to idle
+- feet settle back into a stable stance
+- preferably ends in Idle_FeetTogether or a clean stable stance
+
+Optional:
+StartWalk_Backward
+StopWalk_Backward
+Strafe_Left
+Strafe_Right
+
+==================================================
+PART 4 — ANIMATION BLUEPRINT FLOW
+==================================================
+
+Update ABP_Player.
+
+Variables:
+- Speed
+- ForwardSpeed
+- RightSpeed
+- Direction
+- bIsMoving
+- bMovingForward
+- bMovingBackward
+- bMovingLeft
+- bMovingRight
+- bIsTurningInPlace
+- TurnYawDelta
+- WalkPlayRate
+
+Calculate:
+Speed = VectorLengthXY(Velocity)
+ForwardSpeed = dot(Velocity, ActorForwardVector)
+RightSpeed = dot(Velocity, ActorRightVector)
+
+Thresholds:
+- Moving threshold: 10 UU/s
+- Stop threshold: 5 UU/s
+- Walk speed target: 250 UU/s
+
+Logic:
+If Speed <= 5:
+    bIsMoving = false
+    use Idle / TurnInPlace logic
+
+If Speed > 10:
+    bIsMoving = true
+
+If ForwardSpeed > 10:
+    use Forward walk logic
+
+If ForwardSpeed < -10:
+    use Backward walk logic
+
+If abs(RightSpeed) > 10:
+    use strafe or angled walk logic if available
+
+Do not trigger walk animation from mouse turning alone.
+Mouse turning while standing should use idle or turn-in-place.
+
+==================================================
+PART 5 — STATE MACHINE
+==================================================
+
+Create this state machine:
+
+Idle
+- Default state.
+- Uses Idle_FeetTogether.
+- Can optionally blend to Idle_Staggered after a delay.
+- If Speed > 10 and ForwardSpeed > 0, transition to StartWalk_Forward.
+- If Speed > 10 and ForwardSpeed < 0, transition to Walk_Backward_Loop or StartWalk_Backward if available.
+- If Speed <= 10 and abs(TurnYawDelta) > 45, transition to TurnInPlace_Left or TurnInPlace_Right if available.
+
+StartWalk_Forward
+- Plays once.
+- Transitions to Walk_Forward_Loop when nearly finished or Speed remains > 10.
+- If player releases movement early, transition to StopWalk_Forward or Idle.
+
+Walk_Forward_Loop
+- Loops while ForwardSpeed > 10.
+- Uses play rate Speed / 250 clamped 0.75 to 1.25.
+- If Speed <= 5, transition to StopWalk_Forward.
+
+Walk_Backward_Loop
+- Loops while ForwardSpeed < -10.
+- Uses play rate abs(ForwardSpeed) / 250 clamped 0.75 to 1.15.
+- If Speed <= 5, transition to Idle or StopWalk_Backward if available.
+
+StopWalk_Forward
+- Plays once.
+- Transitions to Idle_FeetTogether when finished.
+
+TurnInPlace_Left / TurnInPlace_Right
+- Only if Speed <= 10.
+- Trigger based on camera/body yaw difference.
+- If no turn animations exist yet, smoothly rotate the body toward the camera and stay in Idle.
+
+==================================================
+PART 6 — TURNING IMPLEMENTATION
+==================================================
+
+Turning must be handled.
+
+Standing still:
+- Mouse turn should not play walk.
+- Keep idle active.
+- Rotate body/root smoothly toward camera yaw.
+- If yaw delta gets large, use turn-in-place animation if available.
+
+Moving:
+- Walking while turning should keep walk animation active.
+- Use Direction or ForwardSpeed/RightSpeed to choose movement direction.
+- Avoid extreme twisting between camera and body.
+
+Simple first implementation:
+- Keep body aligned with camera yaw, smoothed slightly.
+- Use forward/backward walk based on input/velocity.
+- Do not let legs face backward while camera faces forward.
+
+Future implementation:
+- Add TurnLeft_90, TurnRight_90, TurnLeft_180, TurnRight_180.
+- Add strafe left/right and diagonal blendspace.
+
+==================================================
+PART 7 — FIRST-PERSON BODY RULES
+==================================================
+
+Because this is a full-body first-person setup:
+- Hide head/face/hair from owner camera.
+- Preserve full model with head/face separately.
+- Feet/legs should be visible when looking down.
+- No camera clipping into face/head/hood.
+- No duplicate mesh left behind in the level.
+
+==================================================
+PART 8 — ACCEPTANCE TEST
+==================================================
+
+Keep fixing until all pass:
+
+Forward:
+- Press W.
+- Player moves forward.
+- Feet visually walk forward.
+- Animation no longer looks like walking backwards.
+
+Backward:
+- Press S.
+- Player moves backward.
+- Feet use backward/cautious backing animation.
+- It should not look like the forward walk playing incorrectly.
+
+Stop:
+- Release movement.
+- Walk animation stops.
+- Character blends to Idle_FeetTogether or another clean idle.
+- Feet do not freeze with one foot awkwardly mid-step unless intentionally using staggered idle.
+
+Turn in place:
+- Stand still and move mouse.
+- Character does not play walk animation.
+- Body/feet adjust naturally.
+- If turn animations do not exist, body rotates smoothly with idle.
+
+Walk + turn:
+- Hold W and turn mouse.
+- Character walks and turns without hardcore twisting or foot sliding.
+
+Foot quality:
+- Shoes do not deform.
+- Feet do not melt/stretch.
+- Foot sliding is acceptable or improved.
+
+Report:
+- What caused the backwards walk issue.
+- What files were changed.
+- What animations were created/updated.
+- What ABP_Player logic was changed.
+- How forward/backward/turning are handled.
+- What still needs polish.

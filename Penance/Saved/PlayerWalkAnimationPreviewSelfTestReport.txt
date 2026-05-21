@@ -1,0 +1,40 @@
+PLAYER_WALK_ANIMATION_PREVIEW_SELF_TEST_REPORT
+Map: Player_WalkAnimation_Verify
+Actor: PenancePlayerWalkPreviewActor_0
+Mesh: /Game/Player/FirstPerson/SK_Player_FirstPersonBody.SK_Player_FirstPersonBody
+Animation: /Game/Player/FirstPerson/AN_Player_Walk_Verify.AN_Player_Walk_Verify
+AnimationLength: 1.292
+SampledKeys: 32
+InitialActorLocation: X=260.000 Y=0.000 Z=0.000
+InitialAnimationTime: 0.32292
+CurrentAnimationTime: 0.32292
+MaxAnimationTimeDelta: 0.96865
+ComponentIsPlaying: false
+MovePhaseStartLocation: X=260.000 Y=0.000 Z=0.000
+ReversePhaseStartLocation: X=111.888 Y=203.836 Z=0.000
+FinalActorLocation: X=243.577 Y=22.602 Z=0.000
+ForwardDistance2D: 251.965
+ReverseDistance2D: 224.026
+IdlePhaseAnimationPlayed: false
+TurnOnlyPhaseAnimationPlayed: false
+MovePhaseAnimationPlayed: true
+ReversePhaseAnimationPlayed: true
+StopPhaseAnimationPlayed: false
+
+Acceptance checks:
+PASS - preview mesh component exists
+PASS - preview mesh uses first-person body skeletal mesh
+PASS - walk animation asset exists
+PASS - walk animation has playable length
+PASS - walk animation has multiple sampled keys
+PASS - idle does not play walk animation
+PASS - turning in place does not play walk animation
+PASS - movement plays walk animation
+PASS - forward movement physically translates preview actor
+PASS - reverse movement physically translates preview actor
+PASS - reverse movement plays walk animation
+PASS - stop phase stops walk animation
+PASS - animation time advanced during play
+
+Errors:
+- none

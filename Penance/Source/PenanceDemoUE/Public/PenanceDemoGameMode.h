@@ -11,4 +11,6 @@ class PENANCEDEMOUE_API APenanceDemoGameMode : public AGameModeBase
 
 public:
     APenanceDemoGameMode();
+
+    virtual void BeginPlay() override;
 };
