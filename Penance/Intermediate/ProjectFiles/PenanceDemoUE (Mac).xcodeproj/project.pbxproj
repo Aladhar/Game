@@ -1,0 +1,478 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+/* Begin PBXBuildFile section */
+		554543FBB27BB5C0E8BEB824 = {isa = PBXBuildFile; fileRef = FC16639BC84EADF4C3862913; settings = {COMPILER_FLAGS = "@/Users/amritladhar/Documents/GitHub/Game/Penance/Intermediate/ProjectFiles/ResponseFiles/Mac/PenanceDemoUE1.response"; }; }; /* ABP_Player.cpp */
+		6068DDBB2623CA9FB442557A = {isa = PBXBuildFile; fileRef = C607D74A2BDEF83B67031A1B; settings = {COMPILER_FLAGS = "@/Users/amritladhar/Documents/GitHub/Game/Penance/Intermediate/ProjectFiles/ResponseFiles/Mac/PenanceDemoUE1.response"; }; }; /* PenanceDemoGameMode.cpp */
+		6174672EF421C5D8A4FA1A8E = {isa = PBXBuildFile; fileRef = 043B05276A96C5B15E2CCB6C; settings = {COMPILER_FLAGS = "@/Users/amritladhar/Documents/GitHub/Game/Penance/Intermediate/ProjectFiles/ResponseFiles/Mac/PenanceDemoUE1.response"; }; }; /* PenanceDemoUE.cpp */
+		C0219DF2DC1365F8A17AB6E1 = {isa = PBXBuildFile; fileRef = BE28DAFA6A981B7206466C2F; settings = {COMPILER_FLAGS = "@/Users/amritladhar/Documents/GitHub/Game/Penance/Intermediate/ProjectFiles/ResponseFiles/Mac/PenanceDemoUE1.response"; }; }; /* PenanceHUD.cpp */
+		56AED019BD0A9A35A8FA6ED3 = {isa = PBXBuildFile; fileRef = 83D2FC909421EC8A84236841; settings = {COMPILER_FLAGS = "@/Users/amritladhar/Documents/GitHub/Game/Penance/Intermediate/ProjectFiles/ResponseFiles/Mac/PenanceDemoUE1.response"; }; }; /* PenanceHingedDoor.cpp */
+		8F6B6CF916401F6423FD69B8 = {isa = PBXBuildFile; fileRef = CE5564513456355E5DEFB729; settings = {COMPILER_FLAGS = "@/Users/amritladhar/Documents/GitHub/Game/Penance/Intermediate/ProjectFiles/ResponseFiles/Mac/PenanceDemoUE1.response"; }; }; /* PenancePickupItem.cpp */
+		8AF20F95EB77535C4EC166E1 = {isa = PBXBuildFile; fileRef = E0CFEC388C9591084EB24E15; settings = {COMPILER_FLAGS = "@/Users/amritladhar/Documents/GitHub/Game/Penance/Intermediate/ProjectFiles/ResponseFiles/Mac/PenanceDemoUE1.response"; }; }; /* PenancePlayerCharacter.cpp */
+		7B5C7318562657CF1C2F70C0 = {isa = PBXBuildFile; fileRef = 6C20D4706A5CD63AB082BBF8; settings = {COMPILER_FLAGS = "@/Users/amritladhar/Documents/GitHub/Game/Penance/Intermediate/ProjectFiles/ResponseFiles/Mac/PenanceDemoUE1.response"; }; }; /* PenancePlayerWalkPreviewActor.cpp */
+		E642BB7ECCA31216303AC760 = {isa = PBXBuildFile; fileRef = 38DD9D8110C4BA11125B8228; settings = {COMPILER_FLAGS = "@/Users/amritladhar/Documents/GitHub/Game/Penance/Intermediate/ProjectFiles/ResponseFiles/Mac/PenanceDemoUE1.response"; }; }; /* PenanceProgressionManager.cpp */
+		A49B79188DD9D28ABF92EE61 = {isa = PBXBuildFile; fileRef = 361800F01B623D3B74E4B3BB; settings = {COMPILER_FLAGS = "@/Users/amritladhar/Documents/GitHub/Game/Penance/Intermediate/ProjectFiles/ResponseFiles/Mac/PenanceDemoUE1.response"; }; }; /* PenanceProgressionTrigger.cpp */
+		4CBF1F88EFB8C329BBED55BB = {isa = PBXBuildFile; fileRef = D0C956AF2A19D8D177DF980D; }; /* Assets.xcassets */
+		B181604D9491164A2E27EA53 = {isa = PBXBuildFile; fileRef = A5E9AA69FC1CE58C22BEE70D; }; /* UEMetadata */
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C64BBB25FD428890A978320C = {isa = PBXFileReference; explicitFileType = file.txt; name = "DefaultEditor.ini"; path = "../../Config/DefaultEditor.ini"; sourceTree = SOURCE_ROOT; };
+		DB6DB93C6B0703BD9DDA4180 = {isa = PBXFileReference; explicitFileType = file.txt; name = "DefaultEngine.ini"; path = "../../Config/DefaultEngine.ini"; sourceTree = SOURCE_ROOT; };
+		0A5F49D4309D28FCF03A47A9 = {isa = PBXFileReference; explicitFileType = file.txt; name = "DefaultInput.ini"; path = "../../Config/DefaultInput.ini"; sourceTree = SOURCE_ROOT; };
+		5873D72E80F5FC38B15BAE4B = {isa = PBXFileReference; explicitFileType = file.txt; name = "Focus.txt"; path = "../../Focus.txt"; sourceTree = SOURCE_ROOT; };
+		F519DBC82B7C343B37F88500 = {isa = PBXFileReference; explicitFileType = file.txt; name = "PenanceDemoUE.uproject"; path = "../../PenanceDemoUE.uproject"; sourceTree = SOURCE_ROOT; };
+		7451D3F36FE827DF64027CFE = {isa = PBXFileReference; explicitFileType = file.txt; name = "Penance_Foster_House_Origin_Lore_EXPLICIT.txt"; path = "../../Penance_Foster_House_Origin_Lore_EXPLICIT.txt"; sourceTree = SOURCE_ROOT; };
+		34DF79E2EDFE67416BEF77BF = {isa = PBXFileReference; explicitFileType = file.txt; name = "Penance_Horror_Game_Master_Plan_ADD_MORE_INFO.txt"; path = "../../Penance_Horror_Game_Master_Plan_ADD_MORE_INFO.txt"; sourceTree = SOURCE_ROOT; };
+		4E6FC01DBECF6EAFE3EBE34A = {isa = PBXFileReference; explicitFileType = file.txt; name = "README_IMPORT.md"; path = "../../README_IMPORT.md"; sourceTree = SOURCE_ROOT; };
+		CF746C0FF4BEC24D1E04EB4B = {isa = PBXFileReference; explicitFileType = file.txt; name = "PenanceDemoUE.Target.cs"; path = "../../Source/PenanceDemoUE.Target.cs"; sourceTree = SOURCE_ROOT; };
+		74AE085ECC4E27F2CDAA3AF7 = {isa = PBXFileReference; explicitFileType = file.txt; name = "PenanceDemoUE.Build.cs"; path = "../../Source/PenanceDemoUE/PenanceDemoUE.Build.cs"; sourceTree = SOURCE_ROOT; };
+		FC16639BC84EADF4C3862913 = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; name = "ABP_Player.cpp"; path = "../../Source/PenanceDemoUE/Private/ABP_Player.cpp"; sourceTree = SOURCE_ROOT; };
+		C607D74A2BDEF83B67031A1B = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; name = "PenanceDemoGameMode.cpp"; path = "../../Source/PenanceDemoUE/Private/PenanceDemoGameMode.cpp"; sourceTree = SOURCE_ROOT; };
+		043B05276A96C5B15E2CCB6C = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; name = "PenanceDemoUE.cpp"; path = "../../Source/PenanceDemoUE/Private/PenanceDemoUE.cpp"; sourceTree = SOURCE_ROOT; };
+		BE28DAFA6A981B7206466C2F = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; name = "PenanceHUD.cpp"; path = "../../Source/PenanceDemoUE/Private/PenanceHUD.cpp"; sourceTree = SOURCE_ROOT; };
+		83D2FC909421EC8A84236841 = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; name = "PenanceHingedDoor.cpp"; path = "../../Source/PenanceDemoUE/Private/PenanceHingedDoor.cpp"; sourceTree = SOURCE_ROOT; };
+		CE5564513456355E5DEFB729 = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; name = "PenancePickupItem.cpp"; path = "../../Source/PenanceDemoUE/Private/PenancePickupItem.cpp"; sourceTree = SOURCE_ROOT; };
+		E0CFEC388C9591084EB24E15 = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; name = "PenancePlayerCharacter.cpp"; path = "../../Source/PenanceDemoUE/Private/PenancePlayerCharacter.cpp"; sourceTree = SOURCE_ROOT; };
+		6C20D4706A5CD63AB082BBF8 = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; name = "PenancePlayerWalkPreviewActor.cpp"; path = "../../Source/PenanceDemoUE/Private/PenancePlayerWalkPreviewActor.cpp"; sourceTree = SOURCE_ROOT; };
+		38DD9D8110C4BA11125B8228 = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; name = "PenanceProgressionManager.cpp"; path = "../../Source/PenanceDemoUE/Private/PenanceProgressionManager.cpp"; sourceTree = SOURCE_ROOT; };
+		361800F01B623D3B74E4B3BB = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; name = "PenanceProgressionTrigger.cpp"; path = "../../Source/PenanceDemoUE/Private/PenanceProgressionTrigger.cpp"; sourceTree = SOURCE_ROOT; };
+		36278CD21FBEB34161E4CC54 = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; name = "ABP_Player.h"; path = "../../Source/PenanceDemoUE/Public/ABP_Player.h"; sourceTree = SOURCE_ROOT; };
+		A8145C39D0A45146F7599232 = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; name = "PenanceDemoGameMode.h"; path = "../../Source/PenanceDemoUE/Public/PenanceDemoGameMode.h"; sourceTree = SOURCE_ROOT; };
+		F96F3F46E8961E463387E196 = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; name = "PenanceHUD.h"; path = "../../Source/PenanceDemoUE/Public/PenanceHUD.h"; sourceTree = SOURCE_ROOT; };
+		6ED3F74264A85E085E27174D = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; name = "PenanceHingedDoor.h"; path = "../../Source/PenanceDemoUE/Public/PenanceHingedDoor.h"; sourceTree = SOURCE_ROOT; };
+		992450EF07411D8ADD47EAE4 = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; name = "PenancePickupItem.h"; path = "../../Source/PenanceDemoUE/Public/PenancePickupItem.h"; sourceTree = SOURCE_ROOT; };
+		92781317BE4698B5DC864241 = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; name = "PenancePlayerCharacter.h"; path = "../../Source/PenanceDemoUE/Public/PenancePlayerCharacter.h"; sourceTree = SOURCE_ROOT; };
+		5880C11B4DE05A733A33CAFD = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; name = "PenancePlayerWalkPreviewActor.h"; path = "../../Source/PenanceDemoUE/Public/PenancePlayerWalkPreviewActor.h"; sourceTree = SOURCE_ROOT; };
+		EEFD8DBF61A6350817BF6224 = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; name = "PenanceProgressionManager.h"; path = "../../Source/PenanceDemoUE/Public/PenanceProgressionManager.h"; sourceTree = SOURCE_ROOT; };
+		E3C3A4802FE5CBF55E97D9B0 = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; name = "PenanceProgressionTrigger.h"; path = "../../Source/PenanceDemoUE/Public/PenanceProgressionTrigger.h"; sourceTree = SOURCE_ROOT; };
+		67B41118B457162729AA0C2C = {isa = PBXFileReference; explicitFileType = wrapper.application; name = "PenanceDemoUE"; path = "PenanceDemoUE"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0C956AF2A19D8D177DF980D = {isa = PBXFileReference; explicitFileType = folder.assetcatalog; name = "Assets.xcassets"; path = "/Users/Shared/Epic Games/UE_5.7/Engine/Build/Mac/Resources/Assets.xcassets"; sourceTree = "<absolute>"; };
+		A5E9AA69FC1CE58C22BEE70D = {isa = PBXFileReference; explicitFileType = file.txt; name = "UEMetadata"; path = "/Users/Shared/Epic Games/UE_5.7/Engine/Build/Mac/Resources/UEMetadata"; sourceTree = "<absolute>"; };
+		8126E5D4892BF2B04D3F9812 = {isa = PBXFileReference; explicitFileType = test.xcconfig; name = "PenanceDemoUE.xcconfig"; path = "XcconfigsMac/PenanceDemoUE.xcconfig"; sourceTree = "<group>"; };
+		DA8DD00986FDAA8C2BF5A07E = {isa = PBXFileReference; explicitFileType = test.xcconfig; name = "PenanceDemoUE_DebugGame.xcconfig"; path = "XcconfigsMac/PenanceDemoUE_DebugGame.xcconfig"; sourceTree = "<group>"; };
+		980E8E6E2A5A3EA46BF02991 = {isa = PBXFileReference; explicitFileType = test.xcconfig; name = "PenanceDemoUE_Development.xcconfig"; path = "XcconfigsMac/PenanceDemoUE_Development.xcconfig"; sourceTree = "<group>"; };
+		9BE2995B82E06A8382E47078 = {isa = PBXFileReference; explicitFileType = test.xcconfig; name = "PenanceDemoUE_Shipping.xcconfig"; path = "XcconfigsMac/PenanceDemoUE_Shipping.xcconfig"; sourceTree = "<group>"; };
+		4155736F9420E1CFCD069077 = {isa = PBXFileReference; explicitFileType = test.xcconfig; name = "PenanceDemoUE_Index.xcconfig"; path = "XcconfigsMac/PenanceDemoUE_Index.xcconfig"; sourceTree = "<group>"; };
+		8A5045195BAA90713C4D3D4C = {isa = PBXFileReference; explicitFileType = text.plist; name = "Info-Editor.Template.plist"; path = "../../../../../../../Shared/Epic Games/UE_5.7/Engine/Intermediate/Build/Mac/Resources/Info-Editor.Template.plist"; sourceTree = "<group>"; };
+		8FF43F4759D257F082E2A7B9 = {isa = PBXFileReference; explicitFileType = text.plist; name = "Info.Template.plist"; path = "../../Build/Mac/Resources/Info.Template.plist"; sourceTree = "<group>"; };
+		A5763A71744109386BB50BB7 = {isa = PBXFileReference; explicitFileType = text.plist; name = "Sandbox.Server.entitlements"; path = "../../Build/Mac/Resources/Sandbox.Server.entitlements"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		660E159E67734C46CA3FA972 = {
+			isa = PBXGroup;
+			children = (
+				6A7AF93534A5517F7A4AFFA6 /* Config */,
+				C02A708BA83A500A2A24F110 /* Source */,
+				5873D72E80F5FC38B15BAE4B /* Focus.txt */,
+				F519DBC82B7C343B37F88500 /* PenanceDemoUE.uproject */,
+				7451D3F36FE827DF64027CFE /* Penance_Foster_House_Origin_Lore_EXPLICIT.txt */,
+				34DF79E2EDFE67416BEF77BF /* Penance_Horror_Game_Master_Plan_ADD_MORE_INFO.txt */,
+				4E6FC01DBECF6EAFE3EBE34A /* README_IMPORT.md */,
+				162F0F316D40F19D57B366E3 /* Products */,
+				7A9E4CD73AF6B8B31CF00A0E /* Resources */,
+				C99C92E321DE153DD3B46FEF /* Xcconfigs */,
+				6756507D30843C5F7906A008 /* Metadata */,
+			);
+			sourceTree = "<group>";
+		};
+		6A7AF93534A5517F7A4AFFA6 = {
+			isa = PBXGroup;
+			children = (
+				C64BBB25FD428890A978320C /* DefaultEditor.ini */,
+				DB6DB93C6B0703BD9DDA4180 /* DefaultEngine.ini */,
+				0A5F49D4309D28FCF03A47A9 /* DefaultInput.ini */,
+			);
+			name = "Config";
+			path = "/Users/amritladhar/Documents/GitHub/Game/Penance/Config";
+			sourceTree = "<absolute>";
+		};
+		C02A708BA83A500A2A24F110 = {
+			isa = PBXGroup;
+			children = (
+				01E74112483E0C7AD39EF959 /* PenanceDemoUE */,
+				CF746C0FF4BEC24D1E04EB4B /* PenanceDemoUE.Target.cs */,
+			);
+			name = "Source";
+			path = "/Users/amritladhar/Documents/GitHub/Game/Penance/Source";
+			sourceTree = "<absolute>";
+		};
+		01E74112483E0C7AD39EF959 = {
+			isa = PBXGroup;
+			children = (
+				4C7D96471DA9DF4AB319E788 /* Private */,
+				8FFCEF5D970C784EA16DF260 /* Public */,
+				74AE085ECC4E27F2CDAA3AF7 /* PenanceDemoUE.Build.cs */,
+			);
+			name = "PenanceDemoUE";
+			path = "/Users/amritladhar/Documents/GitHub/Game/Penance/Source/PenanceDemoUE";
+			sourceTree = "<absolute>";
+		};
+		4C7D96471DA9DF4AB319E788 = {
+			isa = PBXGroup;
+			children = (
+				FC16639BC84EADF4C3862913 /* ABP_Player.cpp */,
+				C607D74A2BDEF83B67031A1B /* PenanceDemoGameMode.cpp */,
+				043B05276A96C5B15E2CCB6C /* PenanceDemoUE.cpp */,
+				BE28DAFA6A981B7206466C2F /* PenanceHUD.cpp */,
+				83D2FC909421EC8A84236841 /* PenanceHingedDoor.cpp */,
+				CE5564513456355E5DEFB729 /* PenancePickupItem.cpp */,
+				E0CFEC388C9591084EB24E15 /* PenancePlayerCharacter.cpp */,
+				6C20D4706A5CD63AB082BBF8 /* PenancePlayerWalkPreviewActor.cpp */,
+				38DD9D8110C4BA11125B8228 /* PenanceProgressionManager.cpp */,
+				361800F01B623D3B74E4B3BB /* PenanceProgressionTrigger.cpp */,
+			);
+			name = "Private";
+			path = "/Users/amritladhar/Documents/GitHub/Game/Penance/Source/PenanceDemoUE/Private";
+			sourceTree = "<absolute>";
+		};
+		8FFCEF5D970C784EA16DF260 = {
+			isa = PBXGroup;
+			children = (
+				36278CD21FBEB34161E4CC54 /* ABP_Player.h */,
+				A8145C39D0A45146F7599232 /* PenanceDemoGameMode.h */,
+				F96F3F46E8961E463387E196 /* PenanceHUD.h */,
+				6ED3F74264A85E085E27174D /* PenanceHingedDoor.h */,
+				992450EF07411D8ADD47EAE4 /* PenancePickupItem.h */,
+				92781317BE4698B5DC864241 /* PenancePlayerCharacter.h */,
+				5880C11B4DE05A733A33CAFD /* PenancePlayerWalkPreviewActor.h */,
+				EEFD8DBF61A6350817BF6224 /* PenanceProgressionManager.h */,
+				E3C3A4802FE5CBF55E97D9B0 /* PenanceProgressionTrigger.h */,
+			);
+			name = "Public";
+			path = "/Users/amritladhar/Documents/GitHub/Game/Penance/Source/PenanceDemoUE/Public";
+			sourceTree = "<absolute>";
+		};
+		162F0F316D40F19D57B366E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				67B41118B457162729AA0C2C /* PenanceDemoUE */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7A9E4CD73AF6B8B31CF00A0E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D0C956AF2A19D8D177DF980D /* Assets.xcassets */,
+				A5E9AA69FC1CE58C22BEE70D /* UEMetadata */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C99C92E321DE153DD3B46FEF /* Xcconfigs */ = {
+			isa = PBXGroup;
+			children = (
+				8126E5D4892BF2B04D3F9812 /* PenanceDemoUE.xcconfig */,
+				DA8DD00986FDAA8C2BF5A07E /* PenanceDemoUE_DebugGame.xcconfig */,
+				980E8E6E2A5A3EA46BF02991 /* PenanceDemoUE_Development.xcconfig */,
+				9BE2995B82E06A8382E47078 /* PenanceDemoUE_Shipping.xcconfig */,
+				4155736F9420E1CFCD069077 /* PenanceDemoUE_Index.xcconfig */,
+			);
+			name = Xcconfigs;
+			sourceTree = "<group>";
+		};
+		6756507D30843C5F7906A008 /* Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				8A5045195BAA90713C4D3D4C /* Info-Editor.Template.plist */,
+				8FF43F4759D257F082E2A7B9 /* Info.Template.plist */,
+				A5763A71744109386BB50BB7 /* Sandbox.Server.entitlements */,
+			);
+			name = Metadata;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+/* Begin PBXProject section */
+		AFF7DFFB7BD122E03D1DE2A2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 2000;
+				ORGANIZATIONNAME = "Epic Games, Inc.";
+				TargetAttributes = {
+					E85830A803DACB6CD8D360B0 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F701466EF436F083EB7ED348 /* Build configuration list for PBXProject "PenanceDemoUE" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en
+			);
+			mainGroup = 660E159E67734C46CA3FA972;
+			productRefGroup = 162F0F316D40F19D57B366E3;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E85830A803DACB6CD8D360B0 /* PenanceDemoUE */,
+				DB874A44A14DABEF4039BA63 /* PenanceDemoUE_Index */,
+				0F1D75DC2E4BA1DB660FA98A /* PenanceDemoUE_Build */,
+			);
+		};
+/* End PBXProject section */
+/* Begin PBXNativeTarget section (Run_App) */
+		E85830A803DACB6CD8D360B0 /* PenanceDemoUE */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 947CC8BA842AF79FDF85D444 /* Build configuration list for PBXNativeTarget "PenanceDemoUE" */;
+			buildPhases = (
+				5D1CF444FA0CD13B6E490204 /* Resources */,
+				9E68A38C199D4C3879A286BA /* Copy Executable and Staged Data into .app */,
+				2CF63A0191CA03A0C0A55481 /* Generate dsym for archive, and strip */,
+			);
+			dependencies = (
+				C0E4D2F1CB577C80E6CD154D /* PenanceDemoUE_Build */,
+			);
+			name = "PenanceDemoUE";
+			passBuildSettingsInEnvironment = 1;
+			productType = "com.apple.product-type.application";
+			productReference = 67B41118B457162729AA0C2C;
+			productName = "PenanceDemoUE";
+		};
+/* End PBXNativeTarget section (Run_App)*/
+		947CC8BA842AF79FDF85D444 /* Build configuration list for target PenanceDemoUE */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEDBEBF63F3CE6E20D8CF531 /* DebugGame */,
+				894313C890AE179453608438 /* Development */,
+				8F5CA3FEB26D4D6284EBA928 /* Shipping */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Development";
+		};
+		FEDBEBF63F3CE6E20D8CF531 /* DebugGame */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA8DD00986FDAA8C2BF5A07E /* PenanceDemoUE_DebugGame.xcconfig */;
+			buildSettings = {
+			};
+			name = "DebugGame";
+		};
+		894313C890AE179453608438 /* Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 980E8E6E2A5A3EA46BF02991 /* PenanceDemoUE_Development.xcconfig */;
+			buildSettings = {
+			};
+			name = "Development";
+		};
+		8F5CA3FEB26D4D6284EBA928 /* Shipping */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BE2995B82E06A8382E47078 /* PenanceDemoUE_Shipping.xcconfig */;
+			buildSettings = {
+			};
+			name = "Shipping";
+		};
+/* Begin PBXResourcesBuildPhase section */
+		5D1CF444FA0CD13B6E490204 = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CBF1F88EFB8C329BBED55BB /* Assets.xcassets in Resources */,
+				B181604D9491164A2E27EA53 /* UEMetadata in Resources */,
+			);
+		};
+/* End PBXResourcesBuildPhase section */
+/* Begin PBXShellScriptBuildPhase section */
+		9E68A38C199D4C3879A286BA = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "Copy Executable and Staged Data into .app";
+			inputPaths = (
+			);
+			outputPaths = (
+				"/dev/null"
+			);
+			shellPath = /bin/sh;
+			shellScript = "set -eo pipefail\nSRC_EXE=\"${UE_BINARIES_DIR}/${UE_UBT_BINARY_SUBPATH}\"\nDEST_EXE=\"${CONFIGURATION_BUILD_DIR}/${EXECUTABLE_PATH}\"\nDEST_EXE_DIR=`dirname \"${DEST_EXE}\"`\n\necho Copying executable and any standalone dylibs into ${DEST_EXE_DIR} but do not overwrite unless src is newer\nmkdir -p \"${DEST_EXE_DIR}\"\nrsync -au \"${SRC_EXE}\" \"${DEST_EXE}\"\n\n# Skip syncing if desired\nif [[ ${UE_SKIP_STAGEDDATA_SYNC} -eq 1 ]]; then exit 0; fi\n\n# When building engine projects, like UnrealGame, we don't have data to stage unless something has specified UE_OVERRIDE_STAGE_DIR\nif [[ -z ${UE_OVERRIDE_STAGE_DIR} ]]; then \nSTAGED_DIR=\"${UE_PROJECT_DIR}/Saved/StagedBuilds/${UE_TARGET_PLATFORM_NAME}\"\nelse\n  STAGED_DIR=\"${UE_OVERRIDE_STAGE_DIR}\"\nfi\nif [[ -z ${STAGED_DIR} ]]; then exit 0; fi\n# Make sure the staged directory exists and has files in it\nif [[ ! -e \"${STAGED_DIR}\" || ! $(ls -A \"${STAGED_DIR}\") ]]; then \n  echo =========================================================================================\n  echo \"WARNING: To run, you must have a valid staged build directory. The Staged location is:\"\n  echo \"  ${STAGED_DIR}\"\n  echo \"Use the editor's Platforms menu, or run a command like::\"\n  echo \"./RunUAT.sh BuildCookRun -platform=Mac -project=<project> -build -cook -stage -pak\"\n  echo =========================================================================================\n  exit -0 \nfi\n\necho \"Syncing ${STAGED_DIR} to ${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/UE\"\nif [[ -e  \"${STAGED_DIR}\" ]]; then\nrsync -a --delete --exclude=\"/Info.plist\" --exclude=\"/Manifest_*\" --exclude=\"/*.app\" \"${STAGED_DIR}/\" \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/UE\"\nelse\n  echo =========================================================================================\n  echo \"WARNING: To run, you must have a valid staged sync source directory. The Staged SyncSource location is:\"\n  echo \"${STAGED_DIR}\"\n  echo \"Use the editor's Platforms menu, or run a command like::\"\n  echo \"./RunUAT.sh BuildCookRun -platform=Mac -project=<project> -build -cook -stage -pak\"\n  echo =========================================================================================\n  exit -0 \nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+/* Begin PBXShellScriptBuildPhase section */
+		2CF63A0191CA03A0C0A55481 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "Generate dsym for archive, and strip";
+			inputPaths = (
+				"\"$(CONFIGURATION_BUILD_DIR)/$(EXECUTABLE_PATH)\""
+			);
+			outputPaths = (
+				"\"$(DWARF_DSYM_FOLDER_PATH)/$(DWARF_DSYM_FILE_NAME)\""
+			);
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\n# Run the wrapper dsym generator\n\"${UE_ENGINE_DIR}/Build/BatchFiles/Mac/GenerateUniversalDSYM.sh\" \"${CONFIGURATION_BUILD_DIR}/${EXECUTABLE_PATH}\" \"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}\"\nstrip -S -no_code_signature_warning -D \"${CONFIGURATION_BUILD_DIR}/${EXECUTABLE_PATH}\"\n\n# Remove any unused architectures from dylibs in the .app (param1) that don't match the executable (param2). Also error if a dylib is missing arches\n\"${UE_ENGINE_DIR}/Build/BatchFiles/Mac/ThinApp.sh\" \"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}\" \"${CONFIGURATION_BUILD_DIR}/${EXECUTABLE_PATH}\"";
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXShellScriptBuildPhase section */
+/* Begin PBXContainerItemProxy section */
+		A7DE78D4F4E50EC9E3332B04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFF7DFFB7BD122E03D1DE2A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F1D75DC2E4BA1DB660FA98A;
+			remoteInfo = "PenanceDemoUE_Build";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXTargetDependency section */
+		C0E4D2F1CB577C80E6CD154D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0F1D75DC2E4BA1DB660FA98A /* PenanceDemoUE_Build */;
+			targetProxy = A7DE78D4F4E50EC9E3332B04 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+/* Begin PBXNativeTarget section (Build) */
+		0F1D75DC2E4BA1DB660FA98A /* PenanceDemoUE_Build */ = {
+			isa = PBXLegacyTarget;
+			buildConfigurationList = 976B4408275E9429B7F77A19 /* Build configuration list for PBXLegacyTarget "PenanceDemoUE_Build" */;
+			buildArgumentsString = "$(ACTION) PenanceDemoUE $(PLATFORM_NAME) $(CONFIGURATION) \"/Users/amritladhar/Documents/GitHub/Game/Penance/PenanceDemoUE.uproject\"";
+			buildToolPath = "/Users/Shared/Epic Games/UE_5.7/Engine/Build/BatchFiles/Mac/XcodeBuild.sh";
+			buildWorkingDirectory = "/Users/Shared/Epic Games/UE_5.7";
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = "PenanceDemoUE_Build";
+			passBuildSettingsInEnvironment = 1;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section (Build)*/
+		976B4408275E9429B7F77A19 /* Build configuration list for target PenanceDemoUE_Build */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C13DE3EDCA4D5A51736F429A /* DebugGame */,
+				FBFA763BF80FF3A04D55640F /* Development */,
+				8C1AB9DE89B9EB17A25B1AF0 /* Shipping */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Development";
+		};
+		C13DE3EDCA4D5A51736F429A /* DebugGame */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = "DebugGame";
+		};
+		FBFA763BF80FF3A04D55640F /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = "Development";
+		};
+		8C1AB9DE89B9EB17A25B1AF0 /* Shipping */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = "Shipping";
+		};
+		F701466EF436F083EB7ED348 /* Build configuration list for target PenanceDemoUE */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0E3218B85A50F004308C00C /* DebugGame */,
+				B3911DFF025225EA94AA6381 /* Development */,
+				99FB8E4CF4ED8CF0681910D3 /* Shipping */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Development";
+		};
+		C0E3218B85A50F004308C00C /* DebugGame */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos appletvsimulator appletvos xros xrsimulator";
+				ONLY_ACTIVE_ARCH = YES;
+				"VALID_ARCHS[sdk=macos*]" = "arm64 x86_64";
+			};
+			name = "DebugGame";
+		};
+		B3911DFF025225EA94AA6381 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos appletvsimulator appletvos xros xrsimulator";
+				ONLY_ACTIVE_ARCH = YES;
+				"VALID_ARCHS[sdk=macos*]" = "arm64 x86_64";
+			};
+			name = "Development";
+		};
+		99FB8E4CF4ED8CF0681910D3 /* Shipping */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos appletvsimulator appletvos xros xrsimulator";
+				ONLY_ACTIVE_ARCH = YES;
+				"VALID_ARCHS[sdk=macos*]" = "arm64 x86_64";
+			};
+			name = "Shipping";
+		};
+/* Begin PBXNativeTarget section (Index) */
+		DB874A44A14DABEF4039BA63 /* PenanceDemoUE_Index */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18F1819859E8B3167FA0F18A /* Build configuration list for PBXNativeTarget "PenanceDemoUE_Index" */;
+			buildPhases = (
+				39253487F5E8E547B36904A8 /* Sources */,
+			);
+			dependencies = (
+			);
+			name = "PenanceDemoUE_Index";
+			passBuildSettingsInEnvironment = 1;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section (Index)*/
+		18F1819859E8B3167FA0F18A /* Build configuration list for target PenanceDemoUE_Index */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16C30C567CD0A49A8149237B /* DebugGame */,
+				07E14846FE73405F402B3302 /* Development */,
+				6BF3977F65F9533B95C02DDE /* Shipping */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Development";
+		};
+		16C30C567CD0A49A8149237B /* DebugGame */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4155736F9420E1CFCD069077 /* PenanceDemoUE_Index.xcconfig */;
+			buildSettings = {
+			};
+			name = "DebugGame";
+		};
+		07E14846FE73405F402B3302 /* Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4155736F9420E1CFCD069077 /* PenanceDemoUE_Index.xcconfig */;
+			buildSettings = {
+			};
+			name = "Development";
+		};
+		6BF3977F65F9533B95C02DDE /* Shipping */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4155736F9420E1CFCD069077 /* PenanceDemoUE_Index.xcconfig */;
+			buildSettings = {
+			};
+			name = "Shipping";
+		};
+/* Begin PBXSourcesBuildPhase section */
+		39253487F5E8E547B36904A8 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				554543FBB27BB5C0E8BEB824 /* ABP_Player.cpp in Sources */,
+				6068DDBB2623CA9FB442557A /* PenanceDemoGameMode.cpp in Sources */,
+				6174672EF421C5D8A4FA1A8E /* PenanceDemoUE.cpp in Sources */,
+				C0219DF2DC1365F8A17AB6E1 /* PenanceHUD.cpp in Sources */,
+				56AED019BD0A9A35A8FA6ED3 /* PenanceHingedDoor.cpp in Sources */,
+				8F6B6CF916401F6423FD69B8 /* PenancePickupItem.cpp in Sources */,
+				8AF20F95EB77535C4EC166E1 /* PenancePlayerCharacter.cpp in Sources */,
+				7B5C7318562657CF1C2F70C0 /* PenancePlayerWalkPreviewActor.cpp in Sources */,
+				E642BB7ECCA31216303AC760 /* PenanceProgressionManager.cpp in Sources */,
+				A49B79188DD9D28ABF92EE61 /* PenanceProgressionTrigger.cpp in Sources */,
+			);
+		};
+/* End PBXSourcesBuildPhase section */
+	};
+	rootObject = AFF7DFFB7BD122E03D1DE2A2 /* Project object */;
+}
