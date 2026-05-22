@@ -1,0 +1,5 @@
+/Users/amritladhar/Documents/GitHub/Game/Penance/Saved/PlayerModelReviewScreenshots/front_full.png
+/Users/amritladhar/Documents/GitHub/Game/Penance/Saved/PlayerModelReviewScreenshots/three_quarter_full.png
+/Users/amritladhar/Documents/GitHub/Game/Penance/Saved/PlayerModelReviewScreenshots/hands_closeup.png
+/Users/amritladhar/Documents/GitHub/Game/Penance/Saved/PlayerModelReviewScreenshots/jacket_collar_closeup.png
+/Users/amritladhar/Documents/GitHub/Game/Penance/Saved/PlayerModelReviewScreenshots/hair_closeup.png
