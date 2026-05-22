@@ -21,6 +21,20 @@ REQUIRED_ACTORS = {
     "Road_Test_ImportedAsset_SmallPatch": "03_Environment/Roads/ImportedRoadTest",
 }
 
+REPLACED_ROAD_ACTORS = {
+    "MainLoop_Road_South",
+    "MainLoop_Road_North",
+    "MainLoop_Road_West",
+    "MainLoop_Road_East",
+    "ArrivalStreet_Road_80m",
+    "CulDeSac_ConnectorRoad",
+    "CulDeSac_RoadCircle_32m",
+    "FinalHouse_Unreachable_RoadStub_Locked",
+    "FinalHouse_RoadExtension_AppearsLater",
+    "FirstHouse_ClearEntry_WetPath_FromRoad",
+    "Park_Lure_WarmPuddleTrail_FromRoad",
+}
+
 
 def imported_name(actor):
     for tag in actor.tags:
@@ -76,6 +90,25 @@ def main():
         if actual_folder != folder:
             failures.append(f"{name} folder expected {folder}, got {actual_folder}")
 
+    replaced_count = 0
+    for name in REPLACED_ROAD_ACTORS:
+        actor = named.get(name)
+        if not actor:
+            failures.append(f"Missing replaced road actor: {name}")
+            continue
+        mesh_path = ""
+        try:
+            mesh = actor.static_mesh_component.static_mesh
+            mesh_path = mesh.get_path_name() if mesh else ""
+        except Exception:
+            pass
+        if "/Game/Map_Assets/Road" not in mesh_path:
+            failures.append(f"{name} is not using the imported road mesh, got {mesh_path or '<none>'}")
+            continue
+        if str(actor.get_folder_path()) != "03_Environment/Roads":
+            failures.append(f"{name} folder expected 03_Environment/Roads, got {actor.get_folder_path()}")
+        replaced_count += 1
+
     route_actor = named.get("Event_Church_Threshold")
     path_actor = named.get("Church_Approach_CrackedPath_TestAsset")
     if route_actor and path_actor:
@@ -90,6 +123,7 @@ def main():
         f"Imported church actors in level: {len(imported_church_actors)}",
         f"Imported road actors in level: {len(imported_road_actors)}",
         f"Required support actors: {len(REQUIRED_ACTORS)}",
+        f"Replaced route road actors: {replaced_count}/{len(REPLACED_ROAD_ACTORS)}",
         f"Failures: {len(failures)}",
     ]
     if failures:

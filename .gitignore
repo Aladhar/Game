@@ -1,3 +1,13 @@
-Penance/.DS_Store
-Penance/.DS_Store
-/Penance/Saved
+# Unreal build/package output
+Builds/
+Binaries/
+Intermediate/
+Saved/
+DerivedDataCache/
+
+# Debug symbols / packaged binaries
+*.pdb
+*.exe
+*.ucas
+*.utoc
+*.pak

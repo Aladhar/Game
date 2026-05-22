@@ -19,6 +19,20 @@ CORE_ROAD_ACTORS = {
     "MainLoop_Road_East",
 }
 
+ROAD_REPLACEMENT_TARGETS = {
+    "MainLoop_Road_South": ((0.0, 0.0, 22.0), (7.0, 0.08, 78.0)),
+    "MainLoop_Road_North": ((0.0, 0.0, -34.0), (7.0, 0.08, 78.0)),
+    "MainLoop_Road_West": ((-34.0, 0.0, -6.0), (7.0, 0.08, 56.0)),
+    "MainLoop_Road_East": ((34.0, 0.0, -6.0), (7.0, 0.08, 56.0)),
+    "ArrivalStreet_Road_80m": ((0.0, 0.0, 58.0), (7.5, 0.08, 80.0)),
+    "CulDeSac_ConnectorRoad": ((-42.0, 0.0, -12.0), (7.0, 0.08, 18.0)),
+    "CulDeSac_RoadCircle_32m": ((-52.0, 0.0, -12.0), (32.0, 0.08, 32.0)),
+    "FinalHouse_Unreachable_RoadStub_Locked": ((0.0, 0.0, -52.0), (7.0, 0.08, 18.0)),
+    "FinalHouse_RoadExtension_AppearsLater": ((0.0, 0.0, -64.0), (7.0, 0.08, 20.0)),
+    "FirstHouse_ClearEntry_WetPath_FromRoad": ((24.0, 0.12, 42.0), (3.8, 0.10, 3.2)),
+    "Park_Lure_WarmPuddleTrail_FromRoad": ((-25.0, 0.05, -9.0), (12.0, 0.03, 2.4)),
+}
+
 CHURCH_CENTER = (28.0, 0.0, 1.0)
 CHURCH_TARGETS = {
     "Church_VerifiedAssetAnchor": (28.0, 0.03, 1.0),
@@ -153,15 +167,21 @@ def static_mesh_assets_under(path):
     return result
 
 
+def mesh_footprint_score(mesh):
+    bounds = mesh.get_bounds()
+    extent = bounds.box_extent
+    return float(extent.x) * float(extent.y) + float(extent.x) * float(extent.z)
+
+
 def ensure_road_mesh_asset():
     meshes = static_mesh_assets_under(ROAD_ASSET_PREFIX)
     if meshes:
-        return meshes[0], False
+        return max(meshes, key=mesh_footprint_score), False
     import_source_asset(ROAD_SOURCE, ROAD_DESTINATION)
     meshes = static_mesh_assets_under(ROAD_ASSET_PREFIX)
     if not meshes:
         raise RuntimeError("Road GLTF import completed but produced no StaticMesh assets")
-    return meshes[0], True
+    return max(meshes, key=mesh_footprint_score), True
 
 
 def spawn_box(name, target, scale, material, folder, collision=True):
@@ -312,6 +332,42 @@ def place_road_asset_test():
     return actor, mesh.get_path_name(), imported
 
 
+def set_mesh_scale_to_godot_size(actor, mesh, width_m, height_m, length_m):
+    bounds = mesh.get_bounds()
+    extent = bounds.box_extent
+    size_x = max(float(extent.x) * 2.0, 1.0)
+    size_y = max(float(extent.y) * 2.0, 1.0)
+    size_z = max(float(extent.z) * 2.0, 1.0)
+    actor.set_actor_scale3d(
+        unreal.Vector(
+            max(float(length_m) * 100.0 / size_x, 0.01),
+            max(float(width_m) * 100.0 / size_y, 0.01),
+            max(float(height_m) * 100.0 / size_z, 0.01),
+        )
+    )
+
+
+def replace_route_roads():
+    mesh, imported = ensure_road_mesh_asset()
+    replaced = []
+    for name, (target, size) in ROAD_REPLACEMENT_TARGETS.items():
+        actor = find_actor_by_name(name)
+        if not actor:
+            actor = unreal.EditorLevelLibrary.spawn_actor_from_class(
+                unreal.StaticMeshActor,
+                godot_to_unreal(target),
+            )
+            set_name_tag(actor, name)
+        actor.modify()
+        actor.static_mesh_component.set_static_mesh(mesh)
+        actor.set_folder_path("03_Environment/Roads")
+        set_location(actor, *target)
+        set_mesh_scale_to_godot_size(actor, mesh, *size)
+        actor.set_actor_enable_collision(True)
+        replaced.append(actor)
+    return replaced, mesh.get_path_name(), imported
+
+
 def place_or_verify_church_placeholder(church_actors):
     if church_actors:
         for actor in church_actors:
@@ -346,11 +402,12 @@ def write_report(
     road_test_actor,
     road_mesh_path,
     road_imported,
+    replaced_roads,
 ):
     lines = [
         "PENANCE_POST_STEP8_ASSETS",
         f"Edited level: {LEVEL_PATH}",
-        "Scope: post-Step-8 placeholder/test setup only; original roads are not replaced.",
+        "Scope: post-Step-8 asset setup plus full route road replacement.",
         f"Imported church actors verified/foldered: {len(church_actors)}",
         f"Imported road actors verified/foldered: {len(road_actors)}",
         f"Fallback church anchor created: {created_anchor}",
@@ -358,10 +415,21 @@ def write_report(
         f"Church test/support actors: {len(test_actors)}",
         f"Road GLTF imported this run: {road_imported}",
         f"Road test actor: {imported_name(road_test_actor)}",
-        f"Road test mesh: {road_mesh_path}",
+        f"Road replacement mesh: {road_mesh_path}",
+        f"Route road actors replaced: {len(replaced_roads)}",
         "Reserved church exterior center: x=28m z=1m",
-        "Created/updated test support actors:",
+        "Replaced route roads:",
     ]
+    for actor in replaced_roads:
+        x, y, z = unreal_to_godot(actor.get_actor_location())
+        scale = actor.get_actor_scale3d()
+        lines.append(
+            f"- {imported_name(actor)} at x={x:.1f} y={y:.1f} z={z:.1f} "
+            f"scale=({scale.x:.3f},{scale.y:.3f},{scale.z:.3f})"
+        )
+    lines.extend([
+        "Created/updated test support actors:",
+    ])
     for actor in test_actors:
         x, y, z = unreal_to_godot(actor.get_actor_location())
         lines.append(f"- {imported_name(actor)} at x={x:.1f} y={y:.1f} z={z:.1f}")
@@ -375,6 +443,8 @@ def main():
     church_actors, created_anchor = place_or_verify_church_placeholder(church_actors)
     test_actors = create_church_exterior_test_area()
     road_test_actor, road_mesh_path, road_imported = place_road_asset_test()
+    replaced_roads, road_mesh_path, replacement_imported = replace_route_roads()
+    road_imported = road_imported or replacement_imported
     unreal.EditorLoadingAndSavingUtils.save_current_level()
     unreal.EditorAssetLibrary.save_asset(LEVEL_PATH, only_if_is_dirty=False)
     write_report(
@@ -386,6 +456,7 @@ def main():
         road_test_actor,
         road_mesh_path,
         road_imported,
+        replaced_roads,
     )
     unreal.log("Penance post-Step-8 asset setup complete.")
 
