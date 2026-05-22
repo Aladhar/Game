@@ -1,0 +1,201 @@
+PLAYER_BLEND_STRUCTURE_REPORT
+File: /Users/amritladhar/Documents/GitHub/Game/Penance/Built/BlenderWork/PlayerModel_Refined_HighQuality_Working.blend
+
+Objects:
+- BACKUP_ORIGINAL_PlayerRoughDraft_Mesh: type=MESH data=BACKUP_ORIGINAL_PlayerRoughDraft_Mesh_Data verts=99932 groups=36 modifiers=ARMATURE
+- BACKUP_ORIGINAL_SK_Player_Armature: type=ARMATURE data=BACKUP_ORIGINAL_SK_Player_Armature_Data verts=0 groups=0 modifiers=
+- PlayerRoughDraft_Mesh: type=MESH data=geometry_0 verts=99932 groups=66 modifiers=ARMATURE
+- Player_Refined_IndependentFingers: type=MESH data=Player_Refined_IndependentFingers_Mesh verts=720 groups=30 modifiers=ARMATURE
+- Player_Refined_Jacket3D_Details: type=MESH data=Player_Refined_Jacket3D_Details_Mesh verts=268 groups=8 modifiers=ARMATURE
+- Player_Refined_LayeredHairClumps: type=MESH data=Player_Refined_LayeredHairClumps_Mesh verts=168 groups=3 modifiers=ARMATURE
+- REFERENCE_Armature_FingerBones: type=ARMATURE data=Armature.001 verts=0 groups=0 modifiers=
+- SK_Player_Armature: type=ARMATURE data=SK_Player_Armature verts=0 groups=0 modifiers=
+
+Armatures:
+- BACKUP_ORIGINAL_SK_Player_Armature: bones=47
+  - root: parent=None deform
+  - pelvis: parent=root deform
+  - spine_01: parent=pelvis deform
+  - spine_02: parent=spine_01 deform
+  - neck_01: parent=spine_02 deform
+  - head: parent=neck_01 deform
+  - camera: parent=head nodeform
+  - jaw: parent=head nodeform
+  - eye_l: parent=head nodeform
+  - eye_r: parent=head nodeform
+  - hair_front_l: parent=head deform
+  - hair_front_r: parent=head deform
+  - look_at: parent=head nodeform
+  - hood_collar_l: parent=neck_01 deform
+  - hood_collar_r: parent=neck_01 deform
+  - clavicle_l: parent=spine_02 deform
+  - upperarm_l: parent=clavicle_l deform
+  - lowerarm_l: parent=upperarm_l deform
+  - hand_l: parent=lowerarm_l deform
+  - weapon_l: parent=hand_l nodeform
+  - lowerarm_twist_l: parent=lowerarm_l deform
+  - upperarm_twist_l: parent=upperarm_l deform
+  - clavicle_r: parent=spine_02 deform
+  - upperarm_r: parent=clavicle_r deform
+  - lowerarm_r: parent=upperarm_r deform
+  - hand_r: parent=lowerarm_r deform
+  - weapon_r: parent=hand_r nodeform
+  - lowerarm_twist_r: parent=lowerarm_r deform
+  - upperarm_twist_r: parent=upperarm_r deform
+  - jacket_front_l: parent=spine_01 deform
+  - jacket_front_r: parent=spine_01 deform
+  - thigh_l: parent=pelvis deform
+  - calf_l: parent=thigh_l deform
+  - foot_l: parent=calf_l deform
+  - calf_twist_l: parent=calf_l deform
+  - thigh_twist_l: parent=thigh_l deform
+  - thigh_r: parent=pelvis deform
+  - calf_r: parent=thigh_r deform
+  - foot_r: parent=calf_r deform
+  - calf_twist_r: parent=calf_r deform
+  - thigh_twist_r: parent=thigh_r deform
+  - jacket_hem_l: parent=pelvis deform
+  - jacket_hem_r: parent=pelvis deform
+  - ik_hand_l: parent=root nodeform
+  - ik_hand_r: parent=root nodeform
+  - ik_foot_l: parent=root nodeform
+  - ik_foot_r: parent=root nodeform
+- REFERENCE_Armature_FingerBones: bones=52
+  - mixamorig5:Hips: parent=None deform
+  - mixamorig5:Spine: parent=mixamorig5:Hips deform
+  - mixamorig5:Spine1: parent=mixamorig5:Spine deform
+  - mixamorig5:Spine2: parent=mixamorig5:Spine1 deform
+  - mixamorig5:Neck: parent=mixamorig5:Spine2 deform
+  - mixamorig5:Head: parent=mixamorig5:Neck deform
+  - mixamorig5:LeftShoulder: parent=mixamorig5:Spine2 deform
+  - mixamorig5:LeftArm: parent=mixamorig5:LeftShoulder deform
+  - mixamorig5:LeftForeArm: parent=mixamorig5:LeftArm deform
+  - mixamorig5:LeftHand: parent=mixamorig5:LeftForeArm deform
+  - mixamorig5:LeftHandThumb1: parent=mixamorig5:LeftHand deform
+  - mixamorig5:LeftHandThumb2: parent=mixamorig5:LeftHandThumb1 deform
+  - mixamorig5:LeftHandThumb3: parent=mixamorig5:LeftHandThumb2 deform
+  - mixamorig5:LeftHandIndex1: parent=mixamorig5:LeftHand deform
+  - mixamorig5:LeftHandIndex2: parent=mixamorig5:LeftHandIndex1 deform
+  - mixamorig5:LeftHandIndex3: parent=mixamorig5:LeftHandIndex2 deform
+  - mixamorig5:LeftHandMiddle1: parent=mixamorig5:LeftHand deform
+  - mixamorig5:LeftHandMiddle2: parent=mixamorig5:LeftHandMiddle1 deform
+  - mixamorig5:LeftHandMiddle3: parent=mixamorig5:LeftHandMiddle2 deform
+  - mixamorig5:LeftHandRing1: parent=mixamorig5:LeftHand deform
+  - mixamorig5:LeftHandRing2: parent=mixamorig5:LeftHandRing1 deform
+  - mixamorig5:LeftHandRing3: parent=mixamorig5:LeftHandRing2 deform
+  - mixamorig5:LeftHandPinky1: parent=mixamorig5:LeftHand deform
+  - mixamorig5:LeftHandPinky2: parent=mixamorig5:LeftHandPinky1 deform
+  - mixamorig5:LeftHandPinky3: parent=mixamorig5:LeftHandPinky2 deform
+  - mixamorig5:RightShoulder: parent=mixamorig5:Spine2 deform
+  - mixamorig5:RightArm: parent=mixamorig5:RightShoulder deform
+  - mixamorig5:RightForeArm: parent=mixamorig5:RightArm deform
+  - mixamorig5:RightHand: parent=mixamorig5:RightForeArm deform
+  - mixamorig5:RightHandThumb1: parent=mixamorig5:RightHand deform
+  - mixamorig5:RightHandThumb2: parent=mixamorig5:RightHandThumb1 deform
+  - mixamorig5:RightHandThumb3: parent=mixamorig5:RightHandThumb2 deform
+  - mixamorig5:RightHandIndex1: parent=mixamorig5:RightHand deform
+  - mixamorig5:RightHandIndex2: parent=mixamorig5:RightHandIndex1 deform
+  - mixamorig5:RightHandIndex3: parent=mixamorig5:RightHandIndex2 deform
+  - mixamorig5:RightHandMiddle1: parent=mixamorig5:RightHand deform
+  - mixamorig5:RightHandMiddle2: parent=mixamorig5:RightHandMiddle1 deform
+  - mixamorig5:RightHandMiddle3: parent=mixamorig5:RightHandMiddle2 deform
+  - mixamorig5:RightHandRing1: parent=mixamorig5:RightHand deform
+  - mixamorig5:RightHandRing2: parent=mixamorig5:RightHandRing1 deform
+  - mixamorig5:RightHandRing3: parent=mixamorig5:RightHandRing2 deform
+  - mixamorig5:RightHandPinky1: parent=mixamorig5:RightHand deform
+  - mixamorig5:RightHandPinky2: parent=mixamorig5:RightHandPinky1 deform
+  - mixamorig5:RightHandPinky3: parent=mixamorig5:RightHandPinky2 deform
+  - mixamorig5:LeftUpLeg: parent=mixamorig5:Hips deform
+  - mixamorig5:LeftLeg: parent=mixamorig5:LeftUpLeg deform
+  - mixamorig5:LeftFoot: parent=mixamorig5:LeftLeg deform
+  - mixamorig5:LeftToeBase: parent=mixamorig5:LeftFoot deform
+  - mixamorig5:RightUpLeg: parent=mixamorig5:Hips deform
+  - mixamorig5:RightLeg: parent=mixamorig5:RightUpLeg deform
+  - mixamorig5:RightFoot: parent=mixamorig5:RightLeg deform
+  - mixamorig5:RightToeBase: parent=mixamorig5:RightFoot deform
+- SK_Player_Armature: bones=77
+  - root: parent=None deform
+  - pelvis: parent=root deform
+  - spine_01: parent=pelvis deform
+  - spine_02: parent=spine_01 deform
+  - neck_01: parent=spine_02 deform
+  - head: parent=neck_01 deform
+  - camera: parent=head nodeform
+  - jaw: parent=head nodeform
+  - eye_l: parent=head nodeform
+  - eye_r: parent=head nodeform
+  - hair_front_l: parent=head deform
+  - hair_front_r: parent=head deform
+  - look_at: parent=head nodeform
+  - hood_collar_l: parent=neck_01 deform
+  - hood_collar_r: parent=neck_01 deform
+  - clavicle_l: parent=spine_02 deform
+  - upperarm_l: parent=clavicle_l deform
+  - lowerarm_l: parent=upperarm_l deform
+  - hand_l: parent=lowerarm_l deform
+  - weapon_l: parent=hand_l nodeform
+  - thumb_01_l: parent=hand_l deform
+  - thumb_02_l: parent=thumb_01_l deform
+  - thumb_03_l: parent=thumb_02_l deform
+  - index_01_l: parent=hand_l deform
+  - index_02_l: parent=index_01_l deform
+  - index_03_l: parent=index_02_l deform
+  - middle_01_l: parent=hand_l deform
+  - middle_02_l: parent=middle_01_l deform
+  - middle_03_l: parent=middle_02_l deform
+  - ring_01_l: parent=hand_l deform
+  - ring_02_l: parent=ring_01_l deform
+  - ring_03_l: parent=ring_02_l deform
+  - pinky_01_l: parent=hand_l deform
+  - pinky_02_l: parent=pinky_01_l deform
+  - pinky_03_l: parent=pinky_02_l deform
+  - lowerarm_twist_l: parent=lowerarm_l deform
+  - upperarm_twist_l: parent=upperarm_l deform
+  - clavicle_r: parent=spine_02 deform
+  - upperarm_r: parent=clavicle_r deform
+  - lowerarm_r: parent=upperarm_r deform
+  - hand_r: parent=lowerarm_r deform
+  - weapon_r: parent=hand_r nodeform
+  - thumb_01_r: parent=hand_r deform
+  - thumb_02_r: parent=thumb_01_r deform
+  - thumb_03_r: parent=thumb_02_r deform
+  - index_01_r: parent=hand_r deform
+  - index_02_r: parent=index_01_r deform
+  - index_03_r: parent=index_02_r deform
+  - middle_01_r: parent=hand_r deform
+  - middle_02_r: parent=middle_01_r deform
+  - middle_03_r: parent=middle_02_r deform
+  - ring_01_r: parent=hand_r deform
+  - ring_02_r: parent=ring_01_r deform
+  - ring_03_r: parent=ring_02_r deform
+  - pinky_01_r: parent=hand_r deform
+  - pinky_02_r: parent=pinky_01_r deform
+  - pinky_03_r: parent=pinky_02_r deform
+  - lowerarm_twist_r: parent=lowerarm_r deform
+  - upperarm_twist_r: parent=upperarm_r deform
+  - jacket_front_l: parent=spine_01 deform
+  - jacket_front_r: parent=spine_01 deform
+  - thigh_l: parent=pelvis deform
+  - calf_l: parent=thigh_l deform
+  - foot_l: parent=calf_l deform
+  - calf_twist_l: parent=calf_l deform
+  - thigh_twist_l: parent=thigh_l deform
+  - thigh_r: parent=pelvis deform
+  - calf_r: parent=thigh_r deform
+  - foot_r: parent=calf_r deform
+  - calf_twist_r: parent=calf_r deform
+  - thigh_twist_r: parent=thigh_r deform
+  - jacket_hem_l: parent=pelvis deform
+  - jacket_hem_r: parent=pelvis deform
+  - ik_hand_l: parent=root nodeform
+  - ik_hand_r: parent=root nodeform
+  - ik_foot_l: parent=root nodeform
+  - ik_foot_r: parent=root nodeform
+
+Actions:
+- AN_Player_CautiousWalk_32f.001: frames=1.00-32.00 fake_user=True
+- AN_Player_CautiousWalk_32f.002: frames=1.00-92.00 fake_user=True
+- AN_Player_FingerBend_SelfTest: frames=1.00-36.00 fake_user=True
+- Armature|mixamo.com|Layer0.001: frames=1.00-501.00 fake_user=False
+- IdleFeetTog: frames=1.00-1.00 fake_user=True
+- Walking Smoother: frames=0.00-0.00 fake_user=True

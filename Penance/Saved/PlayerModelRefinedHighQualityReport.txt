@@ -1,0 +1,13 @@
+PLAYER_MODEL_REFINED_HIGH_QUALITY_REPORT
+Source: /Users/amritladhar/Documents/GitHub/Game/Penance/Built/BlenderWork/PlayerAnim_Working_Copy_For_You_To_Work_On.blend
+Output: /Users/amritladhar/Documents/GitHub/Game/Penance/Built/BlenderWork/PlayerModel_Refined_HighQuality_Working.blend
+Idle reference: /Users/amritladhar/Documents/GitHub/Game/Penance/Built/BlenderWork/Idle.blend
+Idle reference append: appended REFERENCE_Armature_FingerBones with 30 finger bones
+Finger bones added/verified: 30 new bones
+Shoe rigid weights: left_vertices=6192 right_vertices=6284
+Finger geometry: verts=720 faces=540 weighted_segments=30
+Jacket details: verts=268 faces=204 weighted_groups=8
+Hair clumps: verts=168 faces=128 weighted_groups=3
+Finger bend self-test action: keyed_finger_bones=30
+Saved refined blend: yes
+FBX export: /Users/amritladhar/Documents/GitHub/Game/Penance/Built/FBX/SK_Player_FirstPersonBody_Refined.fbx
