@@ -5,7 +5,7 @@ import sys
 from pathlib import Path
 
 import bpy
-from mathutils import Matrix, Vector
+from mathutils import Vector
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -20,6 +20,12 @@ MESH_NAME = "PlayerRoughDraft_Mesh"
 
 FINGER_CHAINS = ["thumb", "index", "middle", "ring", "pinky"]
 PHALANGES = ["01", "02", "03"]
+GENERATED_OBJECT_PREFIXES = (
+    "Player_Refined_",
+)
+GENERATED_ACTIONS = {
+    "AN_Player_FingerBend_SelfTest",
+}
 
 
 def args_after_separator() -> list[str]:
@@ -89,24 +95,31 @@ def duplicate_backups(arm: bpy.types.Object, mesh: bpy.types.Object) -> None:
     backup_col.hide_viewport = True
     backup_col.hide_render = True
 
-    arm_backup = arm.copy()
-    arm_backup.data = arm.data.copy()
-    arm_backup.name = "BACKUP_ORIGINAL_SK_Player_Armature"
-    arm_backup.data.name = "BACKUP_ORIGINAL_SK_Player_Armature_Data"
-    backup_col.objects.link(arm_backup)
-    arm_backup.hide_viewport = True
-    arm_backup.hide_render = True
+    if not bpy.data.objects.get("BACKUP_ORIGINAL_SK_Player_Armature"):
+        arm_backup = arm.copy()
+        arm_backup.data = arm.data.copy()
+        arm_backup.name = "BACKUP_ORIGINAL_SK_Player_Armature"
+        arm_backup.data.name = "BACKUP_ORIGINAL_SK_Player_Armature_Data"
+        backup_col.objects.link(arm_backup)
+        arm_backup.hide_viewport = True
+        arm_backup.hide_render = True
 
-    mesh_backup = mesh.copy()
-    mesh_backup.data = mesh.data.copy()
-    mesh_backup.name = "BACKUP_ORIGINAL_PlayerRoughDraft_Mesh"
-    mesh_backup.data.name = "BACKUP_ORIGINAL_PlayerRoughDraft_Mesh_Data"
-    backup_col.objects.link(mesh_backup)
-    mesh_backup.hide_viewport = True
-    mesh_backup.hide_render = True
+    if not bpy.data.objects.get("BACKUP_ORIGINAL_PlayerRoughDraft_Mesh"):
+        mesh_backup = mesh.copy()
+        mesh_backup.data = mesh.data.copy()
+        mesh_backup.name = "BACKUP_ORIGINAL_PlayerRoughDraft_Mesh"
+        mesh_backup.data.name = "BACKUP_ORIGINAL_PlayerRoughDraft_Mesh_Data"
+        backup_col.objects.link(mesh_backup)
+        mesh_backup.hide_viewport = True
+        mesh_backup.hide_render = True
 
 
 def append_idle_reference(report: list[str]) -> None:
+    existing_ref = bpy.data.objects.get("REFERENCE_Armature_FingerBones")
+    if existing_ref:
+        report.append(f"Idle reference append: reused {existing_ref.name}")
+        return
+
     if not IDLE_BLEND.exists():
         report.append(f"Idle reference append: missing {IDLE_BLEND}")
         return
@@ -130,6 +143,28 @@ def append_idle_reference(report: list[str]) -> None:
         report.append(f"Idle reference append: appended {appended[0].name} with {len(finger_bones)} finger bones")
     else:
         report.append("Idle reference append: no armature object appended")
+
+
+def remove_prior_generated_assets(report: list[str]) -> None:
+    removed_objects = 0
+    for obj in list(bpy.data.objects):
+        if any(obj.name.startswith(prefix) for prefix in GENERATED_OBJECT_PREFIXES):
+            data = obj.data
+            bpy.data.objects.remove(obj, do_unlink=True)
+            if data and data.users == 0:
+                if isinstance(data, bpy.types.Mesh):
+                    bpy.data.meshes.remove(data)
+            removed_objects += 1
+
+    removed_actions = 0
+    for action_name in GENERATED_ACTIONS:
+        action = bpy.data.actions.get(action_name)
+        if action:
+            bpy.data.actions.remove(action)
+            removed_actions += 1
+
+    if removed_objects or removed_actions:
+        report.append(f"Removed prior generated refinement assets: objects={removed_objects} actions={removed_actions}")
 
 
 def basis_from_axis(axis: Vector) -> tuple[Vector, Vector, Vector]:
@@ -238,12 +273,149 @@ def create_cylinder_segment(
     faces.append(tuple(last + side for side in range(sides)))
 
 
+def create_ellipsoid(
+    verts: list[tuple[float, float, float]],
+    faces: list[tuple[int, ...]],
+    assignments: list[str],
+    center: Vector,
+    radius: Vector,
+    group: str,
+    rings: int = 5,
+    sides: int = 10,
+) -> None:
+    base = len(verts)
+    for ring in range(rings + 1):
+        phi = -math.pi * 0.5 + math.pi * ring / rings
+        z = math.sin(phi)
+        ring_radius = math.cos(phi)
+        for side in range(sides):
+            theta = math.tau * side / sides
+            co = Vector(
+                (
+                    center.x + math.cos(theta) * ring_radius * radius.x,
+                    center.y + math.sin(theta) * ring_radius * radius.y,
+                    center.z + z * radius.z,
+                )
+            )
+            verts.append((co.x, co.y, co.z))
+            assignments.append(group)
+
+    for ring in range(rings):
+        ring_a = base + ring * sides
+        ring_b = base + (ring + 1) * sides
+        for side in range(sides):
+            faces.append((ring_a + side, ring_a + ((side + 1) % sides), ring_b + ((side + 1) % sides), ring_b + side))
+
+
+def create_hair_clump(
+    verts: list[tuple[float, float, float]],
+    faces: list[tuple[int, ...]],
+    assignments: list[str],
+    points: list[Vector],
+    radius: float,
+    group: str,
+    sides: int = 9,
+) -> None:
+    base = len(verts)
+    for index, point in enumerate(points):
+        if index == 0:
+            tangent = points[1] - point
+        elif index == len(points) - 1:
+            tangent = point - points[index - 1]
+        else:
+            tangent = points[index + 1] - points[index - 1]
+        _, right, up = basis_from_axis(tangent)
+        taper = 1.0 - (index / max(1, len(points) - 1)) * 0.82
+        oval_y = radius * taper * 0.70
+        oval_z = radius * taper * 1.18
+        for side in range(sides):
+            angle = math.tau * side / sides
+            co = point + right * math.cos(angle) * oval_y + up * math.sin(angle) * oval_z
+            verts.append((co.x, co.y, co.z))
+            assignments.append(group)
+
+    for index in range(len(points) - 1):
+        ring_a = base + index * sides
+        ring_b = base + (index + 1) * sides
+        for side in range(sides):
+            faces.append((ring_a + side, ring_a + ((side + 1) % sides), ring_b + ((side + 1) % sides), ring_b + side))
+    faces.append(tuple(base + side for side in reversed(range(sides))))
+    last = base + (len(points) - 1) * sides
+    faces.append(tuple(last + side for side in range(sides)))
+
+
+def create_curved_panel(
+    verts: list[tuple[float, float, float]],
+    faces: list[tuple[int, ...]],
+    assignments: list[str],
+    x0: float,
+    x1: float,
+    z0: float,
+    z1: float,
+    y_front: float,
+    thickness: float,
+    group: str,
+    x_segments: int = 3,
+    z_segments: int = 7,
+    asym: float = 0.0,
+) -> None:
+    base = len(verts)
+    for layer in range(2):
+        for iz in range(z_segments + 1):
+            z_t = iz / z_segments
+            z = z0 + (z1 - z0) * z_t
+            for ix in range(x_segments + 1):
+                x_t = ix / x_segments
+                x = x0 + (x1 - x0) * x_t
+                center_x = (x0 + x1) * 0.5
+                curve = -0.010 * (1.0 - abs((x - center_x) / max(abs(x1 - x0) * 0.5, 0.001)) ** 2)
+                fold = math.sin(z_t * math.pi * 2.2 + asym) * 0.0035
+                edge_lift = 0.004 * abs(x_t - 0.5)
+                y = y_front + curve + fold + edge_lift + (thickness if layer == 1 else 0.0)
+                verts.append((x, y, z))
+                assignments.append(group)
+
+    cols = x_segments + 1
+    layer_size = (x_segments + 1) * (z_segments + 1)
+    for layer in range(2):
+        offset = base + layer * layer_size
+        for iz in range(z_segments):
+            for ix in range(x_segments):
+                a = offset + iz * cols + ix
+                b = a + 1
+                c = a + cols + 1
+                d = a + cols
+                faces.append((a, b, c, d) if layer == 0 else (a, d, c, b))
+
+    # Edge thickness.
+    for iz in range(z_segments):
+        for ix in (0, x_segments):
+            a = base + iz * cols + ix
+            b = base + (iz + 1) * cols + ix
+            c = base + layer_size + (iz + 1) * cols + ix
+            d = base + layer_size + iz * cols + ix
+            faces.append((a, b, c, d))
+    for ix in range(x_segments):
+        for iz in (0, z_segments):
+            a = base + iz * cols + ix
+            b = base + iz * cols + ix + 1
+            c = base + layer_size + iz * cols + ix + 1
+            d = base + layer_size + iz * cols + ix
+            faces.append((a, b, c, d))
+
+
 def create_refined_finger_mesh(arm: bpy.types.Object, material: bpy.types.Material, report: list[str]) -> bpy.types.Object:
     verts: list[tuple[float, float, float]] = []
     faces: list[tuple[int, ...]] = []
     assignments: list[str] = []
 
-    for suffix in ("l", "r"):
+    for suffix, side_sign in (("l", -1.0), ("r", 1.0)):
+        hand = arm.data.bones.get(f"hand_{suffix}")
+        if hand:
+            hand_axis = (hand.tail_local - hand.head_local).normalized()
+            palm_center = hand.head_local + hand_axis * 0.030 + Vector((side_sign * 0.002, -0.003, -0.003))
+            create_ellipsoid(verts, faces, assignments, palm_center, Vector((0.030, 0.018, 0.024)), f"hand_{suffix}", rings=6, sides=12)
+
         for finger in FINGER_CHAINS:
             for phalanx in PHALANGES:
                 bone_name = f"{finger}_{phalanx}_{suffix}"
@@ -252,7 +424,7 @@ def create_refined_finger_mesh(arm: bpy.types.Object, material: bpy.types.Materi
                     continue
                 finger_scale = {"thumb": 0.82, "index": 0.78, "middle": 0.86, "ring": 0.76, "pinky": 0.60}[finger]
                 phalanx_scale = {"01": 1.0, "02": 0.82, "03": 0.62}[phalanx]
-                radius = 0.0044 * finger_scale * phalanx_scale
+                radius = 0.0052 * finger_scale * phalanx_scale
                 create_cylinder_segment(
                     verts,
                     faces,
@@ -264,6 +436,28 @@ def create_refined_finger_mesh(arm: bpy.types.Object, material: bpy.types.Materi
                     8,
                     bone_name,
                 )
+                if phalanx == "01":
+                    create_ellipsoid(
+                        verts,
+                        faces,
+                        assignments,
+                        bone.head_local,
+                        Vector((radius * 1.65, radius * 1.18, radius * 1.35)),
+                        bone_name,
+                        rings=4,
+                        sides=8,
+                    )
+                if phalanx == "03":
+                    create_ellipsoid(
+                        verts,
+                        faces,
+                        assignments,
+                        bone.tail_local,
+                        Vector((radius * 1.05, radius * 0.92, radius * 0.82)),
+                        bone_name,
+                        rings=4,
+                        sides=8,
+                    )
 
     mesh = bpy.data.meshes.new("Player_Refined_IndependentFingers_Mesh")
     mesh.from_pydata(verts, [], faces)
@@ -280,7 +474,12 @@ def create_refined_finger_mesh(arm: bpy.types.Object, material: bpy.types.Materi
 
     mod = obj.modifiers.new("Armature_SK_Player", "ARMATURE")
     mod.object = arm
-    report.append(f"Finger geometry: verts={len(verts)} faces={len(faces)} weighted_segments={len(groups)}")
+    bevel = obj.modifiers.new("Soft_Hand_Finger_Surface", "WEIGHTED_NORMAL")
+    try:
+        bevel.keep_sharp = True
+    except Exception:
+        pass
+    report.append(f"Finger/hand geometry: verts={len(verts)} faces={len(faces)} weighted_segments={len(groups)}")
     return obj
 
 
@@ -337,17 +536,15 @@ def create_jacket_detail_mesh(arm: bpy.types.Object, material: bpy.types.Materia
     faces: list[tuple[int, ...]] = []
     assignments: list[str] = []
 
-    # Raised front panels and center overlap.
-    create_box(verts, faces, assignments, (-0.102, -0.086, 0.505), (-0.012, -0.070, 0.785), "jacket_front_l")
-    create_box(verts, faces, assignments, (0.012, -0.087, 0.500), (0.104, -0.070, 0.780), "jacket_front_r")
-    create_box(verts, faces, assignments, (-0.014, -0.094, 0.505), (0.001, -0.066, 0.785), "jacket_front_l")
-    create_box(verts, faces, assignments, (0.001, -0.095, 0.500), (0.017, -0.066, 0.780), "jacket_front_r")
-
-    # Hem, collar, and cuffs.
-    create_box(verts, faces, assignments, (-0.112, -0.093, 0.480), (-0.002, -0.063, 0.512), "jacket_hem_l")
-    create_box(verts, faces, assignments, (0.002, -0.094, 0.478), (0.114, -0.063, 0.510), "jacket_hem_r")
-    create_box(verts, faces, assignments, (-0.126, -0.078, 0.765), (-0.028, -0.044, 0.842), "hood_collar_l")
-    create_box(verts, faces, assignments, (0.028, -0.080, 0.760), (0.128, -0.044, 0.840), "hood_collar_r")
+    # Curved layered panels, center overlap, hem, collar, and cuffs.
+    create_curved_panel(verts, faces, assignments, -0.108, -0.012, 0.505, 0.787, -0.083, 0.013, "jacket_front_l", asym=0.4)
+    create_curved_panel(verts, faces, assignments, 0.012, 0.108, 0.500, 0.782, -0.084, 0.013, "jacket_front_r", asym=1.3)
+    create_curved_panel(verts, faces, assignments, -0.017, 0.002, 0.505, 0.790, -0.096, 0.018, "jacket_front_l", x_segments=1, z_segments=7, asym=0.8)
+    create_curved_panel(verts, faces, assignments, -0.001, 0.019, 0.500, 0.784, -0.098, 0.018, "jacket_front_r", x_segments=1, z_segments=7, asym=1.7)
+    create_curved_panel(verts, faces, assignments, -0.114, -0.002, 0.478, 0.515, -0.091, 0.014, "jacket_hem_l", x_segments=4, z_segments=1, asym=2.1)
+    create_curved_panel(verts, faces, assignments, 0.002, 0.116, 0.476, 0.512, -0.093, 0.014, "jacket_hem_r", x_segments=4, z_segments=1, asym=2.9)
+    create_curved_panel(verts, faces, assignments, -0.130, -0.028, 0.764, 0.846, -0.067, 0.018, "hood_collar_l", x_segments=3, z_segments=2, asym=0.5)
+    create_curved_panel(verts, faces, assignments, 0.028, 0.132, 0.758, 0.842, -0.069, 0.018, "hood_collar_r", x_segments=3, z_segments=2, asym=1.1)
 
     for suffix in ("l", "r"):
         hand = arm.data.bones.get(f"hand_{suffix}")
@@ -379,7 +576,12 @@ def create_jacket_detail_mesh(arm: bpy.types.Object, material: bpy.types.Materia
 
     mod = obj.modifiers.new("Armature_SK_Player", "ARMATURE")
     mod.object = arm
-    report.append(f"Jacket details: verts={len(verts)} faces={len(faces)} weighted_groups={len(groups)}")
+    normal = obj.modifiers.new("Cloth_Detail_WeightedNormals", "WEIGHTED_NORMAL")
+    try:
+        normal.keep_sharp = True
+    except Exception:
+        pass
+    report.append(f"Jacket/collar details: verts={len(verts)} faces={len(faces)} weighted_groups={len(groups)}")
     return obj
 
 
@@ -389,17 +591,21 @@ def create_hair_clump_mesh(arm: bpy.types.Object, material: bpy.types.Material, 
     assignments: list[str] = []
 
     clumps = [
-        ((-0.050, -0.080, 0.970), (-0.074, -0.100, 0.880), 0.016, "hair_front_l"),
-        ((-0.030, -0.090, 0.982), (-0.045, -0.120, 0.865), 0.014, "hair_front_l"),
-        ((-0.010, -0.096, 0.976), (-0.018, -0.128, 0.875), 0.012, "head"),
-        ((0.012, -0.096, 0.976), (0.020, -0.128, 0.875), 0.012, "head"),
-        ((0.032, -0.090, 0.982), (0.048, -0.120, 0.865), 0.014, "hair_front_r"),
-        ((0.052, -0.080, 0.970), (0.078, -0.100, 0.880), 0.016, "hair_front_r"),
-        ((-0.070, -0.040, 0.945), (-0.093, -0.058, 0.855), 0.013, "hair_front_l"),
-        ((0.070, -0.040, 0.945), (0.095, -0.058, 0.855), 0.013, "hair_front_r"),
+        ([(-0.052, -0.070, 0.972), (-0.065, -0.094, 0.930), (-0.076, -0.106, 0.875)], 0.020, "hair_front_l"),
+        ([(-0.034, -0.084, 0.986), (-0.040, -0.113, 0.925), (-0.048, -0.124, 0.858)], 0.017, "hair_front_l"),
+        ([(-0.012, -0.094, 0.982), (-0.018, -0.126, 0.925), (-0.020, -0.134, 0.872)], 0.015, "head"),
+        ([(0.012, -0.094, 0.982), (0.020, -0.126, 0.925), (0.024, -0.134, 0.872)], 0.015, "head"),
+        ([(0.034, -0.084, 0.986), (0.043, -0.113, 0.925), (0.052, -0.124, 0.858)], 0.017, "hair_front_r"),
+        ([(0.054, -0.070, 0.972), (0.068, -0.094, 0.930), (0.080, -0.106, 0.875)], 0.020, "hair_front_r"),
+        ([(-0.073, -0.030, 0.948), (-0.094, -0.052, 0.902), (-0.101, -0.068, 0.848)], 0.016, "hair_front_l"),
+        ([(0.073, -0.030, 0.948), (0.097, -0.052, 0.902), (0.104, -0.068, 0.848)], 0.016, "hair_front_r"),
+        ([(-0.052, 0.022, 0.955), (-0.072, 0.018, 0.900), (-0.074, 0.005, 0.840)], 0.014, "head"),
+        ([(0.052, 0.022, 0.955), (0.074, 0.018, 0.900), (0.077, 0.005, 0.840)], 0.014, "head"),
+        ([(-0.018, 0.038, 0.972), (-0.024, 0.045, 0.918), (-0.026, 0.036, 0.858)], 0.013, "head"),
+        ([(0.020, 0.038, 0.972), (0.028, 0.045, 0.918), (0.030, 0.036, 0.858)], 0.013, "head"),
     ]
-    for start, end, radius, group in clumps:
-        create_cylinder_segment(verts, faces, assignments, Vector(start), Vector(end), radius, radius * 0.16, 7, group)
+    for points, radius, group in clumps:
+        create_hair_clump(verts, faces, assignments, [Vector(point) for point in points], radius, group, sides=9)
 
     mesh = bpy.data.meshes.new("Player_Refined_LayeredHairClumps_Mesh")
     mesh.from_pydata(verts, [], faces)
@@ -416,6 +622,7 @@ def create_hair_clump_mesh(arm: bpy.types.Object, material: bpy.types.Material, 
 
     mod = obj.modifiers.new("Armature_SK_Player", "ARMATURE")
     mod.object = arm
+    normal = obj.modifiers.new("Hair_Clump_WeightedNormals", "WEIGHTED_NORMAL")
     report.append(f"Hair clumps: verts={len(verts)} faces={len(faces)} weighted_groups={len(groups)}")
     return obj
 
