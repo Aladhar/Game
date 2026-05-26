@@ -1,10 +1,18 @@
 PLAYER_FIRST_PERSON_BODY_IMPORT_REPORT
 Source FBX: /Users/amritladhar/Documents/GitHub/Game/Penance/Built/FBX/SK_Player_FirstPersonBody.fbx
-Imported count: 3
+Imported count: 1
 Imported: SkeletalMesh /Game/Player/FirstPerson/SK_Player_FirstPersonBody.SK_Player_FirstPersonBody
-Imported: AnimSequence /Game/Player/FirstPerson/SK_Player_FirstPersonBody_Anim.SK_Player_FirstPersonBody_Anim
-Imported: Skeleton /Game/Player/FirstPerson/SK_Player_FirstPersonBody_Skeleton.SK_Player_FirstPersonBody_Skeleton
 Destination assets:
+- AnimBlueprint /Game/Player/FirstPerson/ABP_Player.ABP_Player
+- AnimSequence /Game/Player/FirstPerson/AN_Player_Idle_FeetTogether.AN_Player_Idle_FeetTogether
+- AnimSequence /Game/Player/FirstPerson/AN_Player_Idle_Staggered.AN_Player_Idle_Staggered
+- AnimSequence /Game/Player/FirstPerson/AN_Player_StartWalk_Forward.AN_Player_StartWalk_Forward
+- AnimSequence /Game/Player/FirstPerson/AN_Player_StopWalk_Forward.AN_Player_StopWalk_Forward
+- AnimSequence /Game/Player/FirstPerson/AN_Player_TurnInPlace_Left.AN_Player_TurnInPlace_Left
+- AnimSequence /Game/Player/FirstPerson/AN_Player_TurnInPlace_Right.AN_Player_TurnInPlace_Right
+- AnimSequence /Game/Player/FirstPerson/AN_Player_Walk_Backward_Loop.AN_Player_Walk_Backward_Loop
+- AnimSequence /Game/Player/FirstPerson/AN_Player_Walk_Forward_Loop.AN_Player_Walk_Forward_Loop
+- AnimSequence /Game/Player/FirstPerson/AN_Player_Walk_Verify.AN_Player_Walk_Verify
 - SkeletalMesh /Game/Player/FirstPerson/SK_Player_FirstPersonBody.SK_Player_FirstPersonBody
 - AnimSequence /Game/Player/FirstPerson/SK_Player_FirstPersonBody_Anim.SK_Player_FirstPersonBody_Anim
 - Skeleton /Game/Player/FirstPerson/SK_Player_FirstPersonBody_Skeleton.SK_Player_FirstPersonBody_Skeleton

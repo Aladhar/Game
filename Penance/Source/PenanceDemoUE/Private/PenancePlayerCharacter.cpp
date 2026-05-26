@@ -44,7 +44,7 @@ APenancePlayerCharacter::APenancePlayerCharacter()
     PlayerMeshComponent->SetupAttachment(GetCapsuleComponent());
     PlayerMeshComponent->SetRelativeLocation(FVector(0.0f, 0.0f, -StandingCapsuleHeight * 0.5f));
     PlayerMeshComponent->SetRelativeRotation(FRotator(0.0f, PlayerMeshVisualYawOffsetDegrees, 0.0f));
-    PlayerMeshComponent->SetRelativeScale3D(FVector(1.65f));
+    PlayerMeshComponent->SetRelativeScale3D(FVector(1.0f));
     PlayerMeshComponent->SetOwnerNoSee(true);
     PlayerMeshComponent->bCastHiddenShadow = true;
 
@@ -84,7 +84,7 @@ APenancePlayerCharacter::APenancePlayerCharacter()
     }
     FirstPersonBodyMesh->SetRelativeLocation(FVector(0.0f, 0.0f, -StandingCapsuleHeight * 0.5f));
     FirstPersonBodyMesh->SetRelativeRotation(FRotator(0.0f, PlayerMeshVisualYawOffsetDegrees, 0.0f));
-    FirstPersonBodyMesh->SetRelativeScale3D(FVector(1.65f));
+    FirstPersonBodyMesh->SetRelativeScale3D(FVector(1.0f));
     FirstPersonBodyMesh->SetAnimationMode(EAnimationMode::AnimationBlueprint);
     FirstPersonBodyMesh->SetAnimInstanceClass(UABP_Player::StaticClass());
     FirstPersonBodyMesh->SetOnlyOwnerSee(true);
