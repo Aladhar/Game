@@ -12,3 +12,8 @@ DerivedDataCache/
 *.utoc
 *.pak
 Penance/Built/.DS_Store
+.DS_Store
+Penance/.DS_Store
+Penance/Built/.DS_Store
+Penance/Content/Player/.DS_Store
+Penance/Content/PenanceAssets/Enemies/PenanceCarrier/.DS_Store
