@@ -1,0 +1,95 @@
+Ai prompt for penance himself.
+
+For Penance himself as the enemy character, I’d use a slightly more advanced humanoid armature than the MC, because enemies usually need more exaggerated animation: lunges, grabs, crawling/jerky movement, attacks, head tracking, and hit reactions.
+Best choice:
+Use a Rigify Human Meta-Rig, but modify it for enemy movement
+Start with:
+Blender → Add → Armature → Human Meta-Rig
+Then build it as a game-ready humanoid rig with:
+Root / global control
+Pelvis / hips
+Spine controls
+Chest control
+Neck + head
+Jaw bone, if his face opens/screams
+Clavicles
+IK arms
+IK legs
+Pole targets for elbows/knees
+Finger bones
+Twist bones for upper arms and forearms
+Extra shoulder/back helper bones if he has unnatural posture
+For Penance, I would not use a clean “normal human only” rig. I’d make him humanoid, but with extra control for horror-style movement.
+Best bind pose for Penance
+Use a wide A-pose, not a perfect T-pose.
+Recommended pose:
+Arms angled down around 35–45°
+Elbows slightly bent
+Hands away from body
+Fingers slightly curled/separated
+Spine mostly straight, but rig can support hunching
+Feet shoulder-width apart
+Knees slightly relaxed
+This prevents shoulder stretching and keeps the hands away from the torso/legs during animations.
+Extra bones I would add for Penance
+Since he is the enemy, add these if you want better control:
+1. Spine/hunch controls
+Use more spine bones than the MC.
+Instead of only:
+pelvis → spine → chest
+Use:
+pelvis → lower spine → mid spine → chest → upper chest → neck → head
+This lets him hunch, twist, lean, and twitch without the whole torso bending like one block.
+2. Shoulder/clavicle controls
+Very important for creepy enemy attacks.
+Penance probably needs:
+raised shoulders
+hunched posture
+reaching attacks
+arm dragging
+sudden grabs
+So make sure the clavicle bones are placed well and weighted cleanly.
+3. Finger bones
+For the MC, fingers are nice.
+For Penance, fingers are required if he grabs, points, claws, or reaches.
+Use:
+3 bones per finger
+3 bones for thumb if possible
+Optional fingertip control bones
+Do not leave enemy hands as stiff mitten hands.
+4. Jaw/head control
+If Penance has creepy facial movement, add at least:
+head bone
+jaw bone
+eye target bones if needed
+Even if you do not fully facial-rig him, a jaw bone helps a lot for horror enemy animations.
+5. Twist bones
+Use twist bones especially for:
+upper arms
+forearms
+thighs
+calves
+This prevents the arms and legs from collapsing when he twists during attacks.
+Best overall setup
+For Penance, I’d do:
+Rigify Human Meta-Rig + IK arms/legs + finger controls + extra spine bones + twist bones + jaw/head control.
+That gives the most control without destroying the mesh.
+For animation style
+Use this rig style if Penance moves like:
+slow stalking enemy
+sudden lunging enemy
+twitchy/possessed enemy
+grabbing enemy
+crawling or bent-over enemy
+The extra spine and shoulder controls matter more than anything else.
+What to avoid
+Do not use a super basic skeleton with only:
+one spine bone
+simple arms/legs
+no IK
+no fingers
+no twist bones
+That will animate, but it will look stiff and the shoulders/arms will distort badly during attacks.
+Final recommendation
+For Penance himself:
+Use a modified Rigify humanoid rig in a wide relaxed A-pose, with IK limbs, full finger bones, twist bones, extra spine controls, clavicle controls, and optional jaw/head/eye controls.
