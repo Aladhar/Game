@@ -2,6 +2,8 @@ from pathlib import Path
 
 import unreal
 
+from penance_script_safety import require_asset_write_permission
+
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 GODOT_ROOT = PROJECT_ROOT.parent / "they-taught-the-rain-your-name"
@@ -142,6 +144,7 @@ def write_report(imported_paths):
 
 
 def main():
+    require_asset_write_permission(f"import Penance source assets into {UE_ASSET_ROOT}")
     disable_browser_sync()
     ensure_directory(UE_ASSET_ROOT)
     imported_paths = []

@@ -2,6 +2,8 @@ from pathlib import Path
 
 import unreal
 
+from penance_script_safety import require_asset_write_permission
+
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 SOURCE_FBX = PROJECT_ROOT / "Built" / "FBX" / "SK_Player_FirstPersonBody.fbx"
@@ -117,6 +119,7 @@ def create_abp_shell(lines: list[str], skeleton) -> None:
 
 
 def main() -> None:
+    require_asset_write_permission(f"import player locomotion assets into {DESTINATION}")
     unreal.SystemLibrary.execute_console_command(None, "Interchange.FeatureFlags.Import.SyncToBrowser 0")
     if not SOURCE_FBX.exists():
         raise RuntimeError(f"Missing source FBX: {SOURCE_FBX}")

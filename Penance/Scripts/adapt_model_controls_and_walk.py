@@ -9,6 +9,8 @@ from pathlib import Path
 import bpy
 from mathutils import Vector
 
+from penance_script_safety import filtered_script_args, require_asset_write_permission
+
 
 PLAYER_REMOVE = {
     "cloth_front_l",
@@ -32,7 +34,7 @@ PENANCE_REMOVE = {
 def args_after_separator() -> tuple[str, Path, Path]:
     if "--" not in sys.argv:
         raise SystemExit("Expected arguments after --: player|penance SRC.blend REPORT.txt")
-    args = sys.argv[sys.argv.index("--") + 1 :]
+    args = filtered_script_args(sys.argv[sys.argv.index("--") + 1 :])
     if len(args) != 3:
         raise SystemExit("Expected arguments after --: player|penance SRC.blend REPORT.txt")
     kind = args[0].lower()
@@ -306,6 +308,7 @@ def write_report(
 
 def main() -> None:
     kind, src, report = args_after_separator()
+    require_asset_write_permission(f"adapt and save Blender file {src}")
     bpy.ops.wm.open_mainfile(filepath=str(src))
     for scene in bpy.data.scenes:
         try:

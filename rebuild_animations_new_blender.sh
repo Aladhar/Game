@@ -5,6 +5,7 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 cd "$SCRIPT_DIR"
 
 BLENDER="${BLENDER:-/Applications/Blender.app/Contents/MacOS/Blender}"
+export PENANCE_ALLOW_ASSET_WRITE=1
 
 SCRIPT="Penance/Scripts/adapt_model_controls_and_walk.py"
 

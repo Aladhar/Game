@@ -3,6 +3,8 @@ from pathlib import Path
 
 import unreal
 
+from penance_script_safety import require_asset_write_permission
+
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 LEVEL_PATH = "/Game/Maps/Penance_Suburban_Blockout"
@@ -361,6 +363,7 @@ def write_report(backup_created, stats):
 
 
 def main():
+    require_asset_write_permission(f"refine and save Step 8 layout in {LEVEL_PATH}")
     backup_created = duplicate_backup_once()
     load_level()
     stats = apply_layout()

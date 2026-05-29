@@ -2,6 +2,8 @@ from pathlib import Path
 
 import unreal
 
+from penance_script_safety import require_asset_write_permission
+
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 SOURCE_FBX = PROJECT_ROOT / "Built" / "FBX" / "SK_Player_FirstPersonBody.fbx"
@@ -61,6 +63,7 @@ def import_body() -> list[str]:
 
 
 def main() -> None:
+    require_asset_write_permission(f"import first-person body assets into {DESTINATION}")
     unreal.SystemLibrary.execute_console_command(None, "Interchange.FeatureFlags.Import.SyncToBrowser 0")
     imported = import_body()
     assets = unreal.EditorAssetLibrary.list_assets(DESTINATION, recursive=True, include_folder=False)

@@ -20,6 +20,8 @@ import addon_utils
 import bpy
 from mathutils import Matrix, Vector
 
+from penance_script_safety import filtered_script_args, require_asset_write_permission
+
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_BLEND = PROJECT_ROOT / "Content" / "Player" / "Player.blend"
@@ -37,7 +39,7 @@ MIXAMO_PREFIX = "mixamorig5:"
 
 
 def args_after_separator() -> tuple[Path, Path]:
-    args = sys.argv[sys.argv.index("--") + 1 :] if "--" in sys.argv else []
+    args = filtered_script_args(sys.argv[sys.argv.index("--") + 1 :]) if "--" in sys.argv else []
     src = Path(args[0]).expanduser().resolve() if args else DEFAULT_BLEND
     report = Path(args[1]).expanduser().resolve() if len(args) > 1 else DEFAULT_REPORT
     if not src.exists():
@@ -576,6 +578,7 @@ def generate_report(
 
 def main() -> None:
     src, report = args_after_separator()
+    require_asset_write_permission(f"fit and save Rigify humanoid rig in {src}")
     backup_line = ensure_backup(src)
     bpy.ops.wm.open_mainfile(filepath=str(src), load_ui=False)
 

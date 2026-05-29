@@ -5,6 +5,8 @@ from pathlib import Path
 
 import unreal
 
+from penance_script_safety import require_asset_write_permission
+
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 EXPORT_PATH = PROJECT_ROOT / "Content" / "PenanceBlockoutExport.json"
@@ -773,6 +775,7 @@ def new_or_open_level():
 
 
 def main():
+    require_asset_write_permission(f"import blockout into {LEVEL_PATH}")
     data = load_json()
     ensure_directory(IMPORT_ROOT)
     ensure_directory("/Game/Maps")

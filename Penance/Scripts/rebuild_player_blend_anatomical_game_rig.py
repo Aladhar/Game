@@ -16,6 +16,8 @@ from pathlib import Path
 import bpy
 from mathutils import Vector
 
+from penance_script_safety import filtered_script_args, require_asset_write_permission
+
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_BLEND = PROJECT_ROOT / "Content" / "Player" / "Player.blend"
@@ -59,7 +61,7 @@ ACTION_SPECS = [
 
 
 def args_after_separator() -> tuple[Path, Path]:
-    args = sys.argv[sys.argv.index("--") + 1 :] if "--" in sys.argv else []
+    args = filtered_script_args(sys.argv[sys.argv.index("--") + 1 :]) if "--" in sys.argv else []
     src = Path(args[0]).expanduser().resolve() if args else DEFAULT_BLEND
     report = Path(args[1]).expanduser().resolve() if len(args) > 1 else DEFAULT_REPORT
     if not src.exists():
@@ -474,6 +476,7 @@ def bone_line(rig: bpy.types.Object, name: str) -> str:
 
 def main() -> None:
     src, report = args_after_separator()
+    require_asset_write_permission(f"rebuild and save anatomical game rig in {src}")
     backup_line = ensure_backup(src)
     bpy.ops.wm.open_mainfile(filepath=str(src), load_ui=False)
     bpy.context.scene.frame_set(1)

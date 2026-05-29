@@ -2,6 +2,8 @@ from pathlib import Path
 
 import unreal
 
+from penance_script_safety import require_asset_write_permission
+
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 LEVEL_PATH = "/Game/Maps/Penance_Suburban_Blockout"
@@ -437,6 +439,7 @@ def write_report(
 
 
 def main():
+    require_asset_write_permission(f"set up and save post-Step-8 assets in {LEVEL_PATH}")
     disable_browser_sync()
     unreal.get_editor_subsystem(unreal.LevelEditorSubsystem).load_level(LEVEL_PATH)
     organized_count, church_actors, road_actors = organize_imported_assets()

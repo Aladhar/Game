@@ -2,6 +2,8 @@ from pathlib import Path
 
 import unreal
 
+from penance_script_safety import require_asset_write_permission
+
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 REPORT_PATH = PROJECT_ROOT / "Saved" / "PenanceRiggedCharacterImportReport.txt"
@@ -78,6 +80,7 @@ def class_name(asset_path):
 
 
 def main():
+    require_asset_write_permission("import rigged character FBX files into Unreal content")
     disable_browser_sync()
     imported_paths = []
     for spec in SPECS:

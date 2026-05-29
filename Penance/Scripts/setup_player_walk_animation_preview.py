@@ -2,6 +2,8 @@ from pathlib import Path
 
 import unreal
 
+from penance_script_safety import require_asset_write_permission
+
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 SOURCE_ANIM = "/Game/Player/FirstPerson/SK_Player_FirstPersonBody_Anim"
@@ -45,6 +47,7 @@ def setup_map(anim) -> None:
 
 
 def main() -> None:
+    require_asset_write_permission(f"create or update player walk animation preview map {PREVIEW_MAP}")
     unreal.SystemLibrary.execute_console_command(None, "Interchange.FeatureFlags.Import.SyncToBrowser 0")
 
     mesh = load_asset("/Game/Player/FirstPerson/SK_Player_FirstPersonBody")
