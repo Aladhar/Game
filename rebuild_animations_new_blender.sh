@@ -1,9 +1,10 @@
 #!/bin/zsh
 set -euo pipefail
 
-cd "/Users/amritladhar/Documents/GitHub/Game"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+cd "$SCRIPT_DIR"
 
-BLENDER="/Applications/Blender.app/Contents/MacOS/Blender"
+BLENDER="${BLENDER:-/Applications/Blender.app/Contents/MacOS/Blender}"
 
 SCRIPT="Penance/Scripts/adapt_model_controls_and_walk.py"
 
