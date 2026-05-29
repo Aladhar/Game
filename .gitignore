@@ -29,3 +29,5 @@ DerivedDataCache/
 # Logs / temp
 *.log
 *.tmp
+Penance/Saved/AutoScreenshot.png
+Penance/Intermediate/ReimportCache/3688439234.bin
