@@ -116,11 +116,12 @@ function Test-BlenderVersion {
         return
     }
 
-    $versionOutput = & $exe --version 2>&1 | Select-Object -First 1
+    $versionOutputLines = & $exe --version 2>&1
     if ($LASTEXITCODE -ne 0) {
         Add-ErrorMessage "Blender --version failed with exit code $LASTEXITCODE"
         return
     }
+    $versionOutput = $versionOutputLines | Select-Object -First 1
     if ($versionOutput -notmatch "Blender\s+$RequiredBlenderMajorMinor(\.|\\s)") {
         Add-ErrorMessage "Blender version output was '$versionOutput', expected Blender $RequiredBlenderMajorMinor.x"
         return
