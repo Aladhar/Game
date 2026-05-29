@@ -11,6 +11,7 @@ public class PenanceDemoUE : ModuleRules
             "Core",
             "CoreUObject",
             "Engine",
+            "EnhancedInput",
             "InputCore"
         });
     }
