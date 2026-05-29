@@ -76,6 +76,29 @@ function Test-UnrealVersion {
     Write-Host "Unreal Engine version OK: $actual"
 }
 
+function Test-UnrealWindowsTools {
+    param([string]$Root)
+    if (-not $Root -or -not (Test-Path -LiteralPath $Root)) {
+        return
+    }
+
+    $requiredToolPaths = @(
+        "Engine\Binaries\Win64\UnrealEditor-Cmd.exe",
+        "Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll",
+        "Engine\Build\BatchFiles\Build.bat",
+        "Engine\Build\BatchFiles\RunUAT.bat"
+    )
+
+    foreach ($relativePath in $requiredToolPaths) {
+        $toolPath = Join-Path $Root $relativePath
+        if (Test-Path -LiteralPath $toolPath) {
+            Write-Host "Unreal Windows tool found: $relativePath"
+        } else {
+            Add-ErrorMessage "Missing Unreal Windows tool: $toolPath"
+        }
+    }
+}
+
 function Test-BlenderVersion {
     param([string]$ConfiguredExe)
     $exe = $ConfiguredExe
@@ -143,7 +166,9 @@ if (-not (Test-Path -LiteralPath "Penance\PenanceDemoUE.uproject")) {
     }
 }
 
-Test-UnrealVersion (Resolve-UnrealRoot $UnrealRoot)
+$resolvedUnrealRoot = Resolve-UnrealRoot $UnrealRoot
+Test-UnrealVersion $resolvedUnrealRoot
+Test-UnrealWindowsTools $resolvedUnrealRoot
 Test-BlenderVersion $BlenderExe
 Test-VisualStudio2022
 
