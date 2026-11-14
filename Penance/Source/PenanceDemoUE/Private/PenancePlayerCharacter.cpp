@@ -15,6 +15,7 @@
 #include "Misc/Paths.h"
 #include "Camera/PlayerCameraManager.h"
 #include "PenanceHingedDoor.h"
+#include "PenanceStreamingDoor.h"
 #include "PenancePickupItem.h"
 #include "UObject/ConstructorHelpers.h"
 #include "EngineUtils.h"
@@ -285,6 +286,13 @@ void APenancePlayerCharacter::Interact()
     FHitResult Hit;
     if (GetInteractionTrace(Hit))
     {
+        if (APenanceStreamingDoor* Portal = Cast<APenanceStreamingDoor>(Hit.GetActor()))
+        {
+            Portal->Interact(this);
+            OnPlayerNoise.Broadcast(TEXT("door"), Portal->GetActorLocation(), 0.6f);
+            return;
+        }
+
         if (APenanceHingedDoor* Door = Cast<APenanceHingedDoor>(Hit.GetActor()))
         {
             Door->Interact(this);
