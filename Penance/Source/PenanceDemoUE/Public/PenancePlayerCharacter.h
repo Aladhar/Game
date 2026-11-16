@@ -2,9 +2,15 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "TimerManager.h"
 #include "PenancePlayerCharacter.generated.h"
 
 class UCameraComponent;
+class USpringArmComponent;
+class UInputAction;
+class UInputMappingContext;
+class UAnimMontage;
+struct FInputActionValue;
 class UAnimSequence;
 class USkeletalMeshComponent;
 class USceneComponent;
@@ -56,6 +62,12 @@ public:
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Penance|Player")
     TObjectPtr<UCameraComponent> FirstPersonCamera;
 
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Penance|Camera")
+    TObjectPtr<USpringArmComponent> CameraBoom;
+
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Penance|Camera")
+    TObjectPtr<UCameraComponent> FollowCamera;
+
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Penance|Player")
     TObjectPtr<USceneComponent> FirstPersonCameraRoot;
 
@@ -81,13 +93,13 @@ public:
     float BodyYawFollowSpeed = 18.0f;
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Penance|Movement")
-    float WalkSpeed = 250.0f;
+    float WalkSpeed = 200.0f;
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Penance|Movement")
-    float SprintSpeed = 550.0f;
+    float SprintSpeed = 420.0f;
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Penance|Movement")
-    float LowStaminaSprintSpeed = 480.0f;
+    float LowStaminaSprintSpeed = 420.0f;
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Penance|Movement")
     float CrouchSpeed = 140.0f;
@@ -136,6 +148,9 @@ public:
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Penance|Interaction")
     float InteractionDistance = 280.0f;
+
+    UFUNCTION(BlueprintCallable, Category = "Penance|Player")
+    void PlayShotReaction();
 
     UFUNCTION(BlueprintCallable, Category = "Penance|Inventory")
     void AddInventoryEntry(const FText& ItemName, const FText& ItemDescription, bool bIsNote);
@@ -199,6 +214,15 @@ private:
     void StartCrouchInput();
     void StopCrouchInput();
     void Interact();
+    void MoveEnhanced(const FInputActionValue& Value);
+    void LookEnhanced(const FInputActionValue& Value);
+    void StartSprintEnhanced();
+    void StopSprintEnhanced();
+    void StartShotReactionEnhanced();
+    void StartCrouchEnhanced();
+    void StopCrouchEnhanced();
+    void RegisterMeaningfulActivity();
+    void HandleInactivityTimeout();
 
     void UpdateMovementRules(float DeltaSeconds);
     void UpdateCrouchRules(float DeltaSeconds);
@@ -218,6 +242,41 @@ private:
     bool HasMovementInput() const;
     bool GetInteractionTrace(FHitResult& OutHit) const;
 
+    UPROPERTY(EditDefaultsOnly, Category = "Penance|Input")
+    TObjectPtr<UInputMappingContext> PlayerMappingContext;
+
+    UPROPERTY(EditDefaultsOnly, Category = "Penance|Input")
+    TObjectPtr<UInputAction> MoveAction;
+
+    UPROPERTY(EditDefaultsOnly, Category = "Penance|Input")
+    TObjectPtr<UInputAction> LookAction;
+
+    UPROPERTY(EditDefaultsOnly, Category = "Penance|Input")
+    TObjectPtr<UInputAction> SprintAction;
+
+    UPROPERTY(EditDefaultsOnly, Category = "Penance|Input")
+    TObjectPtr<UInputAction> CrouchAction;
+
+    UPROPERTY(EditDefaultsOnly, Category = "Penance|Input")
+    TObjectPtr<UInputAction> InteractAction;
+
+    UPROPERTY(EditDefaultsOnly, Category = "Penance|Input")
+    TObjectPtr<UInputAction> JumpAction;
+
+    UPROPERTY(EditDefaultsOnly, Category = "Penance|Input")
+    TObjectPtr<UInputAction> InventoryAction;
+
+    UPROPERTY(EditDefaultsOnly, Category = "Penance|Input")
+    TObjectPtr<UInputAction> TestShotAction;
+
+    UPROPERTY(EditDefaultsOnly, Category = "Penance|Player Animation")
+    TObjectPtr<UAnimMontage> ShotReactionMontage;
+
+    UPROPERTY(EditDefaultsOnly, Category = "Penance|Player Animation")
+    TObjectPtr<UAnimMontage> ScaredMontage;
+
+    FTimerHandle InactivityTimerHandle;
+    FRotator LastObservedControlRotation = FRotator::ZeroRotator;
     FVector2D MoveInput = FVector2D::ZeroVector;
     bool bWantsSprint = false;
     bool bWantsCrouch = false;

@@ -19,20 +19,20 @@ APenancePlayerWalkPreviewActor::APenancePlayerWalkPreviewActor()
     PreviewMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("PreviewMesh"));
     SetRootComponent(PreviewMesh);
 
-    static ConstructorHelpers::FObjectFinder<USkeletalMesh> MeshAsset(TEXT("/Game/Player/FirstPerson/SK_Player_FirstPersonBody.SK_Player_FirstPersonBody"));
+    static ConstructorHelpers::FObjectFinder<USkeletalMesh> MeshAsset(TEXT("/Game/Player/MeshyPlayer/Untitled.Untitled"));
     if (MeshAsset.Succeeded())
     {
         PreviewMesh->SetSkeletalMesh(MeshAsset.Object);
     }
 
-    static ConstructorHelpers::FObjectFinder<UAnimSequence> VerifyWalkAnimAsset(TEXT("/Game/Player/FirstPerson/AN_Player_Walk_Verify.AN_Player_Walk_Verify"));
+    static ConstructorHelpers::FObjectFinder<UAnimSequence> VerifyWalkAnimAsset(TEXT("/Game/Player/MeshyPlayer/Untitled_Anim_Armature_Walk_Forward.Untitled_Anim_Armature_Walk_Forward"));
     if (VerifyWalkAnimAsset.Succeeded())
     {
         WalkAnimation = VerifyWalkAnimAsset.Object;
     }
     else
     {
-        static ConstructorHelpers::FObjectFinder<UAnimSequence> ImportedWalkAnimAsset(TEXT("/Game/Player/FirstPerson/SK_Player_FirstPersonBody_Anim.SK_Player_FirstPersonBody_Anim"));
+        static ConstructorHelpers::FObjectFinder<UAnimSequence> ImportedWalkAnimAsset(TEXT("/Game/Player/MeshyPlayer/Untitled_Anim_Armature_Walk_Forward.Untitled_Anim_Armature_Walk_Forward"));
         if (ImportedWalkAnimAsset.Succeeded())
         {
             WalkAnimation = ImportedWalkAnimAsset.Object;

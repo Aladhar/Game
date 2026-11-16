@@ -16,6 +16,11 @@
 APenanceDemoGameMode::APenanceDemoGameMode()
 {
     DefaultPawnClass = APenancePlayerCharacter::StaticClass();
+    static ConstructorHelpers::FClassFinder<APawn> PenancePlayerBlueprint(TEXT("/Game/Player/BP_PenancePlayer"));
+    if (PenancePlayerBlueprint.Succeeded())
+    {
+        DefaultPawnClass = PenancePlayerBlueprint.Class;
+    }
     HUDClass = APenanceHUD::StaticClass();
 }
 

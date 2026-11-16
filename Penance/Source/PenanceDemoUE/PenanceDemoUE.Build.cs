@@ -14,5 +14,18 @@ public class PenanceDemoUE : ModuleRules
             "EnhancedInput",
             "InputCore"
         });
+
+        if (Target.bBuildEditor)
+        {
+            PrivateDependencyModuleNames.AddRange(new string[]
+            {
+                "UnrealEd",
+                "Kismet",
+                "BlueprintGraph",
+                "AnimGraph",
+                "AnimGraphRuntime",
+                "GraphEditor"
+            });
+        }
     }
 }

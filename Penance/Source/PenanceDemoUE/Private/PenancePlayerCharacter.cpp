@@ -2,8 +2,21 @@
 
 #include "ABP_Player.h"
 #include "Animation/AnimSequence.h"
+#include "Animation/AnimMontage.h"
+#include "Animation/AnimInstance.h"
 #include "Camera/CameraComponent.h"
+#include "Camera/CameraTypes.h"
+#include "GameFramework/SpringArmComponent.h"
+#include "EnhancedInputComponent.h"
+#include "EnhancedInputSubsystems.h"
+#include "InputAction.h"
+#include "InputMappingContext.h"
+#include "InputActionValue.h"
+#include "Engine/LocalPlayer.h"
+#include "TimerManager.h"
 #include "Components/CapsuleComponent.h"
+#include "PhysicsEngine/PhysicsAsset.h"
+#include "Engine/CollisionProfile.h"
 #include "Components/SceneComponent.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
@@ -29,69 +42,42 @@ APenancePlayerCharacter::APenancePlayerCharacter()
     GetCapsuleComponent()->InitCapsuleSize(CapsuleRadius, StandingCapsuleHeight * 0.5f);
 
     USkeletalMeshComponent* PlayerMeshComponent = GetMesh();
-    static ConstructorHelpers::FObjectFinder<USkeletalMesh> PlayerMeshAsset(TEXT("/Game/Player/BlenderSource/SK_Player_FromBlend.SK_Player_FromBlend"));
-    if (!PlayerMeshAsset.Succeeded())
-    {
-        static ConstructorHelpers::FObjectFinder<USkeletalMesh> FallbackPlayerMeshAsset(TEXT("/Game/Player/Skeletal/SK_Player.SK_Player"));
-        if (FallbackPlayerMeshAsset.Succeeded())
-        {
-            PlayerMeshAsset.Object = FallbackPlayerMeshAsset.Object;
-        }
-    }
+    static ConstructorHelpers::FObjectFinder<USkeletalMesh> PlayerMeshAsset(TEXT("/Game/Player/MeshyPlayer/Untitled.Untitled"));
     if (PlayerMeshAsset.Succeeded())
     {
         PlayerMeshComponent->SetSkeletalMesh(PlayerMeshAsset.Object);
+        PlayerMeshComponent->SetPhysicsAsset(LoadObject<UPhysicsAsset>(nullptr, TEXT("/Game/Player/MeshyPlayer/Untitled_PhysicsAsset.Untitled_PhysicsAsset")));
     }
     PlayerMeshComponent->SetupAttachment(GetCapsuleComponent());
     PlayerMeshComponent->SetRelativeLocation(FVector(0.0f, 0.0f, -StandingCapsuleHeight * 0.5f));
     PlayerMeshComponent->SetRelativeRotation(FRotator(0.0f, PlayerMeshVisualYawOffsetDegrees, 0.0f));
     PlayerMeshComponent->SetRelativeScale3D(FVector(1.0f));
-    PlayerMeshComponent->SetOwnerNoSee(true);
+    PlayerMeshComponent->SetOwnerNoSee(false);
+    PlayerMeshComponent->SetCollisionProfileName(UCollisionProfile::NoCollision_ProfileName);
     PlayerMeshComponent->bCastHiddenShadow = true;
 
     FirstPersonBodyMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Mesh_FP_Body"));
     FirstPersonBodyMesh->SetupAttachment(GetCapsuleComponent());
-    static ConstructorHelpers::FObjectFinder<USkeletalMesh> FirstPersonBodyMeshAsset(TEXT("/Game/Player/FirstPerson/SK_Player_FirstPersonBody.SK_Player_FirstPersonBody"));
-    if (FirstPersonBodyMeshAsset.Succeeded())
-    {
-        FirstPersonBodyMesh->SetSkeletalMesh(FirstPersonBodyMeshAsset.Object);
-    }
-    else if (PlayerMeshAsset.Succeeded())
-    {
-        FirstPersonBodyMesh->SetSkeletalMesh(PlayerMeshAsset.Object);
-    }
-    static ConstructorHelpers::FObjectFinder<UAnimSequence> FirstPersonVerifyWalkAnimAsset(TEXT("/Game/Player/FirstPerson/AN_Player_Walk_Verify.AN_Player_Walk_Verify"));
-    if (FirstPersonVerifyWalkAnimAsset.Succeeded())
-    {
-        FirstPersonForwardWalkAnimation = FirstPersonVerifyWalkAnimAsset.Object;
-        FirstPersonBackwardWalkAnimation = FirstPersonVerifyWalkAnimAsset.Object;
-    }
-    else
-    {
-        static ConstructorHelpers::FObjectFinder<UAnimSequence> FirstPersonImportedWalkAnimAsset(TEXT("/Game/Player/FirstPerson/SK_Player_FirstPersonBody_Anim.SK_Player_FirstPersonBody_Anim"));
-        if (FirstPersonImportedWalkAnimAsset.Succeeded())
-        {
-            FirstPersonForwardWalkAnimation = FirstPersonImportedWalkAnimAsset.Object;
-            FirstPersonBackwardWalkAnimation = FirstPersonImportedWalkAnimAsset.Object;
-        }
-    }
-    if (UAnimSequence* ForwardLoopAnimation = LoadObject<UAnimSequence>(nullptr, TEXT("/Game/Player/FirstPerson/AN_Player_Walk_Forward_Loop.AN_Player_Walk_Forward_Loop"), nullptr, LOAD_NoWarn))
-    {
-        FirstPersonForwardWalkAnimation = ForwardLoopAnimation;
-    }
-    if (UAnimSequence* BackwardLoopAnimation = LoadObject<UAnimSequence>(nullptr, TEXT("/Game/Player/FirstPerson/AN_Player_Walk_Backward_Loop.AN_Player_Walk_Backward_Loop"), nullptr, LOAD_NoWarn))
-    {
-        FirstPersonBackwardWalkAnimation = BackwardLoopAnimation;
-    }
     FirstPersonBodyMesh->SetRelativeLocation(FVector(0.0f, 0.0f, -StandingCapsuleHeight * 0.5f));
     FirstPersonBodyMesh->SetRelativeRotation(FRotator(0.0f, PlayerMeshVisualYawOffsetDegrees, 0.0f));
     FirstPersonBodyMesh->SetRelativeScale3D(FVector(1.0f));
-    FirstPersonBodyMesh->SetAnimationMode(EAnimationMode::AnimationBlueprint);
-    FirstPersonBodyMesh->SetAnimInstanceClass(UABP_Player::StaticClass());
-    FirstPersonBodyMesh->SetOnlyOwnerSee(true);
-    FirstPersonBodyMesh->SetOwnerNoSee(false);
-    FirstPersonBodyMesh->SetCastShadow(false);
-    FirstPersonBodyMesh->bCastHiddenShadow = false;
+    FirstPersonBodyMesh->SetVisibility(false, true);
+    FirstPersonBodyMesh->SetHiddenInGame(true, true);
+    FirstPersonBodyMesh->SetCollisionProfileName(UCollisionProfile::NoCollision_ProfileName);
+
+    CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
+    CameraBoom->SetupAttachment(GetCapsuleComponent());
+    CameraBoom->SetRelativeLocation(FVector(0.0f, 0.0f, 72.0f));
+    CameraBoom->TargetArmLength = 320.0f;
+    CameraBoom->bUsePawnControlRotation = true;
+    CameraBoom->bEnableCameraLag = true;
+    CameraBoom->CameraLagSpeed = 12.0f;
+    CameraBoom->bDoCollisionTest = true;
+
+    FollowCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("FollowCamera"));
+    FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
+    FollowCamera->bUsePawnControlRotation = false;
+    FollowCamera->FieldOfView = 85.0f;
 
     FirstPersonCameraRoot = CreateDefaultSubobject<USceneComponent>(TEXT("FirstPersonCameraRoot"));
     FirstPersonCameraRoot->SetupAttachment(GetCapsuleComponent());
@@ -103,18 +89,43 @@ APenancePlayerCharacter::APenancePlayerCharacter()
     FirstPersonCamera->SetRelativeRotation(FRotator::ZeroRotator);
     FirstPersonCamera->bUsePawnControlRotation = true;
     FirstPersonCamera->FieldOfView = 78.0f;
+    FirstPersonCamera->bAutoActivate = false;
+
+    static ConstructorHelpers::FObjectFinder<UInputMappingContext> MappingAsset(TEXT("/Game/Player/Input/IMC_Player.IMC_Player"));
+    if (MappingAsset.Succeeded()) PlayerMappingContext = MappingAsset.Object;
+    static ConstructorHelpers::FObjectFinder<UInputAction> MoveInputAsset(TEXT("/Game/Player/Input/IA_Move.IA_Move"));
+    if (MoveInputAsset.Succeeded()) MoveAction = MoveInputAsset.Object;
+    static ConstructorHelpers::FObjectFinder<UInputAction> LookInputAsset(TEXT("/Game/Player/Input/IA_Look.IA_Look"));
+    if (LookInputAsset.Succeeded()) LookAction = LookInputAsset.Object;
+    static ConstructorHelpers::FObjectFinder<UInputAction> SprintInputAsset(TEXT("/Game/Player/Input/IA_Sprint.IA_Sprint"));
+    if (SprintInputAsset.Succeeded()) SprintAction = SprintInputAsset.Object;
+    static ConstructorHelpers::FObjectFinder<UInputAction> CrouchInputAsset(TEXT("/Game/Player/Input/IA_Crouch.IA_Crouch"));
+    if (CrouchInputAsset.Succeeded()) CrouchAction = CrouchInputAsset.Object;
+    static ConstructorHelpers::FObjectFinder<UInputAction> InteractInputAsset(TEXT("/Game/Player/Input/IA_Interact.IA_Interact"));
+    if (InteractInputAsset.Succeeded()) InteractAction = InteractInputAsset.Object;
+    static ConstructorHelpers::FObjectFinder<UInputAction> JumpInputAsset(TEXT("/Game/Player/Input/IA_Jump.IA_Jump"));
+    if (JumpInputAsset.Succeeded()) JumpAction = JumpInputAsset.Object;
+    static ConstructorHelpers::FObjectFinder<UInputAction> InventoryInputAsset(TEXT("/Game/Player/Input/IA_Inventory.IA_Inventory"));
+    if (InventoryInputAsset.Succeeded()) InventoryAction = InventoryInputAsset.Object;
+    static ConstructorHelpers::FObjectFinder<UInputAction> TestShotInputAsset(TEXT("/Game/Player/Input/IA_TestShot.IA_TestShot"));
+    if (TestShotInputAsset.Succeeded()) TestShotAction = TestShotInputAsset.Object;
+    static ConstructorHelpers::FObjectFinder<UAnimMontage> ShotMontageAsset(TEXT("/Game/Player/Animations/AM_CharacterShot.AM_CharacterShot"));
+    if (ShotMontageAsset.Succeeded()) ShotReactionMontage = ShotMontageAsset.Object;
+    static ConstructorHelpers::FObjectFinder<UAnimMontage> ScaredMontageAsset(TEXT("/Game/Player/Animations/AM_ScaredIdle.AM_ScaredIdle"));
+    if (ScaredMontageAsset.Succeeded()) ScaredMontage = ScaredMontageAsset.Object;
 
     bUseControllerRotationYaw = false;
     bUseControllerRotationPitch = false;
     bUseControllerRotationRoll = false;
 
     UCharacterMovementComponent* Movement = GetCharacterMovement();
-    Movement->bOrientRotationToMovement = false;
+    Movement->bOrientRotationToMovement = true;
+    Movement->RotationRate = FRotator(0.0f, 360.0f, 0.0f);
     Movement->DefaultLandMovementMode = MOVE_Walking;
     Movement->MaxWalkSpeed = WalkSpeed;
     Movement->MaxWalkSpeedCrouched = CrouchSpeed;
-    Movement->MaxAcceleration = 1800.0f;
-    Movement->BrakingDecelerationWalking = 2200.0f;
+    Movement->MaxAcceleration = 1000.0f;
+    Movement->BrakingDecelerationWalking = 1000.0f;
     Movement->GroundFriction = 8.0f;
     Movement->GravityScale = 1.0f;
     Movement->JumpZVelocity = JumpVelocity;
@@ -132,6 +143,19 @@ void APenancePlayerCharacter::BeginPlay()
     Super::BeginPlay();
 
     Stamina = MaxStamina;
+    if (PlayerMappingContext)
+    {
+        if (APlayerController* PlayerController = Cast<APlayerController>(Controller))
+        {
+            if (ULocalPlayer* LocalPlayer = PlayerController->GetLocalPlayer())
+            {
+                if (UEnhancedInputLocalPlayerSubsystem* InputSubsystem = LocalPlayer->GetSubsystem<UEnhancedInputLocalPlayerSubsystem>())
+                {
+                    InputSubsystem->AddMappingContext(PlayerMappingContext, 0);
+                }
+            }
+        }
+    }
     GetCapsuleComponent()->SetCapsuleSize(CapsuleRadius, StandingCapsuleHeight * 0.5f, true);
     GetCharacterMovement()->SetCrouchedHalfHeight(CrouchingCapsuleHeight * 0.5f);
     GetCharacterMovement()->MaxWalkSpeed = WalkSpeed;
@@ -139,6 +163,22 @@ void APenancePlayerCharacter::BeginPlay()
     ForceGroundedMovementMode();
     ResetFirstPersonBodyPose();
     HideOwnerCameraClippingBones();
+    if (FirstPersonCamera) FirstPersonCamera->Deactivate();
+    if (GetMesh())
+    {
+        GetMesh()->SetOwnerNoSee(false);
+        GetMesh()->SetHiddenInGame(false);
+        if (UClass* AnimClass = LoadClass<UAnimInstance>(nullptr, TEXT("/Game/Player/Animations/ABP_PenancePlayer.ABP_PenancePlayer_C")))
+        {
+            GetMesh()->SetAnimationMode(EAnimationMode::AnimationBlueprint);
+            GetMesh()->SetAnimInstanceClass(AnimClass);
+        }
+    }
+    if (const APlayerController* PC = Cast<APlayerController>(Controller))
+    {
+        LastObservedControlRotation = PC->GetControlRotation();
+    }
+    GetWorldTimerManager().SetTimer(InactivityTimerHandle, this, &APenancePlayerCharacter::HandleInactivityTimeout, 30.0f, false);
 
     UE_LOG(
         LogPenancePlayerBody,
@@ -191,6 +231,20 @@ void APenancePlayerCharacter::Tick(float DeltaSeconds)
     UpdateCameraDrivenBodyYaw(DeltaSeconds);
     UpdateFirstPersonBody(DeltaSeconds);
     UpdatePlayerBodySelfTest(DeltaSeconds);
+    if (Controller)
+    {
+        const FRotator CurrentControlRotation = Controller->GetControlRotation();
+        if (FMath::Abs(FMath::FindDeltaAngleDegrees(LastObservedControlRotation.Yaw, CurrentControlRotation.Yaw)) > 0.15f
+            || FMath::Abs(FMath::FindDeltaAngleDegrees(LastObservedControlRotation.Pitch, CurrentControlRotation.Pitch)) > 0.15f)
+        {
+            RegisterMeaningfulActivity();
+        }
+        LastObservedControlRotation = CurrentControlRotation;
+    }
+    if (GetVelocity().SizeSquared2D() > 100.0f && !MoveInput.IsNearlyZero(0.05f))
+    {
+        RegisterMeaningfulActivity();
+    }
     BroadcastStaminaIfNeeded();
 }
 
@@ -198,18 +252,118 @@ void APenancePlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerI
 {
     Super::SetupPlayerInputComponent(PlayerInputComponent);
 
-    PlayerInputComponent->BindAxis(TEXT("MoveForward"), this, &APenancePlayerCharacter::MoveForward);
-    PlayerInputComponent->BindAxis(TEXT("MoveRight"), this, &APenancePlayerCharacter::MoveRight);
-    PlayerInputComponent->BindAxis(TEXT("Turn"), this, &APenancePlayerCharacter::Turn);
-    PlayerInputComponent->BindAxis(TEXT("LookUp"), this, &APenancePlayerCharacter::LookUp);
+    if (UEnhancedInputComponent* EnhancedInput = Cast<UEnhancedInputComponent>(PlayerInputComponent))
+    {
+        if (MoveAction)
+        {
+            EnhancedInput->BindAction(MoveAction, ETriggerEvent::Triggered, this, &APenancePlayerCharacter::MoveEnhanced);
+            EnhancedInput->BindAction(MoveAction, ETriggerEvent::Completed, this, &APenancePlayerCharacter::MoveEnhanced);
+            EnhancedInput->BindAction(MoveAction, ETriggerEvent::Canceled, this, &APenancePlayerCharacter::MoveEnhanced);
+        }
+        if (LookAction) EnhancedInput->BindAction(LookAction, ETriggerEvent::Triggered, this, &APenancePlayerCharacter::LookEnhanced);
+        if (SprintAction)
+        {
+            EnhancedInput->BindAction(SprintAction, ETriggerEvent::Started, this, &APenancePlayerCharacter::StartSprintEnhanced);
+            EnhancedInput->BindAction(SprintAction, ETriggerEvent::Completed, this, &APenancePlayerCharacter::StopSprintEnhanced);
+            EnhancedInput->BindAction(SprintAction, ETriggerEvent::Canceled, this, &APenancePlayerCharacter::StopSprintEnhanced);
+        }
+        if (CrouchAction)
+        {
+            EnhancedInput->BindAction(CrouchAction, ETriggerEvent::Started, this, &APenancePlayerCharacter::StartCrouchEnhanced);
+            EnhancedInput->BindAction(CrouchAction, ETriggerEvent::Completed, this, &APenancePlayerCharacter::StopCrouchEnhanced);
+            EnhancedInput->BindAction(CrouchAction, ETriggerEvent::Canceled, this, &APenancePlayerCharacter::StopCrouchEnhanced);
+        }
+        if (InteractAction) EnhancedInput->BindAction(InteractAction, ETriggerEvent::Started, this, &APenancePlayerCharacter::Interact);
+        if (JumpAction) EnhancedInput->BindAction(JumpAction, ETriggerEvent::Started, this, &APenancePlayerCharacter::Jump);
+        if (InventoryAction) EnhancedInput->BindAction(InventoryAction, ETriggerEvent::Started, this, &APenancePlayerCharacter::ToggleInventory);
+        if (TestShotAction) EnhancedInput->BindAction(TestShotAction, ETriggerEvent::Started, this, &APenancePlayerCharacter::StartShotReactionEnhanced);
+    }
+}
 
-    PlayerInputComponent->BindAction(TEXT("Sprint"), IE_Pressed, this, &APenancePlayerCharacter::StartSprint);
-    PlayerInputComponent->BindAction(TEXT("Sprint"), IE_Released, this, &APenancePlayerCharacter::StopSprint);
-    PlayerInputComponent->BindAction(TEXT("Crouch"), IE_Pressed, this, &APenancePlayerCharacter::StartCrouchInput);
-    PlayerInputComponent->BindAction(TEXT("Crouch"), IE_Released, this, &APenancePlayerCharacter::StopCrouchInput);
-    PlayerInputComponent->BindAction(TEXT("Interact"), IE_Pressed, this, &APenancePlayerCharacter::Interact);
-    PlayerInputComponent->BindAction(TEXT("Jump"), IE_Pressed, this, &APenancePlayerCharacter::Jump);
-    PlayerInputComponent->BindAction(TEXT("Inventory"), IE_Pressed, this, &APenancePlayerCharacter::ToggleInventory);
+void APenancePlayerCharacter::MoveEnhanced(const FInputActionValue& Value)
+{
+    MoveInput = Value.Get<FVector2D>();
+    if (MoveInput.SizeSquared() > 0.0025f)
+    {
+        RegisterMeaningfulActivity();
+        if (Controller)
+        {
+            const FRotator YawRotation(0.0f, Controller->GetControlRotation().Yaw, 0.0f);
+            AddMovementInput(FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X), MoveInput.Y);
+            AddMovementInput(FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y), MoveInput.X);
+        }
+    }
+}
+
+void APenancePlayerCharacter::LookEnhanced(const FInputActionValue& Value)
+{
+    const FVector2D Look = Value.Get<FVector2D>();
+    if (!Look.IsNearlyZero(0.01f))
+    {
+        RegisterMeaningfulActivity();
+        AddControllerYawInput(Look.X * MouseLookSensitivity);
+        AddControllerPitchInput(Look.Y * MouseLookSensitivity);
+    }
+}
+
+void APenancePlayerCharacter::StartSprintEnhanced()
+{
+    bWantsSprint = true;
+    RegisterMeaningfulActivity();
+}
+
+void APenancePlayerCharacter::StopSprintEnhanced()
+{
+    bWantsSprint = false;
+}
+
+void APenancePlayerCharacter::StartShotReactionEnhanced()
+{
+    PlayShotReaction();
+}
+
+void APenancePlayerCharacter::StartCrouchEnhanced()
+{
+    bWantsCrouch = true;
+    RegisterMeaningfulActivity();
+}
+
+void APenancePlayerCharacter::StopCrouchEnhanced()
+{
+    bWantsCrouch = false;
+}
+
+void APenancePlayerCharacter::RegisterMeaningfulActivity()
+{
+    if (!GetWorld()) return;
+    GetWorldTimerManager().ClearTimer(InactivityTimerHandle);
+    GetWorldTimerManager().SetTimer(InactivityTimerHandle, this, &APenancePlayerCharacter::HandleInactivityTimeout, 30.0f, false);
+    if (ScaredMontage && GetMesh() && GetMesh()->GetAnimInstance() && GetMesh()->GetAnimInstance()->Montage_IsPlaying(ScaredMontage))
+    {
+        GetMesh()->GetAnimInstance()->Montage_Stop(0.25f, ScaredMontage);
+    }
+}
+
+void APenancePlayerCharacter::HandleInactivityTimeout()
+{
+    if (!MoveInput.IsNearlyZero(0.05f) || GetVelocity().SizeSquared2D() > 100.0f)
+    {
+        RegisterMeaningfulActivity();
+        return;
+    }
+    if (ScaredMontage && GetMesh() && GetMesh()->GetAnimInstance() && !GetMesh()->GetAnimInstance()->Montage_IsPlaying(ScaredMontage))
+    {
+        GetMesh()->GetAnimInstance()->Montage_Play(ScaredMontage, 1.0f);
+    }
+}
+
+void APenancePlayerCharacter::PlayShotReaction()
+{
+    if (ShotReactionMontage && GetMesh() && GetMesh()->GetAnimInstance()
+        && !GetMesh()->GetAnimInstance()->Montage_IsPlaying(ShotReactionMontage))
+    {
+        GetMesh()->GetAnimInstance()->Montage_Play(ShotReactionMontage, 1.0f);
+    }
 }
 
 void APenancePlayerCharacter::Jump()
@@ -406,6 +560,8 @@ void APenancePlayerCharacter::UpdateCrouchRules(float DeltaSeconds)
     const bool bIsCrouching = bIsCrouched;
     const float TargetEyeHeight = bIsCrouching ? CrouchingCameraHeight : StandingCameraHeight;
     const float TargetRelativeZ = GetCameraRelativeHeightForCurrentCapsule(TargetEyeHeight);
+    if (CameraBoom) CameraBoom->SetRelativeLocation(FVector(0.0f, 0.0f, bIsCrouching ? 48.0f : 72.0f));
+
     if (FirstPersonCameraRoot)
     {
         const FVector CameraRootLocation = FirstPersonCameraRoot->GetRelativeLocation();
@@ -422,6 +578,7 @@ void APenancePlayerCharacter::UpdateCrouchRules(float DeltaSeconds)
 
 void APenancePlayerCharacter::UpdateCameraDrivenBodyYaw(float DeltaSeconds)
 {
+    (void)DeltaSeconds;
     if (!Controller)
     {
         BodyYaw = GetActorRotation().Yaw;
@@ -434,12 +591,6 @@ void APenancePlayerCharacter::UpdateCameraDrivenBodyYaw(float DeltaSeconds)
     const FRotator ControlRotation = Controller->GetControlRotation();
     CameraYaw = ControlRotation.Yaw;
     AimPitch = FMath::FindDeltaAngleDegrees(0.0f, ControlRotation.Pitch);
-
-    const FRotator CurrentActorRotation = GetActorRotation();
-    const FRotator TargetYawOnlyRotation(0.0f, CameraYaw, 0.0f);
-    const FRotator NewYawOnlyRotation = FMath::RInterpTo(CurrentActorRotation, TargetYawOnlyRotation, DeltaSeconds, BodyYawFollowSpeed);
-    SetActorRotation(FRotator(0.0f, NewYawOnlyRotation.Yaw, 0.0f));
-
     BodyYaw = GetActorRotation().Yaw;
     FirstPersonTurnYawDelta = FMath::FindDeltaAngleDegrees(BodyYaw, CameraYaw);
 }
