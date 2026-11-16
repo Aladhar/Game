@@ -215,6 +215,7 @@ private:
     void StopCrouchInput();
     void Interact();
     void MoveEnhanced(const FInputActionValue& Value);
+    void StopMoveEnhanced();
     void LookEnhanced(const FInputActionValue& Value);
     void StartSprintEnhanced();
     void StopSprintEnhanced();
@@ -276,7 +277,6 @@ private:
     TObjectPtr<UAnimMontage> ScaredMontage;
 
     FTimerHandle InactivityTimerHandle;
-    FRotator LastObservedControlRotation = FRotator::ZeroRotator;
     FVector2D MoveInput = FVector2D::ZeroVector;
     bool bWantsSprint = false;
     bool bWantsCrouch = false;

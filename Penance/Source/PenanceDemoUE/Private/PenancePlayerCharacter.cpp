@@ -114,12 +114,12 @@ APenancePlayerCharacter::APenancePlayerCharacter()
     static ConstructorHelpers::FObjectFinder<UAnimMontage> ScaredMontageAsset(TEXT("/Game/Player/Animations/AM_ScaredIdle.AM_ScaredIdle"));
     if (ScaredMontageAsset.Succeeded()) ScaredMontage = ScaredMontageAsset.Object;
 
-    bUseControllerRotationYaw = false;
+    bUseControllerRotationYaw = true;
     bUseControllerRotationPitch = false;
     bUseControllerRotationRoll = false;
 
     UCharacterMovementComponent* Movement = GetCharacterMovement();
-    Movement->bOrientRotationToMovement = true;
+    Movement->bOrientRotationToMovement = false;
     Movement->RotationRate = FRotator(0.0f, 360.0f, 0.0f);
     Movement->DefaultLandMovementMode = MOVE_Walking;
     Movement->MaxWalkSpeed = WalkSpeed;
@@ -168,15 +168,6 @@ void APenancePlayerCharacter::BeginPlay()
     {
         GetMesh()->SetOwnerNoSee(false);
         GetMesh()->SetHiddenInGame(false);
-        if (UClass* AnimClass = LoadClass<UAnimInstance>(nullptr, TEXT("/Game/Player/Animations/ABP_PenancePlayer.ABP_PenancePlayer_C")))
-        {
-            GetMesh()->SetAnimationMode(EAnimationMode::AnimationBlueprint);
-            GetMesh()->SetAnimInstanceClass(AnimClass);
-        }
-    }
-    if (const APlayerController* PC = Cast<APlayerController>(Controller))
-    {
-        LastObservedControlRotation = PC->GetControlRotation();
     }
     GetWorldTimerManager().SetTimer(InactivityTimerHandle, this, &APenancePlayerCharacter::HandleInactivityTimeout, 30.0f, false);
 
@@ -186,7 +177,7 @@ void APenancePlayerCharacter::BeginPlay()
         TEXT("Player body initialized. Mesh=%s FPBody=%s AnimClass=%s OwnerOnly=%s OwnerNoSeeExternal=%s ForwardAnim=%s BackwardAnim=%s Walk=%.1f Sprint=%.1f Crouch=%.1f CameraRootRelative=%s CameraRelative=%s MeshVisualYawOffset=%.1f BodyYawFollow=%.1f"),
         GetMesh() && GetMesh()->GetSkeletalMeshAsset() ? *GetMesh()->GetSkeletalMeshAsset()->GetPathName() : TEXT("None"),
         FirstPersonBodyMesh && FirstPersonBodyMesh->GetSkinnedAsset() ? *FirstPersonBodyMesh->GetSkinnedAsset()->GetPathName() : TEXT("None"),
-        FirstPersonBodyMesh && FirstPersonBodyMesh->GetAnimInstance() ? *FirstPersonBodyMesh->GetAnimInstance()->GetClass()->GetName() : TEXT("None"),
+        GetMesh() && GetMesh()->GetAnimInstance() ? *GetMesh()->GetAnimInstance()->GetClass()->GetName() : TEXT("None"),
         FirstPersonBodyMesh && FirstPersonBodyMesh->bOnlyOwnerSee ? TEXT("true") : TEXT("false"),
         GetMesh() && GetMesh()->bOwnerNoSee ? TEXT("true") : TEXT("false"),
         FirstPersonForwardWalkAnimation ? *FirstPersonForwardWalkAnimation->GetPathName() : TEXT("None"),
@@ -231,20 +222,6 @@ void APenancePlayerCharacter::Tick(float DeltaSeconds)
     UpdateCameraDrivenBodyYaw(DeltaSeconds);
     UpdateFirstPersonBody(DeltaSeconds);
     UpdatePlayerBodySelfTest(DeltaSeconds);
-    if (Controller)
-    {
-        const FRotator CurrentControlRotation = Controller->GetControlRotation();
-        if (FMath::Abs(FMath::FindDeltaAngleDegrees(LastObservedControlRotation.Yaw, CurrentControlRotation.Yaw)) > 0.15f
-            || FMath::Abs(FMath::FindDeltaAngleDegrees(LastObservedControlRotation.Pitch, CurrentControlRotation.Pitch)) > 0.15f)
-        {
-            RegisterMeaningfulActivity();
-        }
-        LastObservedControlRotation = CurrentControlRotation;
-    }
-    if (GetVelocity().SizeSquared2D() > 100.0f && !MoveInput.IsNearlyZero(0.05f))
-    {
-        RegisterMeaningfulActivity();
-    }
     BroadcastStaminaIfNeeded();
 }
 
@@ -257,8 +234,8 @@ void APenancePlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerI
         if (MoveAction)
         {
             EnhancedInput->BindAction(MoveAction, ETriggerEvent::Triggered, this, &APenancePlayerCharacter::MoveEnhanced);
-            EnhancedInput->BindAction(MoveAction, ETriggerEvent::Completed, this, &APenancePlayerCharacter::MoveEnhanced);
-            EnhancedInput->BindAction(MoveAction, ETriggerEvent::Canceled, this, &APenancePlayerCharacter::MoveEnhanced);
+            EnhancedInput->BindAction(MoveAction, ETriggerEvent::Completed, this, &APenancePlayerCharacter::StopMoveEnhanced);
+            EnhancedInput->BindAction(MoveAction, ETriggerEvent::Canceled, this, &APenancePlayerCharacter::StopMoveEnhanced);
         }
         if (LookAction) EnhancedInput->BindAction(LookAction, ETriggerEvent::Triggered, this, &APenancePlayerCharacter::LookEnhanced);
         if (SprintAction)
@@ -295,10 +272,16 @@ void APenancePlayerCharacter::MoveEnhanced(const FInputActionValue& Value)
     }
 }
 
+void APenancePlayerCharacter::StopMoveEnhanced()
+{
+    MoveInput = FVector2D::ZeroVector;
+    RegisterMeaningfulActivity();
+}
+
 void APenancePlayerCharacter::LookEnhanced(const FInputActionValue& Value)
 {
     const FVector2D Look = Value.Get<FVector2D>();
-    if (!Look.IsNearlyZero(0.01f))
+    if (Controller && !Controller->IsLookInputIgnored() && !Look.IsNearlyZero(0.01f))
     {
         RegisterMeaningfulActivity();
         AddControllerYawInput(Look.X * MouseLookSensitivity);
@@ -331,6 +314,7 @@ void APenancePlayerCharacter::StartCrouchEnhanced()
 void APenancePlayerCharacter::StopCrouchEnhanced()
 {
     bWantsCrouch = false;
+    RegisterMeaningfulActivity();
 }
 
 void APenancePlayerCharacter::RegisterMeaningfulActivity()
@@ -346,14 +330,16 @@ void APenancePlayerCharacter::RegisterMeaningfulActivity()
 
 void APenancePlayerCharacter::HandleInactivityTimeout()
 {
-    if (!MoveInput.IsNearlyZero(0.05f) || GetVelocity().SizeSquared2D() > 100.0f)
+    // Held movement and mouse input already rearm the timer in their handlers.
+    if (GetVelocity().SizeSquared2D() > 100.0f)
     {
         RegisterMeaningfulActivity();
         return;
     }
     if (ScaredMontage && GetMesh() && GetMesh()->GetAnimInstance() && !GetMesh()->GetAnimInstance()->Montage_IsPlaying(ScaredMontage))
     {
-        GetMesh()->GetAnimInstance()->Montage_Play(ScaredMontage, 1.0f);
+        const float MontageLength = GetMesh()->GetAnimInstance()->Montage_Play(ScaredMontage, 1.0f);
+        UE_LOG(LogPenancePlayerBody, Verbose, TEXT("Inactivity triggered scared montage (play length %.2f seconds)."), MontageLength);
     }
 }
 
@@ -560,7 +546,12 @@ void APenancePlayerCharacter::UpdateCrouchRules(float DeltaSeconds)
     const bool bIsCrouching = bIsCrouched;
     const float TargetEyeHeight = bIsCrouching ? CrouchingCameraHeight : StandingCameraHeight;
     const float TargetRelativeZ = GetCameraRelativeHeightForCurrentCapsule(TargetEyeHeight);
-    if (CameraBoom) CameraBoom->SetRelativeLocation(FVector(0.0f, 0.0f, bIsCrouching ? 48.0f : 72.0f));
+    if (CameraBoom)
+    {
+        FVector Pivot = CameraBoom->GetRelativeLocation();
+        Pivot.Z = FMath::FInterpTo(Pivot.Z, bIsCrouching ? 48.0f : 72.0f, DeltaSeconds, CrouchTransitionSpeed);
+        CameraBoom->SetRelativeLocation(Pivot);
+    }
 
     if (FirstPersonCameraRoot)
     {
@@ -1085,13 +1076,8 @@ bool APenancePlayerCharacter::HasMovementInput() const
 
 bool APenancePlayerCharacter::GetInteractionTrace(FHitResult& OutHit) const
 {
-    if (!FirstPersonCamera)
-    {
-        return false;
-    }
-
-    const FVector Start = FirstPersonCamera->GetComponentLocation();
-    const FVector End = Start + FirstPersonCamera->GetForwardVector() * InteractionDistance;
+    const FVector Start = GetPawnViewLocation();
+    const FVector End = Start + GetViewRotation().Vector() * InteractionDistance;
     FCollisionQueryParams Params(SCENE_QUERY_STAT(PenanceInteractTrace), false, this);
     return GetWorld() && GetWorld()->LineTraceSingleByChannel(OutHit, Start, End, ECC_Visibility, Params);
 }

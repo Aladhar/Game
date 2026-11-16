@@ -1,63 +1,47 @@
-"""Configure the existing Penance player Blueprint and build its AnimGraph in UE 5.7."""
-import unreal
+"""Build the player's AnimGraph and save its Blueprint settings in UE Editor."""
+import unreal as ue
 
-player_path = '/Game/Player/BP_PenancePlayer'
-player_bp = unreal.EditorAssetLibrary.load_asset(player_path)
-if not player_bp:
-    raise RuntimeError('Missing player Blueprint: ' + player_path)
+assets = ue.get_editor_subsystem(ue.EditorAssetSubsystem)
+blueprints = ue.BlueprintEditorLibrary
+player = assets.load_asset('/Game/Player/BP_PenancePlayer')
+anim = assets.load_asset('/Game/Player/Animations/ABP_PenancePlayer')
+if not player or not anim:
+    raise RuntimeError('Missing Penance player or Animation Blueprint')
 
-player_class = unreal.load_class(None, '/Script/PenanceDemoUE.PenancePlayerCharacter')
-if not player_class:
-    raise RuntimeError('Could not load APenancePlayerCharacter')
-unreal.BlueprintEditorLibrary.reparent_blueprint(player_bp, player_class)
-unreal.BlueprintEditorLibrary.compile_blueprint(player_bp)
+if not ue.PenancePlayerAssetLibrary.build_player_animation_graph():
+    raise RuntimeError('Player AnimGraph or runtime Blend Space evaluation failed')
 
-anim_bp = unreal.EditorAssetLibrary.load_asset('/Game/Player/Animations/ABP_PenancePlayer')
-anim_class = unreal.load_class(None, '/Script/PenanceDemoUE.PenancePlayerAnimInstance')
-if not anim_bp or not anim_class:
-    raise RuntimeError('Missing Anim Blueprint or native Anim Instance class')
-unreal.BlueprintEditorLibrary.reparent_blueprint(anim_bp, anim_class)
-unreal.BlueprintEditorLibrary.compile_blueprint(anim_bp)
+reactions = {}
+for field, montage_name, clip_name in (
+    ('shot_reaction_montage', 'AM_CharacterShot', 'AN_PlayerShotReaction'),
+    ('scared_montage', 'AM_ScaredIdle', 'AN_PlayerScaredIdle'),
+):
+    folder = '/Game/Player/Animations/'
+    montage = assets.load_asset(folder + montage_name)
+    clip = assets.load_asset(folder + clip_name)
+    if not ue.PenancePlayerAssetLibrary.use_recovered_reaction(montage, clip):
+        raise RuntimeError('Could not connect the recovered animation to ' + montage_name)
+    reactions[field] = montage
 
-if not unreal.PenancePlayerAssetLibrary.build_player_animation_graph():
-    raise RuntimeError('BuildPlayerAnimationGraph returned false')
+default = ue.get_default_object(player.generated_class())
+mesh = default.get_editor_property('mesh')
+mesh.set_editor_property('animation_mode', ue.AnimationMode.ANIMATION_BLUEPRINT)
+mesh.set_editor_property('anim_class', anim.generated_class())
+overrides = mesh.get_editor_property('override_materials')
+print('PENANCE_PLAYER_MATERIAL_OVERRIDES', [item.get_path_name() if item else None for item in overrides])
+if overrides:
+    mesh.set_editor_property('override_materials', [])
+for field, montage in reactions.items():
+    default.set_editor_property(field, montage)
+default.set_editor_property('use_controller_rotation_yaw', True)
+default.get_component_by_class(ue.CharacterMovementComponent).set_editor_property('orient_rotation_to_movement', False)
+blueprints.compile_blueprint(player)
 
-# Persist the animation class and physics asset on the Blueprint's mesh template
-# so the setup is visible and editable in the component details panel.
-player_class = player_bp.generated_class()
-player_default = unreal.get_default_object(player_class)
-mesh_component = player_default.get_editor_property('mesh')
-mesh_asset = unreal.EditorAssetLibrary.load_asset('/Game/Player/MeshyPlayer/Untitled')
-physics_asset = unreal.EditorAssetLibrary.load_asset('/Game/Player/MeshyPlayer/Untitled_PhysicsAsset')
-if not mesh_asset or not physics_asset:
-    raise RuntimeError('Missing Untitled mesh or physics asset')
-mesh_component.set_editor_property('skeletal_mesh_asset', mesh_asset)
-mesh_component.set_editor_property('physics_asset_override', physics_asset)
-mesh_component.set_editor_property('animation_mode', unreal.AnimationMode.ANIMATION_BLUEPRINT)
-mesh_component.set_editor_property('anim_class', anim_bp.generated_class())
-unreal.BlueprintEditorLibrary.compile_blueprint(player_bp)
-
-for path in [
-    '/Game/Player/Input/IA_Move', '/Game/Player/Input/IA_Look',
-    '/Game/Player/Input/IA_Sprint', '/Game/Player/Input/IMC_Player',
-    '/Game/Player/Animations/BS_PlayerMovement',
-    '/Game/Player/Animations/ABP_PenancePlayer',
-    '/Game/Player/Animations/AM_CharacterShot',
-    '/Game/Player/Animations/AM_ScaredIdle', player_path,
-]:
-    obj = unreal.EditorAssetLibrary.load_asset(path)
-    if not obj:
-        raise RuntimeError('Missing configured asset ' + path)
-    unreal.EditorAssetLibrary.save_loaded_asset(obj)
-    print('PENANCE_PLAYER_CONFIGURED', obj.get_path_name(), obj.get_class().get_name())
-
-player_class = player_bp.generated_class()
-player_default = unreal.get_default_object(player_class)
-mesh = player_default.get_editor_property('mesh')
-print('PENANCE_PLAYER_PARENT', player_class.get_path_name())
-print('PENANCE_PLAYER_MESH', mesh.get_editor_property('skeletal_mesh_asset').get_path_name())
-print('PENANCE_PLAYER_SKELETON', mesh_asset.get_editor_property('skeleton').get_path_name())
-print('PENANCE_PLAYER_PHYSICS', mesh.get_editor_property('physics_asset_override').get_path_name())
-print('PENANCE_PLAYER_ANIM_CLASS', mesh.get_editor_property('anim_class').get_path_name())
-print('PENANCE_PLAYER_ABP', anim_bp.generated_class().get_path_name())
+for asset in (
+    assets.load_asset('/Game/Player/Animations/BS_PlayerMovement'),
+    assets.load_asset('/Game/Player/Animations/BS_PlayerCrouch'),
+    anim, player, *reactions.values(),
+):
+    if not assets.save_loaded_asset(asset, False):
+        raise RuntimeError('Could not save ' + asset.get_path_name())
 print('PENANCE_PLAYER_GRAPH_READY')
