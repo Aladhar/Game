@@ -1,0 +1,1269 @@
+{
+  "parcels": [
+    {
+      "id": "H01",
+      "name": "First Lit House",
+      "x": 30,
+      "y": 421,
+      "w": 45,
+      "h": 42,
+      "fx": 43.5,
+      "fy": 438,
+      "fw": 18,
+      "fh": 15,
+      "outbuilding": {
+        "x": 35,
+        "y": 425,
+        "w": 7,
+        "h": 7,
+        "kind": "garage"
+      },
+      "desc": "Detached garage, shed, deep backyard",
+      "category": "Residential",
+      "site": "4500 × 4200",
+      "footprint": "1800 × 1500",
+      "priority": "Residential plot"
+    },
+    {
+      "id": "H02",
+      "name": "Boarded Duplex",
+      "x": 93,
+      "y": 421,
+      "w": 45,
+      "h": 42,
+      "fx": 108.2,
+      "fy": 438,
+      "fw": 12,
+      "fh": 11,
+      "outbuilding": {
+        "x": 126,
+        "y": 425,
+        "w": 7,
+        "h": 7,
+        "kind": "shed"
+      },
+      "desc": "Attached garage, side path",
+      "category": "Residential",
+      "site": "4500 × 4200",
+      "footprint": "1200 × 1100",
+      "priority": "Residential plot"
+    },
+    {
+      "id": "H03",
+      "name": "Crooked Gable",
+      "x": 30,
+      "y": 337,
+      "w": 45,
+      "h": 41,
+      "fx": 42.9,
+      "fy": 347,
+      "fw": 14,
+      "fh": 12,
+      "outbuilding": {
+        "x": 35,
+        "y": 366,
+        "w": 7,
+        "h": 7,
+        "kind": "workshop"
+      },
+      "desc": "Workshop, fence, side gate",
+      "category": "Residential",
+      "site": "4500 × 4100",
+      "footprint": "1400 × 1200",
+      "priority": "Residential plot"
+    },
+    {
+      "id": "H04",
+      "name": "Vacant Cottage",
+      "x": 93,
+      "y": 337,
+      "w": 45,
+      "h": 41,
+      "fx": 110.5,
+      "fy": 347,
+      "fw": 10,
+      "fh": 10,
+      "outbuilding": {
+        "x": 126,
+        "y": 366,
+        "w": 7,
+        "h": 7,
+        "kind": "greenhouse"
+      },
+      "desc": "Greenhouse, garden, gravel path",
+      "category": "Residential",
+      "site": "4500 × 4100",
+      "footprint": "1000 × 1000",
+      "priority": "Residential plot"
+    },
+    {
+      "id": "H05",
+      "name": "Overgrown House",
+      "x": 411,
+      "y": 200,
+      "w": 43,
+      "h": 44,
+      "fx": 424.7,
+      "fy": 210,
+      "fw": 13,
+      "fh": 11,
+      "outbuilding": {
+        "x": 416,
+        "y": 232,
+        "w": 7,
+        "h": 7,
+        "kind": "garage"
+      },
+      "desc": "Shed, dense shrubs and rear gate",
+      "category": "Residential",
+      "site": "4300 × 4400",
+      "footprint": "1300 × 1100",
+      "priority": "Residential plot"
+    },
+    {
+      "id": "H06",
+      "name": "Brick Residence",
+      "x": 411,
+      "y": 257,
+      "w": 43,
+      "h": 44,
+      "fx": 422.9,
+      "fy": 267,
+      "fw": 14,
+      "fh": 12,
+      "outbuilding": {
+        "x": 442,
+        "y": 289,
+        "w": 7,
+        "h": 7,
+        "kind": "shed"
+      },
+      "desc": "Two-car garage, abandoned vehicle",
+      "category": "Residential",
+      "site": "4300 × 4400",
+      "footprint": "1400 × 1200",
+      "priority": "Residential plot"
+    },
+    {
+      "id": "H07",
+      "name": "Repeat House",
+      "x": 411,
+      "y": 316,
+      "w": 43,
+      "h": 44,
+      "fx": 426.5,
+      "fy": 326,
+      "fw": 12,
+      "fh": 10,
+      "outbuilding": {
+        "x": 416,
+        "y": 348,
+        "w": 7,
+        "h": 7,
+        "kind": "workshop"
+      },
+      "desc": "Porch, service access, fenced yard",
+      "category": "Residential",
+      "site": "4300 × 4400",
+      "footprint": "1200 × 1000",
+      "priority": "Residential plot"
+    },
+    {
+      "id": "H08",
+      "name": "Burned House",
+      "x": 411,
+      "y": 373,
+      "w": 43,
+      "h": 44,
+      "fx": 424.2,
+      "fy": 383,
+      "fw": 14,
+      "fh": 13,
+      "outbuilding": {
+        "x": 442,
+        "y": 405,
+        "w": 7,
+        "h": 7,
+        "kind": "greenhouse"
+      },
+      "desc": "Damaged garage, rear debris",
+      "category": "Residential",
+      "site": "4300 × 4400",
+      "footprint": "1400 × 1300",
+      "priority": "Residential plot"
+    },
+    {
+      "id": "H09",
+      "name": "Silent Bungalow",
+      "x": 258,
+      "y": 433,
+      "w": 44,
+      "h": 42,
+      "fx": 271.4,
+      "fy": 450,
+      "fw": 12,
+      "fh": 10,
+      "outbuilding": {
+        "x": 263,
+        "y": 437,
+        "w": 7,
+        "h": 7,
+        "kind": "garage"
+      },
+      "desc": "Privacy fence, small shed",
+      "category": "Residential",
+      "site": "4400 × 4200",
+      "footprint": "1200 × 1000",
+      "priority": "Residential plot"
+    },
+    {
+      "id": "H10",
+      "name": "Watchlight House",
+      "x": 326,
+      "y": 433,
+      "w": 44,
+      "h": 42,
+      "fx": 341.0,
+      "fy": 450,
+      "fw": 14,
+      "fh": 12,
+      "outbuilding": {
+        "x": 358,
+        "y": 437,
+        "w": 7,
+        "h": 7,
+        "kind": "shed"
+      },
+      "desc": "Rear workshop, tower sightline",
+      "category": "Residential",
+      "site": "4400 × 4200",
+      "footprint": "1400 × 1200",
+      "priority": "Residential plot"
+    },
+    {
+      "id": "H11",
+      "name": "Caretaker House",
+      "x": 398,
+      "y": 433,
+      "w": 44,
+      "h": 42,
+      "fx": 412.2,
+      "fy": 450,
+      "fw": 13,
+      "fh": 11,
+      "outbuilding": {
+        "x": 403,
+        "y": 437,
+        "w": 7,
+        "h": 7,
+        "kind": "workshop"
+      },
+      "desc": "Detached garage, shrubs",
+      "category": "Residential",
+      "site": "4400 × 4200",
+      "footprint": "1300 × 1100",
+      "priority": "Residential plot"
+    },
+    {
+      "id": "H12",
+      "name": "Playhouse House",
+      "x": 258,
+      "y": 518,
+      "w": 44,
+      "h": 42,
+      "fx": 271.4,
+      "fy": 525,
+      "fw": 12,
+      "fh": 11,
+      "outbuilding": {
+        "x": 290,
+        "y": 548,
+        "w": 7,
+        "h": 7,
+        "kind": "greenhouse"
+      },
+      "desc": "Playhouse, swing and small shed",
+      "category": "Residential",
+      "site": "4400 × 4200",
+      "footprint": "1200 × 1100",
+      "priority": "Residential plot"
+    },
+    {
+      "id": "H13",
+      "name": "Narrow House",
+      "x": 326,
+      "y": 518,
+      "w": 44,
+      "h": 42,
+      "fx": 342.5,
+      "fy": 525,
+      "fw": 11,
+      "fh": 12,
+      "outbuilding": {
+        "x": 331,
+        "y": 548,
+        "w": 7,
+        "h": 7,
+        "kind": "garage"
+      },
+      "desc": "Side driveway, garden",
+      "category": "Residential",
+      "site": "4400 × 4200",
+      "footprint": "1100 × 1200",
+      "priority": "Residential plot"
+    },
+    {
+      "id": "H14",
+      "name": "Dead-End House",
+      "x": 398,
+      "y": 518,
+      "w": 44,
+      "h": 42,
+      "fx": 411.7,
+      "fy": 525,
+      "fw": 14,
+      "fh": 12,
+      "outbuilding": {
+        "x": 430,
+        "y": 548,
+        "w": 7,
+        "h": 7,
+        "kind": "shed"
+      },
+      "desc": "Old garage, deep back lot",
+      "category": "Residential",
+      "site": "4400 × 4200",
+      "footprint": "1400 × 1200",
+      "priority": "Residential plot"
+    },
+    {
+      "id": "WATER",
+      "name": "Water Tower",
+      "x": 18,
+      "y": 18,
+      "w": 84,
+      "h": 78,
+      "fx": 52.0,
+      "fy": 49.0,
+      "fw": 16,
+      "fh": 16,
+      "category": "Utility",
+      "desc": "Tall water tower on the highest wooded hill, fenced utility base and narrow access road",
+      "site": "8400 × 7800",
+      "footprint": "1600 × 1600",
+      "priority": "Essential",
+      "outbuilding": null
+    },
+    {
+      "id": "CHURCH",
+      "name": "Grand Church",
+      "x": 124,
+      "y": 11,
+      "w": 126,
+      "h": 106,
+      "fx": 164.5,
+      "fy": 49.0,
+      "fw": 45,
+      "fh": 30,
+      "category": "Estate",
+      "desc": "Oversized church with bell tower, front square, grave notices, side paths and fenced grounds",
+      "site": "12600 × 10600",
+      "footprint": "4500 × 3000",
+      "priority": "Essential",
+      "outbuilding": null
+    },
+    {
+      "id": "FOSTER",
+      "name": "Foster House",
+      "x": 271,
+      "y": 11,
+      "w": 120,
+      "h": 106,
+      "fx": 317.0,
+      "fy": 53.0,
+      "fw": 28,
+      "fh": 22,
+      "category": "Estate",
+      "desc": "Large Foster House adjoining church; screened by trees, private rear drive, grounds and side yard",
+      "site": "12000 × 10600",
+      "footprint": "2800 × 2200",
+      "priority": "Essential",
+      "outbuilding": null
+    },
+    {
+      "id": "UTILITY",
+      "name": "Utility Station",
+      "x": 409,
+      "y": 23,
+      "w": 51,
+      "h": 74,
+      "fx": 425.5,
+      "fy": 53.5,
+      "fw": 18,
+      "fh": 13,
+      "category": "Utility",
+      "desc": "Fenced utility station and service staging area on north ridge",
+      "site": "5100 × 7400",
+      "footprint": "1800 × 1300",
+      "priority": "Essential",
+      "outbuilding": null
+    },
+    {
+      "id": "MAINT",
+      "name": "Maintenance Shed",
+      "x": 408,
+      "y": 103,
+      "w": 52,
+      "h": 27,
+      "fx": 427.0,
+      "fy": 111.5,
+      "fw": 14,
+      "fh": 10,
+      "category": "Utility",
+      "desc": "Ridge maintenance shed, separate from cemetery caretaker shed",
+      "site": "5200 × 2700",
+      "footprint": "1400 × 1000",
+      "priority": "Essential",
+      "outbuilding": null
+    },
+    {
+      "id": "PUMP",
+      "name": "Creek Pump House",
+      "x": 415,
+      "y": 164,
+      "w": 46,
+      "h": 28,
+      "fx": 430.0,
+      "fy": 172.0,
+      "fw": 16,
+      "fh": 12,
+      "category": "Utility",
+      "desc": "Creek pumps, drain access and utility service spur",
+      "site": "4600 × 2800",
+      "footprint": "1600 × 1200",
+      "priority": "Medium",
+      "outbuilding": null
+    },
+    {
+      "id": "SCHOOL",
+      "name": "Old Schoolhouse",
+      "x": 29,
+      "y": 182,
+      "w": 117,
+      "h": 40,
+      "fx": 70.0,
+      "fy": 193.0,
+      "fw": 35,
+      "fh": 18,
+      "category": "Civic",
+      "desc": "Historic schoolhouse with fenced play yard and side service access",
+      "site": "11700 × 4000",
+      "footprint": "3500 × 1800",
+      "priority": "High",
+      "outbuilding": null
+    },
+    {
+      "id": "PARK",
+      "name": "Town Park",
+      "x": 28,
+      "y": 233,
+      "w": 112,
+      "h": 77,
+      "fx": 84.0,
+      "fy": 271.5,
+      "fw": 0,
+      "fh": 0,
+      "category": "Green",
+      "desc": "Small park with trees, paths, swing, benches and pedestrian bridge approach",
+      "site": "11200 × 7700",
+      "footprint": "0 × 0",
+      "priority": "Essential",
+      "outbuilding": null
+    },
+    {
+      "id": "HALL",
+      "name": "Town Hall + Sheriff",
+      "x": 146,
+      "y": 221,
+      "w": 72,
+      "h": 90,
+      "fx": 168.0,
+      "fy": 256.0,
+      "fw": 28,
+      "fh": 20,
+      "category": "Civic",
+      "desc": "Town Hall opening onto civic square; sheriff annex and archival records",
+      "site": "7200 × 9000",
+      "footprint": "2800 × 2000",
+      "priority": "Essential",
+      "outbuilding": null
+    },
+    {
+      "id": "CEM",
+      "name": "Old Town Graveyard",
+      "x": 304,
+      "y": 225,
+      "w": 84,
+      "h": 93,
+      "fx": 346.0,
+      "fy": 271.5,
+      "fw": 0,
+      "fh": 0,
+      "category": "Cemetery",
+      "desc": "Old central cemetery, separate from church estate, stone wall and terraced graves",
+      "site": "8400 × 9300",
+      "footprint": "0 × 0",
+      "priority": "Essential",
+      "outbuilding": {
+        "x": 368,
+        "y": 296,
+        "w": 12,
+        "h": 9,
+        "kind": "caretaker shed"
+      }
+    },
+    {
+      "id": "POST",
+      "name": "Post Office",
+      "x": 150,
+      "y": 335,
+      "w": 35,
+      "h": 26,
+      "fx": 156.5,
+      "fy": 341.5,
+      "fw": 22,
+      "fh": 13,
+      "category": "Civic",
+      "desc": "Mailboxes, letters, archives and delivery bay",
+      "site": "3500 × 2600",
+      "footprint": "2200 × 1300",
+      "priority": "Medium",
+      "outbuilding": null
+    },
+    {
+      "id": "LIB",
+      "name": "Public Library",
+      "x": 189,
+      "y": 335,
+      "w": 35,
+      "h": 26,
+      "fx": 195.5,
+      "fy": 341.5,
+      "fw": 22,
+      "fh": 13,
+      "category": "Civic",
+      "desc": "Historic records, reading rooms, clue archives",
+      "site": "3500 × 2600",
+      "footprint": "2200 × 1300",
+      "priority": "Medium",
+      "outbuilding": null
+    },
+    {
+      "id": "FIRE",
+      "name": "Fire Station",
+      "x": 329,
+      "y": 347,
+      "w": 64,
+      "h": 42,
+      "fx": 346.0,
+      "fy": 358.0,
+      "fw": 30,
+      "fh": 20,
+      "category": "Civic",
+      "desc": "Single-bay small-town fire station with apparatus driveway",
+      "site": "6400 × 4200",
+      "footprint": "3000 × 2000",
+      "priority": "High",
+      "outbuilding": null
+    },
+    {
+      "id": "BARBER",
+      "name": "Barber Shop",
+      "x": 151,
+      "y": 365,
+      "w": 18,
+      "h": 34,
+      "fx": 154.0,
+      "fy": 376.5,
+      "fw": 12,
+      "fh": 11,
+      "category": "Commerce",
+      "desc": "Old barber shop with striped pole, mirrors and chairs",
+      "site": "1800 × 3400",
+      "footprint": "1200 × 1100",
+      "priority": "High",
+      "outbuilding": null
+    },
+    {
+      "id": "TATTOO",
+      "name": "Tattoo Shop",
+      "x": 172,
+      "y": 365,
+      "w": 18,
+      "h": 34,
+      "fx": 175.0,
+      "fy": 376.5,
+      "fw": 12,
+      "fh": 11,
+      "category": "Commerce",
+      "desc": "Converted older storefront, visually distinct small business",
+      "site": "1800 × 3400",
+      "footprint": "1200 × 1100",
+      "priority": "Optional but included",
+      "outbuilding": null
+    },
+    {
+      "id": "STORE",
+      "name": "General Store / Pharmacy",
+      "x": 193,
+      "y": 365,
+      "w": 30,
+      "h": 34,
+      "fx": 198.5,
+      "fy": 376.5,
+      "fw": 19,
+      "fh": 11,
+      "category": "Commerce",
+      "desc": "General store and pharmacy in one location",
+      "site": "3000 × 3400",
+      "footprint": "1900 × 1100",
+      "priority": "High",
+      "outbuilding": null
+    },
+    {
+      "id": "DINER",
+      "name": "Diner / Café",
+      "x": 241,
+      "y": 365,
+      "w": 25,
+      "h": 34,
+      "fx": 244.0,
+      "fy": 376.5,
+      "fw": 19,
+      "fh": 11,
+      "category": "Commerce",
+      "desc": "Warm-lit retro diner, unsettling refuge and navigation landmark",
+      "site": "2500 × 3400",
+      "footprint": "1900 × 1100",
+      "priority": "High",
+      "outbuilding": null
+    },
+    {
+      "id": "HARD",
+      "name": "Hardware Store",
+      "x": 270,
+      "y": 365,
+      "w": 25,
+      "h": 34,
+      "fx": 273.0,
+      "fy": 376.5,
+      "fw": 19,
+      "fh": 11,
+      "category": "Commerce",
+      "desc": "Old hardware supplies and rear stock access",
+      "site": "2500 × 3400",
+      "footprint": "1900 × 1100",
+      "priority": "High",
+      "outbuilding": null
+    },
+    {
+      "id": "LAUND",
+      "name": "Laundromat",
+      "x": 299,
+      "y": 365,
+      "w": 25,
+      "h": 34,
+      "fx": 302.0,
+      "fy": 376.5,
+      "fw": 19,
+      "fh": 11,
+      "category": "Commerce",
+      "desc": "Small laundromat with vending machine and rear alley",
+      "site": "2500 × 3400",
+      "footprint": "1900 × 1100",
+      "priority": "High",
+      "outbuilding": null
+    },
+    {
+      "id": "GAS",
+      "name": "Gas Station",
+      "x": 151,
+      "y": 450,
+      "w": 54,
+      "h": 39,
+      "fx": 166.0,
+      "fy": 462.5,
+      "fw": 24,
+      "fh": 14,
+      "category": "Commerce",
+      "desc": "Roadside gas station, pumps and parking",
+      "site": "5400 × 3900",
+      "footprint": "2400 × 1400",
+      "priority": "High",
+      "outbuilding": null
+    }
+  ],
+  "roads": [
+    {
+      "id": "R_MAIN",
+      "label": "Main Street / town-to-bridge spine",
+      "kind": "main",
+      "points": [
+        [
+          232,
+          600
+        ],
+        [
+          232,
+          492
+        ],
+        [
+          232,
+          410
+        ],
+        [
+          232,
+          333
+        ],
+        [
+          241,
+          255
+        ],
+        [
+          260,
+          193
+        ],
+        [
+          265,
+          163
+        ],
+        [
+          265,
+          140
+        ]
+      ],
+      "width": 7,
+      "desc": "Primary public road: town entrance, square, north creek crossing. Approx. 700 UU carriageway; location grades require editor validation."
+    },
+    {
+      "id": "R_NORTH",
+      "label": "Northern ridge switchback / church access",
+      "kind": "main",
+      "points": [
+        [
+          265,
+          140
+        ],
+        [
+          265,
+          128
+        ],
+        [
+          298,
+          126
+        ],
+        [
+          369,
+          126
+        ],
+        [
+          394,
+          121
+        ],
+        [
+          399,
+          111
+        ],
+        [
+          397,
+          104
+        ],
+        [
+          379,
+          100
+        ],
+        [
+          306,
+          100
+        ],
+        [
+          258,
+          100
+        ],
+        [
+          258,
+          78
+        ]
+      ],
+      "width": 7,
+      "desc": "Long scenic switchback: proposed bridge-deck road +300 UU to estate gate +1200 UU over about 321 m (2.8% average design rise). Natural terrain is steeper in places, so cut/fill and local grades MUST be checked in Unreal."
+    },
+    {
+      "id": "R_WEST",
+      "label": "Orchard residential loop",
+      "kind": "residential",
+      "points": [
+        [
+          232,
+          320
+        ],
+        [
+          44,
+          320
+        ],
+        [
+          44,
+          405
+        ],
+        [
+          232,
+          405
+        ]
+      ],
+      "width": 6,
+      "desc": "Residential loop serving west homes, park access and small-town side streets. Designed as a loop, not another broad arterial."
+    },
+    {
+      "id": "R_EAST",
+      "label": "Cemetery/East residential connector",
+      "kind": "residential",
+      "points": [
+        [
+          232,
+          330
+        ],
+        [
+          398,
+          330
+        ],
+        [
+          398,
+          196
+        ]
+      ],
+      "width": 6,
+      "desc": "East neighborhood access facing graveyard and H05–H08; a quieter parallel connection rather than a second Main Street."
+    },
+    {
+      "id": "R_EAST_SOUTH",
+      "label": "East Road lower residential connector",
+      "kind": "residential",
+      "points": [
+        [
+          398,
+          330
+        ],
+        [
+          398,
+          415
+        ]
+      ],
+      "width": 6,
+      "desc": "Connects the east house plots and fire station to the town center."
+    },
+    {
+      "id": "R_MARKET",
+      "label": "Market back street",
+      "kind": "residential",
+      "points": [
+        [
+          232,
+          410
+        ],
+        [
+          398,
+          410
+        ]
+      ],
+      "width": 6,
+      "desc": "Low-speed connecting street for shops, firefighters, and east homes."
+    },
+    {
+      "id": "R_DEADEND",
+      "label": "Briar Lane — uphill dead-end street",
+      "kind": "residential",
+      "points": [
+        [
+          232,
+          500
+        ],
+        [
+          458,
+          500
+        ]
+      ],
+      "width": 6,
+      "desc": "Six house plots on both sides; gently rising toward the woods, ending at a fence. No traffic-circle cul-de-sac."
+    },
+    {
+      "id": "R_WATER",
+      "label": "Water tower maintenance access",
+      "kind": "service",
+      "points": [
+        [
+          258,
+          115
+        ],
+        [
+          222,
+          117
+        ],
+        [
+          150,
+          118
+        ],
+        [
+          111,
+          119
+        ],
+        [
+          107,
+          105
+        ],
+        [
+          101,
+          89
+        ],
+        [
+          94,
+          76
+        ]
+      ],
+      "width": 4,
+      "desc": "Narrow gated service track under the northern ridge, separate from the public road network."
+    },
+    {
+      "id": "R_ESTATES",
+      "label": "Church / Foster service drive",
+      "kind": "service",
+      "points": [
+        [
+          258,
+          78
+        ],
+        [
+          258,
+          29
+        ],
+        [
+          315,
+          29
+        ],
+        [
+          364,
+          29
+        ]
+      ],
+      "width": 4,
+      "desc": "Private property service driveway for the church, Foster House and maintenance access."
+    },
+    {
+      "id": "R_UTILITY",
+      "label": "Utility station spur",
+      "kind": "service",
+      "points": [
+        [
+          399,
+          111
+        ],
+        [
+          423,
+          111
+        ],
+        [
+          429,
+          102
+        ]
+      ],
+      "width": 4,
+      "desc": "Small service-only link to power and town maintenance facilities."
+    },
+    {
+      "id": "R_PUMP",
+      "label": "Creek pump service access",
+      "kind": "service",
+      "points": [
+        [
+          398,
+          196
+        ],
+        [
+          424,
+          196
+        ],
+        [
+          429,
+          184
+        ]
+      ],
+      "width": 4,
+      "desc": "Creek pump house maintenance access; do not confuse this with a public road."
+    },
+    {
+      "id": "R_SHOPS",
+      "label": "Rear commercial service alley",
+      "kind": "service",
+      "points": [
+        [
+          252,
+          409
+        ],
+        [
+          305,
+          409
+        ],
+        [
+          316,
+          421
+        ]
+      ],
+      "width": 3.7,
+      "desc": "Rear deliveries and dumpsters behind the diner, hardware store and laundromat."
+    },
+    {
+      "id": "R_FIRE",
+      "label": "Fire station apron access",
+      "kind": "service",
+      "points": [
+        [
+          365,
+          344
+        ],
+        [
+          365,
+          335
+        ],
+        [
+          398,
+          335
+        ]
+      ],
+      "width": 4,
+      "desc": "Fire station vehicle apron connected to east residential road."
+    },
+    {
+      "id": "R_CREEKPATH",
+      "label": "Creek bank trail",
+      "kind": "path",
+      "points": [
+        [
+          28,
+          165
+        ],
+        [
+          95,
+          163
+        ],
+        [
+          161,
+          163
+        ],
+        [
+          238,
+          165
+        ],
+        [
+          300,
+          161
+        ],
+        [
+          380,
+          163
+        ],
+        [
+          471,
+          163
+        ]
+      ],
+      "width": 2,
+      "desc": "Unpaved walkable creekside trail, separate from vehicle roads."
+    },
+    {
+      "id": "R_PARKBRIDGE",
+      "label": "Park to old pedestrian bridge",
+      "kind": "path",
+      "points": [
+        [
+          100,
+          235
+        ],
+        [
+          97,
+          200
+        ],
+        [
+          97,
+          172
+        ],
+        [
+          97,
+          149
+        ],
+        [
+          97,
+          134
+        ],
+        [
+          91,
+          111
+        ]
+      ],
+      "width": 2,
+      "desc": "Park footpath leading to old pedestrian bridge; bridge may be gated until later progression."
+    }
+  ],
+  "sightlines": {
+    "CHURCH": {
+      "name": "Church bell tower",
+      "target": [
+        188,
+        58
+      ],
+      "story": "A tall roofline and bell tower should orient the player even when the road to the church is inaccessible.",
+      "rays": [
+        [
+          "Arrival road",
+          232,
+          572,
+          "partial",
+          "Bell tower peeks between low roofs"
+        ],
+        [
+          "Town square",
+          230,
+          323,
+          "clear",
+          "Upper tower clears the downtown roofline"
+        ],
+        [
+          "Graveyard gate",
+          300,
+          330,
+          "clear",
+          "Old cemetery looks toward the church"
+        ],
+        [
+          "Park overlook",
+          134,
+          261,
+          "partial",
+          "Framed by tree trunks and foliage"
+        ],
+        [
+          "Creek bridge",
+          265,
+          173,
+          "clear",
+          "Strongest full church reveal at the crossing"
+        ]
+      ]
+    },
+    "FOSTER": {
+      "name": "Foster House",
+      "target": [
+        332,
+        61
+      ],
+      "story": "Only intermittent views. This destination should be seen early but remain partially screened by woods and building masses.",
+      "rays": [
+        [
+          "Arrival road",
+          232,
+          572,
+          "blocked",
+          "Keep hidden by houses at arrival"
+        ],
+        [
+          "Town square",
+          230,
+          323,
+          "blocked",
+          "Ridge and storefronts conceal the house"
+        ],
+        [
+          "Graveyard gate",
+          300,
+          330,
+          "partial",
+          "A high window may be visible between trees"
+        ],
+        [
+          "Park overlook",
+          134,
+          261,
+          "partial",
+          "A narrow unnatural glimpse through the trees"
+        ],
+        [
+          "Creek bridge",
+          265,
+          173,
+          "clear",
+          "House silhouette appears behind church grounds"
+        ],
+        [
+          "Dead-end hill",
+          453,
+          500,
+          "partial",
+          "Single lit upper window on distant ridge"
+        ]
+      ]
+    },
+    "WATER": {
+      "name": "Water tower",
+      "target": [
+        62,
+        51
+      ],
+      "story": "A navigational anchor across much of town. Its silhouette stays recognizable even in fog.",
+      "rays": [
+        [
+          "Arrival road",
+          232,
+          572,
+          "partial",
+          "Distant landmark barely above skyline"
+        ],
+        [
+          "Town square",
+          230,
+          323,
+          "partial",
+          "Canopy partially covers the tower"
+        ],
+        [
+          "Park overlook",
+          134,
+          261,
+          "clear",
+          "Unobstructed view of hilltop silhouette"
+        ],
+        [
+          "Creek bridge",
+          265,
+          173,
+          "clear",
+          "Water tower across the creek valley"
+        ],
+        [
+          "Dead-end hill",
+          453,
+          500,
+          "partial",
+          "Seen above rooftops on clear moments"
+        ]
+      ]
+    }
+  },
+  "source_sha256": {
+    "Penance_Town_Masterplan_Interactive_V4.html": "20ccc0bbc3c51baefaf04ee775dc6ce86ad502cdf528f4e7bd50b7ae1c1c4913",
+    "Penance_Town_Masterplan_V4_Notes.md": "807c64b630eb63c02621191962da04c67f073ada2e1d8ab4f3763a3299cb2b70"
+  },
+  "creek_svg": "M-8 151 C56 145 86 148 125 153 S205 154 265 148 S374 143 490 151",
+  "original_map_sha256": {
+    "Content/Maps/Penance_Persistent.umap": "8d415e5577adee2452ca06637b8db51850c732543ec961ae65cb8c6f31e13524",
+    "Content/Maps/Neighborhood/Penance_Neighborhood_V7.umap": "db3a782be832cca1199e2c2ed5e3d59910b674aee6730a6f2662dfd5fb4ef845",
+    "Content/Maps/Interiors/House01_Interior.umap": "05354309165c2b4af8326564c3b12f70c4e84c07c66c98afb09b74bd0b484faa"
+  }
+}
