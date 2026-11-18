@@ -1,0 +1,8 @@
+{
+  "tree_count": 1967,
+  "instancing": "HISM",
+  "cull_start_m": 180,
+  "cull_end_m": 320,
+  "meshes": "Engine primitives with built-in LODs",
+  "seed": 62026
+}

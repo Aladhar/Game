@@ -1,0 +1,239 @@
+{
+  "map": "/Game/Maps/V6/Penance_Town_V6",
+  "fresh_editor_reload": true,
+  "issues": [
+    "Road surface intrusion: Grave Lane",
+    "Blocked public road: Tower Service",
+    "Road surface intrusion: Tower Service",
+    "Impassable route step: House01 approach"
+  ],
+  "warnings": [],
+  "roads": {
+    "Mill Road": {
+      "samples": 287,
+      "missing_floor": [],
+      "anomalies": [],
+      "blocked": [],
+      "max_grade_pct": 8.71,
+      "width_m": 7
+    },
+    "Main Street": {
+      "samples": 85,
+      "missing_floor": [],
+      "anomalies": [],
+      "blocked": [],
+      "max_grade_pct": 0.0,
+      "width_m": 7
+    },
+    "Orchard Loop": {
+      "samples": 141,
+      "missing_floor": [],
+      "anomalies": [],
+      "blocked": [],
+      "max_grade_pct": 2.17,
+      "width_m": 5.6
+    },
+    "Briar Rise": {
+      "samples": 161,
+      "missing_floor": [],
+      "anomalies": [],
+      "blocked": [],
+      "max_grade_pct": 2.36,
+      "width_m": 5.8
+    },
+    "Foundry Cut": {
+      "samples": 59,
+      "missing_floor": [],
+      "anomalies": [],
+      "blocked": [],
+      "max_grade_pct": 4.66,
+      "width_m": 5.8
+    },
+    "School Lane": {
+      "samples": 116,
+      "missing_floor": [],
+      "anomalies": [],
+      "blocked": [],
+      "max_grade_pct": 0.5,
+      "width_m": 5.6
+    },
+    "Grave Lane": {
+      "samples": 87,
+      "missing_floor": [],
+      "anomalies": [
+        {
+          "x": 289.4037150788419,
+          "y": 161.36667019688198,
+          "cm": 24.92,
+          "actor": "V6_Sidewalk_Foundry_Cut-1"
+        }
+      ],
+      "blocked": [],
+      "max_grade_pct": 21.51,
+      "width_m": 4
+    },
+    "Ridge Road": {
+      "samples": 97,
+      "missing_floor": [],
+      "anomalies": [],
+      "blocked": [],
+      "max_grade_pct": 7.17,
+      "width_m": 6.5
+    },
+    "Estate Drive": {
+      "samples": 163,
+      "missing_floor": [],
+      "anomalies": [],
+      "blocked": [],
+      "max_grade_pct": 6.9,
+      "width_m": 4
+    },
+    "Tower Service": {
+      "samples": 102,
+      "missing_floor": [],
+      "anomalies": [
+        {
+          "x": 26.724149064894824,
+          "y": 180.6350449982583,
+          "cm": 118.52,
+          "actor": "V6_Terrain_0_2_Final"
+        },
+        {
+          "x": 25.047682779224388,
+          "y": 182.35255456965498,
+          "cm": 43.42,
+          "actor": "V6_Terrain_0_2_Final"
+        }
+      ],
+      "blocked": [
+        [
+          25.047682779224388,
+          182.35255456965498,
+          "V6_Terrain_0_2_Final"
+        ]
+      ],
+      "max_grade_pct": 117.4,
+      "width_m": 4
+    }
+  },
+  "routes": {
+    "House01 approach": {
+      "samples": 71,
+      "missing": 0,
+      "max_sample_step_cm": 46.06,
+      "blocked": []
+    },
+    "Park shortcut": {
+      "samples": 172,
+      "missing": 0,
+      "max_sample_step_cm": 40.13,
+      "blocked": []
+    },
+    "Bridge approach": {
+      "samples": 280,
+      "missing": 0,
+      "max_sample_step_cm": 6.65,
+      "blocked": []
+    },
+    "Church threshold": {
+      "samples": 28,
+      "missing": 0,
+      "max_sample_step_cm": 2.5,
+      "blocked": []
+    },
+    "Basement descent": {
+      "samples": 90,
+      "missing": 0,
+      "max_sample_step_cm": 18.0,
+      "blocked": []
+    },
+    "Basement escape": {
+      "samples": 175,
+      "missing": 0,
+      "max_sample_step_cm": 18.0,
+      "blocked": []
+    },
+    "Estate garden": {
+      "samples": 954,
+      "missing": 0,
+      "max_sample_step_cm": 0.71,
+      "blocked": []
+    }
+  },
+  "all_actor_count": 1889,
+  "active_actor_count": 1510,
+  "blueprints": {
+    "/Game/Player/BP_PenancePlayer": "compile invoked in fresh commandlet; compiler log checked",
+    "/Game/Player/Animations/ABP_PenancePlayer": "compile invoked in fresh commandlet; compiler log checked",
+    "/Game/UI/WBP_ObjectiveTracker": "compile invoked in fresh commandlet; compiler log checked"
+  },
+  "lighting": {
+    "force_no_precomputed": true,
+    "lights": [
+      {
+        "label": "V6_Basement_Lamp_363",
+        "mobility": "<ComponentMobility.MOVABLE: 2>"
+      },
+      {
+        "label": "V6_Basement_Lamp_378",
+        "mobility": "<ComponentMobility.MOVABLE: 2>"
+      },
+      {
+        "label": "V6_Basement_Lamp_397",
+        "mobility": "<ComponentMobility.MOVABLE: 2>"
+      },
+      {
+        "label": "V6_House01_WarmPorch",
+        "mobility": "<ComponentMobility.MOVABLE: 2>"
+      },
+      {
+        "label": "V6_Afternoon_Light",
+        "mobility": "<ComponentMobility.MOVABLE: 2>",
+        "priority": 2,
+        "atmosphere_sun": true
+      },
+      {
+        "label": "V6_SkyFill",
+        "mobility": "<ComponentMobility.MOVABLE: 2>"
+      },
+      {
+        "label": "V6_SouthFill",
+        "mobility": "<ComponentMobility.MOVABLE: 2>",
+        "priority": 0,
+        "atmosphere_sun": false
+      },
+      {
+        "label": "V6_WestFill",
+        "mobility": "<ComponentMobility.MOVABLE: 2>",
+        "priority": 0,
+        "atmosphere_sun": false
+      }
+    ]
+  },
+  "manual_walkthrough": false,
+  "original_building_parts_preserved": 510,
+  "game_mode": "/Script/PenanceDemoUE.PenanceDemoGameMode",
+  "building_sites": 35,
+  "houses": 20,
+  "site_m": [
+    400,
+    350
+  ],
+  "bridge_m": [
+    7,
+    37
+  ],
+  "clearances_cm": {
+    "house01": [
+      135,
+      230
+    ],
+    "church": [
+      320,
+      420
+    ],
+    "stairs_width": 300,
+    "enemy_height": 230
+  },
+  "physics_world": "PIE"
+}

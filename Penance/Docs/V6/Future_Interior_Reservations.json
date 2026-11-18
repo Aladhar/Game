@@ -1,0 +1,86 @@
+[
+  {
+    "building": "DINER",
+    "center_m": [
+      128,
+      152,
+      4.9
+    ],
+    "width_m": 21,
+    "depth_m": 9,
+    "floors": 2,
+    "below_ground_m": 3,
+    "status": "RESERVED ONLY",
+    "notes": "shop / store / office"
+  },
+  {
+    "building": "LIBRARY",
+    "center_m": [
+      184.5,
+      152.5,
+      5.1
+    ],
+    "width_m": 21,
+    "depth_m": 12,
+    "floors": 2,
+    "below_ground_m": 4,
+    "status": "RESERVED ONLY",
+    "notes": "reading rooms / records / archives"
+  },
+  {
+    "building": "HALL",
+    "center_m": [
+      214,
+      164,
+      5.3
+    ],
+    "width_m": 20,
+    "depth_m": 14,
+    "floors": 3,
+    "below_ground_m": 4,
+    "status": "RESERVED ONLY",
+    "notes": "public hall / offices / records"
+  },
+  {
+    "building": "SCHOOL",
+    "center_m": [
+      145,
+      184,
+      5.5
+    ],
+    "width_m": 26,
+    "depth_m": 12,
+    "floors": 2,
+    "below_ground_m": 3,
+    "status": "RESERVED ONLY",
+    "notes": "classrooms / staff / utility"
+  },
+  {
+    "building": "CHURCH",
+    "center_m": [
+      145,
+      290,
+      11
+    ],
+    "width_m": 23,
+    "depth_m": 35,
+    "floors": 2,
+    "below_ground_m": 8,
+    "status": "RESERVED ONLY",
+    "notes": "nave preserved; future crypt / service passages"
+  },
+  {
+    "building": "FOSTER",
+    "center_m": [
+      324,
+      291,
+      13
+    ],
+    "width_m": 33,
+    "depth_m": 24,
+    "floors": 3,
+    "below_ground_m": 10,
+    "status": "RESERVED ONLY",
+    "notes": "upper floors / cellar / concealed maintenance"
+  }
+]

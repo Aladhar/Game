@@ -1,0 +1,7142 @@
+[
+  {
+    "label": "V6_H01_WestWall",
+    "building": "H01",
+    "original_scale": [
+      0.24,
+      12.0,
+      6.0
+    ],
+    "v6_scale": [
+      0.24,
+      12.0,
+      6.0
+    ]
+  },
+  {
+    "label": "V6_H01_EastWall",
+    "building": "H01",
+    "original_scale": [
+      0.24,
+      12.0,
+      6.0
+    ],
+    "v6_scale": [
+      0.24,
+      12.0,
+      6.0
+    ]
+  },
+  {
+    "label": "V6_H01_BackWall",
+    "building": "H01",
+    "original_scale": [
+      14.0,
+      0.24,
+      6.0
+    ],
+    "v6_scale": [
+      14.0,
+      0.24,
+      6.0
+    ]
+  },
+  {
+    "label": "V6_H01_Front_-1",
+    "building": "H01",
+    "original_scale": [
+      6.325,
+      0.24,
+      6.0
+    ],
+    "v6_scale": [
+      6.325,
+      0.24,
+      6.0
+    ]
+  },
+  {
+    "label": "V6_H01_Front_1",
+    "building": "H01",
+    "original_scale": [
+      6.325,
+      0.24,
+      6.0
+    ],
+    "v6_scale": [
+      6.325,
+      0.24,
+      6.0
+    ]
+  },
+  {
+    "label": "V6_H01_Header",
+    "building": "H01",
+    "original_scale": [
+      1.35,
+      0.24,
+      3.7
+    ],
+    "v6_scale": [
+      1.35,
+      0.24,
+      3.7
+    ]
+  },
+  {
+    "label": "V6_H01_Floor",
+    "building": "H01",
+    "original_scale": [
+      14.0,
+      12.0,
+      0.2
+    ],
+    "v6_scale": [
+      14.0,
+      12.0,
+      0.2
+    ]
+  },
+  {
+    "label": "V6_H01_GableRoof",
+    "building": "H01",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_H01_Window_-1_0",
+    "building": "H01",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H01_Window_-1_1",
+    "building": "H01",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H01_Window_1_0",
+    "building": "H01",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H01_Window_1_1",
+    "building": "H01",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H01_Porch",
+    "building": "H01",
+    "original_scale": [
+      4.2,
+      2.0,
+      0.12
+    ],
+    "v6_scale": [
+      4.2,
+      2.0,
+      0.12
+    ]
+  },
+  {
+    "label": "V6_H01_PorchAwning",
+    "building": "H01",
+    "original_scale": [
+      4.5,
+      2.5,
+      0.15
+    ],
+    "v6_scale": [
+      4.5,
+      2.5,
+      0.15
+    ]
+  },
+  {
+    "label": "V6_H01_PorchPost_-1",
+    "building": "H01",
+    "original_scale": [
+      0.15,
+      0.15,
+      2.7
+    ],
+    "v6_scale": [
+      0.15,
+      0.15,
+      2.7
+    ]
+  },
+  {
+    "label": "V6_H01_PorchPost_1",
+    "building": "H01",
+    "original_scale": [
+      0.15,
+      0.15,
+      2.7
+    ],
+    "v6_scale": [
+      0.15,
+      0.15,
+      2.7
+    ]
+  },
+  {
+    "label": "V6_H01_Foundation",
+    "building": "H01",
+    "original_scale": [
+      14.5,
+      12.5,
+      0.35
+    ],
+    "v6_scale": [
+      14.5,
+      12.5,
+      0.35
+    ]
+  },
+  {
+    "label": "V6_H02_WestWall",
+    "building": "H02",
+    "original_scale": [
+      0.24,
+      9.0,
+      3.2
+    ],
+    "v6_scale": [
+      0.24,
+      9.0,
+      3.2
+    ]
+  },
+  {
+    "label": "V6_H02_EastWall",
+    "building": "H02",
+    "original_scale": [
+      0.24,
+      9.0,
+      3.2
+    ],
+    "v6_scale": [
+      0.24,
+      9.0,
+      3.2
+    ]
+  },
+  {
+    "label": "V6_H02_BackWall",
+    "building": "H02",
+    "original_scale": [
+      11.0,
+      0.24,
+      3.2
+    ],
+    "v6_scale": [
+      11.0,
+      0.24,
+      3.2
+    ]
+  },
+  {
+    "label": "V6_H02_Front_-1",
+    "building": "H02",
+    "original_scale": [
+      4.825,
+      0.24,
+      3.2
+    ],
+    "v6_scale": [
+      4.825,
+      0.24,
+      3.2
+    ]
+  },
+  {
+    "label": "V6_H02_Front_1",
+    "building": "H02",
+    "original_scale": [
+      4.825,
+      0.24,
+      3.2
+    ],
+    "v6_scale": [
+      4.825,
+      0.24,
+      3.2
+    ]
+  },
+  {
+    "label": "V6_H02_Header",
+    "building": "H02",
+    "original_scale": [
+      1.35,
+      0.24,
+      0.9000000000000004
+    ],
+    "v6_scale": [
+      1.35,
+      0.24,
+      0.9000000000000004
+    ]
+  },
+  {
+    "label": "V6_H02_Floor",
+    "building": "H02",
+    "original_scale": [
+      11.0,
+      9.0,
+      0.2
+    ],
+    "v6_scale": [
+      11.0,
+      9.0,
+      0.2
+    ]
+  },
+  {
+    "label": "V6_H02_ClosedDoor",
+    "building": "H02",
+    "original_scale": [
+      1.35,
+      0.12,
+      2.3
+    ],
+    "v6_scale": [
+      1.35,
+      0.12,
+      2.3
+    ]
+  },
+  {
+    "label": "V6_H02_GableRoof",
+    "building": "H02",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_H02_Window_-1_0",
+    "building": "H02",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H02_Window_-1_1",
+    "building": "H02",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H02_Window_1_0",
+    "building": "H02",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H02_Window_1_1",
+    "building": "H02",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H02_Porch",
+    "building": "H02",
+    "original_scale": [
+      4.2,
+      2.0,
+      0.12
+    ],
+    "v6_scale": [
+      4.2,
+      2.0,
+      0.12
+    ]
+  },
+  {
+    "label": "V6_H02_PorchAwning",
+    "building": "H02",
+    "original_scale": [
+      4.5,
+      2.5,
+      0.15
+    ],
+    "v6_scale": [
+      4.5,
+      2.5,
+      0.15
+    ]
+  },
+  {
+    "label": "V6_H02_PorchPost_-1",
+    "building": "H02",
+    "original_scale": [
+      0.15,
+      0.15,
+      2.7
+    ],
+    "v6_scale": [
+      0.15,
+      0.15,
+      2.7
+    ]
+  },
+  {
+    "label": "V6_H02_PorchPost_1",
+    "building": "H02",
+    "original_scale": [
+      0.15,
+      0.15,
+      2.7
+    ],
+    "v6_scale": [
+      0.15,
+      0.15,
+      2.7
+    ]
+  },
+  {
+    "label": "V6_H02_Foundation",
+    "building": "H02",
+    "original_scale": [
+      11.5,
+      9.5,
+      0.35
+    ],
+    "v6_scale": [
+      11.5,
+      9.5,
+      0.35
+    ]
+  },
+  {
+    "label": "V6_H03_WestWall",
+    "building": "H03",
+    "original_scale": [
+      0.24,
+      10.0,
+      5.6
+    ],
+    "v6_scale": [
+      0.24,
+      10.0,
+      5.6
+    ]
+  },
+  {
+    "label": "V6_H03_EastWall",
+    "building": "H03",
+    "original_scale": [
+      0.24,
+      10.0,
+      5.6
+    ],
+    "v6_scale": [
+      0.24,
+      10.0,
+      5.6
+    ]
+  },
+  {
+    "label": "V6_H03_BackWall",
+    "building": "H03",
+    "original_scale": [
+      13.0,
+      0.24,
+      5.6
+    ],
+    "v6_scale": [
+      13.0,
+      0.24,
+      5.6
+    ]
+  },
+  {
+    "label": "V6_H03_Front_-1",
+    "building": "H03",
+    "original_scale": [
+      5.825,
+      0.24,
+      5.6
+    ],
+    "v6_scale": [
+      5.825,
+      0.24,
+      5.6
+    ]
+  },
+  {
+    "label": "V6_H03_Front_1",
+    "building": "H03",
+    "original_scale": [
+      5.825,
+      0.24,
+      5.6
+    ],
+    "v6_scale": [
+      5.825,
+      0.24,
+      5.6
+    ]
+  },
+  {
+    "label": "V6_H03_Header",
+    "building": "H03",
+    "original_scale": [
+      1.35,
+      0.24,
+      3.3
+    ],
+    "v6_scale": [
+      1.35,
+      0.24,
+      3.3
+    ]
+  },
+  {
+    "label": "V6_H03_Floor",
+    "building": "H03",
+    "original_scale": [
+      13.0,
+      10.0,
+      0.2
+    ],
+    "v6_scale": [
+      13.0,
+      10.0,
+      0.2
+    ]
+  },
+  {
+    "label": "V6_H03_ClosedDoor",
+    "building": "H03",
+    "original_scale": [
+      1.35,
+      0.12,
+      2.3
+    ],
+    "v6_scale": [
+      1.35,
+      0.12,
+      2.3
+    ]
+  },
+  {
+    "label": "V6_H03_GableRoof",
+    "building": "H03",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_H03_Window_-1_0",
+    "building": "H03",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H03_Window_-1_1",
+    "building": "H03",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H03_Window_1_0",
+    "building": "H03",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H03_Window_1_1",
+    "building": "H03",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H03_Porch",
+    "building": "H03",
+    "original_scale": [
+      4.2,
+      2.0,
+      0.12
+    ],
+    "v6_scale": [
+      4.2,
+      2.0,
+      0.12
+    ]
+  },
+  {
+    "label": "V6_H03_PorchAwning",
+    "building": "H03",
+    "original_scale": [
+      4.5,
+      2.5,
+      0.15
+    ],
+    "v6_scale": [
+      4.5,
+      2.5,
+      0.15
+    ]
+  },
+  {
+    "label": "V6_H03_PorchPost_-1",
+    "building": "H03",
+    "original_scale": [
+      0.15,
+      0.15,
+      2.7
+    ],
+    "v6_scale": [
+      0.15,
+      0.15,
+      2.7
+    ]
+  },
+  {
+    "label": "V6_H03_PorchPost_1",
+    "building": "H03",
+    "original_scale": [
+      0.15,
+      0.15,
+      2.7
+    ],
+    "v6_scale": [
+      0.15,
+      0.15,
+      2.7
+    ]
+  },
+  {
+    "label": "V6_H03_Foundation",
+    "building": "H03",
+    "original_scale": [
+      13.5,
+      10.5,
+      0.35
+    ],
+    "v6_scale": [
+      13.5,
+      10.5,
+      0.35
+    ]
+  },
+  {
+    "label": "V6_H04_WestWall",
+    "building": "H04",
+    "original_scale": [
+      0.24,
+      13.0,
+      5.2
+    ],
+    "v6_scale": [
+      0.24,
+      13.0,
+      5.2
+    ]
+  },
+  {
+    "label": "V6_H04_EastWall",
+    "building": "H04",
+    "original_scale": [
+      0.24,
+      13.0,
+      5.2
+    ],
+    "v6_scale": [
+      0.24,
+      13.0,
+      5.2
+    ]
+  },
+  {
+    "label": "V6_H04_BackWall",
+    "building": "H04",
+    "original_scale": [
+      10.0,
+      0.24,
+      5.2
+    ],
+    "v6_scale": [
+      10.0,
+      0.24,
+      5.2
+    ]
+  },
+  {
+    "label": "V6_H04_Front_-1",
+    "building": "H04",
+    "original_scale": [
+      4.325,
+      0.24,
+      5.2
+    ],
+    "v6_scale": [
+      4.325,
+      0.24,
+      5.2
+    ]
+  },
+  {
+    "label": "V6_H04_Front_1",
+    "building": "H04",
+    "original_scale": [
+      4.325,
+      0.24,
+      5.2
+    ],
+    "v6_scale": [
+      4.325,
+      0.24,
+      5.2
+    ]
+  },
+  {
+    "label": "V6_H04_Header",
+    "building": "H04",
+    "original_scale": [
+      1.35,
+      0.24,
+      2.9000000000000004
+    ],
+    "v6_scale": [
+      1.35,
+      0.24,
+      2.9000000000000004
+    ]
+  },
+  {
+    "label": "V6_H04_Floor",
+    "building": "H04",
+    "original_scale": [
+      10.0,
+      13.0,
+      0.2
+    ],
+    "v6_scale": [
+      10.0,
+      13.0,
+      0.2
+    ]
+  },
+  {
+    "label": "V6_H04_ClosedDoor",
+    "building": "H04",
+    "original_scale": [
+      1.35,
+      0.12,
+      2.3
+    ],
+    "v6_scale": [
+      1.35,
+      0.12,
+      2.3
+    ]
+  },
+  {
+    "label": "V6_H04_GableRoof",
+    "building": "H04",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_H04_Window_-1_0",
+    "building": "H04",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H04_Window_-1_1",
+    "building": "H04",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H04_Window_1_0",
+    "building": "H04",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H04_Window_1_1",
+    "building": "H04",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H04_Porch",
+    "building": "H04",
+    "original_scale": [
+      4.2,
+      2.0,
+      0.12
+    ],
+    "v6_scale": [
+      4.2,
+      2.0,
+      0.12
+    ]
+  },
+  {
+    "label": "V6_H04_PorchAwning",
+    "building": "H04",
+    "original_scale": [
+      4.5,
+      2.5,
+      0.15
+    ],
+    "v6_scale": [
+      4.5,
+      2.5,
+      0.15
+    ]
+  },
+  {
+    "label": "V6_H04_PorchPost_-1",
+    "building": "H04",
+    "original_scale": [
+      0.15,
+      0.15,
+      2.7
+    ],
+    "v6_scale": [
+      0.15,
+      0.15,
+      2.7
+    ]
+  },
+  {
+    "label": "V6_H04_PorchPost_1",
+    "building": "H04",
+    "original_scale": [
+      0.15,
+      0.15,
+      2.7
+    ],
+    "v6_scale": [
+      0.15,
+      0.15,
+      2.7
+    ]
+  },
+  {
+    "label": "V6_H04_Foundation",
+    "building": "H04",
+    "original_scale": [
+      10.5,
+      13.5,
+      0.35
+    ],
+    "v6_scale": [
+      10.5,
+      13.5,
+      0.35
+    ]
+  },
+  {
+    "label": "V6_H05_WestWall",
+    "building": "H05",
+    "original_scale": [
+      0.24,
+      9.0,
+      3.2
+    ],
+    "v6_scale": [
+      0.24,
+      9.0,
+      3.2
+    ]
+  },
+  {
+    "label": "V6_H05_EastWall",
+    "building": "H05",
+    "original_scale": [
+      0.24,
+      9.0,
+      3.2
+    ],
+    "v6_scale": [
+      0.24,
+      9.0,
+      3.2
+    ]
+  },
+  {
+    "label": "V6_H05_BackWall",
+    "building": "H05",
+    "original_scale": [
+      10.0,
+      0.24,
+      3.2
+    ],
+    "v6_scale": [
+      10.0,
+      0.24,
+      3.2
+    ]
+  },
+  {
+    "label": "V6_H05_Front_-1",
+    "building": "H05",
+    "original_scale": [
+      4.325,
+      0.24,
+      3.2
+    ],
+    "v6_scale": [
+      4.325,
+      0.24,
+      3.2
+    ]
+  },
+  {
+    "label": "V6_H05_Front_1",
+    "building": "H05",
+    "original_scale": [
+      4.325,
+      0.24,
+      3.2
+    ],
+    "v6_scale": [
+      4.325,
+      0.24,
+      3.2
+    ]
+  },
+  {
+    "label": "V6_H05_Header",
+    "building": "H05",
+    "original_scale": [
+      1.35,
+      0.24,
+      0.9000000000000004
+    ],
+    "v6_scale": [
+      1.35,
+      0.24,
+      0.9000000000000004
+    ]
+  },
+  {
+    "label": "V6_H05_Floor",
+    "building": "H05",
+    "original_scale": [
+      10.0,
+      9.0,
+      0.2
+    ],
+    "v6_scale": [
+      10.0,
+      9.0,
+      0.2
+    ]
+  },
+  {
+    "label": "V6_H05_ClosedDoor",
+    "building": "H05",
+    "original_scale": [
+      1.35,
+      0.12,
+      2.3
+    ],
+    "v6_scale": [
+      1.35,
+      0.12,
+      2.3
+    ]
+  },
+  {
+    "label": "V6_H05_GableRoof",
+    "building": "H05",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_H05_Window_-1_0",
+    "building": "H05",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H05_Window_-1_1",
+    "building": "H05",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H05_Window_1_0",
+    "building": "H05",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H05_Window_1_1",
+    "building": "H05",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H05_Porch",
+    "building": "H05",
+    "original_scale": [
+      4.2,
+      2.0,
+      0.12
+    ],
+    "v6_scale": [
+      4.2,
+      2.0,
+      0.12
+    ]
+  },
+  {
+    "label": "V6_H05_PorchAwning",
+    "building": "H05",
+    "original_scale": [
+      4.5,
+      2.5,
+      0.15
+    ],
+    "v6_scale": [
+      4.5,
+      2.5,
+      0.15
+    ]
+  },
+  {
+    "label": "V6_H05_PorchPost_-1",
+    "building": "H05",
+    "original_scale": [
+      0.15,
+      0.15,
+      2.7
+    ],
+    "v6_scale": [
+      0.15,
+      0.15,
+      2.7
+    ]
+  },
+  {
+    "label": "V6_H05_PorchPost_1",
+    "building": "H05",
+    "original_scale": [
+      0.15,
+      0.15,
+      2.7
+    ],
+    "v6_scale": [
+      0.15,
+      0.15,
+      2.7
+    ]
+  },
+  {
+    "label": "V6_H05_Foundation",
+    "building": "H05",
+    "original_scale": [
+      10.5,
+      9.5,
+      0.35
+    ],
+    "v6_scale": [
+      10.5,
+      9.5,
+      0.35
+    ]
+  },
+  {
+    "label": "V6_H06_WestWall",
+    "building": "H06",
+    "original_scale": [
+      0.24,
+      10.0,
+      3.5
+    ],
+    "v6_scale": [
+      0.24,
+      10.0,
+      3.5
+    ]
+  },
+  {
+    "label": "V6_H06_EastWall",
+    "building": "H06",
+    "original_scale": [
+      0.24,
+      10.0,
+      3.5
+    ],
+    "v6_scale": [
+      0.24,
+      10.0,
+      3.5
+    ]
+  },
+  {
+    "label": "V6_H06_BackWall",
+    "building": "H06",
+    "original_scale": [
+      11.0,
+      0.24,
+      3.5
+    ],
+    "v6_scale": [
+      11.0,
+      0.24,
+      3.5
+    ]
+  },
+  {
+    "label": "V6_H06_Front_-1",
+    "building": "H06",
+    "original_scale": [
+      4.825,
+      0.24,
+      3.5
+    ],
+    "v6_scale": [
+      4.825,
+      0.24,
+      3.5
+    ]
+  },
+  {
+    "label": "V6_H06_Front_1",
+    "building": "H06",
+    "original_scale": [
+      4.825,
+      0.24,
+      3.5
+    ],
+    "v6_scale": [
+      4.825,
+      0.24,
+      3.5
+    ]
+  },
+  {
+    "label": "V6_H06_Header",
+    "building": "H06",
+    "original_scale": [
+      1.35,
+      0.24,
+      1.2000000000000002
+    ],
+    "v6_scale": [
+      1.35,
+      0.24,
+      1.2000000000000002
+    ]
+  },
+  {
+    "label": "V6_H06_Floor",
+    "building": "H06",
+    "original_scale": [
+      11.0,
+      10.0,
+      0.2
+    ],
+    "v6_scale": [
+      11.0,
+      10.0,
+      0.2
+    ]
+  },
+  {
+    "label": "V6_H06_ClosedDoor",
+    "building": "H06",
+    "original_scale": [
+      1.35,
+      0.12,
+      2.3
+    ],
+    "v6_scale": [
+      1.35,
+      0.12,
+      2.3
+    ]
+  },
+  {
+    "label": "V6_H06_GableRoof",
+    "building": "H06",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_H06_Window_-1_0",
+    "building": "H06",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H06_Window_-1_1",
+    "building": "H06",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H06_Window_1_0",
+    "building": "H06",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H06_Window_1_1",
+    "building": "H06",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H06_Porch",
+    "building": "H06",
+    "original_scale": [
+      4.2,
+      2.0,
+      0.12
+    ],
+    "v6_scale": [
+      4.2,
+      2.0,
+      0.12
+    ]
+  },
+  {
+    "label": "V6_H06_PorchAwning",
+    "building": "H06",
+    "original_scale": [
+      4.5,
+      2.5,
+      0.15
+    ],
+    "v6_scale": [
+      4.5,
+      2.5,
+      0.15
+    ]
+  },
+  {
+    "label": "V6_H06_PorchPost_-1",
+    "building": "H06",
+    "original_scale": [
+      0.15,
+      0.15,
+      2.7
+    ],
+    "v6_scale": [
+      0.15,
+      0.15,
+      2.7
+    ]
+  },
+  {
+    "label": "V6_H06_PorchPost_1",
+    "building": "H06",
+    "original_scale": [
+      0.15,
+      0.15,
+      2.7
+    ],
+    "v6_scale": [
+      0.15,
+      0.15,
+      2.7
+    ]
+  },
+  {
+    "label": "V6_H06_Foundation",
+    "building": "H06",
+    "original_scale": [
+      11.5,
+      10.5,
+      0.35
+    ],
+    "v6_scale": [
+      11.5,
+      10.5,
+      0.35
+    ]
+  },
+  {
+    "label": "V6_H07_WestWall",
+    "building": "H07",
+    "original_scale": [
+      0.24,
+      12.0,
+      6.0
+    ],
+    "v6_scale": [
+      0.24,
+      12.0,
+      6.0
+    ]
+  },
+  {
+    "label": "V6_H07_EastWall",
+    "building": "H07",
+    "original_scale": [
+      0.24,
+      12.0,
+      6.0
+    ],
+    "v6_scale": [
+      0.24,
+      12.0,
+      6.0
+    ]
+  },
+  {
+    "label": "V6_H07_BackWall",
+    "building": "H07",
+    "original_scale": [
+      12.0,
+      0.24,
+      6.0
+    ],
+    "v6_scale": [
+      12.0,
+      0.24,
+      6.0
+    ]
+  },
+  {
+    "label": "V6_H07_Front_-1",
+    "building": "H07",
+    "original_scale": [
+      5.325,
+      0.24,
+      6.0
+    ],
+    "v6_scale": [
+      5.325,
+      0.24,
+      6.0
+    ]
+  },
+  {
+    "label": "V6_H07_Front_1",
+    "building": "H07",
+    "original_scale": [
+      5.325,
+      0.24,
+      6.0
+    ],
+    "v6_scale": [
+      5.325,
+      0.24,
+      6.0
+    ]
+  },
+  {
+    "label": "V6_H07_Header",
+    "building": "H07",
+    "original_scale": [
+      1.35,
+      0.24,
+      3.7
+    ],
+    "v6_scale": [
+      1.35,
+      0.24,
+      3.7
+    ]
+  },
+  {
+    "label": "V6_H07_Floor",
+    "building": "H07",
+    "original_scale": [
+      12.0,
+      12.0,
+      0.2
+    ],
+    "v6_scale": [
+      12.0,
+      12.0,
+      0.2
+    ]
+  },
+  {
+    "label": "V6_H07_ClosedDoor",
+    "building": "H07",
+    "original_scale": [
+      1.35,
+      0.12,
+      2.3
+    ],
+    "v6_scale": [
+      1.35,
+      0.12,
+      2.3
+    ]
+  },
+  {
+    "label": "V6_H07_GableRoof",
+    "building": "H07",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_H07_Window_-1_0",
+    "building": "H07",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H07_Window_-1_1",
+    "building": "H07",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H07_Window_1_0",
+    "building": "H07",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H07_Window_1_1",
+    "building": "H07",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H07_Porch",
+    "building": "H07",
+    "original_scale": [
+      4.2,
+      2.0,
+      0.12
+    ],
+    "v6_scale": [
+      4.2,
+      2.0,
+      0.12
+    ]
+  },
+  {
+    "label": "V6_H07_PorchAwning",
+    "building": "H07",
+    "original_scale": [
+      4.5,
+      2.5,
+      0.15
+    ],
+    "v6_scale": [
+      4.5,
+      2.5,
+      0.15
+    ]
+  },
+  {
+    "label": "V6_H07_PorchPost_-1",
+    "building": "H07",
+    "original_scale": [
+      0.15,
+      0.15,
+      2.7
+    ],
+    "v6_scale": [
+      0.15,
+      0.15,
+      2.7
+    ]
+  },
+  {
+    "label": "V6_H07_PorchPost_1",
+    "building": "H07",
+    "original_scale": [
+      0.15,
+      0.15,
+      2.7
+    ],
+    "v6_scale": [
+      0.15,
+      0.15,
+      2.7
+    ]
+  },
+  {
+    "label": "V6_H07_Foundation",
+    "building": "H07",
+    "original_scale": [
+      12.5,
+      12.5,
+      0.35
+    ],
+    "v6_scale": [
+      12.5,
+      12.5,
+      0.35
+    ]
+  },
+  {
+    "label": "V6_H08_WestWall",
+    "building": "H08",
+    "original_scale": [
+      0.24,
+      9.0,
+      3.1
+    ],
+    "v6_scale": [
+      0.24,
+      9.0,
+      3.1
+    ]
+  },
+  {
+    "label": "V6_H08_EastWall",
+    "building": "H08",
+    "original_scale": [
+      0.24,
+      9.0,
+      3.1
+    ],
+    "v6_scale": [
+      0.24,
+      9.0,
+      3.1
+    ]
+  },
+  {
+    "label": "V6_H08_BackWall",
+    "building": "H08",
+    "original_scale": [
+      16.0,
+      0.24,
+      3.1
+    ],
+    "v6_scale": [
+      16.0,
+      0.24,
+      3.1
+    ]
+  },
+  {
+    "label": "V6_H08_Front_-1",
+    "building": "H08",
+    "original_scale": [
+      7.325,
+      0.24,
+      3.1
+    ],
+    "v6_scale": [
+      7.325,
+      0.24,
+      3.1
+    ]
+  },
+  {
+    "label": "V6_H08_Front_1",
+    "building": "H08",
+    "original_scale": [
+      7.325,
+      0.24,
+      3.1
+    ],
+    "v6_scale": [
+      7.325,
+      0.24,
+      3.1
+    ]
+  },
+  {
+    "label": "V6_H08_Header",
+    "building": "H08",
+    "original_scale": [
+      1.35,
+      0.24,
+      0.8000000000000003
+    ],
+    "v6_scale": [
+      1.35,
+      0.24,
+      0.8000000000000003
+    ]
+  },
+  {
+    "label": "V6_H08_Floor",
+    "building": "H08",
+    "original_scale": [
+      16.0,
+      9.0,
+      0.2
+    ],
+    "v6_scale": [
+      16.0,
+      9.0,
+      0.2
+    ]
+  },
+  {
+    "label": "V6_H08_ClosedDoor",
+    "building": "H08",
+    "original_scale": [
+      1.35,
+      0.12,
+      2.3
+    ],
+    "v6_scale": [
+      1.35,
+      0.12,
+      2.3
+    ]
+  },
+  {
+    "label": "V6_H08_GableRoof",
+    "building": "H08",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_H08_Window_-1_0",
+    "building": "H08",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H08_Window_-1_1",
+    "building": "H08",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H08_Window_1_0",
+    "building": "H08",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H08_Window_1_1",
+    "building": "H08",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H08_Porch",
+    "building": "H08",
+    "original_scale": [
+      4.2,
+      2.0,
+      0.12
+    ],
+    "v6_scale": [
+      4.2,
+      2.0,
+      0.12
+    ]
+  },
+  {
+    "label": "V6_H08_PorchAwning",
+    "building": "H08",
+    "original_scale": [
+      4.5,
+      2.5,
+      0.15
+    ],
+    "v6_scale": [
+      4.5,
+      2.5,
+      0.15
+    ]
+  },
+  {
+    "label": "V6_H08_PorchPost_-1",
+    "building": "H08",
+    "original_scale": [
+      0.15,
+      0.15,
+      2.7
+    ],
+    "v6_scale": [
+      0.15,
+      0.15,
+      2.7
+    ]
+  },
+  {
+    "label": "V6_H08_PorchPost_1",
+    "building": "H08",
+    "original_scale": [
+      0.15,
+      0.15,
+      2.7
+    ],
+    "v6_scale": [
+      0.15,
+      0.15,
+      2.7
+    ]
+  },
+  {
+    "label": "V6_H08_Foundation",
+    "building": "H08",
+    "original_scale": [
+      16.5,
+      9.5,
+      0.35
+    ],
+    "v6_scale": [
+      16.5,
+      9.5,
+      0.35
+    ]
+  },
+  {
+    "label": "V6_H09_WestWall",
+    "building": "H09",
+    "original_scale": [
+      0.24,
+      10.0,
+      4.4
+    ],
+    "v6_scale": [
+      0.24,
+      10.0,
+      4.4
+    ]
+  },
+  {
+    "label": "V6_H09_EastWall",
+    "building": "H09",
+    "original_scale": [
+      0.24,
+      10.0,
+      4.4
+    ],
+    "v6_scale": [
+      0.24,
+      10.0,
+      4.4
+    ]
+  },
+  {
+    "label": "V6_H09_BackWall",
+    "building": "H09",
+    "original_scale": [
+      13.0,
+      0.24,
+      4.4
+    ],
+    "v6_scale": [
+      13.0,
+      0.24,
+      4.4
+    ]
+  },
+  {
+    "label": "V6_H09_Front_-1",
+    "building": "H09",
+    "original_scale": [
+      5.825,
+      0.24,
+      4.4
+    ],
+    "v6_scale": [
+      5.825,
+      0.24,
+      4.4
+    ]
+  },
+  {
+    "label": "V6_H09_Front_1",
+    "building": "H09",
+    "original_scale": [
+      5.825,
+      0.24,
+      4.4
+    ],
+    "v6_scale": [
+      5.825,
+      0.24,
+      4.4
+    ]
+  },
+  {
+    "label": "V6_H09_Header",
+    "building": "H09",
+    "original_scale": [
+      1.35,
+      0.24,
+      2.1000000000000005
+    ],
+    "v6_scale": [
+      1.35,
+      0.24,
+      2.1000000000000005
+    ]
+  },
+  {
+    "label": "V6_H09_Floor",
+    "building": "H09",
+    "original_scale": [
+      13.0,
+      10.0,
+      0.2
+    ],
+    "v6_scale": [
+      13.0,
+      10.0,
+      0.2
+    ]
+  },
+  {
+    "label": "V6_H09_ClosedDoor",
+    "building": "H09",
+    "original_scale": [
+      1.35,
+      0.12,
+      2.3
+    ],
+    "v6_scale": [
+      1.35,
+      0.12,
+      2.3
+    ]
+  },
+  {
+    "label": "V6_H09_GableRoof",
+    "building": "H09",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_H09_Window_-1_0",
+    "building": "H09",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H09_Window_-1_1",
+    "building": "H09",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H09_Window_1_0",
+    "building": "H09",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H09_Window_1_1",
+    "building": "H09",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H09_Porch",
+    "building": "H09",
+    "original_scale": [
+      4.2,
+      2.0,
+      0.12
+    ],
+    "v6_scale": [
+      4.2,
+      2.0,
+      0.12
+    ]
+  },
+  {
+    "label": "V6_H09_PorchAwning",
+    "building": "H09",
+    "original_scale": [
+      4.5,
+      2.5,
+      0.15
+    ],
+    "v6_scale": [
+      4.5,
+      2.5,
+      0.15
+    ]
+  },
+  {
+    "label": "V6_H09_PorchPost_-1",
+    "building": "H09",
+    "original_scale": [
+      0.15,
+      0.15,
+      2.7
+    ],
+    "v6_scale": [
+      0.15,
+      0.15,
+      2.7
+    ]
+  },
+  {
+    "label": "V6_H09_PorchPost_1",
+    "building": "H09",
+    "original_scale": [
+      0.15,
+      0.15,
+      2.7
+    ],
+    "v6_scale": [
+      0.15,
+      0.15,
+      2.7
+    ]
+  },
+  {
+    "label": "V6_H09_Foundation",
+    "building": "H09",
+    "original_scale": [
+      13.5,
+      10.5,
+      0.35
+    ],
+    "v6_scale": [
+      13.5,
+      10.5,
+      0.35
+    ]
+  },
+  {
+    "label": "V6_H10_WestWall",
+    "building": "H10",
+    "original_scale": [
+      0.24,
+      12.0,
+      5.8
+    ],
+    "v6_scale": [
+      0.24,
+      12.0,
+      5.8
+    ]
+  },
+  {
+    "label": "V6_H10_EastWall",
+    "building": "H10",
+    "original_scale": [
+      0.24,
+      12.0,
+      5.8
+    ],
+    "v6_scale": [
+      0.24,
+      12.0,
+      5.8
+    ]
+  },
+  {
+    "label": "V6_H10_BackWall",
+    "building": "H10",
+    "original_scale": [
+      11.0,
+      0.24,
+      5.8
+    ],
+    "v6_scale": [
+      11.0,
+      0.24,
+      5.8
+    ]
+  },
+  {
+    "label": "V6_H10_Front_-1",
+    "building": "H10",
+    "original_scale": [
+      4.825,
+      0.24,
+      5.8
+    ],
+    "v6_scale": [
+      4.825,
+      0.24,
+      5.8
+    ]
+  },
+  {
+    "label": "V6_H10_Front_1",
+    "building": "H10",
+    "original_scale": [
+      4.825,
+      0.24,
+      5.8
+    ],
+    "v6_scale": [
+      4.825,
+      0.24,
+      5.8
+    ]
+  },
+  {
+    "label": "V6_H10_Header",
+    "building": "H10",
+    "original_scale": [
+      1.35,
+      0.24,
+      3.5
+    ],
+    "v6_scale": [
+      1.35,
+      0.24,
+      3.5
+    ]
+  },
+  {
+    "label": "V6_H10_Floor",
+    "building": "H10",
+    "original_scale": [
+      11.0,
+      12.0,
+      0.2
+    ],
+    "v6_scale": [
+      11.0,
+      12.0,
+      0.2
+    ]
+  },
+  {
+    "label": "V6_H10_ClosedDoor",
+    "building": "H10",
+    "original_scale": [
+      1.35,
+      0.12,
+      2.3
+    ],
+    "v6_scale": [
+      1.35,
+      0.12,
+      2.3
+    ]
+  },
+  {
+    "label": "V6_H10_GableRoof",
+    "building": "H10",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_H10_Window_-1_0",
+    "building": "H10",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H10_Window_-1_1",
+    "building": "H10",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H10_Window_1_0",
+    "building": "H10",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H10_Window_1_1",
+    "building": "H10",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H10_Porch",
+    "building": "H10",
+    "original_scale": [
+      4.2,
+      2.0,
+      0.12
+    ],
+    "v6_scale": [
+      4.2,
+      2.0,
+      0.12
+    ]
+  },
+  {
+    "label": "V6_H10_PorchAwning",
+    "building": "H10",
+    "original_scale": [
+      4.5,
+      2.5,
+      0.15
+    ],
+    "v6_scale": [
+      4.5,
+      2.5,
+      0.15
+    ]
+  },
+  {
+    "label": "V6_H10_PorchPost_-1",
+    "building": "H10",
+    "original_scale": [
+      0.15,
+      0.15,
+      2.7
+    ],
+    "v6_scale": [
+      0.15,
+      0.15,
+      2.7
+    ]
+  },
+  {
+    "label": "V6_H10_PorchPost_1",
+    "building": "H10",
+    "original_scale": [
+      0.15,
+      0.15,
+      2.7
+    ],
+    "v6_scale": [
+      0.15,
+      0.15,
+      2.7
+    ]
+  },
+  {
+    "label": "V6_H10_Foundation",
+    "building": "H10",
+    "original_scale": [
+      11.5,
+      12.5,
+      0.35
+    ],
+    "v6_scale": [
+      11.5,
+      12.5,
+      0.35
+    ]
+  },
+  {
+    "label": "V6_H11_WestWall",
+    "building": "H11",
+    "original_scale": [
+      0.24,
+      11.0,
+      5.7
+    ],
+    "v6_scale": [
+      0.24,
+      11.0,
+      5.7
+    ]
+  },
+  {
+    "label": "V6_H11_EastWall",
+    "building": "H11",
+    "original_scale": [
+      0.24,
+      11.0,
+      5.7
+    ],
+    "v6_scale": [
+      0.24,
+      11.0,
+      5.7
+    ]
+  },
+  {
+    "label": "V6_H11_BackWall",
+    "building": "H11",
+    "original_scale": [
+      14.0,
+      0.24,
+      5.7
+    ],
+    "v6_scale": [
+      14.0,
+      0.24,
+      5.7
+    ]
+  },
+  {
+    "label": "V6_H11_Front_-1",
+    "building": "H11",
+    "original_scale": [
+      6.325,
+      0.24,
+      5.7
+    ],
+    "v6_scale": [
+      6.325,
+      0.24,
+      5.7
+    ]
+  },
+  {
+    "label": "V6_H11_Front_1",
+    "building": "H11",
+    "original_scale": [
+      6.325,
+      0.24,
+      5.7
+    ],
+    "v6_scale": [
+      6.325,
+      0.24,
+      5.7
+    ]
+  },
+  {
+    "label": "V6_H11_Header",
+    "building": "H11",
+    "original_scale": [
+      1.35,
+      0.24,
+      3.4000000000000004
+    ],
+    "v6_scale": [
+      1.35,
+      0.24,
+      3.4000000000000004
+    ]
+  },
+  {
+    "label": "V6_H11_Floor",
+    "building": "H11",
+    "original_scale": [
+      14.0,
+      11.0,
+      0.2
+    ],
+    "v6_scale": [
+      14.0,
+      11.0,
+      0.2
+    ]
+  },
+  {
+    "label": "V6_H11_ClosedDoor",
+    "building": "H11",
+    "original_scale": [
+      1.35,
+      0.12,
+      2.3
+    ],
+    "v6_scale": [
+      1.35,
+      0.12,
+      2.3
+    ]
+  },
+  {
+    "label": "V6_H11_GableRoof",
+    "building": "H11",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_H11_Window_-1_0",
+    "building": "H11",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H11_Window_-1_1",
+    "building": "H11",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H11_Window_1_0",
+    "building": "H11",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H11_Window_1_1",
+    "building": "H11",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H11_Porch",
+    "building": "H11",
+    "original_scale": [
+      4.2,
+      2.0,
+      0.12
+    ],
+    "v6_scale": [
+      4.2,
+      2.0,
+      0.12
+    ]
+  },
+  {
+    "label": "V6_H11_PorchAwning",
+    "building": "H11",
+    "original_scale": [
+      4.5,
+      2.5,
+      0.15
+    ],
+    "v6_scale": [
+      4.5,
+      2.5,
+      0.15
+    ]
+  },
+  {
+    "label": "V6_H11_PorchPost_-1",
+    "building": "H11",
+    "original_scale": [
+      0.15,
+      0.15,
+      2.7
+    ],
+    "v6_scale": [
+      0.15,
+      0.15,
+      2.7
+    ]
+  },
+  {
+    "label": "V6_H11_PorchPost_1",
+    "building": "H11",
+    "original_scale": [
+      0.15,
+      0.15,
+      2.7
+    ],
+    "v6_scale": [
+      0.15,
+      0.15,
+      2.7
+    ]
+  },
+  {
+    "label": "V6_H11_Foundation",
+    "building": "H11",
+    "original_scale": [
+      14.5,
+      11.5,
+      0.35
+    ],
+    "v6_scale": [
+      14.5,
+      11.5,
+      0.35
+    ]
+  },
+  {
+    "label": "V6_H12_WestWall",
+    "building": "H12",
+    "original_scale": [
+      0.24,
+      12.0,
+      6.0
+    ],
+    "v6_scale": [
+      0.24,
+      12.0,
+      6.0
+    ]
+  },
+  {
+    "label": "V6_H12_EastWall",
+    "building": "H12",
+    "original_scale": [
+      0.24,
+      12.0,
+      6.0
+    ],
+    "v6_scale": [
+      0.24,
+      12.0,
+      6.0
+    ]
+  },
+  {
+    "label": "V6_H12_BackWall",
+    "building": "H12",
+    "original_scale": [
+      13.0,
+      0.24,
+      6.0
+    ],
+    "v6_scale": [
+      13.0,
+      0.24,
+      6.0
+    ]
+  },
+  {
+    "label": "V6_H12_Front_-1",
+    "building": "H12",
+    "original_scale": [
+      5.825,
+      0.24,
+      6.0
+    ],
+    "v6_scale": [
+      5.825,
+      0.24,
+      6.0
+    ]
+  },
+  {
+    "label": "V6_H12_Front_1",
+    "building": "H12",
+    "original_scale": [
+      5.825,
+      0.24,
+      6.0
+    ],
+    "v6_scale": [
+      5.825,
+      0.24,
+      6.0
+    ]
+  },
+  {
+    "label": "V6_H12_Header",
+    "building": "H12",
+    "original_scale": [
+      1.35,
+      0.24,
+      3.7
+    ],
+    "v6_scale": [
+      1.35,
+      0.24,
+      3.7
+    ]
+  },
+  {
+    "label": "V6_H12_Floor",
+    "building": "H12",
+    "original_scale": [
+      13.0,
+      12.0,
+      0.2
+    ],
+    "v6_scale": [
+      13.0,
+      12.0,
+      0.2
+    ]
+  },
+  {
+    "label": "V6_H12_ClosedDoor",
+    "building": "H12",
+    "original_scale": [
+      1.35,
+      0.12,
+      2.3
+    ],
+    "v6_scale": [
+      1.35,
+      0.12,
+      2.3
+    ]
+  },
+  {
+    "label": "V6_H12_GableRoof",
+    "building": "H12",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_H12_Window_-1_0",
+    "building": "H12",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H12_Window_-1_1",
+    "building": "H12",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H12_Window_1_0",
+    "building": "H12",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H12_Window_1_1",
+    "building": "H12",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H12_Porch",
+    "building": "H12",
+    "original_scale": [
+      4.2,
+      2.0,
+      0.12
+    ],
+    "v6_scale": [
+      4.2,
+      2.0,
+      0.12
+    ]
+  },
+  {
+    "label": "V6_H12_PorchAwning",
+    "building": "H12",
+    "original_scale": [
+      4.5,
+      2.5,
+      0.15
+    ],
+    "v6_scale": [
+      4.5,
+      2.5,
+      0.15
+    ]
+  },
+  {
+    "label": "V6_H12_PorchPost_-1",
+    "building": "H12",
+    "original_scale": [
+      0.15,
+      0.15,
+      2.7
+    ],
+    "v6_scale": [
+      0.15,
+      0.15,
+      2.7
+    ]
+  },
+  {
+    "label": "V6_H12_PorchPost_1",
+    "building": "H12",
+    "original_scale": [
+      0.15,
+      0.15,
+      2.7
+    ],
+    "v6_scale": [
+      0.15,
+      0.15,
+      2.7
+    ]
+  },
+  {
+    "label": "V6_H12_Foundation",
+    "building": "H12",
+    "original_scale": [
+      13.5,
+      12.5,
+      0.35
+    ],
+    "v6_scale": [
+      13.5,
+      12.5,
+      0.35
+    ]
+  },
+  {
+    "label": "V6_H13_WestWall",
+    "building": "H13",
+    "original_scale": [
+      0.24,
+      9.0,
+      3.4
+    ],
+    "v6_scale": [
+      0.24,
+      9.0,
+      3.4
+    ]
+  },
+  {
+    "label": "V6_H13_EastWall",
+    "building": "H13",
+    "original_scale": [
+      0.24,
+      9.0,
+      3.4
+    ],
+    "v6_scale": [
+      0.24,
+      9.0,
+      3.4
+    ]
+  },
+  {
+    "label": "V6_H13_BackWall",
+    "building": "H13",
+    "original_scale": [
+      11.0,
+      0.24,
+      3.4
+    ],
+    "v6_scale": [
+      11.0,
+      0.24,
+      3.4
+    ]
+  },
+  {
+    "label": "V6_H13_Front_-1",
+    "building": "H13",
+    "original_scale": [
+      4.825,
+      0.24,
+      3.4
+    ],
+    "v6_scale": [
+      4.825,
+      0.24,
+      3.4
+    ]
+  },
+  {
+    "label": "V6_H13_Front_1",
+    "building": "H13",
+    "original_scale": [
+      4.825,
+      0.24,
+      3.4
+    ],
+    "v6_scale": [
+      4.825,
+      0.24,
+      3.4
+    ]
+  },
+  {
+    "label": "V6_H13_Header",
+    "building": "H13",
+    "original_scale": [
+      1.35,
+      0.24,
+      1.1
+    ],
+    "v6_scale": [
+      1.35,
+      0.24,
+      1.1
+    ]
+  },
+  {
+    "label": "V6_H13_Floor",
+    "building": "H13",
+    "original_scale": [
+      11.0,
+      9.0,
+      0.2
+    ],
+    "v6_scale": [
+      11.0,
+      9.0,
+      0.2
+    ]
+  },
+  {
+    "label": "V6_H13_ClosedDoor",
+    "building": "H13",
+    "original_scale": [
+      1.35,
+      0.12,
+      2.3
+    ],
+    "v6_scale": [
+      1.35,
+      0.12,
+      2.3
+    ]
+  },
+  {
+    "label": "V6_H13_GableRoof",
+    "building": "H13",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_H13_Window_-1_0",
+    "building": "H13",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H13_Window_-1_1",
+    "building": "H13",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H13_Window_1_0",
+    "building": "H13",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H13_Window_1_1",
+    "building": "H13",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H13_Porch",
+    "building": "H13",
+    "original_scale": [
+      4.2,
+      2.0,
+      0.12
+    ],
+    "v6_scale": [
+      4.2,
+      2.0,
+      0.12
+    ]
+  },
+  {
+    "label": "V6_H13_PorchAwning",
+    "building": "H13",
+    "original_scale": [
+      4.5,
+      2.5,
+      0.15
+    ],
+    "v6_scale": [
+      4.5,
+      2.5,
+      0.15
+    ]
+  },
+  {
+    "label": "V6_H13_PorchPost_-1",
+    "building": "H13",
+    "original_scale": [
+      0.15,
+      0.15,
+      2.7
+    ],
+    "v6_scale": [
+      0.15,
+      0.15,
+      2.7
+    ]
+  },
+  {
+    "label": "V6_H13_PorchPost_1",
+    "building": "H13",
+    "original_scale": [
+      0.15,
+      0.15,
+      2.7
+    ],
+    "v6_scale": [
+      0.15,
+      0.15,
+      2.7
+    ]
+  },
+  {
+    "label": "V6_H13_Foundation",
+    "building": "H13",
+    "original_scale": [
+      11.5,
+      9.5,
+      0.35
+    ],
+    "v6_scale": [
+      11.5,
+      9.5,
+      0.35
+    ]
+  },
+  {
+    "label": "V6_H14_WestWall",
+    "building": "H14",
+    "original_scale": [
+      0.24,
+      12.0,
+      5.4
+    ],
+    "v6_scale": [
+      0.24,
+      12.0,
+      5.4
+    ]
+  },
+  {
+    "label": "V6_H14_EastWall",
+    "building": "H14",
+    "original_scale": [
+      0.24,
+      12.0,
+      5.4
+    ],
+    "v6_scale": [
+      0.24,
+      12.0,
+      5.4
+    ]
+  },
+  {
+    "label": "V6_H14_BackWall",
+    "building": "H14",
+    "original_scale": [
+      10.0,
+      0.24,
+      5.4
+    ],
+    "v6_scale": [
+      10.0,
+      0.24,
+      5.4
+    ]
+  },
+  {
+    "label": "V6_H14_Front_-1",
+    "building": "H14",
+    "original_scale": [
+      4.325,
+      0.24,
+      5.4
+    ],
+    "v6_scale": [
+      4.325,
+      0.24,
+      5.4
+    ]
+  },
+  {
+    "label": "V6_H14_Front_1",
+    "building": "H14",
+    "original_scale": [
+      4.325,
+      0.24,
+      5.4
+    ],
+    "v6_scale": [
+      4.325,
+      0.24,
+      5.4
+    ]
+  },
+  {
+    "label": "V6_H14_Header",
+    "building": "H14",
+    "original_scale": [
+      1.35,
+      0.24,
+      3.1000000000000005
+    ],
+    "v6_scale": [
+      1.35,
+      0.24,
+      3.1000000000000005
+    ]
+  },
+  {
+    "label": "V6_H14_Floor",
+    "building": "H14",
+    "original_scale": [
+      10.0,
+      12.0,
+      0.2
+    ],
+    "v6_scale": [
+      10.0,
+      12.0,
+      0.2
+    ]
+  },
+  {
+    "label": "V6_H14_ClosedDoor",
+    "building": "H14",
+    "original_scale": [
+      1.35,
+      0.12,
+      2.3
+    ],
+    "v6_scale": [
+      1.35,
+      0.12,
+      2.3
+    ]
+  },
+  {
+    "label": "V6_H14_GableRoof",
+    "building": "H14",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_H14_Window_-1_0",
+    "building": "H14",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H14_Window_-1_1",
+    "building": "H14",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H14_Window_1_0",
+    "building": "H14",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H14_Window_1_1",
+    "building": "H14",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_H14_Porch",
+    "building": "H14",
+    "original_scale": [
+      4.2,
+      2.0,
+      0.12
+    ],
+    "v6_scale": [
+      4.2,
+      2.0,
+      0.12
+    ]
+  },
+  {
+    "label": "V6_H14_PorchAwning",
+    "building": "H14",
+    "original_scale": [
+      4.5,
+      2.5,
+      0.15
+    ],
+    "v6_scale": [
+      4.5,
+      2.5,
+      0.15
+    ]
+  },
+  {
+    "label": "V6_H14_PorchPost_-1",
+    "building": "H14",
+    "original_scale": [
+      0.15,
+      0.15,
+      2.7
+    ],
+    "v6_scale": [
+      0.15,
+      0.15,
+      2.7
+    ]
+  },
+  {
+    "label": "V6_H14_PorchPost_1",
+    "building": "H14",
+    "original_scale": [
+      0.15,
+      0.15,
+      2.7
+    ],
+    "v6_scale": [
+      0.15,
+      0.15,
+      2.7
+    ]
+  },
+  {
+    "label": "V6_H14_Foundation",
+    "building": "H14",
+    "original_scale": [
+      10.5,
+      12.5,
+      0.35
+    ],
+    "v6_scale": [
+      10.5,
+      12.5,
+      0.35
+    ]
+  },
+  {
+    "label": "V6_GAS_WestWall",
+    "building": "GAS",
+    "original_scale": [
+      0.24,
+      10.0,
+      3.7
+    ],
+    "v6_scale": [
+      0.24,
+      10.0,
+      3.7
+    ]
+  },
+  {
+    "label": "V6_GAS_EastWall",
+    "building": "GAS",
+    "original_scale": [
+      0.24,
+      10.0,
+      3.7
+    ],
+    "v6_scale": [
+      0.24,
+      10.0,
+      3.7
+    ]
+  },
+  {
+    "label": "V6_GAS_BackWall",
+    "building": "GAS",
+    "original_scale": [
+      14.0,
+      0.24,
+      3.7
+    ],
+    "v6_scale": [
+      14.0,
+      0.24,
+      3.7
+    ]
+  },
+  {
+    "label": "V6_GAS_Front_-1",
+    "building": "GAS",
+    "original_scale": [
+      6.325,
+      0.24,
+      3.7
+    ],
+    "v6_scale": [
+      6.325,
+      0.24,
+      3.7
+    ]
+  },
+  {
+    "label": "V6_GAS_Front_1",
+    "building": "GAS",
+    "original_scale": [
+      6.325,
+      0.24,
+      3.7
+    ],
+    "v6_scale": [
+      6.325,
+      0.24,
+      3.7
+    ]
+  },
+  {
+    "label": "V6_GAS_Header",
+    "building": "GAS",
+    "original_scale": [
+      1.35,
+      0.24,
+      1.4000000000000004
+    ],
+    "v6_scale": [
+      1.35,
+      0.24,
+      1.4000000000000004
+    ]
+  },
+  {
+    "label": "V6_GAS_Floor",
+    "building": "GAS",
+    "original_scale": [
+      14.0,
+      10.0,
+      0.2
+    ],
+    "v6_scale": [
+      14.0,
+      10.0,
+      0.2
+    ]
+  },
+  {
+    "label": "V6_GAS_ClosedDoor",
+    "building": "GAS",
+    "original_scale": [
+      1.35,
+      0.12,
+      2.3
+    ],
+    "v6_scale": [
+      1.35,
+      0.12,
+      2.3
+    ]
+  },
+  {
+    "label": "V6_GAS_GableRoof",
+    "building": "GAS",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_GAS_Window_-1_0",
+    "building": "GAS",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_GAS_Window_-1_1",
+    "building": "GAS",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_GAS_Window_1_0",
+    "building": "GAS",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_GAS_Window_1_1",
+    "building": "GAS",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_GAS_Foundation",
+    "building": "GAS",
+    "original_scale": [
+      14.5,
+      10.5,
+      0.35
+    ],
+    "v6_scale": [
+      14.5,
+      10.5,
+      0.35
+    ]
+  },
+  {
+    "label": "V6_GAS_Sign",
+    "building": "GAS",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_DINER_WestWall",
+    "building": "DINER",
+    "original_scale": [
+      0.24,
+      10.0,
+      4.2
+    ],
+    "v6_scale": [
+      0.24,
+      10.0,
+      4.2
+    ]
+  },
+  {
+    "label": "V6_DINER_EastWall",
+    "building": "DINER",
+    "original_scale": [
+      0.24,
+      10.0,
+      4.2
+    ],
+    "v6_scale": [
+      0.24,
+      10.0,
+      4.2
+    ]
+  },
+  {
+    "label": "V6_DINER_BackWall",
+    "building": "DINER",
+    "original_scale": [
+      22.0,
+      0.24,
+      4.2
+    ],
+    "v6_scale": [
+      22.0,
+      0.24,
+      4.2
+    ]
+  },
+  {
+    "label": "V6_DINER_Front_-1",
+    "building": "DINER",
+    "original_scale": [
+      10.325,
+      0.24,
+      4.2
+    ],
+    "v6_scale": [
+      10.325,
+      0.24,
+      4.2
+    ]
+  },
+  {
+    "label": "V6_DINER_Front_1",
+    "building": "DINER",
+    "original_scale": [
+      10.325,
+      0.24,
+      4.2
+    ],
+    "v6_scale": [
+      10.325,
+      0.24,
+      4.2
+    ]
+  },
+  {
+    "label": "V6_DINER_Header",
+    "building": "DINER",
+    "original_scale": [
+      1.35,
+      0.24,
+      1.9000000000000004
+    ],
+    "v6_scale": [
+      1.35,
+      0.24,
+      1.9000000000000004
+    ]
+  },
+  {
+    "label": "V6_DINER_Floor",
+    "building": "DINER",
+    "original_scale": [
+      22.0,
+      10.0,
+      0.2
+    ],
+    "v6_scale": [
+      22.0,
+      10.0,
+      0.2
+    ]
+  },
+  {
+    "label": "V6_DINER_ClosedDoor",
+    "building": "DINER",
+    "original_scale": [
+      1.35,
+      0.12,
+      2.3
+    ],
+    "v6_scale": [
+      1.35,
+      0.12,
+      2.3
+    ]
+  },
+  {
+    "label": "V6_DINER_GableRoof",
+    "building": "DINER",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_DINER_Window_-1_0",
+    "building": "DINER",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_DINER_Window_-1_1",
+    "building": "DINER",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_DINER_Window_1_0",
+    "building": "DINER",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_DINER_Window_1_1",
+    "building": "DINER",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_DINER_Foundation",
+    "building": "DINER",
+    "original_scale": [
+      22.5,
+      10.5,
+      0.35
+    ],
+    "v6_scale": [
+      22.5,
+      10.5,
+      0.35
+    ]
+  },
+  {
+    "label": "V6_DINER_Sign",
+    "building": "DINER",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_POST_WestWall",
+    "building": "POST",
+    "original_scale": [
+      0.24,
+      10.0,
+      5.0
+    ],
+    "v6_scale": [
+      0.24,
+      10.0,
+      5.0
+    ]
+  },
+  {
+    "label": "V6_POST_EastWall",
+    "building": "POST",
+    "original_scale": [
+      0.24,
+      10.0,
+      5.0
+    ],
+    "v6_scale": [
+      0.24,
+      10.0,
+      5.0
+    ]
+  },
+  {
+    "label": "V6_POST_BackWall",
+    "building": "POST",
+    "original_scale": [
+      13.0,
+      0.24,
+      5.0
+    ],
+    "v6_scale": [
+      13.0,
+      0.24,
+      5.0
+    ]
+  },
+  {
+    "label": "V6_POST_Front_-1",
+    "building": "POST",
+    "original_scale": [
+      5.825,
+      0.24,
+      5.0
+    ],
+    "v6_scale": [
+      5.825,
+      0.24,
+      5.0
+    ]
+  },
+  {
+    "label": "V6_POST_Front_1",
+    "building": "POST",
+    "original_scale": [
+      5.825,
+      0.24,
+      5.0
+    ],
+    "v6_scale": [
+      5.825,
+      0.24,
+      5.0
+    ]
+  },
+  {
+    "label": "V6_POST_Header",
+    "building": "POST",
+    "original_scale": [
+      1.35,
+      0.24,
+      2.7
+    ],
+    "v6_scale": [
+      1.35,
+      0.24,
+      2.7
+    ]
+  },
+  {
+    "label": "V6_POST_Floor",
+    "building": "POST",
+    "original_scale": [
+      13.0,
+      10.0,
+      0.2
+    ],
+    "v6_scale": [
+      13.0,
+      10.0,
+      0.2
+    ]
+  },
+  {
+    "label": "V6_POST_ClosedDoor",
+    "building": "POST",
+    "original_scale": [
+      1.35,
+      0.12,
+      2.3
+    ],
+    "v6_scale": [
+      1.35,
+      0.12,
+      2.3
+    ]
+  },
+  {
+    "label": "V6_POST_GableRoof",
+    "building": "POST",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_POST_Window_-1_0",
+    "building": "POST",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_POST_Window_-1_1",
+    "building": "POST",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_POST_Window_1_0",
+    "building": "POST",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_POST_Window_1_1",
+    "building": "POST",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_POST_Foundation",
+    "building": "POST",
+    "original_scale": [
+      13.5,
+      10.5,
+      0.35
+    ],
+    "v6_scale": [
+      13.5,
+      10.5,
+      0.35
+    ]
+  },
+  {
+    "label": "V6_POST_Sign",
+    "building": "POST",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_BARBER_WestWall",
+    "building": "BARBER",
+    "original_scale": [
+      0.24,
+      10.0,
+      5.8
+    ],
+    "v6_scale": [
+      0.24,
+      10.0,
+      5.8
+    ]
+  },
+  {
+    "label": "V6_BARBER_EastWall",
+    "building": "BARBER",
+    "original_scale": [
+      0.24,
+      10.0,
+      5.8
+    ],
+    "v6_scale": [
+      0.24,
+      10.0,
+      5.8
+    ]
+  },
+  {
+    "label": "V6_BARBER_BackWall",
+    "building": "BARBER",
+    "original_scale": [
+      16.0,
+      0.24,
+      5.8
+    ],
+    "v6_scale": [
+      16.0,
+      0.24,
+      5.8
+    ]
+  },
+  {
+    "label": "V6_BARBER_Front_-1",
+    "building": "BARBER",
+    "original_scale": [
+      7.325,
+      0.24,
+      5.8
+    ],
+    "v6_scale": [
+      7.325,
+      0.24,
+      5.8
+    ]
+  },
+  {
+    "label": "V6_BARBER_Front_1",
+    "building": "BARBER",
+    "original_scale": [
+      7.325,
+      0.24,
+      5.8
+    ],
+    "v6_scale": [
+      7.325,
+      0.24,
+      5.8
+    ]
+  },
+  {
+    "label": "V6_BARBER_Header",
+    "building": "BARBER",
+    "original_scale": [
+      1.35,
+      0.24,
+      3.5
+    ],
+    "v6_scale": [
+      1.35,
+      0.24,
+      3.5
+    ]
+  },
+  {
+    "label": "V6_BARBER_Floor",
+    "building": "BARBER",
+    "original_scale": [
+      16.0,
+      10.0,
+      0.2
+    ],
+    "v6_scale": [
+      16.0,
+      10.0,
+      0.2
+    ]
+  },
+  {
+    "label": "V6_BARBER_ClosedDoor",
+    "building": "BARBER",
+    "original_scale": [
+      1.35,
+      0.12,
+      2.3
+    ],
+    "v6_scale": [
+      1.35,
+      0.12,
+      2.3
+    ]
+  },
+  {
+    "label": "V6_BARBER_GableRoof",
+    "building": "BARBER",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_BARBER_Window_-1_0",
+    "building": "BARBER",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_BARBER_Window_-1_1",
+    "building": "BARBER",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_BARBER_Window_1_0",
+    "building": "BARBER",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_BARBER_Window_1_1",
+    "building": "BARBER",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_BARBER_Foundation",
+    "building": "BARBER",
+    "original_scale": [
+      16.5,
+      10.5,
+      0.35
+    ],
+    "v6_scale": [
+      16.5,
+      10.5,
+      0.35
+    ]
+  },
+  {
+    "label": "V6_BARBER_Sign",
+    "building": "BARBER",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_LIBRARY_WestWall",
+    "building": "LIBRARY",
+    "original_scale": [
+      0.24,
+      13.0,
+      6.0
+    ],
+    "v6_scale": [
+      0.24,
+      13.0,
+      6.0
+    ]
+  },
+  {
+    "label": "V6_LIBRARY_EastWall",
+    "building": "LIBRARY",
+    "original_scale": [
+      0.24,
+      13.0,
+      6.0
+    ],
+    "v6_scale": [
+      0.24,
+      13.0,
+      6.0
+    ]
+  },
+  {
+    "label": "V6_LIBRARY_BackWall",
+    "building": "LIBRARY",
+    "original_scale": [
+      22.0,
+      0.24,
+      6.0
+    ],
+    "v6_scale": [
+      22.0,
+      0.24,
+      6.0
+    ]
+  },
+  {
+    "label": "V6_LIBRARY_Front_-1",
+    "building": "LIBRARY",
+    "original_scale": [
+      10.325,
+      0.24,
+      6.0
+    ],
+    "v6_scale": [
+      10.325,
+      0.24,
+      6.0
+    ]
+  },
+  {
+    "label": "V6_LIBRARY_Front_1",
+    "building": "LIBRARY",
+    "original_scale": [
+      10.325,
+      0.24,
+      6.0
+    ],
+    "v6_scale": [
+      10.325,
+      0.24,
+      6.0
+    ]
+  },
+  {
+    "label": "V6_LIBRARY_Header",
+    "building": "LIBRARY",
+    "original_scale": [
+      1.35,
+      0.24,
+      3.7
+    ],
+    "v6_scale": [
+      1.35,
+      0.24,
+      3.7
+    ]
+  },
+  {
+    "label": "V6_LIBRARY_Floor",
+    "building": "LIBRARY",
+    "original_scale": [
+      22.0,
+      13.0,
+      0.2
+    ],
+    "v6_scale": [
+      22.0,
+      13.0,
+      0.2
+    ]
+  },
+  {
+    "label": "V6_LIBRARY_ClosedDoor",
+    "building": "LIBRARY",
+    "original_scale": [
+      1.35,
+      0.12,
+      2.3
+    ],
+    "v6_scale": [
+      1.35,
+      0.12,
+      2.3
+    ]
+  },
+  {
+    "label": "V6_LIBRARY_GableRoof",
+    "building": "LIBRARY",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_LIBRARY_Window_-1_0",
+    "building": "LIBRARY",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_LIBRARY_Window_-1_1",
+    "building": "LIBRARY",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_LIBRARY_Window_1_0",
+    "building": "LIBRARY",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_LIBRARY_Window_1_1",
+    "building": "LIBRARY",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_LIBRARY_Foundation",
+    "building": "LIBRARY",
+    "original_scale": [
+      22.5,
+      13.5,
+      0.35
+    ],
+    "v6_scale": [
+      22.5,
+      13.5,
+      0.35
+    ]
+  },
+  {
+    "label": "V6_LIBRARY_Sign",
+    "building": "LIBRARY",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_HALL_WestWall",
+    "building": "HALL",
+    "original_scale": [
+      0.24,
+      15.0,
+      7.0
+    ],
+    "v6_scale": [
+      0.24,
+      15.0,
+      7.0
+    ]
+  },
+  {
+    "label": "V6_HALL_EastWall",
+    "building": "HALL",
+    "original_scale": [
+      0.24,
+      15.0,
+      7.0
+    ],
+    "v6_scale": [
+      0.24,
+      15.0,
+      7.0
+    ]
+  },
+  {
+    "label": "V6_HALL_BackWall",
+    "building": "HALL",
+    "original_scale": [
+      21.0,
+      0.24,
+      7.0
+    ],
+    "v6_scale": [
+      21.0,
+      0.24,
+      7.0
+    ]
+  },
+  {
+    "label": "V6_HALL_Front_-1",
+    "building": "HALL",
+    "original_scale": [
+      9.825,
+      0.24,
+      7.0
+    ],
+    "v6_scale": [
+      9.825,
+      0.24,
+      7.0
+    ]
+  },
+  {
+    "label": "V6_HALL_Front_1",
+    "building": "HALL",
+    "original_scale": [
+      9.825,
+      0.24,
+      7.0
+    ],
+    "v6_scale": [
+      9.825,
+      0.24,
+      7.0
+    ]
+  },
+  {
+    "label": "V6_HALL_Header",
+    "building": "HALL",
+    "original_scale": [
+      1.35,
+      0.24,
+      4.7
+    ],
+    "v6_scale": [
+      1.35,
+      0.24,
+      4.7
+    ]
+  },
+  {
+    "label": "V6_HALL_Floor",
+    "building": "HALL",
+    "original_scale": [
+      21.0,
+      15.0,
+      0.2
+    ],
+    "v6_scale": [
+      21.0,
+      15.0,
+      0.2
+    ]
+  },
+  {
+    "label": "V6_HALL_ClosedDoor",
+    "building": "HALL",
+    "original_scale": [
+      1.35,
+      0.12,
+      2.3
+    ],
+    "v6_scale": [
+      1.35,
+      0.12,
+      2.3
+    ]
+  },
+  {
+    "label": "V6_HALL_GableRoof",
+    "building": "HALL",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_HALL_Window_-1_0",
+    "building": "HALL",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_HALL_Window_-1_1",
+    "building": "HALL",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_HALL_Window_1_0",
+    "building": "HALL",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_HALL_Window_1_1",
+    "building": "HALL",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_HALL_Foundation",
+    "building": "HALL",
+    "original_scale": [
+      21.5,
+      15.5,
+      0.35
+    ],
+    "v6_scale": [
+      21.5,
+      15.5,
+      0.35
+    ]
+  },
+  {
+    "label": "V6_HALL_Sign",
+    "building": "HALL",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_SHERIFF_WestWall",
+    "building": "SHERIFF",
+    "original_scale": [
+      0.24,
+      11.0,
+      4.0
+    ],
+    "v6_scale": [
+      0.24,
+      11.0,
+      4.0
+    ]
+  },
+  {
+    "label": "V6_SHERIFF_EastWall",
+    "building": "SHERIFF",
+    "original_scale": [
+      0.24,
+      11.0,
+      4.0
+    ],
+    "v6_scale": [
+      0.24,
+      11.0,
+      4.0
+    ]
+  },
+  {
+    "label": "V6_SHERIFF_BackWall",
+    "building": "SHERIFF",
+    "original_scale": [
+      12.0,
+      0.24,
+      4.0
+    ],
+    "v6_scale": [
+      12.0,
+      0.24,
+      4.0
+    ]
+  },
+  {
+    "label": "V6_SHERIFF_Front_-1",
+    "building": "SHERIFF",
+    "original_scale": [
+      5.325,
+      0.24,
+      4.0
+    ],
+    "v6_scale": [
+      5.325,
+      0.24,
+      4.0
+    ]
+  },
+  {
+    "label": "V6_SHERIFF_Front_1",
+    "building": "SHERIFF",
+    "original_scale": [
+      5.325,
+      0.24,
+      4.0
+    ],
+    "v6_scale": [
+      5.325,
+      0.24,
+      4.0
+    ]
+  },
+  {
+    "label": "V6_SHERIFF_Header",
+    "building": "SHERIFF",
+    "original_scale": [
+      1.35,
+      0.24,
+      1.7000000000000002
+    ],
+    "v6_scale": [
+      1.35,
+      0.24,
+      1.7000000000000002
+    ]
+  },
+  {
+    "label": "V6_SHERIFF_Floor",
+    "building": "SHERIFF",
+    "original_scale": [
+      12.0,
+      11.0,
+      0.2
+    ],
+    "v6_scale": [
+      12.0,
+      11.0,
+      0.2
+    ]
+  },
+  {
+    "label": "V6_SHERIFF_ClosedDoor",
+    "building": "SHERIFF",
+    "original_scale": [
+      1.35,
+      0.12,
+      2.3
+    ],
+    "v6_scale": [
+      1.35,
+      0.12,
+      2.3
+    ]
+  },
+  {
+    "label": "V6_SHERIFF_GableRoof",
+    "building": "SHERIFF",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_SHERIFF_Window_-1_0",
+    "building": "SHERIFF",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_SHERIFF_Window_-1_1",
+    "building": "SHERIFF",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_SHERIFF_Window_1_0",
+    "building": "SHERIFF",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_SHERIFF_Window_1_1",
+    "building": "SHERIFF",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_SHERIFF_Foundation",
+    "building": "SHERIFF",
+    "original_scale": [
+      12.5,
+      11.5,
+      0.35
+    ],
+    "v6_scale": [
+      12.5,
+      11.5,
+      0.35
+    ]
+  },
+  {
+    "label": "V6_SHERIFF_Sign",
+    "building": "SHERIFF",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_SCHOOL_WestWall",
+    "building": "SCHOOL",
+    "original_scale": [
+      0.24,
+      13.0,
+      5.0
+    ],
+    "v6_scale": [
+      0.24,
+      13.0,
+      5.0
+    ]
+  },
+  {
+    "label": "V6_SCHOOL_EastWall",
+    "building": "SCHOOL",
+    "original_scale": [
+      0.24,
+      13.0,
+      5.0
+    ],
+    "v6_scale": [
+      0.24,
+      13.0,
+      5.0
+    ]
+  },
+  {
+    "label": "V6_SCHOOL_BackWall",
+    "building": "SCHOOL",
+    "original_scale": [
+      27.0,
+      0.24,
+      5.0
+    ],
+    "v6_scale": [
+      27.0,
+      0.24,
+      5.0
+    ]
+  },
+  {
+    "label": "V6_SCHOOL_Front_-1",
+    "building": "SCHOOL",
+    "original_scale": [
+      12.825,
+      0.24,
+      5.0
+    ],
+    "v6_scale": [
+      12.825,
+      0.24,
+      5.0
+    ]
+  },
+  {
+    "label": "V6_SCHOOL_Front_1",
+    "building": "SCHOOL",
+    "original_scale": [
+      12.825,
+      0.24,
+      5.0
+    ],
+    "v6_scale": [
+      12.825,
+      0.24,
+      5.0
+    ]
+  },
+  {
+    "label": "V6_SCHOOL_Header",
+    "building": "SCHOOL",
+    "original_scale": [
+      1.35,
+      0.24,
+      2.7
+    ],
+    "v6_scale": [
+      1.35,
+      0.24,
+      2.7
+    ]
+  },
+  {
+    "label": "V6_SCHOOL_Floor",
+    "building": "SCHOOL",
+    "original_scale": [
+      27.0,
+      13.0,
+      0.2
+    ],
+    "v6_scale": [
+      27.0,
+      13.0,
+      0.2
+    ]
+  },
+  {
+    "label": "V6_SCHOOL_ClosedDoor",
+    "building": "SCHOOL",
+    "original_scale": [
+      1.35,
+      0.12,
+      2.3
+    ],
+    "v6_scale": [
+      1.35,
+      0.12,
+      2.3
+    ]
+  },
+  {
+    "label": "V6_SCHOOL_GableRoof",
+    "building": "SCHOOL",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_SCHOOL_Window_-1_0",
+    "building": "SCHOOL",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_SCHOOL_Window_-1_1",
+    "building": "SCHOOL",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_SCHOOL_Window_1_0",
+    "building": "SCHOOL",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_SCHOOL_Window_1_1",
+    "building": "SCHOOL",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_SCHOOL_Foundation",
+    "building": "SCHOOL",
+    "original_scale": [
+      27.5,
+      13.5,
+      0.35
+    ],
+    "v6_scale": [
+      27.5,
+      13.5,
+      0.35
+    ]
+  },
+  {
+    "label": "V6_SCHOOL_Sign",
+    "building": "SCHOOL",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_FIRE_WestWall",
+    "building": "FIRE",
+    "original_scale": [
+      0.24,
+      16.0,
+      5.2
+    ],
+    "v6_scale": [
+      0.24,
+      16.0,
+      5.2
+    ]
+  },
+  {
+    "label": "V6_FIRE_EastWall",
+    "building": "FIRE",
+    "original_scale": [
+      0.24,
+      16.0,
+      5.2
+    ],
+    "v6_scale": [
+      0.24,
+      16.0,
+      5.2
+    ]
+  },
+  {
+    "label": "V6_FIRE_BackWall",
+    "building": "FIRE",
+    "original_scale": [
+      22.0,
+      0.24,
+      5.2
+    ],
+    "v6_scale": [
+      22.0,
+      0.24,
+      5.2
+    ]
+  },
+  {
+    "label": "V6_FIRE_Front_-1",
+    "building": "FIRE",
+    "original_scale": [
+      10.325,
+      0.24,
+      5.2
+    ],
+    "v6_scale": [
+      10.325,
+      0.24,
+      5.2
+    ]
+  },
+  {
+    "label": "V6_FIRE_Front_1",
+    "building": "FIRE",
+    "original_scale": [
+      10.325,
+      0.24,
+      5.2
+    ],
+    "v6_scale": [
+      10.325,
+      0.24,
+      5.2
+    ]
+  },
+  {
+    "label": "V6_FIRE_Header",
+    "building": "FIRE",
+    "original_scale": [
+      1.35,
+      0.24,
+      2.9000000000000004
+    ],
+    "v6_scale": [
+      1.35,
+      0.24,
+      2.9000000000000004
+    ]
+  },
+  {
+    "label": "V6_FIRE_Floor",
+    "building": "FIRE",
+    "original_scale": [
+      22.0,
+      16.0,
+      0.2
+    ],
+    "v6_scale": [
+      22.0,
+      16.0,
+      0.2
+    ]
+  },
+  {
+    "label": "V6_FIRE_ClosedDoor",
+    "building": "FIRE",
+    "original_scale": [
+      1.35,
+      0.12,
+      2.3
+    ],
+    "v6_scale": [
+      1.35,
+      0.12,
+      2.3
+    ]
+  },
+  {
+    "label": "V6_FIRE_GableRoof",
+    "building": "FIRE",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_FIRE_Window_-1_0",
+    "building": "FIRE",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_FIRE_Window_-1_1",
+    "building": "FIRE",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_FIRE_Window_-1_2",
+    "building": "FIRE",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_FIRE_Window_-1_3",
+    "building": "FIRE",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_FIRE_Window_1_0",
+    "building": "FIRE",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_FIRE_Window_1_1",
+    "building": "FIRE",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_FIRE_Window_1_2",
+    "building": "FIRE",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_FIRE_Window_1_3",
+    "building": "FIRE",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_FIRE_Foundation",
+    "building": "FIRE",
+    "original_scale": [
+      22.5,
+      16.5,
+      0.35
+    ],
+    "v6_scale": [
+      22.5,
+      16.5,
+      0.35
+    ]
+  },
+  {
+    "label": "V6_CARE_WestWall",
+    "building": "CARE",
+    "original_scale": [
+      0.24,
+      8.0,
+      3.2
+    ],
+    "v6_scale": [
+      0.24,
+      8.0,
+      3.2
+    ]
+  },
+  {
+    "label": "V6_CARE_EastWall",
+    "building": "CARE",
+    "original_scale": [
+      0.24,
+      8.0,
+      3.2
+    ],
+    "v6_scale": [
+      0.24,
+      8.0,
+      3.2
+    ]
+  },
+  {
+    "label": "V6_CARE_BackWall",
+    "building": "CARE",
+    "original_scale": [
+      8.0,
+      0.24,
+      3.2
+    ],
+    "v6_scale": [
+      8.0,
+      0.24,
+      3.2
+    ]
+  },
+  {
+    "label": "V6_CARE_Front_-1",
+    "building": "CARE",
+    "original_scale": [
+      3.325,
+      0.24,
+      3.2
+    ],
+    "v6_scale": [
+      3.325,
+      0.24,
+      3.2
+    ]
+  },
+  {
+    "label": "V6_CARE_Front_1",
+    "building": "CARE",
+    "original_scale": [
+      3.325,
+      0.24,
+      3.2
+    ],
+    "v6_scale": [
+      3.325,
+      0.24,
+      3.2
+    ]
+  },
+  {
+    "label": "V6_CARE_Header",
+    "building": "CARE",
+    "original_scale": [
+      1.35,
+      0.24,
+      0.9000000000000004
+    ],
+    "v6_scale": [
+      1.35,
+      0.24,
+      0.9000000000000004
+    ]
+  },
+  {
+    "label": "V6_CARE_Floor",
+    "building": "CARE",
+    "original_scale": [
+      8.0,
+      8.0,
+      0.2
+    ],
+    "v6_scale": [
+      8.0,
+      8.0,
+      0.2
+    ]
+  },
+  {
+    "label": "V6_CARE_ClosedDoor",
+    "building": "CARE",
+    "original_scale": [
+      1.35,
+      0.12,
+      2.3
+    ],
+    "v6_scale": [
+      1.35,
+      0.12,
+      2.3
+    ]
+  },
+  {
+    "label": "V6_CARE_GableRoof",
+    "building": "CARE",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_CARE_Window_-1_0",
+    "building": "CARE",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_CARE_Window_-1_1",
+    "building": "CARE",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_CARE_Window_1_0",
+    "building": "CARE",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_CARE_Window_1_1",
+    "building": "CARE",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_CARE_Foundation",
+    "building": "CARE",
+    "original_scale": [
+      8.5,
+      8.5,
+      0.35
+    ],
+    "v6_scale": [
+      8.5,
+      8.5,
+      0.35
+    ]
+  },
+  {
+    "label": "V6_PUMP_WestWall",
+    "building": "PUMP",
+    "original_scale": [
+      0.24,
+      8.0,
+      4.0
+    ],
+    "v6_scale": [
+      0.24,
+      8.0,
+      4.0
+    ]
+  },
+  {
+    "label": "V6_PUMP_EastWall",
+    "building": "PUMP",
+    "original_scale": [
+      0.24,
+      8.0,
+      4.0
+    ],
+    "v6_scale": [
+      0.24,
+      8.0,
+      4.0
+    ]
+  },
+  {
+    "label": "V6_PUMP_BackWall",
+    "building": "PUMP",
+    "original_scale": [
+      10.0,
+      0.24,
+      4.0
+    ],
+    "v6_scale": [
+      10.0,
+      0.24,
+      4.0
+    ]
+  },
+  {
+    "label": "V6_PUMP_Front_-1",
+    "building": "PUMP",
+    "original_scale": [
+      4.325,
+      0.24,
+      4.0
+    ],
+    "v6_scale": [
+      4.325,
+      0.24,
+      4.0
+    ]
+  },
+  {
+    "label": "V6_PUMP_Front_1",
+    "building": "PUMP",
+    "original_scale": [
+      4.325,
+      0.24,
+      4.0
+    ],
+    "v6_scale": [
+      4.325,
+      0.24,
+      4.0
+    ]
+  },
+  {
+    "label": "V6_PUMP_Header",
+    "building": "PUMP",
+    "original_scale": [
+      1.35,
+      0.24,
+      1.7000000000000002
+    ],
+    "v6_scale": [
+      1.35,
+      0.24,
+      1.7000000000000002
+    ]
+  },
+  {
+    "label": "V6_PUMP_Floor",
+    "building": "PUMP",
+    "original_scale": [
+      10.0,
+      8.0,
+      0.2
+    ],
+    "v6_scale": [
+      10.0,
+      8.0,
+      0.2
+    ]
+  },
+  {
+    "label": "V6_PUMP_ClosedDoor",
+    "building": "PUMP",
+    "original_scale": [
+      1.35,
+      0.12,
+      2.3
+    ],
+    "v6_scale": [
+      1.35,
+      0.12,
+      2.3
+    ]
+  },
+  {
+    "label": "V6_PUMP_GableRoof",
+    "building": "PUMP",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_PUMP_Window_-1_0",
+    "building": "PUMP",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_PUMP_Window_-1_1",
+    "building": "PUMP",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_PUMP_Window_1_0",
+    "building": "PUMP",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_PUMP_Window_1_1",
+    "building": "PUMP",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_PUMP_Foundation",
+    "building": "PUMP",
+    "original_scale": [
+      10.5,
+      8.5,
+      0.35
+    ],
+    "v6_scale": [
+      10.5,
+      8.5,
+      0.35
+    ]
+  },
+  {
+    "label": "V6_CHURCH_WestWall",
+    "building": "CHURCH",
+    "original_scale": [
+      0.24,
+      36.0,
+      10.0
+    ],
+    "v6_scale": [
+      0.24,
+      36.0,
+      10.0
+    ]
+  },
+  {
+    "label": "V6_CHURCH_EastWall",
+    "building": "CHURCH",
+    "original_scale": [
+      0.24,
+      36.0,
+      10.0
+    ],
+    "v6_scale": [
+      0.24,
+      36.0,
+      10.0
+    ]
+  },
+  {
+    "label": "V6_CHURCH_BackWall",
+    "building": "CHURCH",
+    "original_scale": [
+      24.0,
+      0.24,
+      10.0
+    ],
+    "v6_scale": [
+      24.0,
+      0.24,
+      10.0
+    ]
+  },
+  {
+    "label": "V6_CHURCH_Front_-1",
+    "building": "CHURCH",
+    "original_scale": [
+      10.4,
+      0.24,
+      10.0
+    ],
+    "v6_scale": [
+      10.4,
+      0.24,
+      10.0
+    ]
+  },
+  {
+    "label": "V6_CHURCH_Front_1",
+    "building": "CHURCH",
+    "original_scale": [
+      10.4,
+      0.24,
+      10.0
+    ],
+    "v6_scale": [
+      10.4,
+      0.24,
+      10.0
+    ]
+  },
+  {
+    "label": "V6_CHURCH_Header",
+    "building": "CHURCH",
+    "original_scale": [
+      3.2,
+      0.24,
+      5.8
+    ],
+    "v6_scale": [
+      3.2,
+      0.24,
+      5.8
+    ]
+  },
+  {
+    "label": "V6_CHURCH_GableRoof",
+    "building": "CHURCH",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_CHURCH_Window_-1_0",
+    "building": "CHURCH",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_CHURCH_Window_-1_1",
+    "building": "CHURCH",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_CHURCH_Window_-1_2",
+    "building": "CHURCH",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_CHURCH_Window_-1_3",
+    "building": "CHURCH",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_CHURCH_Window_1_0",
+    "building": "CHURCH",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_CHURCH_Window_1_1",
+    "building": "CHURCH",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_CHURCH_Window_1_2",
+    "building": "CHURCH",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_CHURCH_Window_1_3",
+    "building": "CHURCH",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_CHURCH_Sign",
+    "building": "CHURCH",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_FOSTER_WestWall",
+    "building": "FOSTER",
+    "original_scale": [
+      0.24,
+      25.0,
+      11.0
+    ],
+    "v6_scale": [
+      0.24,
+      25.0,
+      11.0
+    ]
+  },
+  {
+    "label": "V6_FOSTER_EastWall",
+    "building": "FOSTER",
+    "original_scale": [
+      0.24,
+      25.0,
+      11.0
+    ],
+    "v6_scale": [
+      0.24,
+      25.0,
+      11.0
+    ]
+  },
+  {
+    "label": "V6_FOSTER_BackWall",
+    "building": "FOSTER",
+    "original_scale": [
+      34.0,
+      0.24,
+      11.0
+    ],
+    "v6_scale": [
+      34.0,
+      0.24,
+      11.0
+    ]
+  },
+  {
+    "label": "V6_FOSTER_Front_-1",
+    "building": "FOSTER",
+    "original_scale": [
+      16.325,
+      0.24,
+      11.0
+    ],
+    "v6_scale": [
+      16.325,
+      0.24,
+      11.0
+    ]
+  },
+  {
+    "label": "V6_FOSTER_Front_1",
+    "building": "FOSTER",
+    "original_scale": [
+      16.325,
+      0.24,
+      11.0
+    ],
+    "v6_scale": [
+      16.325,
+      0.24,
+      11.0
+    ]
+  },
+  {
+    "label": "V6_FOSTER_Header",
+    "building": "FOSTER",
+    "original_scale": [
+      1.35,
+      0.24,
+      8.7
+    ],
+    "v6_scale": [
+      1.35,
+      0.24,
+      8.7
+    ]
+  },
+  {
+    "label": "V6_FOSTER_Floor",
+    "building": "FOSTER",
+    "original_scale": [
+      34.0,
+      25.0,
+      0.2
+    ],
+    "v6_scale": [
+      34.0,
+      25.0,
+      0.2
+    ]
+  },
+  {
+    "label": "V6_FOSTER_ClosedDoor",
+    "building": "FOSTER",
+    "original_scale": [
+      1.35,
+      0.12,
+      2.3
+    ],
+    "v6_scale": [
+      1.35,
+      0.12,
+      2.3
+    ]
+  },
+  {
+    "label": "V6_FOSTER_GableRoof",
+    "building": "FOSTER",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_FOSTER_Window_-1_0",
+    "building": "FOSTER",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_FOSTER_Window_-1_1",
+    "building": "FOSTER",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_FOSTER_Window_-1_2",
+    "building": "FOSTER",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_FOSTER_Window_-1_3",
+    "building": "FOSTER",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_FOSTER_Window_1_0",
+    "building": "FOSTER",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_FOSTER_Window_1_1",
+    "building": "FOSTER",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_FOSTER_Window_1_2",
+    "building": "FOSTER",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_FOSTER_Window_1_3",
+    "building": "FOSTER",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_FOSTER_Foundation",
+    "building": "FOSTER",
+    "original_scale": [
+      34.5,
+      25.5,
+      0.35
+    ],
+    "v6_scale": [
+      34.5,
+      25.5,
+      0.35
+    ]
+  },
+  {
+    "label": "V6_FOSTER_Sign",
+    "building": "FOSTER",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_LODGE_WestWall",
+    "building": "LODGE",
+    "original_scale": [
+      0.24,
+      8.0,
+      4.0
+    ],
+    "v6_scale": [
+      0.24,
+      8.0,
+      4.0
+    ]
+  },
+  {
+    "label": "V6_LODGE_EastWall",
+    "building": "LODGE",
+    "original_scale": [
+      0.24,
+      8.0,
+      4.0
+    ],
+    "v6_scale": [
+      0.24,
+      8.0,
+      4.0
+    ]
+  },
+  {
+    "label": "V6_LODGE_BackWall",
+    "building": "LODGE",
+    "original_scale": [
+      9.0,
+      0.24,
+      4.0
+    ],
+    "v6_scale": [
+      9.0,
+      0.24,
+      4.0
+    ]
+  },
+  {
+    "label": "V6_LODGE_Front_-1",
+    "building": "LODGE",
+    "original_scale": [
+      3.825,
+      0.24,
+      4.0
+    ],
+    "v6_scale": [
+      3.825,
+      0.24,
+      4.0
+    ]
+  },
+  {
+    "label": "V6_LODGE_Front_1",
+    "building": "LODGE",
+    "original_scale": [
+      3.825,
+      0.24,
+      4.0
+    ],
+    "v6_scale": [
+      3.825,
+      0.24,
+      4.0
+    ]
+  },
+  {
+    "label": "V6_LODGE_Header",
+    "building": "LODGE",
+    "original_scale": [
+      1.35,
+      0.24,
+      1.7000000000000002
+    ],
+    "v6_scale": [
+      1.35,
+      0.24,
+      1.7000000000000002
+    ]
+  },
+  {
+    "label": "V6_LODGE_Floor",
+    "building": "LODGE",
+    "original_scale": [
+      9.0,
+      8.0,
+      0.2
+    ],
+    "v6_scale": [
+      9.0,
+      8.0,
+      0.2
+    ]
+  },
+  {
+    "label": "V6_LODGE_ClosedDoor",
+    "building": "LODGE",
+    "original_scale": [
+      1.35,
+      0.12,
+      2.3
+    ],
+    "v6_scale": [
+      1.35,
+      0.12,
+      2.3
+    ]
+  },
+  {
+    "label": "V6_LODGE_GableRoof",
+    "building": "LODGE",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_LODGE_Window_-1_0",
+    "building": "LODGE",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_LODGE_Window_-1_1",
+    "building": "LODGE",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_LODGE_Window_1_0",
+    "building": "LODGE",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_LODGE_Window_1_1",
+    "building": "LODGE",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_LODGE_Foundation",
+    "building": "LODGE",
+    "original_scale": [
+      9.5,
+      8.5,
+      0.35
+    ],
+    "v6_scale": [
+      9.5,
+      8.5,
+      0.35
+    ]
+  },
+  {
+    "label": "V6_LODGE_Sign",
+    "building": "LODGE",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_UTILITY_WestWall",
+    "building": "UTILITY",
+    "original_scale": [
+      0.24,
+      13.0,
+      4.5
+    ],
+    "v6_scale": [
+      0.24,
+      13.0,
+      4.5
+    ]
+  },
+  {
+    "label": "V6_UTILITY_EastWall",
+    "building": "UTILITY",
+    "original_scale": [
+      0.24,
+      13.0,
+      4.5
+    ],
+    "v6_scale": [
+      0.24,
+      13.0,
+      4.5
+    ]
+  },
+  {
+    "label": "V6_UTILITY_BackWall",
+    "building": "UTILITY",
+    "original_scale": [
+      18.0,
+      0.24,
+      4.5
+    ],
+    "v6_scale": [
+      18.0,
+      0.24,
+      4.5
+    ]
+  },
+  {
+    "label": "V6_UTILITY_Front_-1",
+    "building": "UTILITY",
+    "original_scale": [
+      8.325,
+      0.24,
+      4.5
+    ],
+    "v6_scale": [
+      8.325,
+      0.24,
+      4.5
+    ]
+  },
+  {
+    "label": "V6_UTILITY_Front_1",
+    "building": "UTILITY",
+    "original_scale": [
+      8.325,
+      0.24,
+      4.5
+    ],
+    "v6_scale": [
+      8.325,
+      0.24,
+      4.5
+    ]
+  },
+  {
+    "label": "V6_UTILITY_Header",
+    "building": "UTILITY",
+    "original_scale": [
+      1.35,
+      0.24,
+      2.2
+    ],
+    "v6_scale": [
+      1.35,
+      0.24,
+      2.2
+    ]
+  },
+  {
+    "label": "V6_UTILITY_Floor",
+    "building": "UTILITY",
+    "original_scale": [
+      18.0,
+      13.0,
+      0.2
+    ],
+    "v6_scale": [
+      18.0,
+      13.0,
+      0.2
+    ]
+  },
+  {
+    "label": "V6_UTILITY_ClosedDoor",
+    "building": "UTILITY",
+    "original_scale": [
+      1.35,
+      0.12,
+      2.3
+    ],
+    "v6_scale": [
+      1.35,
+      0.12,
+      2.3
+    ]
+  },
+  {
+    "label": "V6_UTILITY_GableRoof",
+    "building": "UTILITY",
+    "original_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "v6_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "label": "V6_UTILITY_Window_-1_0",
+    "building": "UTILITY",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_UTILITY_Window_-1_1",
+    "building": "UTILITY",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_UTILITY_Window_1_0",
+    "building": "UTILITY",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_UTILITY_Window_1_1",
+    "building": "UTILITY",
+    "original_scale": [
+      0.03,
+      1.3,
+      1.3
+    ],
+    "v6_scale": [
+      0.03,
+      1.3,
+      1.3
+    ]
+  },
+  {
+    "label": "V6_UTILITY_Foundation",
+    "building": "UTILITY",
+    "original_scale": [
+      18.5,
+      13.5,
+      0.35
+    ],
+    "v6_scale": [
+      18.5,
+      13.5,
+      0.35
+    ]
+  },
+  {
+    "label": "V6_CHURCH_BellTower",
+    "building": "CHURCH",
+    "original_scale": [
+      6.0,
+      7.0,
+      22.0
+    ],
+    "v6_scale": [
+      6.0,
+      7.0,
+      22.0
+    ]
+  },
+  {
+    "label": "V6_CHURCH_Buttress_-12.5_-10",
+    "building": "CHURCH",
+    "original_scale": [
+      1.2,
+      2.0,
+      6.0
+    ],
+    "v6_scale": [
+      1.2,
+      2.0,
+      6.0
+    ]
+  },
+  {
+    "label": "V6_CHURCH_Buttress_-12.5_0",
+    "building": "CHURCH",
+    "original_scale": [
+      1.2,
+      2.0,
+      6.0
+    ],
+    "v6_scale": [
+      1.2,
+      2.0,
+      6.0
+    ]
+  },
+  {
+    "label": "V6_CHURCH_Buttress_-12.5_10",
+    "building": "CHURCH",
+    "original_scale": [
+      1.2,
+      2.0,
+      6.0
+    ],
+    "v6_scale": [
+      1.2,
+      2.0,
+      6.0
+    ]
+  },
+  {
+    "label": "V6_CHURCH_Buttress_12.5_-10",
+    "building": "CHURCH",
+    "original_scale": [
+      1.2,
+      2.0,
+      6.0
+    ],
+    "v6_scale": [
+      1.2,
+      2.0,
+      6.0
+    ]
+  },
+  {
+    "label": "V6_CHURCH_Buttress_12.5_0",
+    "building": "CHURCH",
+    "original_scale": [
+      1.2,
+      2.0,
+      6.0
+    ],
+    "v6_scale": [
+      1.2,
+      2.0,
+      6.0
+    ]
+  },
+  {
+    "label": "V6_CHURCH_Buttress_12.5_10",
+    "building": "CHURCH",
+    "original_scale": [
+      1.2,
+      2.0,
+      6.0
+    ],
+    "v6_scale": [
+      1.2,
+      2.0,
+      6.0
+    ]
+  },
+  {
+    "label": "V6_CHURCH_Pew_-5_0",
+    "building": "CHURCH",
+    "original_scale": [
+      5.0,
+      1.0,
+      0.9
+    ],
+    "v6_scale": [
+      5.0,
+      1.0,
+      0.9
+    ]
+  },
+  {
+    "label": "V6_CHURCH_Pew_5_0",
+    "building": "CHURCH",
+    "original_scale": [
+      5.0,
+      1.0,
+      0.9
+    ],
+    "v6_scale": [
+      5.0,
+      1.0,
+      0.9
+    ]
+  },
+  {
+    "label": "V6_CHURCH_Pew_-5_1",
+    "building": "CHURCH",
+    "original_scale": [
+      5.0,
+      1.0,
+      0.9
+    ],
+    "v6_scale": [
+      5.0,
+      1.0,
+      0.9
+    ]
+  },
+  {
+    "label": "V6_CHURCH_Pew_5_1",
+    "building": "CHURCH",
+    "original_scale": [
+      5.0,
+      1.0,
+      0.9
+    ],
+    "v6_scale": [
+      5.0,
+      1.0,
+      0.9
+    ]
+  },
+  {
+    "label": "V6_CHURCH_Pew_-5_2",
+    "building": "CHURCH",
+    "original_scale": [
+      5.0,
+      1.0,
+      0.9
+    ],
+    "v6_scale": [
+      5.0,
+      1.0,
+      0.9
+    ]
+  },
+  {
+    "label": "V6_CHURCH_Pew_5_2",
+    "building": "CHURCH",
+    "original_scale": [
+      5.0,
+      1.0,
+      0.9
+    ],
+    "v6_scale": [
+      5.0,
+      1.0,
+      0.9
+    ]
+  },
+  {
+    "label": "V6_CHURCH_Pew_-5_3",
+    "building": "CHURCH",
+    "original_scale": [
+      5.0,
+      1.0,
+      0.9
+    ],
+    "v6_scale": [
+      5.0,
+      1.0,
+      0.9
+    ]
+  },
+  {
+    "label": "V6_CHURCH_Pew_5_3",
+    "building": "CHURCH",
+    "original_scale": [
+      5.0,
+      1.0,
+      0.9
+    ],
+    "v6_scale": [
+      5.0,
+      1.0,
+      0.9
+    ]
+  },
+  {
+    "label": "V6_CHURCH_Pew_-5_4",
+    "building": "CHURCH",
+    "original_scale": [
+      5.0,
+      1.0,
+      0.9
+    ],
+    "v6_scale": [
+      5.0,
+      1.0,
+      0.9
+    ]
+  },
+  {
+    "label": "V6_CHURCH_Pew_5_4",
+    "building": "CHURCH",
+    "original_scale": [
+      5.0,
+      1.0,
+      0.9
+    ],
+    "v6_scale": [
+      5.0,
+      1.0,
+      0.9
+    ]
+  },
+  {
+    "label": "V6_CHURCH_Pew_-5_5",
+    "building": "CHURCH",
+    "original_scale": [
+      5.0,
+      1.0,
+      0.9
+    ],
+    "v6_scale": [
+      5.0,
+      1.0,
+      0.9
+    ]
+  },
+  {
+    "label": "V6_CHURCH_Pew_5_5",
+    "building": "CHURCH",
+    "original_scale": [
+      5.0,
+      1.0,
+      0.9
+    ],
+    "v6_scale": [
+      5.0,
+      1.0,
+      0.9
+    ]
+  },
+  {
+    "label": "V6_CHURCH_Pew_-5_6",
+    "building": "CHURCH",
+    "original_scale": [
+      5.0,
+      1.0,
+      0.9
+    ],
+    "v6_scale": [
+      5.0,
+      1.0,
+      0.9
+    ]
+  },
+  {
+    "label": "V6_CHURCH_Pew_5_6",
+    "building": "CHURCH",
+    "original_scale": [
+      5.0,
+      1.0,
+      0.9
+    ],
+    "v6_scale": [
+      5.0,
+      1.0,
+      0.9
+    ]
+  },
+  {
+    "label": "V6_FOSTER_Wing_-1",
+    "building": "FOSTER",
+    "original_scale": [
+      8.0,
+      19.0,
+      8.4
+    ],
+    "v6_scale": [
+      8.0,
+      19.0,
+      8.4
+    ]
+  },
+  {
+    "label": "V6_FOSTER_Wing_1",
+    "building": "FOSTER",
+    "original_scale": [
+      8.0,
+      19.0,
+      8.4
+    ],
+    "v6_scale": [
+      8.0,
+      19.0,
+      8.4
+    ]
+  },
+  {
+    "label": "V6_FOSTER_Portico",
+    "building": "FOSTER",
+    "original_scale": [
+      16.0,
+      6.0,
+      0.5
+    ],
+    "v6_scale": [
+      16.0,
+      6.0,
+      0.5
+    ]
+  },
+  {
+    "label": "V6_FOSTER_Column_-6",
+    "building": "FOSTER",
+    "original_scale": [
+      0.55,
+      0.55,
+      7.6
+    ],
+    "v6_scale": [
+      0.55,
+      0.55,
+      7.6
+    ]
+  },
+  {
+    "label": "V6_FOSTER_Column_-2",
+    "building": "FOSTER",
+    "original_scale": [
+      0.55,
+      0.55,
+      7.6
+    ],
+    "v6_scale": [
+      0.55,
+      0.55,
+      7.6
+    ]
+  },
+  {
+    "label": "V6_FOSTER_Column_2",
+    "building": "FOSTER",
+    "original_scale": [
+      0.55,
+      0.55,
+      7.6
+    ],
+    "v6_scale": [
+      0.55,
+      0.55,
+      7.6
+    ]
+  },
+  {
+    "label": "V6_FOSTER_Column_6",
+    "building": "FOSTER",
+    "original_scale": [
+      0.55,
+      0.55,
+      7.6
+    ],
+    "v6_scale": [
+      0.55,
+      0.55,
+      7.6
+    ]
+  },
+  {
+    "label": "V6_SCHOOL_SchoolBellTower",
+    "building": "SCHOOL",
+    "original_scale": [
+      3.4,
+      3.4,
+      4.0
+    ],
+    "v6_scale": [
+      3.4,
+      3.4,
+      4.0
+    ]
+  }
+]

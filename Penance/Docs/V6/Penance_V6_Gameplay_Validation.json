@@ -1,0 +1,48 @@
+{
+  "map": "/Game/Maps/V6/Penance_Town_V6",
+  "issues": [],
+  "runtime": {
+    "possessed_class": "/Game/Player/BP_PenancePlayer.BP_PenancePlayer_C",
+    "spawn_position_uu": [
+      3000.0,
+      2000.0,
+      549.1499691009521
+    ],
+    "player_mesh": "Untitled",
+    "animation_class": "/Game/Player/Animations/ABP_PenancePlayer.ABP_PenancePlayer_C",
+    "stages_observed": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "walked_routes": [
+      "Arrival to House01",
+      "Interior return",
+      "Neighborhood and park"
+    ],
+    "streamed_entry": true,
+    "interior_silhouette": true,
+    "streamed_exit": true,
+    "return_position_uu": [
+      10000.0,
+      9600.0,
+      566.4166363618284
+    ]
+  },
+  "screenshots": [
+    "Arrival.png",
+    "Orchard.png",
+    "Briar.png",
+    "MainStreet.png",
+    "Park.png",
+    "Bridge.png",
+    "Church.png",
+    "Foster.png",
+    "Overhead.png"
+  ],
+  "traversal": "Continuous AddMovementInput on possessed pawn; no checkpoint teleports; House01 uses original portal",
+  "human_manual_walkthrough": false,
+  "elapsed_seconds": 207.62
+}
