@@ -1,0 +1,98 @@
+{
+  "AN_EXP_Stalk": {
+    "frames": 84,
+    "loop": true,
+    "speed": 30.0,
+    "stance": [
+      0.72,
+      0.75
+    ],
+    "lift": [
+      7.0,
+      6.0
+    ],
+    "drop": 7.0,
+    "lean": 2.0,
+    "sway": 2.0,
+    "arms": 6.0,
+    "style": "normal"
+  },
+  "AN_EXP_Limp": {
+    "frames": 72,
+    "loop": true,
+    "speed": 34.0,
+    "stance": [
+      0.59,
+      0.8
+    ],
+    "lift": [
+      8.0,
+      2.3
+    ],
+    "drop": 8.0,
+    "lean": 4.0,
+    "sway": 3.8,
+    "arms": 8.0,
+    "style": "limp"
+  },
+  "AN_EXP_Heavy": {
+    "frames": 60,
+    "loop": true,
+    "speed": 52.0,
+    "stance": [
+      0.7,
+      0.7
+    ],
+    "lift": [
+      8.0,
+      8.0
+    ],
+    "drop": 8.0,
+    "lean": 3.8,
+    "sway": 3.0,
+    "arms": 9.0,
+    "style": "normal"
+  },
+  "AN_EXP_Chase": {
+    "frames": 30,
+    "loop": true,
+    "speed": 115.0,
+    "stance": [
+      0.59,
+      0.62
+    ],
+    "lift": [
+      16.0,
+      14.0
+    ],
+    "drop": 12.0,
+    "lean": 13.0,
+    "sway": 3.5,
+    "arms": 23.0,
+    "style": "normal"
+  },
+  "AN_EXP_Lunge": {
+    "frames": 54,
+    "loop": false,
+    "speed": 0.0,
+    "impact": 19,
+    "anticipation": 10,
+    "recovery": 32
+  },
+  "AN_EXP_Overhead": {
+    "frames": 78,
+    "loop": false,
+    "speed": 0.0,
+    "impact": 34,
+    "anticipation": 25,
+    "recovery": 49
+  },
+  "AN_EXP_Sweep": {
+    "frames": 66,
+    "loop": false,
+    "speed": 0.0,
+    "impact": 25,
+    "anticipation": 16,
+    "recovery": 40
+  }
+}

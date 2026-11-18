@@ -16,6 +16,7 @@ class USkeletalMeshComponent;
 class USceneComponent;
 class APenanceHingedDoor;
 class APenancePickupItem;
+class UPenanceInspectionComponent;
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FPenanceStaminaChangedSignature, float, CurrentStamina, float, MaxStamina);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FPenanceCrouchChangedSignature, bool, bIsCrouching);
@@ -44,6 +45,10 @@ class PENANCEDEMOUE_API APenancePlayerCharacter : public ACharacter
 
 public:
     APenancePlayerCharacter();
+
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Penance|Inspection")
+    TObjectPtr<UPenanceInspectionComponent> Inspection;
+    void SetInspectionLock(bool bLocked);
 
     virtual void BeginPlay() override;
     virtual void Tick(float DeltaSeconds) override;

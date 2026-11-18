@@ -4,6 +4,7 @@
 #include "Engine/Canvas.h"
 #include "Engine/Engine.h"
 #include "PenancePlayerCharacter.h"
+#include "PenanceInspection.h"
 #include "PenanceObjectiveSubsystem.h"
 #include "PenanceObjectiveTrackerWidget.h"
 #include "EnhancedInputComponent.h"
@@ -18,7 +19,7 @@ void APenanceHUD::DrawHUD()
     Super::DrawHUD();
 
     APenancePlayerCharacter* Player = Cast<APenancePlayerCharacter>(GetOwningPawn());
-    if (!Player || !Canvas)
+    if (!Player || !Canvas || (Player->Inspection && Player->Inspection->bInspecting))
     {
         return;
     }
@@ -129,7 +130,7 @@ void APenanceHUD::BeginPlay()
         ObjectiveInput->BindAction(Action,ETriggerEvent::Started,this,&ThisClass::ToggleObjectives);PC->PushInputComponent(ObjectiveInput);
     }
 }
-void APenanceHUD::ToggleObjectives(){if(ObjectiveTracker)ObjectiveTracker->ToggleDetails();}
+void APenanceHUD::ToggleObjectives(){auto* P=Cast<APenancePlayerCharacter>(GetOwningPawn());if(P && P->Inspection && P->Inspection->bInspecting)return;if(ObjectiveTracker)ObjectiveTracker->ToggleDetails();}
 void APenanceHUD::EndPlay(const EEndPlayReason::Type Reason)
 {
     if(auto* PC=GetOwningPlayerController())

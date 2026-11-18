@@ -30,6 +30,7 @@
 #include "PenanceHingedDoor.h"
 #include "PenanceStreamingDoor.h"
 #include "PenancePickupItem.h"
+#include "PenanceInspection.h"
 #include "UObject/ConstructorHelpers.h"
 #include "EngineUtils.h"
 
@@ -38,6 +39,7 @@ DEFINE_LOG_CATEGORY_STATIC(LogPenancePlayerBody, Log, All);
 APenancePlayerCharacter::APenancePlayerCharacter()
 {
     PrimaryActorTick.bCanEverTick = true;
+    Inspection = CreateDefaultSubobject<UPenanceInspectionComponent>(TEXT("Inspection"));
 
     GetCapsuleComponent()->InitCapsuleSize(CapsuleRadius, StandingCapsuleHeight * 0.5f);
 
@@ -213,6 +215,7 @@ void APenancePlayerCharacter::BeginPlay()
 void APenancePlayerCharacter::Tick(float DeltaSeconds)
 {
     Super::Tick(DeltaSeconds);
+    if (Inspection && Inspection->bInspecting) { RegisterMeaningfulActivity(); return; }
 
     ForceGroundedMovementMode();
     UpdateMovementRules(DeltaSeconds);
@@ -259,6 +262,7 @@ void APenancePlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerI
 
 void APenancePlayerCharacter::MoveEnhanced(const FInputActionValue& Value)
 {
+    if (Inspection && Inspection->bInspecting) return;
     MoveInput = Value.Get<FVector2D>();
     if (MoveInput.SizeSquared() > 0.0025f)
     {
@@ -280,6 +284,7 @@ void APenancePlayerCharacter::StopMoveEnhanced()
 
 void APenancePlayerCharacter::LookEnhanced(const FInputActionValue& Value)
 {
+    if (Inspection && Inspection->bInspecting) return;
     const FVector2D Look = Value.Get<FVector2D>();
     if (Controller && !Controller->IsLookInputIgnored() && !Look.IsNearlyZero(0.01f))
     {
@@ -291,6 +296,7 @@ void APenancePlayerCharacter::LookEnhanced(const FInputActionValue& Value)
 
 void APenancePlayerCharacter::StartSprintEnhanced()
 {
+    if (Inspection && Inspection->bInspecting) return;
     bWantsSprint = true;
     RegisterMeaningfulActivity();
 }
@@ -307,6 +313,7 @@ void APenancePlayerCharacter::StartShotReactionEnhanced()
 
 void APenancePlayerCharacter::StartCrouchEnhanced()
 {
+    if (Inspection && Inspection->bInspecting) return;
     bWantsCrouch = true;
     RegisterMeaningfulActivity();
 }
@@ -345,6 +352,7 @@ void APenancePlayerCharacter::HandleInactivityTimeout()
 
 void APenancePlayerCharacter::PlayShotReaction()
 {
+    if (Inspection && Inspection->bInspecting) return;
     if (ShotReactionMontage && GetMesh() && GetMesh()->GetAnimInstance()
         && !GetMesh()->GetAnimInstance()->Montage_IsPlaying(ShotReactionMontage))
     {
@@ -354,6 +362,7 @@ void APenancePlayerCharacter::PlayShotReaction()
 
 void APenancePlayerCharacter::Jump()
 {
+    if (Inspection && Inspection->bInspecting) return;
     Super::Jump();
     OnPlayerNoise.Broadcast(TEXT("jump"), GetActorLocation(), 0.85f);
 }
@@ -423,9 +432,15 @@ void APenancePlayerCharacter::StopCrouchInput()
 
 void APenancePlayerCharacter::Interact()
 {
+    if (Inspection && Inspection->bInspecting) return;
     FHitResult Hit;
     if (GetInteractionTrace(Hit))
     {
+        if (APenanceInspectObject* Object = Cast<APenanceInspectObject>(Hit.GetActor()))
+        {
+            Object->Interact(this);
+            return;
+        }
         if (APenanceStreamingDoor* Portal = Cast<APenanceStreamingDoor>(Hit.GetActor()))
         {
             Portal->Interact(this);
@@ -467,6 +482,7 @@ void APenancePlayerCharacter::AddInventoryEntry(const FText& ItemName, const FTe
 
 void APenancePlayerCharacter::ToggleInventory()
 {
+    if (Inspection && Inspection->bInspecting) return;
     bInventoryOpen = !bInventoryOpen;
 }
 
@@ -630,7 +646,11 @@ void APenancePlayerCharacter::UpdateInteractionFocus()
         return;
     }
 
-    if (Cast<APenanceHingedDoor>(Hit.GetActor()))
+    if (Cast<APenanceInspectObject>(Hit.GetActor()))
+    {
+        CurrentInteractionHint = FText::FromString(TEXT("E — Inspect"));
+    }
+    else if (Cast<APenanceHingedDoor>(Hit.GetActor()))
     {
         CurrentInteractionHint = FText::FromString(TEXT("E - Open / close door"));
     }
@@ -1080,4 +1100,11 @@ bool APenancePlayerCharacter::GetInteractionTrace(FHitResult& OutHit) const
     const FVector End = Start + GetViewRotation().Vector() * InteractionDistance;
     FCollisionQueryParams Params(SCENE_QUERY_STAT(PenanceInteractTrace), false, this);
     return GetWorld() && GetWorld()->LineTraceSingleByChannel(OutHit, Start, End, ECC_Visibility, Params);
+}
+
+void APenancePlayerCharacter::SetInspectionLock(bool bLocked)
+{
+    MoveInput = FVector2D::ZeroVector;
+    bWantsSprint = false;
+    RegisterMeaningfulActivity();
 }

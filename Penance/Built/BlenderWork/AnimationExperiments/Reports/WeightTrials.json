@@ -1,0 +1,45 @@
+{
+  "trials": [
+    {
+      "alpha": 0.0,
+      "score": 5.791844749114806e-05,
+      "p99_stretch": 1.1720615864768447,
+      "max_stretch": 2.525181368946745,
+      "fraction_over_2": 4.607162602125438e-05
+    },
+    {
+      "alpha": 0.25,
+      "score": 5.625024699117011e-05,
+      "p99_stretch": 1.1717324149611086,
+      "max_stretch": 2.519033435835049,
+      "fraction_over_2": 4.0952556463337225e-05
+    },
+    {
+      "alpha": 0.5,
+      "score": 5.4788841433024884e-05,
+      "p99_stretch": 1.1714665086186484,
+      "max_stretch": 2.512883148391767,
+      "fraction_over_2": 3.327395212646149e-05
+    },
+    {
+      "alpha": 0.75,
+      "score": 5.345127619660251e-05,
+      "p99_stretch": 1.170951660523892,
+      "max_stretch": 2.5067305128621533,
+      "fraction_over_2": 3.327395212646149e-05
+    }
+  ],
+  "selected": {
+    "alpha": 0.75,
+    "score": 5.345127619660251e-05,
+    "p99_stretch": 1.170951660523892,
+    "max_stretch": 2.5067305128621533,
+    "fraction_over_2": 3.327395212646149e-05
+  },
+  "changed_vertices": 3338,
+  "test_pose_count": 73,
+  "measured_edges": 5352,
+  "method": "Joint-local topology diffusion, max 4 influences, selected by stretch/compression score across original and new poses.",
+  "skeleton_changed": false,
+  "geometry_changed": false
+}

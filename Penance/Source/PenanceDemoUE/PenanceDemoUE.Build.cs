@@ -29,7 +29,8 @@ public class PenanceDemoUE : ModuleRules
                 "AnimGraph",
                 "AnimGraphRuntime",
                 "GraphEditor",
-                "UMGEditor"
+                "UMGEditor",
+                "AssetRegistry"
             });
         }
     }

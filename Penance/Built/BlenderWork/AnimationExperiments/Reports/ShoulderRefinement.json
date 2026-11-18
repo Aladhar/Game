@@ -1,0 +1,36 @@
+{
+  "trials": [
+    {
+      "strength": 0,
+      "score": 0.0012498264420564209,
+      "p99": 1.2733486313812636,
+      "max": 9.299355380617273
+    },
+    {
+      "strength": 0.35,
+      "score": 0.0024526547780250024,
+      "p99": 1.3558205526486689,
+      "max": 7.467651936774099
+    },
+    {
+      "strength": 0.65,
+      "score": 0.009051723563605221,
+      "p99": 1.5056011980922352,
+      "max": 12.000603390829676
+    },
+    {
+      "strength": 1,
+      "score": 0.025676748790761025,
+      "p99": 1.7973949477253963,
+      "max": 10.061170048616031
+    }
+  ],
+  "selected": {
+    "strength": 0,
+    "score": 0.0012498264420564209,
+    "p99": 1.2733486313812636,
+    "max": 9.299355380617273
+  },
+  "changed_vertices": 0,
+  "purpose": "Replace inappropriate spinal influences on lateral upper-arm skin with continuous shoulder/elbow fields."
+}
