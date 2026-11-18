@@ -29,7 +29,7 @@ road('School Lane','residential',5.6,[(78,157,5.1),(102,166,5.2),(126,169,5.3),(
 road('Grave Lane','service',4,[(285,160,6.2),(314,169,5.2),(340,164,5),(367,163,5),(384,171,5.1)])
 road('Ridge Road','main',6.5,[(250,239,5.4),(218,246,7),(181,251,8.5),(154,258,10.5),(135,261,11)])
 road('Estate Drive','service',4,[(250,239,5.4),(280,247,7),(313,249,9),(344,260,11),(365,280,13),(365,311,13),(341,320,13),(325,317,13)])
-road('Tower Service','service',4,[(34,136,5.3),(29,136,5.3),(28,156,7),(30,179,9),(8,195,12),(38,195,14.4),(38,183,14.4),(25,183,14.4)])
+road('Tower Service','service',4,[(34,136,5.3),(29,136,5.3),(28,156,7),(30,179,9),(8,195,12),(38,195,14.4),(54,192,14.4)])
 # Quadratic corner rounding keeps junctions tied to their surveyed endpoints.
 def rounded(points,radius=3,fraction=.18):
  out=[points[0]]
@@ -70,6 +70,8 @@ class Terrain:
    dx,dy=x-b['x'],y-b['y'];c,s=math.cos(math.radians(b['yaw'])),math.sin(math.radians(b['yaw']))
    X,Y=abs(dx*c+dy*s),abs(-dx*s+dy*c);dist=max(X-b['w']/2-2,Y-b['d']/2-2)
    if dist<5:z=mix(z,b['z']-.08,1-smooth(dist/5))
+  towerdist=max(abs(x-54)-7,abs(y-192)-7)
+  if towerdist<5:z=mix(z,14.32,1-smooth(towerdist/5))
   parkdist=max(abs(x-100)-20,abs(y-187)-18)
   if parkdist<6:z=mix(z,5.12,1-smooth(parkdist/6))
   # Church rear service exit is flush with the preserved 2nd staircase.
@@ -96,7 +98,7 @@ class Terrain:
  def road_z(self,x,y):return self.road_candidate(x,y)[1]+.045
 CHECKPOINTS=[(30,20,5.6),v5.CHECKPOINTS[1],(34,136,6.3),(100,187,6),(145,269,12),(153,294,7.32),(137,323,12),(325,276,14)]
 OBJECTIVES=v5.OBJECTIVES
-VIEWS=[('Arrival',(30,20),(47,49,6)),('Orchard',(34,107),(54,121,7)),('Briar',(209,96),(252,110,8)),('MainStreet',(113,137),(187,153,8)),('Park',(100,187),(145,286,20)),('Bridge',(250,184),(226,256,12)),('Church',(145,255),(145,290,22)),('Foster',(330,266),(324,291,21))]
+VIEWS=[('Arrival',(30,20),(47,49,6)),('Orchard',(34,107),(54,121,7)),('Briar',(209,96),(252,110,8)),('MainStreet',(113,137),(187,153,8)),('Park',(100,187),(145,286,20)),('Bridge',(250,184),(226,256,12)),('Church',(145,243),(145,290,22)),('Foster',(334,253),(324,291,21))]
 DRIVES={}
 for b in BUILDINGS:
  c,s=math.cos(math.radians(b['yaw'])),math.sin(math.radians(b['yaw']));front=(b['x']+s*(b['d']/2+1),b['y']-c*(b['d']/2+1))
@@ -106,6 +108,7 @@ for b in BUILDINGS:
    d,t=project(*front,a,q)
    if d<best[0]:best=(d,(mix(a[0],q[0],t),mix(a[1],q[1],t),mix(a[2],q[2],t)))
  DRIVES[b['id']]=[best[1],(*front,b['z']-.08)]
+DRIVES['H01']=[(78,101,4.8),(87,105,4.8),(93,106,4.72)]
 DRIVES['CHURCH']=[(135,261,11),(145,265,11),(145,271,11)]
 DRIVES['FOSTER']=[(365,294,13),(353,294,13)]
 DRIVES['UTILITY']=[(355,270,12),(371,265,10),(377,256,9.5)]

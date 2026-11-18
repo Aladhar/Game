@@ -15,12 +15,19 @@
       1,
       2,
       3,
-      4
+      4,
+      5,
+      6,
+      7,
+      8
     ],
     "walked_routes": [
       "Arrival to House01",
       "Interior return",
-      "Neighborhood and park"
+      "Neighborhood and park",
+      "Bridge and church",
+      "Basement west escape",
+      "Estate approach"
     ],
     "streamed_entry": true,
     "interior_silhouette": true,
@@ -29,7 +36,11 @@
       10000.0,
       9600.0,
       566.4166363618284
-    ]
+    ],
+    "basement_encounter_spawned": true,
+    "opening_preview_completed": true,
+    "walk_distance_m": 2837.14,
+    "no_checkpoint_teleports": true
   },
   "screenshots": [
     "Arrival.png",
@@ -44,5 +55,5 @@
   ],
   "traversal": "Continuous AddMovementInput on possessed pawn; no checkpoint teleports; House01 uses original portal",
   "human_manual_walkthrough": false,
-  "elapsed_seconds": 207.62
+  "elapsed_seconds": 504.34
 }
