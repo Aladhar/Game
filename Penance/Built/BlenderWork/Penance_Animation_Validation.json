@@ -1,0 +1,691 @@
+{
+  "clips": {
+    "AN_Penance_Idle": {
+      "duration_seconds": 5.0,
+      "bone_count": 31,
+      "frames_evaluated": 151,
+      "root_deviation": 0.0,
+      "loop_endpoint_max_error": 0.0,
+      "skeleton": "/Game/Enemies/Penance/SKEL_Penance.SKEL_Penance"
+    },
+    "AN_Penance_StalkWalk": {
+      "duration_seconds": 2.0,
+      "bone_count": 31,
+      "frames_evaluated": 61,
+      "root_deviation": 0.0,
+      "loop_endpoint_max_error": 0.0,
+      "skeleton": "/Game/Enemies/Penance/SKEL_Penance.SKEL_Penance"
+    },
+    "AN_Penance_Chase": {
+      "duration_seconds": 1.0,
+      "bone_count": 31,
+      "frames_evaluated": 31,
+      "root_deviation": 0.0,
+      "loop_endpoint_max_error": 0.0,
+      "skeleton": "/Game/Enemies/Penance/SKEL_Penance.SKEL_Penance"
+    },
+    "AN_Penance_Attack": {
+      "duration_seconds": 1.5,
+      "bone_count": 31,
+      "frames_evaluated": 46,
+      "root_deviation": 0.0,
+      "loop_endpoint_max_error": 0.0,
+      "skeleton": "/Game/Enemies/Penance/SKEL_Penance.SKEL_Penance"
+    }
+  },
+  "mesh_repair": {
+    "saved_blend": "/Users/amritladhar/Documents/GitHub/Game/Penance/Built/BlenderWork/Penance_Rigged_Repaired.blend",
+    "visible_vertices_after_separation": 117085,
+    "original_vertices": 116470,
+    "repaired_vertices": 121837,
+    "original_faces": 143610,
+    "repaired_faces": 155282,
+    "added_hidden_faces": 11672,
+    "original_visible_face_coordinates_preserved": true,
+    "original_UVs_preserved": true,
+    "bone_count": 31,
+    "height_cm": 229.99998403450024,
+    "object_scales": [
+      [
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0
+      ]
+    ],
+    "repaired_boundary_rings": 50,
+    "rings": [
+      {
+        "source_loop": 0,
+        "part": 0,
+        "boundary_vertices": 11,
+        "cap_triangles": 9,
+        "normal": [
+          0.5503949522972107,
+          0.6648602485656738,
+          -0.5050012469291687
+        ]
+      },
+      {
+        "source_loop": 0,
+        "part": 0,
+        "boundary_vertices": 690,
+        "cap_triangles": 3400,
+        "normal": [
+          -0.005961248651146889,
+          0.9539799094200134,
+          0.29981136322021484
+        ]
+      },
+      {
+        "source_loop": 1,
+        "part": 1,
+        "boundary_vertices": 690,
+        "cap_triangles": 2310,
+        "normal": [
+          0.005961210001260042,
+          -0.9539797902107239,
+          -0.29981157183647156
+        ]
+      },
+      {
+        "source_loop": 2,
+        "part": 3,
+        "boundary_vertices": 138,
+        "cap_triangles": 246,
+        "normal": [
+          0.009677436202764511,
+          0.2540165185928345,
+          0.9671514630317688
+        ]
+      },
+      {
+        "source_loop": 3,
+        "part": 0,
+        "boundary_vertices": 138,
+        "cap_triangles": 364,
+        "normal": [
+          -0.009677434340119362,
+          -0.25401678681373596,
+          -0.967151403427124
+        ]
+      },
+      {
+        "source_loop": 4,
+        "part": 2,
+        "boundary_vertices": 39,
+        "cap_triangles": 93,
+        "normal": [
+          -0.012013435363769531,
+          -0.014761896803975105,
+          0.9998188018798828
+        ]
+      },
+      {
+        "source_loop": 5,
+        "part": 0,
+        "boundary_vertices": 39,
+        "cap_triangles": 213,
+        "normal": [
+          0.012013435363769531,
+          0.014761896803975105,
+          -0.9998188018798828
+        ]
+      },
+      {
+        "source_loop": 6,
+        "part": 0,
+        "boundary_vertices": 31,
+        "cap_triangles": 61,
+        "normal": [
+          -0.6806412935256958,
+          0.6682224273681641,
+          0.30034342408180237
+        ]
+      },
+      {
+        "source_loop": 7,
+        "part": 1,
+        "boundary_vertices": 31,
+        "cap_triangles": 49,
+        "normal": [
+          0.6806412935256958,
+          -0.6682224273681641,
+          -0.30034342408180237
+        ]
+      },
+      {
+        "source_loop": 8,
+        "part": 1,
+        "boundary_vertices": 22,
+        "cap_triangles": 20,
+        "normal": [
+          0.9463986754417419,
+          0.2983716130256653,
+          0.12370900064706802
+        ]
+      },
+      {
+        "source_loop": 9,
+        "part": 0,
+        "boundary_vertices": 22,
+        "cap_triangles": 20,
+        "normal": [
+          -0.9463986754417419,
+          -0.2983716130256653,
+          -0.12370900064706802
+        ]
+      },
+      {
+        "source_loop": 10,
+        "part": 0,
+        "boundary_vertices": 20,
+        "cap_triangles": 18,
+        "normal": [
+          0.02389301173388958,
+          0.7596076130867004,
+          -0.6499425768852234
+        ]
+      },
+      {
+        "source_loop": 11,
+        "part": 1,
+        "boundary_vertices": 20,
+        "cap_triangles": 18,
+        "normal": [
+          -0.02389301173388958,
+          -0.7596076130867004,
+          0.6499425768852234
+        ]
+      },
+      {
+        "source_loop": 12,
+        "part": 0,
+        "boundary_vertices": 19,
+        "cap_triangles": 29,
+        "normal": [
+          -0.022544492036104202,
+          -0.0051006171852350235,
+          -0.9997327923774719
+        ]
+      },
+      {
+        "source_loop": 13,
+        "part": 2,
+        "boundary_vertices": 19,
+        "cap_triangles": 17,
+        "normal": [
+          0.022544492036104202,
+          0.0051006171852350235,
+          0.9997327923774719
+        ]
+      },
+      {
+        "source_loop": 14,
+        "part": 1,
+        "boundary_vertices": 15,
+        "cap_triangles": 13,
+        "normal": [
+          -0.015748411417007446,
+          -0.17108549177646637,
+          0.9851303696632385
+        ]
+      },
+      {
+        "source_loop": 15,
+        "part": 0,
+        "boundary_vertices": 15,
+        "cap_triangles": 13,
+        "normal": [
+          0.015748411417007446,
+          0.17108549177646637,
+          -0.9851303696632385
+        ]
+      },
+      {
+        "source_loop": 16,
+        "part": 1,
+        "boundary_vertices": 13,
+        "cap_triangles": 11,
+        "normal": [
+          0.6100214123725891,
+          0.4456295967102051,
+          0.6552007794380188
+        ]
+      },
+      {
+        "source_loop": 17,
+        "part": 0,
+        "boundary_vertices": 13,
+        "cap_triangles": 11,
+        "normal": [
+          -0.6100214123725891,
+          -0.4456295967102051,
+          -0.6552007794380188
+        ]
+      },
+      {
+        "source_loop": 18,
+        "part": 3,
+        "boundary_vertices": 12,
+        "cap_triangles": 10,
+        "normal": [
+          0.6553413271903992,
+          0.16877442598342896,
+          0.7362356185913086
+        ]
+      },
+      {
+        "source_loop": 19,
+        "part": 0,
+        "boundary_vertices": 12,
+        "cap_triangles": 10,
+        "normal": [
+          -0.6553413271903992,
+          -0.16877442598342896,
+          -0.7362356185913086
+        ]
+      },
+      {
+        "source_loop": 20,
+        "part": 1,
+        "boundary_vertices": 12,
+        "cap_triangles": 10,
+        "normal": [
+          0.04003066569566727,
+          0.40985992550849915,
+          0.9112696647644043
+        ]
+      },
+      {
+        "source_loop": 21,
+        "part": 0,
+        "boundary_vertices": 12,
+        "cap_triangles": 10,
+        "normal": [
+          -0.04003066569566727,
+          -0.40985992550849915,
+          -0.9112696647644043
+        ]
+      },
+      {
+        "source_loop": 22,
+        "part": 1,
+        "boundary_vertices": 12,
+        "cap_triangles": 10,
+        "normal": [
+          -0.29698237776756287,
+          0.6188666224479675,
+          0.7271901369094849
+        ]
+      },
+      {
+        "source_loop": 23,
+        "part": 0,
+        "boundary_vertices": 12,
+        "cap_triangles": 10,
+        "normal": [
+          0.29698240756988525,
+          -0.6188667416572571,
+          -0.7271901369094849
+        ]
+      },
+      {
+        "source_loop": 24,
+        "part": 1,
+        "boundary_vertices": 11,
+        "cap_triangles": 9,
+        "normal": [
+          0.6859690546989441,
+          -0.5463424324989319,
+          0.4805791676044464
+        ]
+      },
+      {
+        "source_loop": 25,
+        "part": 0,
+        "boundary_vertices": 11,
+        "cap_triangles": 9,
+        "normal": [
+          -0.6859690546989441,
+          0.5463424324989319,
+          -0.4805791676044464
+        ]
+      },
+      {
+        "source_loop": 26,
+        "part": 1,
+        "boundary_vertices": 11,
+        "cap_triangles": 9,
+        "normal": [
+          -0.5503949522972107,
+          -0.6648602485656738,
+          0.5050012469291687
+        ]
+      },
+      {
+        "source_loop": 27,
+        "part": 0,
+        "boundary_vertices": 11,
+        "cap_triangles": 9,
+        "normal": [
+          0.6142024993896484,
+          0.3125465214252472,
+          0.7246171832084656
+        ]
+      },
+      {
+        "source_loop": 28,
+        "part": 1,
+        "boundary_vertices": 11,
+        "cap_triangles": 9,
+        "normal": [
+          -0.6142024993896484,
+          -0.3125465214252472,
+          -0.7246171832084656
+        ]
+      },
+      {
+        "source_loop": 29,
+        "part": 0,
+        "boundary_vertices": 11,
+        "cap_triangles": 9,
+        "normal": [
+          0.7222363352775574,
+          -0.21433718502521515,
+          -0.6575973033905029
+        ]
+      },
+      {
+        "source_loop": 30,
+        "part": 1,
+        "boundary_vertices": 11,
+        "cap_triangles": 9,
+        "normal": [
+          -0.7222363352775574,
+          0.21433718502521515,
+          0.6575973033905029
+        ]
+      },
+      {
+        "source_loop": 31,
+        "part": 1,
+        "boundary_vertices": 10,
+        "cap_triangles": 8,
+        "normal": [
+          -0.04036512225866318,
+          -0.5867528915405273,
+          0.8087592720985413
+        ]
+      },
+      {
+        "source_loop": 32,
+        "part": 0,
+        "boundary_vertices": 10,
+        "cap_triangles": 8,
+        "normal": [
+          0.04036512225866318,
+          0.5867528915405273,
+          -0.8087592720985413
+        ]
+      },
+      {
+        "source_loop": 33,
+        "part": 2,
+        "boundary_vertices": 9,
+        "cap_triangles": 7,
+        "normal": [
+          -0.1542930006980896,
+          0.03166671097278595,
+          -0.9875174760818481
+        ]
+      },
+      {
+        "source_loop": 34,
+        "part": 0,
+        "boundary_vertices": 9,
+        "cap_triangles": 7,
+        "normal": [
+          0.1542930006980896,
+          -0.03166671097278595,
+          0.9875174760818481
+        ]
+      },
+      {
+        "source_loop": 35,
+        "part": 0,
+        "boundary_vertices": 9,
+        "cap_triangles": 7,
+        "normal": [
+          0.9568591713905334,
+          -0.19808143377304077,
+          -0.21256598830223083
+        ]
+      },
+      {
+        "source_loop": 36,
+        "part": 1,
+        "boundary_vertices": 9,
+        "cap_triangles": 7,
+        "normal": [
+          -0.9568591713905334,
+          0.19808143377304077,
+          0.21256598830223083
+        ]
+      },
+      {
+        "source_loop": 37,
+        "part": 1,
+        "boundary_vertices": 8,
+        "cap_triangles": 6,
+        "normal": [
+          -0.08588551729917526,
+          0.7153885364532471,
+          0.6934284567832947
+        ]
+      },
+      {
+        "source_loop": 38,
+        "part": 0,
+        "boundary_vertices": 8,
+        "cap_triangles": 6,
+        "normal": [
+          0.08588551729917526,
+          -0.7153885364532471,
+          -0.6934284567832947
+        ]
+      },
+      {
+        "source_loop": 39,
+        "part": 1,
+        "boundary_vertices": 8,
+        "cap_triangles": 6,
+        "normal": [
+          -0.19475378096103668,
+          -0.5600486993789673,
+          0.8052431344985962
+        ]
+      },
+      {
+        "source_loop": 40,
+        "part": 0,
+        "boundary_vertices": 8,
+        "cap_triangles": 6,
+        "normal": [
+          0.19475378096103668,
+          0.5600486993789673,
+          -0.8052431344985962
+        ]
+      },
+      {
+        "source_loop": 41,
+        "part": 1,
+        "boundary_vertices": 8,
+        "cap_triangles": 6,
+        "normal": [
+          -0.39779868721961975,
+          0.14886875450611115,
+          0.9053145051002502
+        ]
+      },
+      {
+        "source_loop": 42,
+        "part": 0,
+        "boundary_vertices": 8,
+        "cap_triangles": 6,
+        "normal": [
+          0.39779868721961975,
+          -0.14886875450611115,
+          -0.9053145051002502
+        ]
+      },
+      {
+        "source_loop": 43,
+        "part": 1,
+        "boundary_vertices": 6,
+        "cap_triangles": 4,
+        "normal": [
+          0.14299938082695007,
+          -0.30257588624954224,
+          0.9423369765281677
+        ]
+      },
+      {
+        "source_loop": 44,
+        "part": 0,
+        "boundary_vertices": 6,
+        "cap_triangles": 4,
+        "normal": [
+          -0.14299938082695007,
+          0.30257588624954224,
+          -0.9423369765281677
+        ]
+      },
+      {
+        "source_loop": 45,
+        "part": 1,
+        "boundary_vertices": 5,
+        "cap_triangles": 3,
+        "normal": [
+          0.2533527910709381,
+          -0.2830198407173157,
+          -0.9250470995903015
+        ]
+      },
+      {
+        "source_loop": 46,
+        "part": 0,
+        "boundary_vertices": 5,
+        "cap_triangles": 3,
+        "normal": [
+          -0.2533527910709381,
+          0.2830198407173157,
+          0.9250470995903015
+        ]
+      },
+      {
+        "source_loop": 47,
+        "part": 0,
+        "boundary_vertices": 4,
+        "cap_triangles": 2,
+        "normal": [
+          -0.3995504379272461,
+          -0.8688427209854126,
+          -0.29235532879829407
+        ]
+      },
+      {
+        "source_loop": 48,
+        "part": 1,
+        "boundary_vertices": 4,
+        "cap_triangles": 2,
+        "normal": [
+          0.3995504379272461,
+          0.8688427209854126,
+          0.29235532879829407
+        ]
+      }
+    ]
+  },
+  "topology": {
+    "vertices": 121837,
+    "triangles": 155282,
+    "geometric_boundary_edges": 0,
+    "nonmanifold_edges": 24,
+    "new_near_zero_area_faces": 0,
+    "original_near_zero_area_faces": 1,
+    "same_part_uv_pairs": 44433,
+    "max_same_part_weight_difference": 0.0,
+    "bone_count": 31,
+    "max_influences": 4,
+    "bounds_min": [
+      -50.047035217285156,
+      -71.51404571533203,
+      7.067106935210177e-07
+    ],
+    "bounds_max": [
+      53.35561752319336,
+      34.48408508300781,
+      229.99998474121094
+    ]
+  },
+  "unreal_mesh_validation": {
+    "render_vertices_before": 116750,
+    "render_vertices_after": 138518,
+    "asset": "/Game/Enemies/Penance/SK_Penance.SK_Penance",
+    "import_content": "Geometry and repaired skinning",
+    "bone_count": 31,
+    "skeleton_unchanged": true,
+    "reference_pose_unchanged": true,
+    "physics_asset_unchanged": true,
+    "materials_unchanged": true,
+    "bounds_unchanged": true,
+    "height_cm": 229.99998403450024,
+    "materials": [
+      "/Game/Enemies/Penance/Materials/M_Penance.M_Penance"
+    ]
+  },
+  "play_in_editor": {
+    "started": true,
+    "sequence_autoplay": true,
+    "stage_actor_count": 5,
+    "actor_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "chase_foot_motion_cm": 17.82707699632528,
+    "blend_foot_motion_cm": 50.878696814587784
+  },
+  "created_or_modified_project_assets": [
+    "Built/BlenderWork/Penance_Animated.blend",
+    "Built/BlenderWork/Penance_Rigged_Repaired.blend",
+    "Built/FBX/SK_Penance_Repaired.fbx",
+    "Content/Enemies/Penance/SK_Penance.uasset",
+    "Content/Enemies/Penance/Validation/L_Penance_AnimationShowcase.umap",
+    "Content/Enemies/Penance/Validation/LS_Penance_AnimationShowcase.uasset",
+    "Built/FBX/PenanceAnimations/AN_Penance_Idle.fbx",
+    "Content/Enemies/Penance/Animations/AN_Penance_Idle.uasset",
+    "Built/FBX/PenanceAnimations/AN_Penance_StalkWalk.fbx",
+    "Content/Enemies/Penance/Animations/AN_Penance_StalkWalk.uasset",
+    "Built/FBX/PenanceAnimations/AN_Penance_Chase.fbx",
+    "Content/Enemies/Penance/Animations/AN_Penance_Chase.uasset",
+    "Built/FBX/PenanceAnimations/AN_Penance_Attack.fbx",
+    "Content/Enemies/Penance/Animations/AN_Penance_Attack.uasset"
+  ],
+  "known_limitations": [
+    "Accessory contact remains in some idle, walk and attack frames; accepted for this pass.",
+    "Some added interior faces can become visible and have provisional UV sampling.",
+    "No terrain foot IK, enemy AI, damage or gameplay encounters were added."
+  ],
+  "impact_seconds": 0.7,
+  "impact_frame_blender": 22,
+  "intended_speed_cm_s": {
+    "StalkWalk": 35,
+    "Chase": 100
+  }
+}

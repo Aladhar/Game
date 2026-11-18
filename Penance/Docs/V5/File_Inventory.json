@@ -1,0 +1,937 @@
+{
+  "files": [
+    {
+      "path": "Content/Environment/V5/Materials/M_V5_Bridge.uasset",
+      "bytes": 5386
+    },
+    {
+      "path": "Content/Environment/V5/Materials/M_V5_Civic.uasset",
+      "bytes": 5381
+    },
+    {
+      "path": "Content/Environment/V5/Materials/M_V5_Commerce.uasset",
+      "bytes": 5396
+    },
+    {
+      "path": "Content/Environment/V5/Materials/M_V5_Creek.uasset",
+      "bytes": 5381
+    },
+    {
+      "path": "Content/Environment/V5/Materials/M_V5_Dark.uasset",
+      "bytes": 5376
+    },
+    {
+      "path": "Content/Environment/V5/Materials/M_V5_Estate.uasset",
+      "bytes": 5386
+    },
+    {
+      "path": "Content/Environment/V5/Materials/M_V5_Glass.uasset",
+      "bytes": 5381
+    },
+    {
+      "path": "Content/Environment/V5/Materials/M_V5_Lit.uasset",
+      "bytes": 5371
+    },
+    {
+      "path": "Content/Environment/V5/Materials/M_V5_Metal.uasset",
+      "bytes": 5381
+    },
+    {
+      "path": "Content/Environment/V5/Materials/M_V5_Path.uasset",
+      "bytes": 5376
+    },
+    {
+      "path": "Content/Environment/V5/Materials/M_V5_Roof.uasset",
+      "bytes": 5376
+    },
+    {
+      "path": "Content/Environment/V5/Materials/M_V5_Stone.uasset",
+      "bytes": 5381
+    },
+    {
+      "path": "Content/Environment/V5/Materials/M_V5_Terrain.uasset",
+      "bytes": 5391
+    },
+    {
+      "path": "Content/Environment/V5/Materials/M_V5_Trunk.uasset",
+      "bytes": 5381
+    },
+    {
+      "path": "Content/Environment/V5/Materials/M_V5_Utility.uasset",
+      "bytes": 5391
+    },
+    {
+      "path": "Content/Environment/V5/Materials/M_V5_White.uasset",
+      "bytes": 5381
+    },
+    {
+      "path": "Content/Environment/V5/Materials/M_V5_Woods.uasset",
+      "bytes": 5381
+    },
+    {
+      "path": "Content/Environment/V5/Materials/M_V5_main.uasset",
+      "bytes": 5376
+    },
+    {
+      "path": "Content/Environment/V5/Materials/M_V5_residential.uasset",
+      "bytes": 5411
+    },
+    {
+      "path": "Content/Environment/V5/Materials/M_V5_service.uasset",
+      "bytes": 5391
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_BARBER_GableRoof.uasset",
+      "bytes": 10866
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_CARE_GableRoof.uasset",
+      "bytes": 10911
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_CHURCH_GableRoof.uasset",
+      "bytes": 10860
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Creek_Water.uasset",
+      "bytes": 28560
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_DINER_GableRoof.uasset",
+      "bytes": 10915
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Drive_BARBER.uasset",
+      "bytes": 11178
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Drive_CARE.uasset",
+      "bytes": 10805
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Drive_CHURCH.uasset",
+      "bytes": 10819
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Drive_DINER.uasset",
+      "bytes": 11023
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Drive_FIRE.uasset",
+      "bytes": 11019
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Drive_FOSTER.uasset",
+      "bytes": 11102
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Drive_GAS.uasset",
+      "bytes": 11177
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Drive_H01.uasset",
+      "bytes": 11150
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Drive_H02.uasset",
+      "bytes": 11102
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Drive_H03.uasset",
+      "bytes": 10957
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Drive_H04.uasset",
+      "bytes": 10918
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Drive_H05.uasset",
+      "bytes": 11177
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Drive_H06.uasset",
+      "bytes": 11202
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Drive_H07.uasset",
+      "bytes": 11216
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Drive_H08.uasset",
+      "bytes": 11364
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Drive_H09.uasset",
+      "bytes": 11015
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Drive_H10.uasset",
+      "bytes": 11018
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Drive_H11.uasset",
+      "bytes": 11015
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Drive_H12.uasset",
+      "bytes": 11204
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Drive_H13.uasset",
+      "bytes": 11021
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Drive_H14.uasset",
+      "bytes": 11229
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Drive_H14_Validated.uasset",
+      "bytes": 10962
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Drive_HALL.uasset",
+      "bytes": 10917
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Drive_LIBRARY.uasset",
+      "bytes": 10929
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Drive_LODGE.uasset",
+      "bytes": 11309
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Drive_POST.uasset",
+      "bytes": 10917
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Drive_PUMP.uasset",
+      "bytes": 11099
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Drive_SCHOOL.uasset",
+      "bytes": 11038
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Drive_SHERIFF.uasset",
+      "bytes": 10816
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Drive_UTILITY.uasset",
+      "bytes": 12442
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Estate_Back_Path_Final.uasset",
+      "bytes": 27622
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Estate_Back_Path_Validated.uasset",
+      "bytes": 27370
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_FIRE_GableRoof.uasset",
+      "bytes": 10863
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_FOSTER_GableRoof.uasset",
+      "bytes": 10920
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_GAS_GableRoof.uasset",
+      "bytes": 10908
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_H01_GableRoof.uasset",
+      "bytes": 10851
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_H02_GableRoof.uasset",
+      "bytes": 10907
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_H03_GableRoof.uasset",
+      "bytes": 10907
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_H04_GableRoof.uasset",
+      "bytes": 10908
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_H05_GableRoof.uasset",
+      "bytes": 10902
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_H06_GableRoof.uasset",
+      "bytes": 10906
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_H07_GableRoof.uasset",
+      "bytes": 10903
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_H08_GableRoof.uasset",
+      "bytes": 10904
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_H09_GableRoof.uasset",
+      "bytes": 10910
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_H10_GableRoof.uasset",
+      "bytes": 10910
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_H11_GableRoof.uasset",
+      "bytes": 10906
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_H12_GableRoof.uasset",
+      "bytes": 10906
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_H13_GableRoof.uasset",
+      "bytes": 10856
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_H14_GableRoof.uasset",
+      "bytes": 10907
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_HALL_GableRoof.uasset",
+      "bytes": 10860
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_LIBRARY_GableRoof.uasset",
+      "bytes": 10877
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_LODGE_GableRoof.uasset",
+      "bytes": 10916
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_POST_GableRoof.uasset",
+      "bytes": 10913
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_PUMP_GableRoof.uasset",
+      "bytes": 10912
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Path_Bridge_approach.uasset",
+      "bytes": 19945
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Path_Creek_trail.uasset",
+      "bytes": 36943
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Path_Estate_back_path.uasset",
+      "bytes": 25739
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Path_Old_footbridge_access.uasset",
+      "bytes": 21517
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Path_Park_shortcut.uasset",
+      "bytes": 17633
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Path_School_yard.uasset",
+      "bytes": 14395
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Road_Briar_Rise.uasset",
+      "bytes": 16520
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Road_Estate_Drive.uasset",
+      "bytes": 15566
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Road_Foundry_Cut.uasset",
+      "bytes": 13530
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Road_Grave_Lane.uasset",
+      "bytes": 13420
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Road_Grave_Lane_Validated.uasset",
+      "bytes": 13066
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Road_Main_Street.uasset",
+      "bytes": 15214
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Road_Mill_Road.uasset",
+      "bytes": 20725
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Road_Orchard_Loop.uasset",
+      "bytes": 17308
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Road_Ridge_Road.uasset",
+      "bytes": 14714
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Road_School_Lane.uasset",
+      "bytes": 14941
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Road_Tower_Service.uasset",
+      "bytes": 14193
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Road_Tower_Service_Final.uasset",
+      "bytes": 14741
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_SCHOOL_GableRoof.uasset",
+      "bytes": 10922
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_SHERIFF_GableRoof.uasset",
+      "bytes": 10925
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Terrain_0_0.uasset",
+      "bytes": 100726
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Terrain_0_1.uasset",
+      "bytes": 98203
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Terrain_0_2.uasset",
+      "bytes": 96286
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Terrain_0_3.uasset",
+      "bytes": 92657
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Terrain_1_0.uasset",
+      "bytes": 98861
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Terrain_1_1.uasset",
+      "bytes": 99587
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Terrain_1_2.uasset",
+      "bytes": 97831
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Terrain_1_3.uasset",
+      "bytes": 72602
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Terrain_2_0.uasset",
+      "bytes": 97612
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Terrain_2_1.uasset",
+      "bytes": 91523
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Terrain_2_2.uasset",
+      "bytes": 99631
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Terrain_2_3.uasset",
+      "bytes": 93884
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Terrain_3_0.uasset",
+      "bytes": 91030
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Terrain_3_1.uasset",
+      "bytes": 88428
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Terrain_3_2.uasset",
+      "bytes": 89058
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Terrain_3_3.uasset",
+      "bytes": 96375
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Terrain_Final_0_0.uasset",
+      "bytes": 100751
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Terrain_Final_0_1.uasset",
+      "bytes": 98181
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Terrain_Final_0_2.uasset",
+      "bytes": 96339
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Terrain_Final_0_3.uasset",
+      "bytes": 92681
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Terrain_Final_1_0.uasset",
+      "bytes": 98882
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Terrain_Final_1_1.uasset",
+      "bytes": 99337
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Terrain_Final_1_2.uasset",
+      "bytes": 97735
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Terrain_Final_1_3.uasset",
+      "bytes": 72644
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Terrain_Final_2_0.uasset",
+      "bytes": 97652
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Terrain_Final_2_1.uasset",
+      "bytes": 91459
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Terrain_Final_2_2.uasset",
+      "bytes": 99769
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Terrain_Final_2_3.uasset",
+      "bytes": 93909
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Terrain_Final_3_0.uasset",
+      "bytes": 91054
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Terrain_Final_3_1.uasset",
+      "bytes": 88546
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Terrain_Final_3_2.uasset",
+      "bytes": 88760
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Terrain_Final_3_3.uasset",
+      "bytes": 95916
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Terrain_ServiceFinal_0_1.uasset",
+      "bytes": 98200
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Terrain_ServiceFinal_0_2.uasset",
+      "bytes": 96198
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Terrain_Validated_3_1.uasset",
+      "bytes": 88222
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Terrain_Validated_3_2.uasset",
+      "bytes": 88776
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_TreeCrowns_0_0.uasset",
+      "bytes": 17794
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_TreeCrowns_0_1.uasset",
+      "bytes": 13444
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_TreeCrowns_0_2.uasset",
+      "bytes": 18132
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_TreeCrowns_0_3.uasset",
+      "bytes": 26289
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_TreeCrowns_1_0.uasset",
+      "bytes": 14090
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_TreeCrowns_1_1.uasset",
+      "bytes": 10732
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_TreeCrowns_1_2.uasset",
+      "bytes": 16984
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_TreeCrowns_1_3.uasset",
+      "bytes": 22631
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_TreeCrowns_2_0.uasset",
+      "bytes": 13892
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_TreeCrowns_2_1.uasset",
+      "bytes": 11904
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_TreeCrowns_2_2.uasset",
+      "bytes": 16110
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_TreeCrowns_2_3.uasset",
+      "bytes": 23490
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_TreeCrowns_3_0.uasset",
+      "bytes": 18317
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_TreeCrowns_3_1.uasset",
+      "bytes": 16965
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_TreeCrowns_3_2.uasset",
+      "bytes": 14603
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_TreeCrowns_3_3.uasset",
+      "bytes": 23349
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_TreeTrunks_0_0.uasset",
+      "bytes": 18543
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_TreeTrunks_0_1.uasset",
+      "bytes": 13492
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_TreeTrunks_0_2.uasset",
+      "bytes": 18880
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_TreeTrunks_0_3.uasset",
+      "bytes": 26638
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_TreeTrunks_1_0.uasset",
+      "bytes": 14432
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_TreeTrunks_1_1.uasset",
+      "bytes": 10867
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_TreeTrunks_1_2.uasset",
+      "bytes": 17818
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_TreeTrunks_1_3.uasset",
+      "bytes": 23012
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_TreeTrunks_2_0.uasset",
+      "bytes": 14205
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_TreeTrunks_2_1.uasset",
+      "bytes": 11802
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_TreeTrunks_2_2.uasset",
+      "bytes": 16784
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_TreeTrunks_2_3.uasset",
+      "bytes": 23936
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_TreeTrunks_3_0.uasset",
+      "bytes": 19022
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_TreeTrunks_3_1.uasset",
+      "bytes": 17782
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_TreeTrunks_3_2.uasset",
+      "bytes": 15117
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_TreeTrunks_3_3.uasset",
+      "bytes": 23734
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_UTILITY_GableRoof.uasset",
+      "bytes": 10922
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Walk_Briar_Rise-1.uasset",
+      "bytes": 16352
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Walk_Briar_Rise-1_Final.uasset",
+      "bytes": 16312
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Walk_Briar_Rise1.uasset",
+      "bytes": 16352
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Walk_Briar_Rise1_Final.uasset",
+      "bytes": 16147
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Walk_Foundry_Cut-1.uasset",
+      "bytes": 13483
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Walk_Foundry_Cut-1_Final.uasset",
+      "bytes": 13342
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Walk_Foundry_Cut1.uasset",
+      "bytes": 13478
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Walk_Foundry_Cut1_Final.uasset",
+      "bytes": 13498
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Walk_Main_Street-1.uasset",
+      "bytes": 15105
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Walk_Main_Street-1_Final.uasset",
+      "bytes": 14814
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Walk_Main_Street1.uasset",
+      "bytes": 15142
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Walk_Main_Street1_Final.uasset",
+      "bytes": 14672
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Walk_Mill_Road-1.uasset",
+      "bytes": 19025
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Walk_Mill_Road-1_Final.uasset",
+      "bytes": 18639
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Walk_Mill_Road1.uasset",
+      "bytes": 19044
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Walk_Mill_Road1_Final.uasset",
+      "bytes": 18675
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Walk_Orchard_Loop-1.uasset",
+      "bytes": 17186
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Walk_Orchard_Loop-1_Final.uasset",
+      "bytes": 16977
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Walk_Orchard_Loop1.uasset",
+      "bytes": 17190
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Walk_Orchard_Loop1_Final.uasset",
+      "bytes": 17031
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Walk_Ridge_Road-1.uasset",
+      "bytes": 14618
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Walk_Ridge_Road-1_Final.uasset",
+      "bytes": 14626
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Walk_Ridge_Road1.uasset",
+      "bytes": 14631
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Walk_Ridge_Road1_Final.uasset",
+      "bytes": 14629
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Walk_School_Lane-1.uasset",
+      "bytes": 14871
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Walk_School_Lane-1_Final.uasset",
+      "bytes": 14841
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Walk_School_Lane1.uasset",
+      "bytes": 14873
+    },
+    {
+      "path": "Content/Environment/V5/Meshes/SM_V5_Walk_School_Lane1_Final.uasset",
+      "bytes": 14889
+    },
+    {
+      "path": "Content/Maps/V5/Penance_Town_V5.umap",
+      "bytes": 1576017
+    },
+    {
+      "path": "Docs/V5/Additional_Placements.json",
+      "bytes": 3149
+    },
+    {
+      "path": "Docs/V5/Final_Validation.md",
+      "bytes": 2159
+    },
+    {
+      "path": "Docs/V5/Penance_Town_V5_Interactive.html",
+      "bytes": 50234
+    },
+    {
+      "path": "Docs/V5/Penance_V5_Chapter_Graph.md",
+      "bytes": 6235
+    },
+    {
+      "path": "Docs/V5/Penance_V5_Implementation.json",
+      "bytes": 39186
+    },
+    {
+      "path": "Docs/V5/Penance_V5_Masterplan.png",
+      "bytes": 232019
+    },
+    {
+      "path": "Docs/V5/Penance_V5_Validation.json",
+      "bytes": 18411
+    },
+    {
+      "path": "Docs/V5/Placement_Review.json",
+      "bytes": 75
+    },
+    {
+      "path": "Docs/V5/Player_Height_Views.jpg",
+      "bytes": 118547
+    },
+    {
+      "path": "Docs/V5/Preservation_Check.json",
+      "bytes": 7658
+    },
+    {
+      "path": "Docs/V5/README.md",
+      "bytes": 7980
+    },
+    {
+      "path": "Docs/V5/Unreal_Actor_Placements.json",
+      "bytes": 368665
+    },
+    {
+      "path": "Docs/V5/Views/Arrival.png",
+      "bytes": 1624447
+    },
+    {
+      "path": "Docs/V5/Views/ChurchApproach.png",
+      "bytes": 1173227
+    },
+    {
+      "path": "Docs/V5/Views/CreekCrossing.png",
+      "bytes": 1624447
+    },
+    {
+      "path": "Docs/V5/Views/FosterApproach.png",
+      "bytes": 1173227
+    },
+    {
+      "path": "Docs/V5/Views/Graveyard.png",
+      "bytes": 1624447
+    },
+    {
+      "path": "Docs/V5/Views/MainStreet.png",
+      "bytes": 1624447
+    },
+    {
+      "path": "Docs/V5/Views/Overhead.png",
+      "bytes": 1624447
+    },
+    {
+      "path": "Docs/V5/Views/Park.png",
+      "bytes": 1624447
+    },
+    {
+      "path": "Docs/V5/Views/Residential.png",
+      "bytes": 1624447
+    },
+    {
+      "path": "Docs/V5/Views/World.png",
+      "bytes": 1173227
+    },
+    {
+      "path": "Scripts/Build_Penance_Town_V5.py",
+      "bytes": 24720
+    },
+    {
+      "path": "Scripts/Complete_Penance_V5_Details.py",
+      "bytes": 2468
+    },
+    {
+      "path": "Scripts/Complete_Penance_V5_Junctions.py",
+      "bytes": 2220
+    },
+    {
+      "path": "Scripts/Finalize_Penance_V5.py",
+      "bytes": 2571
+    },
+    {
+      "path": "Scripts/Finish_Penance_V5_Access.py",
+      "bytes": 749
+    },
+    {
+      "path": "Scripts/Finish_Penance_V5_Collision.py",
+      "bytes": 548
+    },
+    {
+      "path": "Scripts/Penance_Town_V5_Design.py",
+      "bytes": 14826
+    },
+    {
+      "path": "Scripts/Present_Penance_Town_V5.py",
+      "bytes": 11190
+    },
+    {
+      "path": "Scripts/Refine_Penance_V5_Routes.py",
+      "bytes": 2511
+    },
+    {
+      "path": "Scripts/Render_Penance_V5_Masterplan.py",
+      "bytes": 4602
+    },
+    {
+      "path": "Scripts/Verify_Penance_Town_V5.py",
+      "bytes": 13224
+    },
+    {
+      "path": "Source/PenanceDemoUE/Private/PenanceV5WorldDirector.cpp",
+      "bytes": 4407
+    },
+    {
+      "path": "Source/PenanceDemoUE/Public/PenanceV5WorldDirector.h",
+      "bytes": 1821
+    }
+  ],
+  "archive_locations": [
+    "Built/WorldCheckpoints/V5_Incomplete_FirstBuild",
+    "Built/WorldCheckpoints/V5_BeforeCollisionFix"
+  ],
+  "generated_editor_caches_excluded": true
+}

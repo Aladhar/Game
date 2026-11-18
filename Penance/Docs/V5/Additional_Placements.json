@@ -1,0 +1,240 @@
+[
+  {
+    "name": "V5_Gas_Canopy",
+    "position_m": [
+      100,
+      64,
+      8.6
+    ],
+    "dimensions_m": [
+      13,
+      8,
+      0.35
+    ],
+    "yaw": -25
+  },
+  {
+    "name": "V5_Gas_Pump_96",
+    "position_m": [
+      96,
+      61,
+      5.723391252194357
+    ],
+    "dimensions_m": [
+      0.65,
+      1,
+      1.4
+    ],
+    "yaw": -25
+  },
+  {
+    "name": "V5_Gas_Post_96",
+    "position_m": [
+      99,
+      62,
+      6.61368857868977
+    ],
+    "dimensions_m": [
+      0.2,
+      0.2,
+      3.2
+    ],
+    "yaw": 0
+  },
+  {
+    "name": "V5_Gas_Pump_104",
+    "position_m": [
+      104,
+      66,
+      5.69268299693482
+    ],
+    "dimensions_m": [
+      0.65,
+      1,
+      1.4
+    ],
+    "yaw": -25
+  },
+  {
+    "name": "V5_Gas_Post_104",
+    "position_m": [
+      107,
+      67,
+      6.577929483051271
+    ],
+    "dimensions_m": [
+      0.2,
+      0.2,
+      3.2
+    ],
+    "yaw": 0
+  },
+  {
+    "name": "V5_Fire_Bay_313",
+    "position_m": [
+      313,
+      156.85,
+      7.9
+    ],
+    "dimensions_m": [
+      6,
+      0.05,
+      4
+    ],
+    "yaw": 0
+  },
+  {
+    "name": "V5_Fire_Bay_323",
+    "position_m": [
+      323,
+      156.85,
+      7.9
+    ],
+    "dimensions_m": [
+      6,
+      0.05,
+      4
+    ],
+    "yaw": 0
+  },
+  {
+    "name": "V5_Retaining_Briar",
+    "position_m": [
+      400,
+      134,
+      7.9072257352650235
+    ],
+    "dimensions_m": [
+      10,
+      0.4,
+      1.5
+    ],
+    "yaw": 0
+  },
+  {
+    "name": "V5_Retaining_Tower",
+    "position_m": [
+      39,
+      229,
+      13.4367971292363
+    ],
+    "dimensions_m": [
+      8,
+      0.4,
+      1.5
+    ],
+    "yaw": 90
+  },
+  {
+    "name": "V5_Retaining_Ridge",
+    "position_m": [
+      230,
+      337,
+      9.165307482530896
+    ],
+    "dimensions_m": [
+      14,
+      0.4,
+      1.5
+    ],
+    "yaw": -30
+  },
+  {
+    "name": "V5_Estate_CarriageHouse",
+    "position_m": [
+      421,
+      402,
+      15.14932771817272
+    ],
+    "dimensions_m": [
+      12,
+      9,
+      4.4
+    ],
+    "yaw": 0
+  },
+  {
+    "name": "V5_Estate_CarriageRoof",
+    "position_m": [
+      421,
+      402,
+      17.449327718172718
+    ],
+    "dimensions_m": [
+      13,
+      10,
+      0.3
+    ],
+    "yaw": 0
+  },
+  {
+    "name": "V5_Estate_GardenHedge_341",
+    "position_m": [
+      341,
+      386,
+      14.08825604240971
+    ],
+    "dimensions_m": [
+      0.8,
+      12,
+      1.6
+    ],
+    "yaw": 0
+  },
+  {
+    "name": "V5_Estate_GardenHedge_389",
+    "position_m": [
+      389,
+      386,
+      14.40499086633399
+    ],
+    "dimensions_m": [
+      0.8,
+      12,
+      1.6
+    ],
+    "yaw": 0
+  },
+  {
+    "name": "V5_Bench_108",
+    "position_m": [
+      108,
+      230,
+      5.516002085752396
+    ],
+    "dimensions_m": [
+      2,
+      0.6,
+      0.8
+    ],
+    "yaw": 0
+  },
+  {
+    "name": "V5_Bench_139",
+    "position_m": [
+      139,
+      228,
+      4.970405173094798
+    ],
+    "dimensions_m": [
+      2,
+      0.6,
+      0.8
+    ],
+    "yaw": 0
+  },
+  {
+    "name": "V5_Bench_242",
+    "position_m": [
+      242,
+      181,
+      5.524841009126292
+    ],
+    "dimensions_m": [
+      2,
+      0.6,
+      0.8
+    ],
+    "yaw": 0
+  }
+]

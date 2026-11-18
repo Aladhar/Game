@@ -1,0 +1,2532 @@
+{
+  "map": "/Game/Maps/V5/Penance_Town_V5",
+  "units": "meters; multiply every coordinate/dimension by 100 for Unreal UU",
+  "site": [
+    480,
+    440
+  ],
+  "north": "+Y",
+  "history": "Authoritative V5 placements. Meters, east +X / north +Y / up +Z; Unreal = meters * 100.\nFounded at a mill crossing; civic infill follows the historic commercial road.\nOrchard workers' cottages predate the eastern postwar ridge subdivision.\nChurch land and the Foster estate share the old north-bank carriage road.\nThe disappearance was six months ago: intact buildings, interrupted routines.\n",
+  "buildings": [
+    {
+      "id": "H01",
+      "name": "A Light in the Window",
+      "x": 109,
+      "y": 118,
+      "w": 14,
+      "d": 12,
+      "h": 6,
+      "z": 4.8,
+      "category": "Residential",
+      "yaw": -90,
+      "roof": 3,
+      "chapter": 2,
+      "unreal_position": [
+        10900,
+        11800,
+        480.0
+      ],
+      "unreal_yaw": -90
+    },
+    {
+      "id": "H02",
+      "name": "Orchard bungalow",
+      "x": 71,
+      "y": 87,
+      "w": 11,
+      "d": 9,
+      "h": 3.2,
+      "z": 4.9,
+      "category": "Residential",
+      "yaw": 35,
+      "roof": 2,
+      "chapter": 3,
+      "unreal_position": [
+        7100,
+        8700,
+        490.00000000000006
+      ],
+      "unreal_yaw": 35
+    },
+    {
+      "id": "H03",
+      "name": "Mill worker duplex",
+      "x": 45,
+      "y": 132,
+      "w": 13,
+      "d": 10,
+      "h": 5.6,
+      "z": 5.5,
+      "category": "Residential",
+      "yaw": -8,
+      "roof": 2.8,
+      "chapter": 3,
+      "unreal_position": [
+        4500,
+        13200,
+        550.0
+      ],
+      "unreal_yaw": -8
+    },
+    {
+      "id": "H04",
+      "name": "Corner saltbox",
+      "x": 83,
+      "y": 151,
+      "w": 10,
+      "d": 13,
+      "h": 5.2,
+      "z": 5.7,
+      "category": "Residential",
+      "yaw": -100,
+      "roof": 3,
+      "chapter": 3,
+      "unreal_position": [
+        8300,
+        15100,
+        570.0
+      ],
+      "unreal_yaw": -100
+    },
+    {
+      "id": "H05",
+      "name": "Orchard cottage",
+      "x": 88,
+      "y": 206,
+      "w": 10,
+      "d": 9,
+      "h": 3.2,
+      "z": 5.6,
+      "category": "Residential",
+      "yaw": 30,
+      "roof": 2.3,
+      "chapter": 3,
+      "unreal_position": [
+        8800,
+        20600,
+        560.0
+      ],
+      "unreal_yaw": 30
+    },
+    {
+      "id": "H06",
+      "name": "Garden house",
+      "x": 146,
+      "y": 101,
+      "w": 11,
+      "d": 10,
+      "h": 3.5,
+      "z": 4.9,
+      "category": "Residential",
+      "yaw": 25,
+      "roof": 2.5,
+      "chapter": 3,
+      "unreal_position": [
+        14600,
+        10100,
+        490.00000000000006
+      ],
+      "unreal_yaw": 25
+    },
+    {
+      "id": "H07",
+      "name": "Stationmaster house",
+      "x": 165,
+      "y": 110,
+      "w": 12,
+      "d": 12,
+      "h": 6,
+      "z": 5.1,
+      "category": "Residential",
+      "yaw": 15,
+      "roof": 3.2,
+      "chapter": 3,
+      "unreal_position": [
+        16500,
+        11000,
+        509.99999999999994
+      ],
+      "unreal_yaw": 15
+    },
+    {
+      "id": "H08",
+      "name": "Briar ranch",
+      "x": 231,
+      "y": 109,
+      "w": 16,
+      "d": 9,
+      "h": 3.1,
+      "z": 5.8,
+      "category": "Residential",
+      "yaw": -30,
+      "roof": 2,
+      "chapter": 3,
+      "unreal_position": [
+        23100,
+        10900,
+        580.0
+      ],
+      "unreal_yaw": -30
+    },
+    {
+      "id": "H09",
+      "name": "Split-level",
+      "x": 279,
+      "y": 96,
+      "w": 13,
+      "d": 10,
+      "h": 4.4,
+      "z": 6.7,
+      "category": "Residential",
+      "yaw": -10,
+      "roof": 2.2,
+      "chapter": 3,
+      "unreal_position": [
+        27900,
+        9600,
+        670.0
+      ],
+      "unreal_yaw": -10
+    },
+    {
+      "id": "H10",
+      "name": "Ridge gable",
+      "x": 332,
+      "y": 88,
+      "w": 11,
+      "d": 12,
+      "h": 5.8,
+      "z": 7.1,
+      "category": "Residential",
+      "yaw": 10,
+      "roof": 3,
+      "chapter": 3,
+      "unreal_position": [
+        33200,
+        8800,
+        710.0
+      ],
+      "unreal_yaw": 10
+    },
+    {
+      "id": "H11",
+      "name": "Uphill family home",
+      "x": 366,
+      "y": 102,
+      "w": 14,
+      "d": 11,
+      "h": 5.7,
+      "z": 8,
+      "category": "Residential",
+      "yaw": 35,
+      "roof": 2.8,
+      "chapter": 3,
+      "unreal_position": [
+        36600,
+        10200,
+        800
+      ],
+      "unreal_yaw": 35
+    },
+    {
+      "id": "H12",
+      "name": "Briar dead-end",
+      "x": 410,
+      "y": 149,
+      "w": 13,
+      "d": 12,
+      "h": 6,
+      "z": 8.7,
+      "category": "Residential",
+      "yaw": -95,
+      "roof": 3.2,
+      "chapter": 3,
+      "unreal_position": [
+        41000,
+        14900,
+        869.9999999999999
+      ],
+      "unreal_yaw": -95
+    },
+    {
+      "id": "H13",
+      "name": "Foundry cottage",
+      "x": 353,
+      "y": 165,
+      "w": 11,
+      "d": 9,
+      "h": 3.4,
+      "z": 7.3,
+      "category": "Residential",
+      "yaw": 0,
+      "roof": 2,
+      "chapter": 3,
+      "unreal_position": [
+        35300,
+        16500,
+        730.0
+      ],
+      "unreal_yaw": 0
+    },
+    {
+      "id": "H14",
+      "name": "Creek keeper home",
+      "x": 423,
+      "y": 218,
+      "w": 10,
+      "d": 12,
+      "h": 5.4,
+      "z": 5.5,
+      "category": "Residential",
+      "yaw": 75,
+      "roof": 2.6,
+      "chapter": 3,
+      "unreal_position": [
+        42300,
+        21800,
+        550.0
+      ],
+      "unreal_yaw": 75
+    },
+    {
+      "id": "GAS",
+      "name": "Last Stop Gas",
+      "x": 91,
+      "y": 48,
+      "w": 14,
+      "d": 10,
+      "h": 3.7,
+      "z": 5,
+      "category": "Commerce",
+      "yaw": -25,
+      "roof": 1,
+      "chapter": 1,
+      "unreal_position": [
+        9100,
+        4800,
+        500
+      ],
+      "unreal_yaw": -25
+    },
+    {
+      "id": "DINER",
+      "name": "Mill Road Diner",
+      "x": 168,
+      "y": 179,
+      "w": 22,
+      "d": 10,
+      "h": 4.2,
+      "z": 4.9,
+      "category": "Commerce",
+      "yaw": 10,
+      "roof": 1,
+      "chapter": 5,
+      "unreal_position": [
+        16800,
+        17900,
+        490.00000000000006
+      ],
+      "unreal_yaw": 10
+    },
+    {
+      "id": "POST",
+      "name": "Post Office",
+      "x": 205,
+      "y": 187,
+      "w": 13,
+      "d": 10,
+      "h": 5,
+      "z": 4.9,
+      "category": "Civic",
+      "yaw": 4,
+      "roof": 2,
+      "chapter": 5,
+      "unreal_position": [
+        20500,
+        18700,
+        490.00000000000006
+      ],
+      "unreal_yaw": 4
+    },
+    {
+      "id": "BARBER",
+      "name": "Barber / Hardware",
+      "x": 184,
+      "y": 130,
+      "w": 16,
+      "d": 10,
+      "h": 5.8,
+      "z": 5,
+      "category": "Commerce",
+      "yaw": 180,
+      "roof": 1.3,
+      "chapter": 5,
+      "unreal_position": [
+        18400,
+        13000,
+        500
+      ],
+      "unreal_yaw": 180
+    },
+    {
+      "id": "LIBRARY",
+      "name": "Public Library",
+      "x": 246,
+      "y": 151,
+      "w": 22,
+      "d": 13,
+      "h": 6,
+      "z": 5.1,
+      "category": "Civic",
+      "yaw": 0,
+      "roof": 2.4,
+      "chapter": 6,
+      "unreal_position": [
+        24600,
+        15100,
+        509.99999999999994
+      ],
+      "unreal_yaw": 0
+    },
+    {
+      "id": "HALL",
+      "name": "Town Hall",
+      "x": 255,
+      "y": 196,
+      "w": 21,
+      "d": 15,
+      "h": 7,
+      "z": 5.3,
+      "category": "Civic",
+      "yaw": 0,
+      "roof": 3,
+      "chapter": 6,
+      "unreal_position": [
+        25500,
+        19600,
+        530.0
+      ],
+      "unreal_yaw": 0
+    },
+    {
+      "id": "SHERIFF",
+      "name": "Sheriff Annex",
+      "x": 280,
+      "y": 208,
+      "w": 12,
+      "d": 11,
+      "h": 4,
+      "z": 5.3,
+      "category": "Civic",
+      "yaw": -20,
+      "roof": 1.4,
+      "chapter": 6,
+      "unreal_position": [
+        28000,
+        20800,
+        530.0
+      ],
+      "unreal_yaw": -20
+    },
+    {
+      "id": "SCHOOL",
+      "name": "Schoolhouse",
+      "x": 161,
+      "y": 200,
+      "w": 27,
+      "d": 13,
+      "h": 5,
+      "z": 5.5,
+      "category": "Civic",
+      "yaw": -6,
+      "roof": 3,
+      "chapter": 4,
+      "unreal_position": [
+        16100,
+        20000,
+        550.0
+      ],
+      "unreal_yaw": -6
+    },
+    {
+      "id": "FIRE",
+      "name": "Fire Station",
+      "x": 319,
+      "y": 165,
+      "w": 22,
+      "d": 16,
+      "h": 5.2,
+      "z": 5.9,
+      "category": "Utility",
+      "yaw": 0,
+      "roof": 1.6,
+      "chapter": 5,
+      "unreal_position": [
+        31900,
+        16500,
+        590.0
+      ],
+      "unreal_yaw": 0
+    },
+    {
+      "id": "CARE",
+      "name": "Graveyard caretaker",
+      "x": 374,
+      "y": 226,
+      "w": 8,
+      "d": 8,
+      "h": 3.2,
+      "z": 5.5,
+      "category": "Stone",
+      "yaw": 20,
+      "roof": 2,
+      "chapter": 7,
+      "unreal_position": [
+        37400,
+        22600,
+        550.0
+      ],
+      "unreal_yaw": 20
+    },
+    {
+      "id": "PUMP",
+      "name": "Creek Pump Station",
+      "x": 346,
+      "y": 240,
+      "w": 10,
+      "d": 8,
+      "h": 4,
+      "z": 2.3,
+      "category": "Utility",
+      "yaw": -20,
+      "roof": 1,
+      "chapter": 8,
+      "unreal_position": [
+        34600,
+        24000,
+        229.99999999999997
+      ],
+      "unreal_yaw": -20
+    },
+    {
+      "id": "CHURCH",
+      "name": "Grand Church",
+      "x": 185,
+      "y": 370,
+      "w": 24,
+      "d": 36,
+      "h": 10,
+      "z": 10,
+      "category": "Estate",
+      "yaw": 0,
+      "roof": 5,
+      "chapter": 10,
+      "unreal_position": [
+        18500,
+        37000,
+        1000
+      ],
+      "unreal_yaw": 0
+    },
+    {
+      "id": "FOSTER",
+      "name": "Foster House",
+      "x": 364,
+      "y": 369,
+      "w": 34,
+      "d": 25,
+      "h": 11,
+      "z": 13,
+      "category": "Estate",
+      "yaw": 12,
+      "roof": 4.5,
+      "chapter": 12,
+      "unreal_position": [
+        36400,
+        36900,
+        1300
+      ],
+      "unreal_yaw": 12
+    },
+    {
+      "id": "LODGE",
+      "name": "Estate gate lodge",
+      "x": 365,
+      "y": 328,
+      "w": 9,
+      "d": 8,
+      "h": 4,
+      "z": 10,
+      "category": "Estate",
+      "yaw": 20,
+      "roof": 2.5,
+      "chapter": 12,
+      "unreal_position": [
+        36500,
+        32800,
+        1000
+      ],
+      "unreal_yaw": 20
+    },
+    {
+      "id": "UTILITY",
+      "name": "Substation / maintenance",
+      "x": 434,
+      "y": 326,
+      "w": 18,
+      "d": 13,
+      "h": 4.5,
+      "z": 9.5,
+      "category": "Utility",
+      "yaw": 10,
+      "roof": 1,
+      "chapter": 8,
+      "unreal_position": [
+        43400,
+        32600,
+        950.0
+      ],
+      "unreal_yaw": 10
+    }
+  ],
+  "roads": {
+    "Mill Road": {
+      "kind": "main",
+      "width": 7,
+      "points": [
+        [
+          55,
+          22,
+          5
+        ],
+        [
+          75,
+          55,
+          4.8
+        ],
+        [
+          94,
+          87,
+          4.7
+        ],
+        [
+          130,
+          115,
+          4.6
+        ],
+        [
+          176,
+          145,
+          4.7
+        ],
+        [
+          230,
+          171,
+          4.7
+        ],
+        [
+          290,
+          186,
+          5
+        ],
+        [
+          305,
+          220,
+          4.3
+        ],
+        [
+          305,
+          235,
+          4.2
+        ],
+        [
+          305,
+          291,
+          4.2
+        ],
+        [
+          305,
+          310,
+          4.7
+        ]
+      ]
+    },
+    "Main Street": {
+      "kind": "main",
+      "width": 7,
+      "points": [
+        [
+          109,
+          153,
+          4.6
+        ],
+        [
+          154,
+          161,
+          4.6
+        ],
+        [
+          200,
+          170,
+          4.6
+        ],
+        [
+          230,
+          171,
+          4.7
+        ],
+        [
+          285,
+          169,
+          4.9
+        ]
+      ]
+    },
+    "Orchard Loop": {
+      "kind": "residential",
+      "width": 5.6,
+      "points": [
+        [
+          94,
+          87,
+          4.7
+        ],
+        [
+          60,
+          120,
+          4.8
+        ],
+        [
+          65,
+          164,
+          5.3
+        ],
+        [
+          105,
+          194,
+          5.2
+        ],
+        [
+          133,
+          182,
+          4.8
+        ],
+        [
+          154,
+          161,
+          4.6
+        ],
+        [
+          130,
+          115,
+          4.6
+        ]
+      ]
+    },
+    "Briar Rise": {
+      "kind": "residential",
+      "width": 5.8,
+      "points": [
+        [
+          202,
+          158,
+          4.7
+        ],
+        [
+          241,
+          131,
+          5.3
+        ],
+        [
+          285,
+          116,
+          6
+        ],
+        [
+          328,
+          106,
+          6.4
+        ],
+        [
+          367,
+          125,
+          7.5
+        ],
+        [
+          387,
+          155,
+          8
+        ]
+      ]
+    },
+    "Foundry Cut": {
+      "kind": "residential",
+      "width": 5.8,
+      "points": [
+        [
+          387,
+          155,
+          8
+        ],
+        [
+          358,
+          181,
+          6.9
+        ],
+        [
+          320,
+          190,
+          5.5
+        ],
+        [
+          290,
+          186,
+          5
+        ]
+      ]
+    },
+    "School Lane": {
+      "kind": "residential",
+      "width": 5.6,
+      "points": [
+        [
+          105,
+          194,
+          5.2
+        ],
+        [
+          125,
+          213,
+          5.3
+        ],
+        [
+          174,
+          220,
+          5.2
+        ],
+        [
+          208,
+          211,
+          4.9
+        ],
+        [
+          230,
+          171,
+          4.7
+        ]
+      ]
+    },
+    "Grave Lane": {
+      "kind": "service",
+      "width": 4,
+      "points": [
+        [
+          320,
+          190,
+          5.5
+        ],
+        [
+          349,
+          209,
+          5.8
+        ],
+        [
+          382,
+          214,
+          5.5
+        ],
+        [
+          409,
+          214,
+          5.5
+        ]
+      ]
+    },
+    "Ridge Road": {
+      "kind": "main",
+      "width": 6.5,
+      "points": [
+        [
+          305,
+          310,
+          4.7
+        ],
+        [
+          280,
+          320,
+          5.6
+        ],
+        [
+          239,
+          322,
+          6.2
+        ],
+        [
+          210,
+          338,
+          8.1
+        ],
+        [
+          185,
+          344,
+          9.3
+        ],
+        [
+          169,
+          348,
+          10
+        ]
+      ]
+    },
+    "Estate Drive": {
+      "kind": "service",
+      "width": 4,
+      "points": [
+        [
+          305,
+          310,
+          4.7
+        ],
+        [
+          324,
+          329,
+          6.1
+        ],
+        [
+          351,
+          337,
+          7.8
+        ],
+        [
+          382,
+          350,
+          10.0
+        ],
+        [
+          404,
+          365,
+          11.5
+        ],
+        [
+          404,
+          396,
+          13
+        ],
+        [
+          380,
+          401,
+          13
+        ],
+        [
+          365,
+          395,
+          13
+        ]
+      ]
+    },
+    "Tower Service": {
+      "kind": "service",
+      "width": 4,
+      "points": [
+        [
+          65,
+          164,
+          5.3
+        ],
+        [
+          38,
+          173,
+          6.8
+        ],
+        [
+          15,
+          192,
+          8.8
+        ],
+        [
+          14,
+          217,
+          10.8
+        ],
+        [
+          14,
+          238,
+          12.7
+        ],
+        [
+          44,
+          242,
+          14.4
+        ],
+        [
+          44,
+          224,
+          14.4
+        ],
+        [
+          30,
+          224,
+          14.4
+        ]
+      ]
+    }
+  },
+  "paths": {
+    "Park shortcut": [
+      [
+        101,
+        190
+      ],
+      [
+        103,
+        215
+      ],
+      [
+        126,
+        227
+      ],
+      [
+        150,
+        221
+      ]
+    ],
+    "Creek trail": [
+      [
+        125,
+        232
+      ],
+      [
+        166,
+        239
+      ],
+      [
+        213,
+        236
+      ],
+      [
+        259,
+        227
+      ],
+      [
+        290,
+        222
+      ],
+      [
+        331,
+        226
+      ],
+      [
+        367,
+        243
+      ],
+      [
+        407,
+        251
+      ]
+    ],
+    "Bridge approach": [
+      [
+        208,
+        211
+      ],
+      [
+        254,
+        212
+      ],
+      [
+        290,
+        222
+      ],
+      [
+        305,
+        235
+      ]
+    ],
+    "Old footbridge access": [
+      [
+        144,
+        240
+      ],
+      [
+        155,
+        254
+      ],
+      [
+        166,
+        278
+      ],
+      [
+        180,
+        307
+      ],
+      [
+        210,
+        338
+      ]
+    ],
+    "Estate back path": [
+      [
+        185,
+        401
+      ],
+      [
+        223,
+        394
+      ],
+      [
+        267,
+        386
+      ],
+      [
+        308,
+        378
+      ],
+      [
+        332,
+        373
+      ],
+      [
+        336,
+        360
+      ],
+      [
+        336,
+        350
+      ],
+      [
+        349,
+        350
+      ],
+      [
+        365,
+        354
+      ]
+    ],
+    "School yard": [
+      [
+        125,
+        213
+      ],
+      [
+        125,
+        204
+      ],
+      [
+        162,
+        197
+      ]
+    ]
+  },
+  "driveways": {
+    "H01": [
+      [
+        94,
+        104
+      ],
+      [
+        101,
+        115
+      ]
+    ],
+    "H02": [
+      [
+        79,
+        75
+      ],
+      [
+        75,
+        86
+      ]
+    ],
+    "H03": [
+      [
+        61,
+        131
+      ],
+      [
+        54,
+        132
+      ]
+    ],
+    "H04": [
+      [
+        64,
+        151
+      ],
+      [
+        74,
+        151
+      ]
+    ],
+    "H05": [
+      [
+        104,
+        193
+      ],
+      [
+        94,
+        201
+      ]
+    ],
+    "H06": [
+      [
+        143,
+        124
+      ],
+      [
+        146,
+        109
+      ]
+    ],
+    "H07": [
+      [
+        152,
+        129
+      ],
+      [
+        164,
+        119
+      ]
+    ],
+    "H08": [
+      [
+        236,
+        135
+      ],
+      [
+        232,
+        117
+      ]
+    ],
+    "H09": [
+      [
+        280,
+        118
+      ],
+      [
+        280,
+        104
+      ]
+    ],
+    "H10": [
+      [
+        330,
+        107
+      ],
+      [
+        332,
+        98
+      ]
+    ],
+    "H11": [
+      [
+        366,
+        125
+      ],
+      [
+        366,
+        111
+      ]
+    ],
+    "H12": [
+      [
+        387,
+        155
+      ],
+      [
+        401,
+        150
+      ]
+    ],
+    "H13": [
+      [
+        355,
+        181
+      ],
+      [
+        353,
+        172
+      ]
+    ],
+    "H14": [
+      [
+        409,
+        214
+      ],
+      [
+        415,
+        218
+      ]
+    ],
+    "GAS": [
+      [
+        75,
+        55
+      ],
+      [
+        85,
+        48
+      ]
+    ],
+    "DINER": [
+      [
+        167,
+        164
+      ],
+      [
+        168,
+        172
+      ]
+    ],
+    "BARBER": [
+      [
+        187,
+        150
+      ],
+      [
+        184,
+        138
+      ]
+    ],
+    "POST": [
+      [
+        205,
+        170
+      ],
+      [
+        205,
+        180
+      ]
+    ],
+    "LIBRARY": [
+      [
+        248,
+        171
+      ],
+      [
+        248,
+        161
+      ]
+    ],
+    "HALL": [
+      [
+        255,
+        178
+      ],
+      [
+        255,
+        187
+      ]
+    ],
+    "SHERIFF": [
+      [
+        290,
+        210
+      ],
+      [
+        288,
+        209
+      ]
+    ],
+    "SCHOOL": [
+      [
+        155,
+        218
+      ],
+      [
+        159,
+        210
+      ]
+    ],
+    "FIRE": [
+      [
+        319,
+        190
+      ],
+      [
+        319,
+        176
+      ]
+    ],
+    "CARE": [
+      [
+        375,
+        218
+      ],
+      [
+        374,
+        220
+      ]
+    ],
+    "PUMP": [
+      [
+        349,
+        235
+      ],
+      [
+        346,
+        246
+      ]
+    ],
+    "CHURCH": [
+      [
+        185,
+        344
+      ],
+      [
+        185,
+        350
+      ]
+    ],
+    "FOSTER": [
+      [
+        404,
+        371
+      ],
+      [
+        394,
+        367
+      ]
+    ],
+    "LODGE": [
+      [
+        377,
+        347
+      ],
+      [
+        366,
+        334
+      ]
+    ],
+    "UTILITY": [
+      [
+        404,
+        390
+      ],
+      [
+        427,
+        360
+      ],
+      [
+        434,
+        335
+      ]
+    ]
+  },
+  "checkpoints": [
+    [
+      55,
+      22,
+      6
+    ],
+    [
+      2000,
+      0,
+      1
+    ],
+    [
+      65,
+      161,
+      6.3
+    ],
+    [
+      126,
+      221,
+      6.3
+    ],
+    [
+      185,
+      349,
+      11
+    ],
+    [
+      193,
+      374,
+      6.32
+    ],
+    [
+      177,
+      403,
+      11
+    ],
+    [
+      365,
+      354,
+      14
+    ]
+  ],
+  "objectives": [
+    "The road has fallen away behind you. Follow the warm light up Mill Road. [E: house door]",
+    "Someone is standing in the hall. Find the front door and leave.",
+    "The door returned you to the side yard. Follow the orchard street toward the school bell.",
+    "The park gate is open. Cross the playground; the ridge is visible from there.",
+    "The bridge is clear. Follow the old road to the church on the far bank.",
+    "The nave is empty. Take the east service stair beneath the church.",
+    "Keep moving. The west service stair leads outside. [Scripted preview: no damage]",
+    "The estate gate is open. Follow the garden path to Foster House."
+  ],
+  "chapters": [
+    {
+      "chapter": 1,
+      "title": "The Return",
+      "start": "Arrival",
+      "objective": "Reach the lit house",
+      "path": [
+        "GAS",
+        "H01"
+      ],
+      "encounter": "No clear enemy sighting",
+      "optional": [
+        "Gas register",
+        "Bus shelter"
+      ],
+      "obstacle": "Visible road washout",
+      "unlock": "Reach the house",
+      "exit": "H01",
+      "shortcut": "Gas forecourt",
+      "beats": [
+        "Arrival",
+        "Interrupted refueling",
+        "Road washout",
+        "Warm window reveal"
+      ],
+      "implemented": "geography built; condensed opening preview only (see validation report)"
+    },
+    {
+      "chapter": 2,
+      "title": "A Light in the Window",
+      "start": "H01",
+      "objective": "Escape the changed house",
+      "path": [
+        "H01"
+      ],
+      "encounter": "Brief stationary Penance in the hall",
+      "optional": [
+        "Childhood room"
+      ],
+      "obstacle": "Changed exit",
+      "unlock": "Enter then leave House01",
+      "exit": "Orchard Loop",
+      "shortcut": "Side yard",
+      "beats": [
+        "Familiar doorway",
+        "Childhood echo space",
+        "Silhouette",
+        "Changed side-yard exit"
+      ],
+      "implemented": "geography built; condensed opening preview only (see validation report)"
+    },
+    {
+      "chapter": 3,
+      "title": "The Forgotten Neighborhood",
+      "start": "Orchard Loop",
+      "objective": "Find the school route",
+      "path": [
+        "H03",
+        "H05",
+        "SCHOOL"
+      ],
+      "encounter": "Dead-end escape reserved",
+      "optional": [
+        "H04 yard",
+        "H12 dead-end"
+      ],
+      "obstacle": "Park shortcut fence",
+      "unlock": "Orchard memory checkpoint",
+      "exit": "School Lane",
+      "shortcut": "Park service path",
+      "beats": [
+        "Repeat street",
+        "Changed parked car",
+        "Dead-end reserve",
+        "Shortcut opens"
+      ],
+      "implemented": "geography built; condensed opening preview only (see validation report)"
+    },
+    {
+      "chapter": 4,
+      "title": "Innocence",
+      "start": "SCHOOL",
+      "objective": "Reach the park overlook",
+      "path": [
+        "SCHOOL",
+        "PARK"
+      ],
+      "encounter": "Threat-free relief, later memory echo",
+      "optional": [
+        "School playground"
+      ],
+      "obstacle": "School rear access",
+      "unlock": "Park checkpoint",
+      "exit": "Main Street",
+      "shortcut": "Creek trail",
+      "beats": [
+        "Empty classroom reserve",
+        "Playground",
+        "Sister memory reserve",
+        "Church glimpse"
+      ],
+      "implemented": "geography built; condensed opening preview only (see validation report)"
+    },
+    {
+      "chapter": 5,
+      "title": "The Last Ordinary Day",
+      "start": "DINER",
+      "objective": "Restore one block of power",
+      "path": [
+        "DINER",
+        "BARBER",
+        "POST"
+      ],
+      "encounter": "Dark kitchen escape reserved",
+      "optional": [
+        "Hardware store"
+      ],
+      "obstacle": "Unpowered service door",
+      "unlock": "Power restoration puzzle planned",
+      "exit": "LIBRARY",
+      "shortcut": "Commercial rear alley",
+      "beats": [
+        "Interrupted meal",
+        "Breaker route",
+        "Power returns",
+        "Last-night reconstruction"
+      ],
+      "implemented": "site + routes; encounters planned"
+    },
+    {
+      "chapter": 6,
+      "title": "The Missing Records",
+      "start": "LIBRARY",
+      "objective": "Reach the municipal records wing",
+      "path": [
+        "LIBRARY",
+        "HALL",
+        "SHERIFF"
+      ],
+      "encounter": "Archive evasion reserved",
+      "optional": [
+        "Postal sorting",
+        "Town Hall balcony"
+      ],
+      "obstacle": "Annex evidence cabinet",
+      "unlock": "Core record scene planned",
+      "exit": "CARE",
+      "shortcut": "Civic courtyard",
+      "beats": [
+        "Library reference",
+        "Town Hall denial",
+        "Sheriff annex",
+        "Graveyard direction"
+      ],
+      "implemented": "site + routes; encounters planned"
+    },
+    {
+      "chapter": 7,
+      "title": "The Unmarked",
+      "start": "CARE",
+      "objective": "Reach the creek maintenance gate",
+      "path": [
+        "CARE",
+        "GRAVEYARD"
+      ],
+      "encounter": "Wall-and-grave sightline escape reserved",
+      "optional": [
+        "Unmarked plots"
+      ],
+      "obstacle": "Caretaker gate",
+      "unlock": "Burial-record scene planned",
+      "exit": "PUMP",
+      "shortcut": "Grave Lane",
+      "beats": [
+        "Caretaker room",
+        "Missing names",
+        "Terraced graves",
+        "Creek path opens"
+      ],
+      "implemented": "site + routes; encounters planned"
+    },
+    {
+      "chapter": 8,
+      "title": "Beneath the Water",
+      "start": "PUMP",
+      "objective": "Make the crossing approach safe",
+      "path": [
+        "PUMP",
+        "BRIDGE"
+      ],
+      "encounter": "Pump hazard/evasion reserved",
+      "optional": [
+        "Utility yard",
+        "Old mill footing"
+      ],
+      "obstacle": "Sluice machinery",
+      "unlock": "Pump environmental puzzle planned",
+      "exit": "BRIDGE",
+      "shortcut": "Creek maintenance trail",
+      "beats": [
+        "Bank descent",
+        "Pump chamber reserve",
+        "Flood bypass",
+        "Bridge approach"
+      ],
+      "implemented": "site + routes; encounters planned"
+    },
+    {
+      "chapter": 9,
+      "title": "The Crossing",
+      "start": "BRIDGE",
+      "objective": "Reach the old church road",
+      "path": [
+        "BRIDGE",
+        "CHURCH"
+      ],
+      "encounter": "Exposed crossing, no early patrol",
+      "optional": [
+        "Old footbridge"
+      ],
+      "obstacle": "Creek and steep banks",
+      "unlock": "Crossing event planned",
+      "exit": "CHURCH",
+      "shortcut": "Return bridge",
+      "beats": [
+        "Bridge exposure",
+        "Forest compression",
+        "Ridge road cut",
+        "Church threshold"
+      ],
+      "implemented": "geography built; condensed opening preview only (see validation report)"
+    },
+    {
+      "chapter": 10,
+      "title": "Confession",
+      "start": "CHURCH",
+      "objective": "Find the basement stair",
+      "path": [
+        "CHURCH"
+      ],
+      "encounter": "Door-opening set piece planned; open entry in preview",
+      "optional": [
+        "Church office reserve"
+      ],
+      "obstacle": "Office/archive doors planned",
+      "unlock": "Nave checkpoint",
+      "exit": "BASEMENT",
+      "shortcut": "Rear church path",
+      "beats": [
+        "Grand entrance",
+        "Empty pews",
+        "Archive reserve",
+        "Service stair"
+      ],
+      "implemented": "geography built; condensed opening preview only (see validation report)"
+    },
+    {
+      "chapter": 11,
+      "title": "The First Descent",
+      "start": "BASEMENT",
+      "objective": "Escape to the grounds",
+      "path": [
+        "BASEMENT",
+        "FOSTER"
+      ],
+      "encounter": "Scripted no-damage chase preview",
+      "optional": [
+        "Maintenance alcove"
+      ],
+      "obstacle": "Estate gate until escape",
+      "unlock": "Reach west escape stair",
+      "exit": "FOSTER",
+      "shortcut": "Garden back path",
+      "beats": [
+        "Descent",
+        "Penance appears",
+        "Two-route cover space",
+        "Escape stair",
+        "Estate reveal"
+      ],
+      "implemented": "geography built; condensed opening preview only (see validation report)"
+    },
+    {
+      "chapter": 12,
+      "title": "The Grounds",
+      "start": "FOSTER",
+      "objective": "Reach the estate entry",
+      "path": [
+        "LODGE",
+        "FOSTER"
+      ],
+      "encounter": "Garden stealth routes reserved",
+      "optional": [
+        "Greenhouse",
+        "Carriage house"
+      ],
+      "obstacle": "Estate threshold",
+      "unlock": "Grounds sequence planned",
+      "exit": "FOSTER interior",
+      "shortcut": "Garden service loop",
+      "beats": [
+        "Gate lodge",
+        "Garden approach",
+        "Outbuildings",
+        "Main threshold"
+      ],
+      "implemented": "geography built; condensed opening preview only (see validation report)"
+    },
+    {
+      "chapter": 13,
+      "title": "The Erased",
+      "start": "FOSTER interior",
+      "objective": "Recover the sister’s fuller story",
+      "path": [
+        "FOSTER"
+      ],
+      "encounter": "Interior survival reserved",
+      "optional": [
+        "Personal belongings"
+      ],
+      "obstacle": "Interior locked wing planned",
+      "unlock": "Core revelation scene planned",
+      "exit": "Return town",
+      "shortcut": "Estate service exit",
+      "beats": [
+        "Sister’s room reserve",
+        "Evidence of child",
+        "Institutional link",
+        "Return route"
+      ],
+      "implemented": "site + routes; encounters planned"
+    },
+    {
+      "chapter": 14,
+      "title": "Penance",
+      "start": "Return town",
+      "objective": "Confront what the town concealed",
+      "path": [
+        "CHURCH",
+        "HALL",
+        "H01"
+      ],
+      "encounter": "Final confrontation reserved",
+      "optional": [
+        "Optional ending discoveries"
+      ],
+      "obstacle": "Narrative resolution undecided",
+      "unlock": "Future chapter implementation",
+      "exit": "Ending undecided",
+      "shortcut": "Established return routes",
+      "beats": [
+        "Altered church",
+        "Changed square",
+        "Disappearance reconstruction",
+        "Confrontation"
+      ],
+      "implemented": "site + routes; encounters planned"
+    }
+  ],
+  "views": [
+    [
+      "Arrival",
+      [
+        61,
+        32
+      ],
+      [
+        109,
+        118,
+        9
+      ]
+    ],
+    [
+      "Residential",
+      [
+        65,
+        152
+      ],
+      [
+        97,
+        185,
+        8
+      ]
+    ],
+    [
+      "Park",
+      [
+        117,
+        218
+      ],
+      [
+        161,
+        200,
+        9
+      ]
+    ],
+    [
+      "MainStreet",
+      [
+        186,
+        166
+      ],
+      [
+        259,
+        190,
+        12
+      ]
+    ],
+    [
+      "Graveyard",
+      [
+        365,
+        215
+      ],
+      [
+        397,
+        236,
+        7
+      ]
+    ],
+    [
+      "CreekCrossing",
+      [
+        305,
+        235
+      ],
+      [
+        305,
+        290,
+        5
+      ]
+    ],
+    [
+      "ChurchApproach",
+      [
+        185,
+        330
+      ],
+      [
+        185,
+        370,
+        25
+      ]
+    ],
+    [
+      "FosterApproach",
+      [
+        365,
+        335
+      ],
+      [
+        364,
+        369,
+        22
+      ]
+    ]
+  ],
+  "creek": [
+    [
+      0,
+      239.2,
+      0
+    ],
+    [
+      4,
+      240.6168897676357,
+      0
+    ],
+    [
+      8,
+      242.03012100077842,
+      0
+    ],
+    [
+      12,
+      243.43604945143403,
+      0
+    ],
+    [
+      16,
+      244.83105938881783,
+      0
+    ],
+    [
+      20,
+      246.2115777187057,
+      0
+    ],
+    [
+      24,
+      247.57408793629074,
+      0
+    ],
+    [
+      28,
+      248.91514385805908,
+      0
+    ],
+    [
+      32,
+      250.23138307906305,
+      0
+    ],
+    [
+      36,
+      251.5195401030403,
+      0
+    ],
+    [
+      40,
+      252.77645909410694,
+      0
+    ],
+    [
+      44,
+      253.99910620022902,
+      0
+    ],
+    [
+      48,
+      255.18458140035003,
+      0
+    ],
+    [
+      52,
+      256.3301298289107,
+      0
+    ],
+    [
+      56,
+      257.4331525335404,
+      0
+    ],
+    [
+      60,
+      258.4912166239104,
+      0
+    ],
+    [
+      64,
+      259.50206477211844,
+      0
+    ],
+    [
+      68,
+      260.46362402750606,
+      0
+    ],
+    [
+      72,
+      261.37401391148643,
+      0
+    ],
+    [
+      76,
+      262.231553760773,
+      0
+    ],
+    [
+      80,
+      263.0347692903338,
+      0
+    ],
+    [
+      84,
+      263.7823983504427,
+      0
+    ],
+    [
+      88,
+      264.47339585534735,
+      0
+    ],
+    [
+      92,
+      265.1069378643064,
+      0
+    ],
+    [
+      96,
+      265.6824247990608,
+      0
+    ],
+    [
+      100,
+      266.1994837851737,
+      0
+    ],
+    [
+      104,
+      266.65797010809746,
+      0
+    ],
+    [
+      108,
+      267.0579677782806,
+      0
+    ],
+    [
+      112,
+      267.39978920310904,
+      0
+    ],
+    [
+      116,
+      267.6839739669618,
+      0
+    ],
+    [
+      120,
+      267.9112867241454,
+      0
+    ],
+    [
+      124,
+      268.0827142129357,
+      0
+    ],
+    [
+      128,
+      268.1994614023852,
+      0
+    ],
+    [
+      132,
+      268.2629467869457,
+      0
+    ],
+    [
+      136,
+      268.2747968472768,
+      0
+    ],
+    [
+      140,
+      268.23683969887446,
+      0
+    ],
+    [
+      144,
+      268.1510979533188,
+      0
+    ],
+    [
+      148,
+      268.01978082001926,
+      0
+    ],
+    [
+      152,
+      267.84527547929906,
+      0
+    ],
+    [
+      156,
+      267.6301377605072,
+      0
+    ],
+    [
+      160,
+      267.3770821615593,
+      0
+    ],
+    [
+      164,
+      267.088971248882,
+      0
+    ],
+    [
+      168,
+      266.76880447915136,
+      0
+    ],
+    [
+      172,
+      266.41970648647947,
+      0
+    ],
+    [
+      176,
+      266.044914880785,
+      0
+    ],
+    [
+      180,
+      265.6477676049953,
+      0
+    ],
+    [
+      184,
+      265.2316899004513,
+      0
+    ],
+    [
+      188,
+      264.800180931413,
+      0
+    ],
+    [
+      192,
+      264.356800120898,
+      0
+    ],
+    [
+      196,
+      263.9051532512109,
+      0
+    ],
+    [
+      200,
+      263.4488783834402,
+      0
+    ],
+    [
+      204,
+      262.9916316509083,
+      0
+    ],
+    [
+      208,
+      262.5370729820484,
+      0
+    ],
+    [
+      212,
+      262.08885180846255,
+      0
+    ],
+    [
+      216,
+      261.6505928139697,
+      0
+    ],
+    [
+      220,
+      261.22588178029224,
+      0
+    ],
+    [
+      224,
+      260.8182515846557,
+      0
+    ],
+    [
+      228,
+      260.43116840397863,
+      0
+    ],
+    [
+      232,
+      260.0680181795259,
+      0
+    ],
+    [
+      236,
+      259.7320933948802,
+      0
+    ],
+    [
+      240,
+      259.42658021886484,
+      0
+    ],
+    [
+      244,
+      259.1545460636219,
+      0
+    ],
+    [
+      248,
+      258.91892760643395,
+      0
+    ],
+    [
+      252,
+      258.72251932206194,
+      0
+    ],
+    [
+      256,
+      258.5679625703811,
+      0
+    ],
+    [
+      260,
+      258.457735281927,
+      0
+    ],
+    [
+      264,
+      258.3941422816302,
+      0
+    ],
+    [
+      268,
+      258.37930628852376,
+      0
+    ],
+    [
+      272,
+      258.4151596265712,
+      0
+    ],
+    [
+      276,
+      258.5034366789827,
+      0
+    ],
+    [
+      280,
+      258.6456671154856,
+      0
+    ],
+    [
+      284,
+      258.84316991899686,
+      0
+    ],
+    [
+      288,
+      259.0970482350235,
+      0
+    ],
+    [
+      292,
+      259.40818506390235,
+      0
+    ],
+    [
+      296,
+      259.7772398127028,
+      0
+    ],
+    [
+      300,
+      260.2046457202566,
+      0
+    ],
+    [
+      304,
+      260.6906081653693,
+      0
+    ],
+    [
+      308,
+      261.2351038648203,
+      0
+    ],
+    [
+      312,
+      261.8378809642834,
+      0
+    ],
+    [
+      316,
+      262.49846002181266,
+      0
+    ],
+    [
+      320,
+      263.21613588005295,
+      0
+    ],
+    [
+      324,
+      263.989980419864,
+      0
+    ],
+    [
+      328,
+      264.81884618460634,
+      0
+    ],
+    [
+      332,
+      265.7013708609344,
+      0
+    ],
+    [
+      336,
+      266.6359825986011,
+      0
+    ],
+    [
+      340,
+      267.6209061484998,
+      0
+    ],
+    [
+      344,
+      268.65416979497354,
+      0
+    ],
+    [
+      348,
+      269.7336130553228,
+      0
+    ],
+    [
+      352,
+      270.8568951164441,
+      0
+    ],
+    [
+      356,
+      272.0215039756552,
+      0
+    ],
+    [
+      360,
+      273.2247662500115,
+      0
+    ],
+    [
+      364,
+      274.46385761580973,
+      0
+    ],
+    [
+      368,
+      275.73581383751116,
+      0
+    ],
+    [
+      372,
+      277.0375423430179,
+      0
+    ],
+    [
+      376,
+      278.3658343001013,
+      0
+    ],
+    [
+      380,
+      279.71737714682246,
+      0
+    ],
+    [
+      384,
+      281.0887675270161,
+      0
+    ],
+    [
+      388,
+      282.47652458032354,
+      0
+    ],
+    [
+      392,
+      283.87710353487785,
+      0
+    ],
+    [
+      396,
+      285.286909549562,
+      0
+    ],
+    [
+      400,
+      286.7023117517866,
+      0
+    ],
+    [
+      404,
+      288.11965741597,
+      0
+    ],
+    [
+      408,
+      289.5352862273527,
+      0
+    ],
+    [
+      412,
+      290.94554457544893,
+      0
+    ],
+    [
+      416,
+      292.34679982131723,
+      0
+    ],
+    [
+      420,
+      293.7354544829374,
+      0
+    ],
+    [
+      424,
+      295.1079602833013,
+      0
+    ],
+    [
+      428,
+      296.4608320063582,
+      0
+    ],
+    [
+      432,
+      297.7906611067093,
+      0
+    ],
+    [
+      436,
+      299.0941290199041,
+      0
+    ],
+    [
+      440,
+      300.3680201213641,
+      0
+    ],
+    [
+      444,
+      301.60923428332745,
+      0
+    ],
+    [
+      448,
+      302.8147989807818,
+      0
+    ],
+    [
+      452,
+      303.98188089911093,
+      0
+    ],
+    [
+      456,
+      305.10779699812736,
+      0
+    ],
+    [
+      460,
+      306.19002498928705,
+      0
+    ],
+    [
+      464,
+      307.2262131851726,
+      0
+    ],
+    [
+      468,
+      308.2141896827814,
+      0
+    ],
+    [
+      472,
+      309.1519708447611,
+      0
+    ],
+    [
+      476,
+      310.0377690454709,
+      0
+    ],
+    [
+      480,
+      310.8699996516211,
+      0
+    ]
+  ]
+}
