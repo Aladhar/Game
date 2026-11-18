@@ -39,8 +39,9 @@
     ],
     "basement_encounter_spawned": true,
     "opening_preview_completed": true,
-    "walk_distance_m": 2837.14,
-    "no_checkpoint_teleports": true
+    "no_checkpoint_teleports": true,
+    "cumulative_xy_delta_m_including_house_portal": 2837.14,
+    "distance_note": "Cumulative XY displacement includes the House01 entry transfer; it is not a walked-distance measurement."
   },
   "screenshots": [
     "Arrival.png",

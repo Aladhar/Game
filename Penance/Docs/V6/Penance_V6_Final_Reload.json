@@ -1,0 +1,42 @@
+{
+  "map": "/Game/Maps/V6/Penance_Town_V6",
+  "issues": [],
+  "runtime": {
+    "possessed_class": "/Game/Player/BP_PenancePlayer.BP_PenancePlayer_C",
+    "spawn_position_uu": [
+      3000.0,
+      2000.0,
+      549.1499691009521
+    ],
+    "player_mesh": "Untitled",
+    "animation_class": "/Game/Player/Animations/ABP_PenancePlayer.ABP_PenancePlayer_C"
+  },
+  "screenshots": [
+    "Arrival.png",
+    "Orchard.png",
+    "Briar.png",
+    "MainStreet.png",
+    "Park.png",
+    "Bridge.png",
+    "Church.png",
+    "Foster.png",
+    "Overhead.png"
+  ],
+  "traversal": "Continuous AddMovementInput on possessed pawn; no checkpoint teleports; House01 uses original portal",
+  "human_manual_walkthrough": false,
+  "elapsed_seconds": 195.32,
+  "keyboard_smoke_test": "not verified through desktop automation",
+  "keyboard_initial_uu": [
+    3000.0,
+    2000.0,
+    549.1499691009521
+  ],
+  "keyboard_current_uu": [
+    3632.3472531591487,
+    2096.1980648662648,
+    555.6499667167664
+  ],
+  "keyboard_displacement_cm": 639.6556622362849,
+  "keyboard_delivery_error": "CUA noWindowsAvailable when attempting to focus/send keys; screenshot observation succeeded.",
+  "keyboard_position_delta_is_not_input_proof": true
+}

@@ -1,0 +1,31 @@
+Build.log
+Result: Succeeded
+Total execution time: 12.19 seconds
+Parcels.log
+[2026.11.18-20.21.12:083][  0]LogPython: V6_PARCELS_FINAL_SAVED
+PlayValidation.log
+[2026.11.18-20.13.34:367][165]LogPython: V6_WALK_ROUTE Arrival to House01
+[2026.11.18-20.14.35:595][323]LogTemp: Display: PENANCE_V5_STAGE 1: Someone is standing in the hall. Find the front door and leave.
+[2026.11.18-20.14.37:222][348]LogPython: V6_WALK_ROUTE Interior return
+[2026.11.18-20.14.37:902][367]LogTemp: Display: PENANCE_V5_STAGE 2: The door returned you to the side yard. Follow the orchard street toward the school bell.
+[2026.11.18-20.14.38:572][398]LogPython: V6_WALK_ROUTE Neighborhood and park
+[2026.11.18-20.15.28:098][567]LogTemp: Display: PENANCE_V5_STAGE 3: The park gate is open. Cross the playground; the ridge is visible from there.
+[2026.11.18-20.16.12:515][ 35]LogTemp: Display: PENANCE_V5_STAGE 4: The bridge is clear. Follow the old road to the church on the far bank.
+[2026.11.18-20.16.14:782][153]LogPython: V6_WALK_ROUTE Bridge and church
+[2026.11.18-20.19.06:015][178]LogTemp: Display: PENANCE_V5_STAGE 5: The nave is empty. Take the east service stair beneath the church.
+[2026.11.18-20.19.22:495][ 82]LogTemp: Display: PENANCE_V5_STAGE 6: Keep moving. The west service stair leads outside. [Scripted preview: no damage]
+[2026.11.18-20.19.24:760][159]LogPython: V6_WALK_ROUTE Basement west escape
+[2026.11.18-20.19.42:120][996]LogTemp: Display: PENANCE_V5_STAGE 7: The estate gate is open. Follow the garden path to Foster House.
+[2026.11.18-20.19.45:363][129]LogPython: V6_WALK_ROUTE Estate approach
+[2026.11.18-20.21.28:321][451]LogTemp: Display: PENANCE_V5_STAGE 8: The ridge is quiet. V5 preview complete — explore or restart Play.
+[2026.11.18-20.21.31:225][582]LogPython: V6_PLAY_VALIDATION_COMPLETE {"possessed_class": "/Game/Player/BP_PenancePlayer.BP_PenancePlayer_C", "spawn_position_uu": [3000.0, 2000.0, 549.1499691009521], "player_mesh": "Untitled", "animation_class": "/Game/Player/Animations/ABP_PenancePlayer.ABP_PenancePlayer_C", "stages_observed": [0, 1, 2, 3, 4, 5, 6, 7, 8], "walked_routes": ["Arrival to House01", "Interior return", "Neighborhood and park", "Bridge and church", "Basement west escape", "Estate approach"], "streamed_entry": true, "interior_silhouette": true, "streamed_exit": true, "return_position_uu": [10000.0, 9600.0, 566.4166363618284], "basement_encounter_spawned": true, "opening_preview_completed": true, "walk_distance_m": 2837.14, "no_checkpoint_teleports": true}
+FinalReload.log
+[2026.11.18-20.23.24:594][  0]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0.115ms to complete.
+[2026.11.18-20.23.29:304][  2]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0.14ms to complete.
+[2026.11.18-20.23.37:682][255]LogPenancePlayerBody: Player body initialized. Mesh=/Game/Player/MeshyPlayer/Untitled.Untitled FPBody=None AnimClass=ABP_PenancePlayer_C OwnerOnly=false OwnerNoSeeExternal=false ForwardAnim=None BackwardAnim=None Walk=200.0 Sprint=420.0 Crouch=140.0 CameraRootRelative=X=0.000 Y=0.000 Z=72.500 CameraRelative=X=0.000 Y=0.000 Z=0.000 MeshVisualYawOffset=-90.0 BodyYawFollow=18.0
+[2026.11.18-20.23.38:002][255]LogPython: V6_SAVED_VALIDATION {"issues": [], "active_actors": 1558}
+
+Overhead.log
+[2026.11.18-20.35.26:228][  0]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0.145ms to complete.
+[2026.11.18-20.35.29:798][  2]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0.157ms to complete.
+[2026.11.18-20.35.42:977][265]LogPython: V6_FULL_OVERHEAD_CAPTURED

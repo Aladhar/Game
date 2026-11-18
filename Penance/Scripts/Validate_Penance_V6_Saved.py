@@ -58,13 +58,14 @@ for a in active:
  rec=dict(label=a.get_actor_label(),class_name=a.get_class().get_path_name(),location_uu=list(a.get_actor_location().to_tuple()),rotation_degrees=list(a.get_actor_rotation().to_tuple()),scale=list(a.get_actor_scale3d().to_tuple()),folder=str(a.get_folder_path()),tags=list(map(str,a.tags)))
  if c:
   rec['mesh']=c.static_mesh.get_path_name() if c.static_mesh else None;check(c.static_mesh is not None,'Missing mesh: '+a.get_actor_label());rec['materials']=[m.get_path_name() if m else None for m in c.get_materials()]
- placements.append(rec)
+ if a.get_actor_label().startswith('V6_') and 'Transient_' not in a.get_actor_label():placements.append(rec)
  lc=a.get_component_by_class(u.LightComponentBase)
  if lc:
   q=dict(label=a.get_actor_label(),mobility=str(lc.mobility))
   if isinstance(lc,u.DirectionalLightComponent):q.update(priority=lc.get_editor_property('forward_shading_priority'),atmosphere_sun=lc.get_editor_property('atmosphere_sun_light'))
   lights.append(q);check(lc.mobility==u.ComponentMobility.MOVABLE,'Non-movable light '+a.get_actor_label())
 (out/'Unreal_Actor_Placements.json').write_text(json.dumps(placements,indent=2)+'\n')
+r['placed_saved_actor_count']=len(placements)
 r['lighting']=dict(force_no_precomputed=w.get_world_settings().get_editor_property('force_no_precomputed_lighting'),lights=lights)
 check(sum(a.get_class().get_name()=='PlayerStart' for a in active)==1,'Expected one PlayerStart')
 check(sum(a.get_class().get_name()=='PenanceStreamingDoor' for a in active)==1,'Expected one exterior streaming entrance')

@@ -1,12 +1,7 @@
 {
   "map": "/Game/Maps/V6/Penance_Town_V6",
   "fresh_editor_reload": true,
-  "issues": [
-    "Road surface intrusion: Grave Lane",
-    "Blocked public road: Tower Service",
-    "Road surface intrusion: Tower Service",
-    "Impassable route step: House01 approach"
-  ],
+  "issues": [],
   "warnings": [],
   "roads": {
     "Mill Road": {
@@ -60,16 +55,9 @@
     "Grave Lane": {
       "samples": 87,
       "missing_floor": [],
-      "anomalies": [
-        {
-          "x": 289.4037150788419,
-          "y": 161.36667019688198,
-          "cm": 24.92,
-          "actor": "V6_Sidewalk_Foundry_Cut-1"
-        }
-      ],
+      "anomalies": [],
       "blocked": [],
-      "max_grade_pct": 21.51,
+      "max_grade_pct": 9.08,
       "width_m": 4
     },
     "Ridge Road": {
@@ -89,30 +77,11 @@
       "width_m": 4
     },
     "Tower Service": {
-      "samples": 102,
+      "samples": 96,
       "missing_floor": [],
-      "anomalies": [
-        {
-          "x": 26.724149064894824,
-          "y": 180.6350449982583,
-          "cm": 118.52,
-          "actor": "V6_Terrain_0_2_Final"
-        },
-        {
-          "x": 25.047682779224388,
-          "y": 182.35255456965498,
-          "cm": 43.42,
-          "actor": "V6_Terrain_0_2_Final"
-        }
-      ],
-      "blocked": [
-        [
-          25.047682779224388,
-          182.35255456965498,
-          "V6_Terrain_0_2_Final"
-        ]
-      ],
-      "max_grade_pct": 117.4,
+      "anomalies": [],
+      "blocked": [],
+      "max_grade_pct": 30.48,
       "width_m": 4
     }
   },
@@ -120,7 +89,7 @@
     "House01 approach": {
       "samples": 71,
       "missing": 0,
-      "max_sample_step_cm": 46.06,
+      "max_sample_step_cm": 13.94,
       "blocked": []
     },
     "Park shortcut": {
@@ -160,8 +129,8 @@
       "blocked": []
     }
   },
-  "all_actor_count": 1889,
-  "active_actor_count": 1510,
+  "all_actor_count": 2006,
+  "active_actor_count": 1558,
   "blueprints": {
     "/Game/Player/BP_PenancePlayer": "compile invoked in fresh commandlet; compiler log checked",
     "/Game/Player/Animations/ABP_PenancePlayer": "compile invoked in fresh commandlet; compiler log checked",
@@ -235,5 +204,7 @@
     "stairs_width": 300,
     "enemy_height": 230
   },
-  "physics_world": "PIE"
+  "physics_world": "PIE",
+  "placed_saved_actor_count": 1540,
+  "active_actor_count_includes_runtime_actors": true
 }

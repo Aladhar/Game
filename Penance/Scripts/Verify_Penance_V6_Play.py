@@ -6,7 +6,7 @@ from pathlib import Path
 import sys,json,time,math,traceback
 import unreal as u
 sys.path.insert(0,str(Path(__file__).resolve().parent));import Penance_Town_V6_Design as p
-root=Path(__file__).resolve().parents[1];out=root/'Docs/V6';shots=out/'Views';shots.mkdir(exist_ok=True)
+root=Path(__file__).resolve().parents[1];out=root/'Docs/V6';PROBE_ONLY=Path('/private/tmp/PenanceV6/ProbeOnly').exists();shots=out/'Views';shots.mkdir(exist_ok=True)
 L=u.get_editor_subsystem(u.LevelEditorSubsystem);A=u.get_editor_subsystem(u.EditorActorSubsystem)
 assert L.load_level(p.MAP)
 import Complete_Penance_V6_Foliage;Complete_Penance_V6_Foliage.apply()
@@ -15,7 +15,7 @@ report=dict(map=p.MAP,issues=[],runtime={},screenshots=[],traversal='Continuous 
 start=time.monotonic();last=start;phase='start';busy=False;game=None;pawn=None;pc=None;director=None;door=None;capture=None;cc=None;rt=None;jobs=[];si=0;wi=0;route=[];walkstage='';previous=None;stucktime=0;distance=0;laststage=-1
 u.EditorPythonScripting.set_keep_python_script_alive(True)
 def write():
- report['elapsed_seconds']=round(time.monotonic()-start,2);(out/'Penance_V6_Gameplay_Validation.json').write_text(json.dumps(report,indent=2)+'\n')
+ report['elapsed_seconds']=round(time.monotonic()-start,2);(out/('Penance_V6_Final_Reload.json' if PROBE_ONLY else 'Penance_V6_Gameplay_Validation.json')).write_text(json.dumps(report,indent=2)+'\n')
 def setroute(name,pts):
  global route,wi,walkstage,phase,last,stucktime
  route=pts;wi=0;walkstage=name;phase='walk';last=time.monotonic();stucktime=0
@@ -26,8 +26,9 @@ def setupcapture():
  rt=u.RenderingLibrary.create_render_target2d(game,1440,900,u.TextureRenderTargetFormat.RTF_RGBA8);cc.set_editor_properties({'texture_target':rt,'capture_source':u.SceneCaptureSource.SCS_FINAL_COLOR_LDR,'capture_every_frame':False,'capture_on_movement':False,'fov_angle':80})
  for cmd in('r.EyeAdaptationQuality 0','r.ScreenPercentage 100','r.AntiAliasingMethod 2'):u.SystemLibrary.execute_console_command(game,cmd)
  jobs=[a for a in u.GameplayStatics.get_all_actors_of_class(game,u.CameraActor) if a.get_actor_label().startswith('V6_Review_')];phase='capture_next';last=time.monotonic()
+keyboard_start=None
 def tick(dt):
- global phase,last,busy,game,pawn,pc,director,door,si,wi,previous,stucktime,distance,laststage
+ global phase,last,busy,game,pawn,pc,director,door,si,wi,previous,stucktime,distance,laststage,keyboard_start
  if busy:return
  busy=True
  try:
@@ -51,10 +52,12 @@ def tick(dt):
    setupcapture()
   elif phase=='capture_next':
    if si>=len(jobs):
+    if PROBE_ONLY:
+     keyboard_start=pawn.get_actor_location();phase='keyboard';last=now;report['keyboard_smoke_test']='awaiting physical keyboard';write();return
     setroute('Arrival to House01',[(30,20),(40,37),(66,47),(68,60),(68,73),(74,88),(78,99),(87,106),(92.0,106)]);return
    cam=jobs[si];cm=cam.get_component_by_class(u.CameraComponent);si+=1;capture.set_actor_location(cam.get_actor_location(),False,False);capture.set_actor_rotation(cam.get_actor_rotation(),False)
    cc.set_editor_property('projection_type',cm.projection_mode)
-   if cm.projection_mode==u.CameraProjectionMode.ORTHOGRAPHIC:cc.set_editor_property('ortho_width',43000)
+   if cm.projection_mode==u.CameraProjectionMode.ORTHOGRAPHIC:cc.set_editor_property('ortho_width',60000)
    phase='capture_save';last=now
   elif phase=='capture_save':
    if now-last<2:return
@@ -81,7 +84,7 @@ def tick(dt):
     elif walkstage=='Basement west escape':
      assert stage>=7,'Escape checkpoint failed';setroute('Estate approach',p.PATHS['Estate back path'])
     elif walkstage=='Estate approach':
-     assert stage==8,'Estate reveal failed';report['runtime']['opening_preview_completed']=True;report['runtime']['walk_distance_m']=round(distance,2);report['runtime']['no_checkpoint_teleports']=True
+     assert stage==8,'Estate reveal failed';report['runtime']['opening_preview_completed']=True;report['runtime']['walk_distance_m_excluding_house_portal']=round(distance,2);report['runtime']['no_checkpoint_teleports']=True
      for tag in('V5_ParkShortcutBarrier','V5_EstateBarrier'):
       assert all(a.get_editor_property('hidden') for a in u.GameplayStatics.get_all_actors_with_tag(game,u.Name(tag))),tag+' stayed closed'
      write();L.editor_request_end_play();phase='end';last=now
@@ -91,6 +94,14 @@ def tick(dt):
    if stucktime>8 or now-last>480:raise RuntimeError(f'Stuck on {walkstage} waypoint {wi}: {xy}, target={target}, z={pos.z/100}')
    yaw=math.degrees(math.atan2(dy,dx));pc.set_control_rotation(u.Rotator(yaw=yaw));pawn.add_movement_input(u.Vector(dx/d,dy/d,0),1,False)
    if int(now)%10==0:write()
+  elif phase=='keyboard':
+   pos=pawn.get_actor_location();report['keyboard_initial_uu']=list(keyboard_start.to_tuple());report['keyboard_current_uu']=list(pos.to_tuple());report['keyboard_displacement_cm']=u.Vector.distance(keyboard_start,pos);write()
+   if Path('/private/tmp/PenanceV6/ManualComplete').exists():
+    report['keyboard_smoke_test']='physical keyboard movement verified' if Path('/private/tmp/PenanceV6/KeyboardInputSent').exists() and report['keyboard_displacement_cm']>50 else 'not verified: keyboard delivery unavailable';u.PenanceObjectiveEditorLibrary.capture_gameplay(str(shots/'PIE_Player_HUD.png'));phase='keyboard_capture';last=now
+   elif now-last>300:raise RuntimeError('Keyboard smoke test timed out')
+  elif phase=='keyboard_capture':
+   if now-last<2:return
+   L.editor_request_end_play();phase='end';last=now
   elif phase=='enter':
    if pawn.get_actor_location().x<150000:
     if now-last>30:raise RuntimeError('House01 did not stream in')
@@ -99,6 +110,7 @@ def tick(dt):
    assert director.get_editor_property('stage')==1,'House stage failed';report['runtime']['streamed_entry']=True
    report['runtime']['interior_silhouette']=len(u.GameplayStatics.get_all_actors_of_class(game,u.SkeletalMeshActor))>=1
    # Walk inside the real interior, back toward the existing exit door.
+   previous=None
    setroute('Interior return',[(1996.1,0),(1996.7,0)])
   elif phase=='exit':
    if pawn.get_actor_location().x>100000:

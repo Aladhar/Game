@@ -1,47 +1,5 @@
 [
   {
-    "label": "WorldSettings",
-    "class_name": "/Script/Engine.WorldSettings",
-    "location_uu": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      1.0,
-      1.0,
-      1.0
-    ],
-    "folder": "None",
-    "tags": []
-  },
-  {
-    "label": "Brush0",
-    "class_name": "/Script/Engine.Brush",
-    "location_uu": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      1.0,
-      1.0,
-      1.0
-    ],
-    "folder": "None",
-    "tags": []
-  },
-  {
     "label": "V6_H01_WestWall",
     "class_name": "/Script/Engine.StaticMeshActor",
     "location_uu": [
@@ -13526,8 +13484,8 @@
     "label": "V6_Tower_Leg_27_221",
     "class_name": "/Script/Engine.StaticMeshActor",
     "location_uu": [
-      2200.0,
-      18000.0,
+      5100.0,
+      18900.0,
       2340.0
     ],
     "rotation_degrees": [
@@ -13551,8 +13509,8 @@
     "label": "V6_Tower_Leg_27_227",
     "class_name": "/Script/Engine.StaticMeshActor",
     "location_uu": [
-      2200.0,
-      18600.0,
+      5100.0,
+      19500.0,
       2340.0
     ],
     "rotation_degrees": [
@@ -13576,8 +13534,8 @@
     "label": "V6_Tower_Leg_33_221",
     "class_name": "/Script/Engine.StaticMeshActor",
     "location_uu": [
-      2800.0,
-      18000.0,
+      5700.0,
+      18900.0,
       2340.0
     ],
     "rotation_degrees": [
@@ -13601,8 +13559,8 @@
     "label": "V6_Tower_Leg_33_227",
     "class_name": "/Script/Engine.StaticMeshActor",
     "location_uu": [
-      2800.0,
-      18600.0,
+      5700.0,
+      19500.0,
       2340.0
     ],
     "rotation_degrees": [
@@ -13626,8 +13584,8 @@
     "label": "V6_WaterTower_Tank",
     "class_name": "/Script/Engine.StaticMeshActor",
     "location_uu": [
-      2500.0,
-      18300.0,
+      5400.0,
+      19200.0,
       3240.0
     ],
     "rotation_degrees": [
@@ -13651,8 +13609,8 @@
     "label": "V6_TownWater",
     "class_name": "/Script/Engine.TextRenderActor",
     "location_uu": [
-      2500.0,
-      17700.0,
+      5400.0,
+      18690.0,
       3240.0
     ],
     "rotation_degrees": [
@@ -16260,56 +16218,6 @@
     "folder": "V6/01_Roads",
     "tags": [],
     "mesh": "/Game/Environment/V6/Meshes/SM_V6_Sidewalk_Briar_Rise1.SM_V6_Sidewalk_Briar_Rise1",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_Path.M_V5_Path"
-    ]
-  },
-  {
-    "label": "V6_Sidewalk_Foundry_Cut-1",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      30443.943318110512,
-      13665.881456315148,
-      0.0
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      1.0,
-      1.0,
-      1.0
-    ],
-    "folder": "V6/01_Roads",
-    "tags": [],
-    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Sidewalk_Foundry_Cut-1.SM_V6_Sidewalk_Foundry_Cut-1",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_Path.M_V5_Path"
-    ]
-  },
-  {
-    "label": "V6_Sidewalk_Foundry_Cut1",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      29807.209911516977,
-      13232.902739831541,
-      0.0
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      1.0,
-      1.0,
-      1.0
-    ],
-    "folder": "V6/01_Roads",
-    "tags": [],
-    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Sidewalk_Foundry_Cut1.SM_V6_Sidewalk_Foundry_Cut1",
     "materials": [
       "/Game/Environment/V6/Materials/M_V5_Path.M_V5_Path"
     ]
@@ -22104,81 +22012,6 @@
     ]
   },
   {
-    "label": "V6_H02_RearFence_3",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      4410.0,
-      7440.000000000001,
-      548.7815525596702
-    ],
-    "rotation_degrees": [
-      -0.0,
-      0.0,
-      90.0
-    ],
-    "scale": [
-      17.0,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
-    "label": "V6_H02_RearFence_4",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      5500.0,
-      8290.0,
-      546.7942368167977
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      21.800000000000004,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
-    "label": "V6_H02_RearFence_5",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      6590.000000000001,
-      7300.0,
-      551.2216758212214
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      -90.0
-    ],
-    "scale": [
-      19.80000000000001,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
     "label": "V6_H02_Mailbox",
     "class_name": "/Script/Engine.StaticMeshActor",
     "location_uu": [
@@ -22320,56 +22153,6 @@
       1.55,
       0.24,
       0.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
-    "label": "V6_H03_RearFence_2",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      860.0,
-      11700.0,
-      726.178482040331
-    ],
-    "rotation_degrees": [
-      -0.0,
-      0.0,
-      90.0
-    ],
-    "scale": [
-      23.80000000000001,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
-    "label": "V6_H03_RearFence_3",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      1885.0000000000002,
-      12890.0,
-      544.0645312793425
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      20.5,
-      0.09,
-      1.1
     ],
     "folder": "V6/03_Residential",
     "tags": [],
@@ -22579,106 +22362,6 @@
     ]
   },
   {
-    "label": "V6_H04_RearFence_4",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      4210.0,
-      12100.0,
-      546.7323759886082
-    ],
-    "rotation_degrees": [
-      -0.0,
-      0.0,
-      90.0
-    ],
-    "scale": [
-      20.80000000000001,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
-    "label": "V6_H04_RearFence_5",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      5400.0,
-      13140.0,
-      541.3375527316916
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      23.800000000000004,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
-    "label": "V6_H04_RearFence_6",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      6590.000000000001,
-      12890.0,
-      545.8614145729271
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      -90.0
-    ],
-    "scale": [
-      5.0,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
-    "label": "V6_H04_RearFence_7",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      6450.0,
-      12640.0,
-      559.2072695762677
-    ],
-    "rotation_degrees": [
-      -0.0,
-      0.0,
-      180.0
-    ],
-    "scale": [
-      2.8000000000000114,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
     "label": "V6_H04_Mailbox",
     "class_name": "/Script/Engine.StaticMeshActor",
     "location_uu": [
@@ -22732,9 +22415,9 @@
     "label": "V6_H04_Garage",
     "class_name": "/Script/Engine.StaticMeshActor",
     "location_uu": [
-      6250.0,
+      5950.0,
       11250.0,
-      650.8601902957503
+      681.8530093311899
     ],
     "rotation_degrees": [
       0.0,
@@ -22757,9 +22440,9 @@
     "label": "V6_H04_GarageRoof",
     "class_name": "/Script/Engine.StaticMeshActor",
     "location_uu": [
-      6250.0,
+      5950.0,
       11250.0,
-      800.8601902957503
+      831.8530093311899
     ],
     "rotation_degrees": [
       0.0,
@@ -22870,81 +22553,6 @@
       1.55,
       0.24,
       0.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
-    "label": "V6_H05_RearFence_1",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      4460.0,
-      17300.0,
-      537.7854302342516
-    ],
-    "rotation_degrees": [
-      -0.0,
-      0.0,
-      90.0
-    ],
-    "scale": [
-      19.80000000000001,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
-    "label": "V6_H05_RearFence_2",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      5500.0,
-      18290.0,
-      539.9449764952986
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      20.800000000000004,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
-    "label": "V6_H05_RearFence_3",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      6540.000000000001,
-      17300.0,
-      536.3018717414932
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      -90.0
-    ],
-    "scale": [
-      19.80000000000001,
-      0.09,
-      1.1
     ],
     "folder": "V6/03_Residential",
     "tags": [],
@@ -23154,81 +22762,6 @@
     ]
   },
   {
-    "label": "V6_H06_RearFence_1",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      10275.0,
-      9610.0,
-      536.6576243884263
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      12.300000000000011,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
-    "label": "V6_H06_RearFence_2",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      10890.0,
-      9750.0,
-      548.227807283681
-    ],
-    "rotation_degrees": [
-      -0.0,
-      0.0,
-      90.0
-    ],
-    "scale": [
-      2.8000000000000114,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
-    "label": "V6_H06_RearFence_5",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      11375.0,
-      9710.0,
-      555.4444874222108
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      7.300000000000011,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
     "label": "V6_H06_Mailbox",
     "class_name": "/Script/Engine.StaticMeshActor",
     "location_uu": [
@@ -23429,81 +22962,6 @@
     ]
   },
   {
-    "label": "V6_H07_RearFence_0",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      10890.0,
-      10615.0,
-      546.0196972620308
-    ],
-    "rotation_degrees": [
-      -0.0,
-      0.0,
-      90.0
-    ],
-    "scale": [
-      19.5,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
-    "label": "V6_H07_RearFence_3",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      11900.0,
-      11740.0,
-      546.1133994781268
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      22.80000000000001,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
-    "label": "V6_H07_RearFence_4",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      13040.0,
-      10600.0,
-      551.8670298240158
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      -90.0
-    ],
-    "scale": [
-      22.80000000000001,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
     "label": "V6_H07_Mailbox",
     "class_name": "/Script/Engine.StaticMeshActor",
     "location_uu": [
@@ -23557,9 +23015,9 @@
     "label": "V6_H07_Garage",
     "class_name": "/Script/Engine.StaticMeshActor",
     "location_uu": [
-      11100.0,
+      11250.0,
       11550.0,
-      637.162924877418
+      638.1393400756408
     ],
     "rotation_degrees": [
       -0.0,
@@ -23582,9 +23040,9 @@
     "label": "V6_H07_GarageRoof",
     "class_name": "/Script/Engine.StaticMeshActor",
     "location_uu": [
-      11100.0,
+      11250.0,
       11550.0,
-      787.162924877418
+      788.1393400756408
     ],
     "rotation_degrees": [
       -0.0,
@@ -23695,81 +23153,6 @@
       1.55,
       0.24,
       0.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
-    "label": "V6_H08_RearFence_0",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      15300.0,
-      9590.0,
-      578.5037606229482
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      26.80000000000001,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
-    "label": "V6_H08_RearFence_1",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      16640.0,
-      8600.0,
-      582.9731429373448
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      -90.0
-    ],
-    "scale": [
-      19.80000000000001,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
-    "label": "V6_H08_RearFence_3",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      13960.0,
-      8600.0,
-      569.0852961922284
-    ],
-    "rotation_degrees": [
-      -0.0,
-      0.0,
-      90.0
-    ],
-    "scale": [
-      19.80000000000001,
-      0.09,
-      1.1
     ],
     "folder": "V6/03_Residential",
     "tags": [],
@@ -23979,81 +23362,6 @@
     ]
   },
   {
-    "label": "V6_H09_RearFence_0",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      18700.0,
-      9040.0,
-      616.6995682723956
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      23.80000000000001,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
-    "label": "V6_H09_RearFence_1",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      19890.0,
-      8000.0,
-      623.2366008466579
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      -90.0
-    ],
-    "scale": [
-      20.80000000000001,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
-    "label": "V6_H09_RearFence_3",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      17510.0,
-      8000.0,
-      595.8993303433668
-    ],
-    "rotation_degrees": [
-      -0.0,
-      0.0,
-      90.0
-    ],
-    "scale": [
-      20.80000000000001,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
     "label": "V6_H09_Mailbox",
     "class_name": "/Script/Engine.StaticMeshActor",
     "location_uu": [
@@ -24245,81 +23553,6 @@
       1.55,
       0.24,
       0.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
-    "label": "V6_H10_RearFence_0",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      22500.0,
-      8940.0,
-      678.1547773793704
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      21.80000000000001,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
-    "label": "V6_H10_RearFence_1",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      23590.0,
-      7800.0,
-      682.9132470849813
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      -90.0
-    ],
-    "scale": [
-      22.80000000000001,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
-    "label": "V6_H10_RearFence_3",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      21410.0,
-      7800.0,
-      650.4022841475299
-    ],
-    "rotation_degrees": [
-      -0.0,
-      0.0,
-      90.0
-    ],
-    "scale": [
-      22.80000000000001,
-      0.09,
-      1.1
     ],
     "folder": "V6/03_Residential",
     "tags": [],
@@ -24529,56 +23762,6 @@
     ]
   },
   {
-    "label": "V6_H11_RearFence_0",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      25810.723486343046,
-      9473.440450783306,
-      727.8459129658694
-    ],
-    "rotation_degrees": [
-      -0.0,
-      0.0,
-      10.0
-    ],
-    "scale": [
-      24.799999999999955,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
-    "label": "V6_H11_RearFence_1",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      27221.161613735138,
-      8615.323740306994,
-      731.8936527981554
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      -80.0
-    ],
-    "scale": [
-      21.800000000000015,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
     "label": "V6_H11_Mailbox",
     "class_name": "/Script/Engine.StaticMeshActor",
     "location_uu": [
@@ -24770,31 +23953,6 @@
       1.55,
       0.24,
       0.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
-    "label": "V6_H12_RearFence_11",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      31766.745835631322,
-      13479.957236368686,
-      665.5580192602197
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      -5.0
-    ],
-    "scale": [
-      21.53457463922776,
-      0.09,
-      1.1
     ],
     "folder": "V6/03_Residential",
     "tags": [],
@@ -25004,56 +24162,6 @@
     ]
   },
   {
-    "label": "V6_H13_RearFence_2",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      26610.000000000004,
-      14300.0,
-      668.3580577590361
-    ],
-    "rotation_degrees": [
-      -0.0,
-      0.0,
-      90.0
-    ],
-    "scale": [
-      19.80000000000001,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
-    "label": "V6_H13_RearFence_3",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      27494.07567084338,
-      15290.0,
-      646.8898941168951
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      17.681513416867574,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
     "label": "V6_H13_Mailbox",
     "class_name": "/Script/Engine.StaticMeshActor",
     "location_uu": [
@@ -25245,56 +24353,6 @@
       1.55,
       0.24,
       0.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
-    "label": "V6_H14_RearFence_20",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      36898.84455803046,
-      18595.053711416876,
-      558.9926697481969
-    ],
-    "rotation_degrees": [
-      -0.0,
-      0.0,
-      75.0
-    ],
-    "scale": [
-      20.799999999999937,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
-    "label": "V6_H14_RearFence_21",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      38269.17180690662,
-      19304.562859340625,
-      557.3045920212767
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      -15.0
-    ],
-    "scale": [
-      22.80000000000007,
-      0.09,
-      1.1
     ],
     "folder": "V6/03_Residential",
     "tags": [],
@@ -25829,56 +24887,6 @@
     ]
   },
   {
-    "label": "V6_H15_RearFence_1",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      9100.0,
-      8390.0,
-      545.8330391935443
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      14.800000000000011,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
-    "label": "V6_H15_RearFence_2",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      9840.0,
-      7400.0,
-      547.6441423528628
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      -90.0
-    ],
-    "scale": [
-      19.80000000000001,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
     "label": "V6_H15_Mailbox",
     "class_name": "/Script/Engine.StaticMeshActor",
     "location_uu": [
@@ -26079,81 +25087,6 @@
     ]
   },
   {
-    "label": "V6_H16_RearFence_6",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      6340.0,
-      12100.0,
-      559.0657490110108
-    ],
-    "rotation_degrees": [
-      -0.0,
-      0.0,
-      90.0
-    ],
-    "scale": [
-      15.800000000000011,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
-    "label": "V6_H16_RearFence_7",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      7240.000000000001,
-      12890.0,
-      528.3736423382366
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      18.000000000000007,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
-    "label": "V6_H16_RearFence_8",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      8140.000000000001,
-      12754.026137422019,
-      530.0472232006292
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      -90.0
-    ],
-    "scale": [
-      2.7194772515596384,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
     "label": "V6_H16_Mailbox",
     "class_name": "/Script/Engine.StaticMeshActor",
     "location_uu": [
@@ -26207,9 +25140,9 @@
     "label": "V6_H16_Garage",
     "class_name": "/Script/Engine.StaticMeshActor",
     "location_uu": [
-      6400.0,
+      6700.0,
       12700.0,
-      650.4099655275553
+      634.5267972559959
     ],
     "rotation_degrees": [
       -0.0,
@@ -26232,9 +25165,9 @@
     "label": "V6_H16_GarageRoof",
     "class_name": "/Script/Engine.StaticMeshActor",
     "location_uu": [
-      6400.0,
+      6700.0,
       12700.0,
-      800.4099655275553
+      784.5267972559959
     ],
     "rotation_degrees": [
       -0.0,
@@ -26345,56 +25278,6 @@
       1.55,
       0.24,
       0.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
-    "label": "V6_H17_RearFence_2",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      960.0,
-      14500.0,
-      640.3603960225975
-    ],
-    "rotation_degrees": [
-      -0.0,
-      0.0,
-      90.0
-    ],
-    "scale": [
-      19.80000000000001,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
-    "label": "V6_H17_RearFence_3",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      1935.8628329027702,
-      15490.0,
-      541.1891472869162
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      19.517256658055402,
-      0.09,
-      1.1
     ],
     "folder": "V6/03_Residential",
     "tags": [],
@@ -26604,81 +25487,6 @@
     ]
   },
   {
-    "label": "V6_H18_RearFence_0",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      15110.0,
-      12197.762906587426,
-      578.9839400822042
-    ],
-    "rotation_degrees": [
-      -0.0,
-      0.0,
-      90.0
-    ],
-    "scale": [
-      15.844741868251504,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
-    "label": "V6_H18_RearFence_1",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      16100.0,
-      12990.0,
-      586.7676064545385
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      19.80000000000001,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
-    "label": "V6_H18_RearFence_2",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      17090.0,
-      11900.0,
-      597.0548203416064
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      -90.0
-    ],
-    "scale": [
-      21.80000000000001,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
     "label": "V6_H18_Mailbox",
     "class_name": "/Script/Engine.StaticMeshActor",
     "location_uu": [
@@ -26879,81 +25687,6 @@
     ]
   },
   {
-    "label": "V6_H19_RearFence_1",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      18960.0,
-      11300.0,
-      629.3180634048202
-    ],
-    "rotation_degrees": [
-      -0.0,
-      0.0,
-      90.0
-    ],
-    "scale": [
-      18.80000000000001,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
-    "label": "V6_H19_RearFence_2",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      20100.0,
-      12240.0,
-      643.8127529717407
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      22.80000000000001,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
-    "label": "V6_H19_RearFence_3",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      21240.0,
-      11300.0,
-      659.177937447535
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      -90.0
-    ],
-    "scale": [
-      18.80000000000001,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
     "label": "V6_H19_Mailbox",
     "class_name": "/Script/Engine.StaticMeshActor",
     "location_uu": [
@@ -27145,56 +25878,6 @@
       1.55,
       0.24,
       0.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
-    "label": "V6_H20_RearFence_0",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      23395.43714065937,
-      12369.171806906621,
-      688.5509497640542
-    ],
-    "rotation_degrees": [
-      -0.0,
-      0.0,
-      75.0
-    ],
-    "scale": [
-      22.79999999999997,
-      0.09,
-      1.1
-    ],
-    "folder": "V6/03_Residential",
-    "tags": [],
-    "mesh": "/Engine/BasicShapes/Cube.Cube",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
-    ]
-  },
-  {
-    "label": "V6_H20_RearFence_1",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      24695.053711416873,
-      13201.155441969535,
-      687.373205633948
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      -15.0
-    ],
-    "scale": [
-      20.799999999999955,
-      0.09,
-      1.1
     ],
     "folder": "V6/03_Residential",
     "tags": [],
@@ -35507,12 +34190,12 @@
     "class_name": "/Script/Engine.CameraActor",
     "location_uu": [
       14500.0,
-      25500.0,
-      1192.9457467624168
+      24300.0,
+      1065.0820588073013
     ],
     "rotation_degrees": [
-      1.6547968117991809e-15,
-      16.05210304260254,
+      -0.0,
+      13.575447082519531,
       90.0
     ],
     "scale": [
@@ -35531,14 +34214,14 @@
     "label": "V6_Review_Foster",
     "class_name": "/Script/Engine.CameraActor",
     "location_uu": [
-      33000.0,
-      26600.0,
-      1312.9858144863222
+      33400.0,
+      25300.0,
+      1158.4658040665436
     ],
     "rotation_degrees": [
-      3.3262354916713038e-15,
-      17.02003288269043,
-      103.49573516845703
+      -8.176465155778517e-16,
+      13.474827766418457,
+      104.74356079101562
     ],
     "scale": [
       1.0,
@@ -35558,7 +34241,7 @@
     "location_uu": [
       20000.0,
       17500.0,
-      60000.0
+      18000.0
     ],
     "rotation_degrees": [
       0.0,
@@ -35774,431 +34457,6 @@
     ]
   },
   {
-    "label": "V6_Terrain_0_0_Final",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      1.0,
-      1.0,
-      1.0
-    ],
-    "folder": "V6/00_Geography",
-    "tags": [],
-    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Terrain_0_0_Final.SM_V6_Terrain_0_0_Final",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_Terrain.M_V5_Terrain"
-    ]
-  },
-  {
-    "label": "V6_Terrain_0_1_Final",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      0.0,
-      8800.0,
-      0.0
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      1.0,
-      1.0,
-      1.0
-    ],
-    "folder": "V6/00_Geography",
-    "tags": [],
-    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Terrain_0_1_Final.SM_V6_Terrain_0_1_Final",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_Terrain.M_V5_Terrain"
-    ]
-  },
-  {
-    "label": "V6_Terrain_0_2_Final",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      0.0,
-      17600.0,
-      0.0
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      1.0,
-      1.0,
-      1.0
-    ],
-    "folder": "V6/00_Geography",
-    "tags": [],
-    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Terrain_0_2_Final.SM_V6_Terrain_0_2_Final",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_Terrain.M_V5_Terrain"
-    ]
-  },
-  {
-    "label": "V6_Terrain_0_3_Final",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      0.0,
-      26400.0,
-      0.0
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      1.0,
-      1.0,
-      1.0
-    ],
-    "folder": "V6/00_Geography",
-    "tags": [],
-    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Terrain_0_3_Final.SM_V6_Terrain_0_3_Final",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_Terrain.M_V5_Terrain"
-    ]
-  },
-  {
-    "label": "V6_Terrain_1_0_Final",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      10000.0,
-      0.0,
-      0.0
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      1.0,
-      1.0,
-      1.0
-    ],
-    "folder": "V6/00_Geography",
-    "tags": [],
-    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Terrain_1_0_Final.SM_V6_Terrain_1_0_Final",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_Terrain.M_V5_Terrain"
-    ]
-  },
-  {
-    "label": "V6_Terrain_1_1_Final",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      10000.0,
-      8800.0,
-      0.0
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      1.0,
-      1.0,
-      1.0
-    ],
-    "folder": "V6/00_Geography",
-    "tags": [],
-    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Terrain_1_1_Final.SM_V6_Terrain_1_1_Final",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_Terrain.M_V5_Terrain"
-    ]
-  },
-  {
-    "label": "V6_Terrain_1_2_Final",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      10000.0,
-      17600.0,
-      0.0
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      1.0,
-      1.0,
-      1.0
-    ],
-    "folder": "V6/00_Geography",
-    "tags": [],
-    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Terrain_1_2_Final.SM_V6_Terrain_1_2_Final",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_Terrain.M_V5_Terrain"
-    ]
-  },
-  {
-    "label": "V6_Terrain_1_3_Final",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      10000.0,
-      26400.0,
-      0.0
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      1.0,
-      1.0,
-      1.0
-    ],
-    "folder": "V6/00_Geography",
-    "tags": [],
-    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Terrain_1_3_Final.SM_V6_Terrain_1_3_Final",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_Terrain.M_V5_Terrain"
-    ]
-  },
-  {
-    "label": "V6_Terrain_2_0_Final",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      20000.0,
-      0.0,
-      0.0
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      1.0,
-      1.0,
-      1.0
-    ],
-    "folder": "V6/00_Geography",
-    "tags": [],
-    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Terrain_2_0_Final.SM_V6_Terrain_2_0_Final",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_Terrain.M_V5_Terrain"
-    ]
-  },
-  {
-    "label": "V6_Terrain_2_1_Final",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      20000.0,
-      8800.0,
-      0.0
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      1.0,
-      1.0,
-      1.0
-    ],
-    "folder": "V6/00_Geography",
-    "tags": [],
-    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Terrain_2_1_Final.SM_V6_Terrain_2_1_Final",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_Terrain.M_V5_Terrain"
-    ]
-  },
-  {
-    "label": "V6_Terrain_2_2_Final",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      20000.0,
-      17600.0,
-      0.0
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      1.0,
-      1.0,
-      1.0
-    ],
-    "folder": "V6/00_Geography",
-    "tags": [],
-    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Terrain_2_2_Final.SM_V6_Terrain_2_2_Final",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_Terrain.M_V5_Terrain"
-    ]
-  },
-  {
-    "label": "V6_Terrain_2_3_Final",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      20000.0,
-      26400.0,
-      0.0
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      1.0,
-      1.0,
-      1.0
-    ],
-    "folder": "V6/00_Geography",
-    "tags": [],
-    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Terrain_2_3_Final.SM_V6_Terrain_2_3_Final",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_Terrain.M_V5_Terrain"
-    ]
-  },
-  {
-    "label": "V6_Terrain_3_0_Final",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      30000.0,
-      0.0,
-      0.0
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      1.0,
-      1.0,
-      1.0
-    ],
-    "folder": "V6/00_Geography",
-    "tags": [],
-    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Terrain_3_0_Final.SM_V6_Terrain_3_0_Final",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_Terrain.M_V5_Terrain"
-    ]
-  },
-  {
-    "label": "V6_Terrain_3_1_Final",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      30000.0,
-      8800.0,
-      0.0
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      1.0,
-      1.0,
-      1.0
-    ],
-    "folder": "V6/00_Geography",
-    "tags": [],
-    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Terrain_3_1_Final.SM_V6_Terrain_3_1_Final",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_Terrain.M_V5_Terrain"
-    ]
-  },
-  {
-    "label": "V6_Terrain_3_2_Final",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      30000.0,
-      17600.0,
-      0.0
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      1.0,
-      1.0,
-      1.0
-    ],
-    "folder": "V6/00_Geography",
-    "tags": [],
-    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Terrain_3_2_Final.SM_V6_Terrain_3_2_Final",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_Terrain.M_V5_Terrain"
-    ]
-  },
-  {
-    "label": "V6_Terrain_3_3_Final",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      30000.0,
-      26400.0,
-      0.0
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      1.0,
-      1.0,
-      1.0
-    ],
-    "folder": "V6/00_Geography",
-    "tags": [],
-    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Terrain_3_3_Final.SM_V6_Terrain_3_3_Final",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_Terrain.M_V5_Terrain"
-    ]
-  },
-  {
-    "label": "V6_Road_Tower_Service_Final",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      3400.0,
-      13400.0,
-      0.0
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      1.0,
-      1.0,
-      1.0
-    ],
-    "folder": "V6/01_Roads",
-    "tags": [],
-    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Road_Tower_Service_Final.SM_V6_Road_Tower_Service_Final",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_service.M_V5_service"
-    ]
-  },
-  {
     "label": "V6_Road_Grave_Lane_Final",
     "class_name": "/Script/Engine.StaticMeshActor",
     "location_uu": [
@@ -36221,31 +34479,6 @@
     "mesh": "/Game/Environment/V6/Meshes/SM_V6_Road_Grave_Lane_Final.SM_V6_Road_Grave_Lane_Final",
     "materials": [
       "/Game/Environment/V6/Materials/M_V5_service.M_V5_service"
-    ]
-  },
-  {
-    "label": "V6_Drive_H01_Final",
-    "class_name": "/Script/Engine.StaticMeshActor",
-    "location_uu": [
-      8188.736598136103,
-      11169.025644874284,
-      0.0
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      1.0,
-      1.0,
-      1.0
-    ],
-    "folder": "V6/01_Roads",
-    "tags": [],
-    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Drive_H01_Final.SM_V6_Drive_H01_Final",
-    "materials": [
-      "/Game/Environment/V6/Materials/M_V5_Path.M_V5_Path"
     ]
   },
   {
@@ -37124,8 +35357,8 @@
     ]
   },
   {
-    "label": "V6_Transient_ValidationCapture",
-    "class_name": "/Script/Engine.SceneCapture2D",
+    "label": "V6_Terrain_0_0_ParcelFinal",
+    "class_name": "/Script/Engine.StaticMeshActor",
     "location_uu": [
       0.0,
       0.0,
@@ -37141,19 +35374,19 @@
       1.0,
       1.0
     ],
-    "folder": "None",
+    "folder": "V6/00_Geography",
     "tags": [],
-    "mesh": "/Engine/EditorMeshes/MatineeCam_SM.MatineeCam_SM",
+    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Terrain_0_0_ParcelFinal.SM_V6_Terrain_0_0_ParcelFinal",
     "materials": [
-      "/Engine/EditorMaterials/MatineeCam_mat.MatineeCam_mat"
+      "/Game/Environment/V6/Materials/M_V5_Terrain.M_V5_Terrain"
     ]
   },
   {
-    "label": "DefaultPhysicsVolume0",
-    "class_name": "/Script/Engine.DefaultPhysicsVolume",
+    "label": "V6_Terrain_0_1_ParcelFinal",
+    "class_name": "/Script/Engine.StaticMeshActor",
     "location_uu": [
       0.0,
-      0.0,
+      8800.0,
       0.0
     ],
     "rotation_degrees": [
@@ -37166,291 +35399,68 @@
       1.0,
       1.0
     ],
-    "folder": "None",
-    "tags": []
-  },
-  {
-    "label": "GameplayDebuggerPlayerManager0",
-    "class_name": "/Script/GameplayDebugger.GameplayDebuggerPlayerManager",
-    "location_uu": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      1.0,
-      1.0,
-      1.0
-    ],
-    "folder": "None",
-    "tags": []
-  },
-  {
-    "label": "Actor",
-    "class_name": "/Script/Engine.Actor",
-    "location_uu": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      1.0,
-      1.0,
-      1.0
-    ],
-    "folder": "None",
-    "tags": []
-  },
-  {
-    "label": "PenanceDemoGameMode0",
-    "class_name": "/Script/PenanceDemoUE.PenanceDemoGameMode",
-    "location_uu": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      1.0,
-      1.0,
-      1.0
-    ],
-    "folder": "None",
-    "tags": []
-  },
-  {
-    "label": "GameSession0",
-    "class_name": "/Script/Engine.GameSession",
-    "location_uu": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      1.0,
-      1.0,
-      1.0
-    ],
-    "folder": "None",
-    "tags": []
-  },
-  {
-    "label": "ParticleEventManager0",
-    "class_name": "/Script/Engine.ParticleEventManager",
-    "location_uu": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      1.0,
-      1.0,
-      1.0
-    ],
-    "folder": "None",
-    "tags": []
-  },
-  {
-    "label": "GameNetworkManager0",
-    "class_name": "/Script/Engine.GameNetworkManager",
-    "location_uu": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      1.0,
-      1.0,
-      1.0
-    ],
-    "folder": "None",
-    "tags": []
-  },
-  {
-    "label": "GameStateBase0",
-    "class_name": "/Script/Engine.GameStateBase",
-    "location_uu": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      1.0,
-      1.0,
-      1.0
-    ],
-    "folder": "None",
-    "tags": []
-  },
-  {
-    "label": "AbstractNavData",
-    "class_name": "/Script/NavigationSystem.AbstractNavData",
-    "location_uu": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      1.0,
-      1.0,
-      1.0
-    ],
-    "folder": "None",
-    "tags": []
-  },
-  {
-    "label": "PlayerController0",
-    "class_name": "/Script/Engine.PlayerController",
-    "location_uu": [
-      3000.0,
-      2000.0,
-      560.0
-    ],
-    "rotation_degrees": [
-      -0.0,
-      0.17499999701976776,
-      57.525001525878906
-    ],
-    "scale": [
-      1.0,
-      1.0,
-      1.0
-    ],
-    "folder": "None",
-    "tags": []
-  },
-  {
-    "label": "PlayerState0",
-    "class_name": "/Script/Engine.PlayerState",
-    "location_uu": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      1.0,
-      1.0,
-      1.0
-    ],
-    "folder": "None",
-    "tags": []
-  },
-  {
-    "label": "PlayerCameraManager0",
-    "class_name": "/Script/Engine.PlayerCameraManager",
-    "location_uu": [
-      2828.1827029365636,
-      1730.0410009786867,
-      620.172586256036
-    ],
-    "rotation_degrees": [
-      -0.0,
-      0.17499999701976776,
-      57.525001525878906
-    ],
-    "scale": [
-      1.0,
-      1.0,
-      1.0
-    ],
-    "folder": "None",
-    "tags": []
-  },
-  {
-    "label": "PenanceHUD0",
-    "class_name": "/Script/PenanceDemoUE.PenanceHUD",
-    "location_uu": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "rotation_degrees": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "scale": [
-      1.0,
-      1.0,
-      1.0
-    ],
-    "folder": "None",
-    "tags": []
-  },
-  {
-    "label": "BP_PenancePlayer0",
-    "class_name": "/Game/Player/BP_PenancePlayer.BP_PenancePlayer_C",
-    "location_uu": [
-      3000.0,
-      2000.0,
-      549.1499691009521
-    ],
-    "rotation_degrees": [
-      -0.0,
-      0.0,
-      57.525001525878906
-    ],
-    "scale": [
-      1.0,
-      1.0,
-      1.0
-    ],
-    "folder": "None",
+    "folder": "V6/00_Geography",
     "tags": [],
-    "mesh": "/Engine/EditorMeshes/MatineeCam_SM.MatineeCam_SM",
+    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Terrain_0_1_ParcelFinal.SM_V6_Terrain_0_1_ParcelFinal",
     "materials": [
-      "/Engine/EditorMaterials/MatineeCam_mat.MatineeCam_mat"
+      "/Game/Environment/V6/Materials/M_V5_Terrain.M_V5_Terrain"
     ]
   },
   {
-    "label": "GameplayDebuggerCategoryReplicator0",
-    "class_name": "/Script/GameplayDebugger.GameplayDebuggerCategoryReplicator",
+    "label": "V6_Terrain_0_2_ParcelFinal",
+    "class_name": "/Script/Engine.StaticMeshActor",
     "location_uu": [
       0.0,
+      17600.0,
+      0.0
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "folder": "V6/00_Geography",
+    "tags": [],
+    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Terrain_0_2_ParcelFinal.SM_V6_Terrain_0_2_ParcelFinal",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Terrain.M_V5_Terrain"
+    ]
+  },
+  {
+    "label": "V6_Terrain_0_3_ParcelFinal",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      0.0,
+      26400.0,
+      0.0
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "folder": "V6/00_Geography",
+    "tags": [],
+    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Terrain_0_3_ParcelFinal.SM_V6_Terrain_0_3_ParcelFinal",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Terrain.M_V5_Terrain"
+    ]
+  },
+  {
+    "label": "V6_Terrain_1_0_ParcelFinal",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      10000.0,
       0.0,
       0.0
     ],
@@ -37464,7 +35474,2791 @@
       1.0,
       1.0
     ],
-    "folder": "None",
+    "folder": "V6/00_Geography",
+    "tags": [],
+    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Terrain_1_0_ParcelFinal.SM_V6_Terrain_1_0_ParcelFinal",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Terrain.M_V5_Terrain"
+    ]
+  },
+  {
+    "label": "V6_Terrain_1_1_ParcelFinal",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      10000.0,
+      8800.0,
+      0.0
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "folder": "V6/00_Geography",
+    "tags": [],
+    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Terrain_1_1_ParcelFinal.SM_V6_Terrain_1_1_ParcelFinal",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Terrain.M_V5_Terrain"
+    ]
+  },
+  {
+    "label": "V6_Terrain_1_2_ParcelFinal",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      10000.0,
+      17600.0,
+      0.0
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "folder": "V6/00_Geography",
+    "tags": [],
+    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Terrain_1_2_ParcelFinal.SM_V6_Terrain_1_2_ParcelFinal",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Terrain.M_V5_Terrain"
+    ]
+  },
+  {
+    "label": "V6_Terrain_1_3_ParcelFinal",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      10000.0,
+      26400.0,
+      0.0
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "folder": "V6/00_Geography",
+    "tags": [],
+    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Terrain_1_3_ParcelFinal.SM_V6_Terrain_1_3_ParcelFinal",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Terrain.M_V5_Terrain"
+    ]
+  },
+  {
+    "label": "V6_Terrain_2_0_ParcelFinal",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      20000.0,
+      0.0,
+      0.0
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "folder": "V6/00_Geography",
+    "tags": [],
+    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Terrain_2_0_ParcelFinal.SM_V6_Terrain_2_0_ParcelFinal",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Terrain.M_V5_Terrain"
+    ]
+  },
+  {
+    "label": "V6_Terrain_2_1_ParcelFinal",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      20000.0,
+      8800.0,
+      0.0
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "folder": "V6/00_Geography",
+    "tags": [],
+    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Terrain_2_1_ParcelFinal.SM_V6_Terrain_2_1_ParcelFinal",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Terrain.M_V5_Terrain"
+    ]
+  },
+  {
+    "label": "V6_Terrain_2_2_ParcelFinal",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      20000.0,
+      17600.0,
+      0.0
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "folder": "V6/00_Geography",
+    "tags": [],
+    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Terrain_2_2_ParcelFinal.SM_V6_Terrain_2_2_ParcelFinal",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Terrain.M_V5_Terrain"
+    ]
+  },
+  {
+    "label": "V6_Terrain_2_3_ParcelFinal",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      20000.0,
+      26400.0,
+      0.0
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "folder": "V6/00_Geography",
+    "tags": [],
+    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Terrain_2_3_ParcelFinal.SM_V6_Terrain_2_3_ParcelFinal",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Terrain.M_V5_Terrain"
+    ]
+  },
+  {
+    "label": "V6_Terrain_3_0_ParcelFinal",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      30000.0,
+      0.0,
+      0.0
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "folder": "V6/00_Geography",
+    "tags": [],
+    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Terrain_3_0_ParcelFinal.SM_V6_Terrain_3_0_ParcelFinal",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Terrain.M_V5_Terrain"
+    ]
+  },
+  {
+    "label": "V6_Terrain_3_1_ParcelFinal",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      30000.0,
+      8800.0,
+      0.0
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "folder": "V6/00_Geography",
+    "tags": [],
+    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Terrain_3_1_ParcelFinal.SM_V6_Terrain_3_1_ParcelFinal",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Terrain.M_V5_Terrain"
+    ]
+  },
+  {
+    "label": "V6_Terrain_3_2_ParcelFinal",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      30000.0,
+      17600.0,
+      0.0
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "folder": "V6/00_Geography",
+    "tags": [],
+    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Terrain_3_2_ParcelFinal.SM_V6_Terrain_3_2_ParcelFinal",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Terrain.M_V5_Terrain"
+    ]
+  },
+  {
+    "label": "V6_Terrain_3_3_ParcelFinal",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      30000.0,
+      26400.0,
+      0.0
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "folder": "V6/00_Geography",
+    "tags": [],
+    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Terrain_3_3_ParcelFinal.SM_V6_Terrain_3_3_ParcelFinal",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Terrain.M_V5_Terrain"
+    ]
+  },
+  {
+    "label": "V6_Road_Tower_Service_ParcelFinal",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      3400.0,
+      13400.0,
+      0.0
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "folder": "V6/01_Roads",
+    "tags": [],
+    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Road_Tower_Service_ParcelFinal.SM_V6_Road_Tower_Service_ParcelFinal",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_service.M_V5_service"
+    ]
+  },
+  {
+    "label": "V6_Drive_H01_ParcelFinal",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      7747.201999413052,
+      10218.795501320634,
+      0.0
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "folder": "V6/01_Roads",
+    "tags": [],
+    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Drive_H01_ParcelFinal.SM_V6_Drive_H01_ParcelFinal",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Path.M_V5_Path"
+    ]
+  },
+  {
+    "label": "V6_Sidewalk_Foundry_Cut_ParcelFinal-1",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      30443.943318110512,
+      13665.881456315148,
+      0.0
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "folder": "V6/01_Roads",
+    "tags": [],
+    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Sidewalk_Foundry_Cut_ParcelFinal-1.SM_V6_Sidewalk_Foundry_Cut_ParcelFinal-1",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Path.M_V5_Path"
+    ]
+  },
+  {
+    "label": "V6_Sidewalk_Foundry_Cut_ParcelFinal1",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      29807.209911516977,
+      13232.902739831541,
+      0.0
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "folder": "V6/01_Roads",
+    "tags": [],
+    "mesh": "/Game/Environment/V6/Meshes/SM_V6_Sidewalk_Foundry_Cut_ParcelFinal1.SM_V6_Sidewalk_Foundry_Cut_ParcelFinal1",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Path.M_V5_Path"
+    ]
+  },
+  {
+    "label": "V6_H03_GarageRollup",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      1465.0,
+      12700.0,
+      627.578846044643
+    ],
+    "rotation_degrees": [
+      -0.0,
+      0.0,
+      90.0
+    ],
+    "scale": [
+      2.7,
+      0.05,
+      2.0
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_H04_GarageRollup",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      5685.0,
+      11250.0,
+      641.8530093311899
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      -90.0
+    ],
+    "scale": [
+      2.7,
+      0.05,
+      2.0
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_H05_GarageRollup",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      6350.0,
+      17685.0,
+      632.46137838042
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      2.7,
+      0.05,
+      2.0
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_H06_GarageRollup",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      11135.0,
+      7900.0,
+      584.2326623806495
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      -90.0
+    ],
+    "scale": [
+      2.7,
+      0.05,
+      2.0
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_H07_GarageRollup",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      11515.0,
+      11550.0,
+      598.1393400756409
+    ],
+    "rotation_degrees": [
+      -0.0,
+      0.0,
+      90.0
+    ],
+    "scale": [
+      2.7,
+      0.05,
+      2.0
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_H08_GarageRollup",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      14150.0,
+      8215.0,
+      655.1274314081058
+    ],
+    "rotation_degrees": [
+      -0.0,
+      0.0,
+      180.0
+    ],
+    "scale": [
+      2.7,
+      0.05,
+      2.0
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_H09_GarageRollup",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      17700.0,
+      7565.000000000001,
+      690.7130592703169
+    ],
+    "rotation_degrees": [
+      -0.0,
+      0.0,
+      180.0
+    ],
+    "scale": [
+      2.7,
+      0.05,
+      2.0
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_H10_GarageRollup",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      21600.0,
+      7265.000000000001,
+      726.8438480377748
+    ],
+    "rotation_degrees": [
+      -0.0,
+      0.0,
+      180.0
+    ],
+    "scale": [
+      2.7,
+      0.05,
+      2.0
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_H11_GarageRollup",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      25050.171225505645,
+      7740.037653238803,
+      765.8227506736464
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      -170.0
+    ],
+    "scale": [
+      2.7,
+      0.05,
+      2.0
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_H12_GarageRollup",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      32045.808420731424,
+      11257.176979538257,
+      776.314392502055
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      -95.0
+    ],
+    "scale": [
+      2.7,
+      0.05,
+      2.0
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_H13_GarageRollup",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      26800.0,
+      13915.0,
+      730.0518658667495
+    ],
+    "rotation_degrees": [
+      -0.0,
+      0.0,
+      180.0
+    ],
+    "scale": [
+      2.7,
+      0.05,
+      2.0
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_H14_GarageRollup",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      37703.225871272494,
+      19259.505141475554,
+      630.6240191198638
+    ],
+    "rotation_degrees": [
+      -0.0,
+      0.0,
+      75.0
+    ],
+    "scale": [
+      2.7,
+      0.05,
+      2.0
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_H15_GarageRollup",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      9235.0,
+      6600.0,
+      585.5990900786866
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      -90.0
+    ],
+    "scale": [
+      2.7,
+      0.05,
+      2.0
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_H16_GarageRollup",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      6965.000000000001,
+      12700.0,
+      594.5267972559959
+    ],
+    "rotation_degrees": [
+      -0.0,
+      0.0,
+      90.0
+    ],
+    "scale": [
+      2.7,
+      0.05,
+      2.0
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_H17_GarageRollup",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      1565.0,
+      15300.0,
+      626.8937954560171
+    ],
+    "rotation_degrees": [
+      -0.0,
+      0.0,
+      90.0
+    ],
+    "scale": [
+      2.7,
+      0.05,
+      2.0
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_H18_GarageRollup",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      16900.0,
+      12385.0,
+      648.84133915379
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      2.7,
+      0.05,
+      2.0
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_H19_GarageRollup",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      21050.0,
+      11635.0,
+      701.7220968436129
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      2.7,
+      0.05,
+      2.0
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_H20_GarageRollup",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      25359.505141475554,
+      12396.77412872751,
+      742.2428805757754
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      -15.0
+    ],
+    "scale": [
+      2.7,
+      0.05,
+      2.0
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_H02_RearFence_Final_1",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      6790.000000000001,
+      7503.718356458356,
+      554.8022462573582
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      -90.0
+    ],
+    "scale": [
+      18.57436712916713,
+      0.09,
+      1.1
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
+    ]
+  },
+  {
+    "label": "V6_H02_RearFence_Final_3",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      4210.0,
+      7532.5,
+      551.661993528144
+    ],
+    "rotation_degrees": [
+      -0.0,
+      0.0,
+      90.0
+    ],
+    "scale": [
+      19.150000000000006,
+      0.09,
+      1.1
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
+    ]
+  },
+  {
+    "label": "V6_H02_RearFence_Final_4",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      5269.746851666851,
+      8490.0,
+      541.0314024816012
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      21.194937033337027,
+      0.09,
+      1.1
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
+    ]
+  },
+  {
+    "label": "V6_H03_RearFence_Final_0",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      1785.0000000000002,
+      13090.0,
+      527.1208236836666
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      22.5,
+      0.09,
+      1.1
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
+    ]
+  },
+  {
+    "label": "V6_H03_RearFence_Final_14",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      660.0,
+      11700.0,
+      1043.712213211424
+    ],
+    "rotation_degrees": [
+      -0.0,
+      0.0,
+      90.0
+    ],
+    "scale": [
+      27.80000000000001,
+      0.09,
+      1.1
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
+    ]
+  },
+  {
+    "label": "V6_H04_RearFence_Final_1",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      5167.5,
+      13340.0,
+      516.4985899478013
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      23.15,
+      0.09,
+      1.1
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
+    ]
+  },
+  {
+    "label": "V6_H04_RearFence_Final_2",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      6325.0,
+      12100.0,
+      560.2987870954099
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      -90.0
+    ],
+    "scale": [
+      24.80000000000001,
+      0.09,
+      1.1
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
+    ]
+  },
+  {
+    "label": "V6_H05_RearFence_Final_0",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      6740.000000000001,
+      17300.0,
+      513.9003546362334
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      -90.0
+    ],
+    "scale": [
+      23.80000000000001,
+      0.09,
+      1.1
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
+    ]
+  },
+  {
+    "label": "V6_H05_RearFence_Final_2",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      4260.0,
+      17300.0,
+      516.2167206753766
+    ],
+    "rotation_degrees": [
+      -0.0,
+      0.0,
+      90.0
+    ],
+    "scale": [
+      23.80000000000001,
+      0.09,
+      1.1
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
+    ]
+  },
+  {
+    "label": "V6_H05_RearFence_Final_3",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      5500.0,
+      18490.0,
+      1485.8547100423807
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      24.800000000000004,
+      0.09,
+      1.1
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
+    ]
+  },
+  {
+    "label": "V6_H06_RearFence_Final_3",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      9460.0,
+      9209.062500000002,
+      544.5596942205691
+    ],
+    "rotation_degrees": [
+      -0.0,
+      0.0,
+      90.0
+    ],
+    "scale": [
+      8.318749999999966,
+      0.09,
+      1.1
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
+    ]
+  },
+  {
+    "label": "V6_H06_RearFence_Final_4",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      10700.0,
+      9625.0,
+      538.5906541376501
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      24.80000000000001,
+      0.09,
+      1.1
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
+    ]
+  },
+  {
+    "label": "V6_H07_RearFence_Final_0",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      10950.0,
+      10812.763157894737,
+      551.1444980463879
+    ],
+    "rotation_degrees": [
+      -0.0,
+      0.0,
+      90.0
+    ],
+    "scale": [
+      22.54473684210528,
+      0.09,
+      1.1
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
+    ]
+  },
+  {
+    "label": "V6_H07_RearFence_Final_1",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      12095.0,
+      11940.0,
+      543.5434176103377
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      22.900000000000006,
+      0.09,
+      1.1
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
+    ]
+  },
+  {
+    "label": "V6_H08_RearFence_Final_0",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      13760.0,
+      8600.0,
+      549.9321812421165
+    ],
+    "rotation_degrees": [
+      -0.0,
+      0.0,
+      90.0
+    ],
+    "scale": [
+      23.80000000000001,
+      0.09,
+      1.1
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
+    ]
+  },
+  {
+    "label": "V6_H08_RearFence_Final_1",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      15014.60582376651,
+      9790.0,
+      561.6634640853523
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      25.092116475330243,
+      0.09,
+      1.1
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
+    ]
+  },
+  {
+    "label": "V6_H09_RearFence_Final_0",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      17310.0,
+      8000.0,
+      570.9173559491345
+    ],
+    "rotation_degrees": [
+      -0.0,
+      0.0,
+      90.0
+    ],
+    "scale": [
+      24.80000000000001,
+      0.09,
+      1.1
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
+    ]
+  },
+  {
+    "label": "V6_H09_RearFence_Final_1",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      18297.23304703363,
+      9240.0,
+      597.3299376810215
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      19.744660940672617,
+      0.09,
+      1.1
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
+    ]
+  },
+  {
+    "label": "V6_H10_RearFence_Final_4",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      22956.960325133758,
+      9140.0,
+      679.1694563661782
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      16.660793497324875,
+      0.09,
+      1.1
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
+    ]
+  },
+  {
+    "label": "V6_H10_RearFence_Final_5",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      23790.0,
+      7800.0,
+      682.0942829720108
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      -90.0
+    ],
+    "scale": [
+      26.80000000000001,
+      0.09,
+      1.1
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
+    ]
+  },
+  {
+    "label": "V6_H11_RearFence_Final_7",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      26058.107301417993,
+      9720.146214348762,
+      730.7373737247699
+    ],
+    "rotation_degrees": [
+      -0.0,
+      0.0,
+      10.0
+    ],
+    "scale": [
+      23.070689893627573,
+      0.09,
+      1.1
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
+    ]
+  },
+  {
+    "label": "V6_H11_RearFence_Final_8",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      27418.12316433758,
+      8650.05337584038,
+      734.4041332733693
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      -80.0
+    ],
+    "scale": [
+      25.799999999999994,
+      0.09,
+      1.1
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
+    ]
+  },
+  {
+    "label": "V6_H12_RearFence_Final_70",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      31834.58708897242,
+      13674.785863290617,
+      634.4412910410952
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      -5.0
+    ],
+    "scale": [
+      24.522521375179583,
+      0.09,
+      1.1
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
+    ]
+  },
+  {
+    "label": "V6_H13_RearFence_Final_1",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      26410.000000000004,
+      14300.0,
+      662.8480051324012
+    ],
+    "rotation_degrees": [
+      -0.0,
+      0.0,
+      90.0
+    ],
+    "scale": [
+      23.80000000000001,
+      0.09,
+      1.1
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
+    ]
+  },
+  {
+    "label": "V6_H13_RearFence_Final_2",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      27323.704829830018,
+      15490.0,
+      630.0586653162385
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      18.274096596600316,
+      0.09,
+      1.1
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
+    ]
+  },
+  {
+    "label": "V6_H14_RearFence_Final_33",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      36705.65939277264,
+      18646.817520437377,
+      546.6415168005801
+    ],
+    "rotation_degrees": [
+      -0.0,
+      0.0,
+      75.0
+    ],
+    "scale": [
+      24.80000000000003,
+      0.09,
+      1.1
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
+    ]
+  },
+  {
+    "label": "V6_H14_RearFence_Final_34",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      38313.29750434989,
+      19499.794650427266,
+      543.8833077723788
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      -15.0
+    ],
+    "scale": [
+      26.641848900415397,
+      0.09,
+      1.1
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
+    ]
+  },
+  {
+    "label": "V6_H15_RearFence_Final_2",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      9789.634146341465,
+      7948.437499999998,
+      539.9561307433204
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      -68.68209075927734
+    ],
+    "scale": [
+      13.773677825249441,
+      0.09,
+      1.1
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
+    ]
+  },
+  {
+    "label": "V6_H16_RearFence_Final_9",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      6325.0,
+      11900.0,
+      560.3037510507507
+    ],
+    "rotation_degrees": [
+      -0.0,
+      0.0,
+      90.0
+    ],
+    "scale": [
+      23.80000000000001,
+      0.09,
+      1.1
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
+    ]
+  },
+  {
+    "label": "V6_H16_RearFence_Final_10",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      7332.5,
+      13090.0,
+      518.3489293068641
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      20.150000000000006,
+      0.09,
+      1.1
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
+    ]
+  },
+  {
+    "label": "V6_H17_RearFence_Final_0",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      1662.4960415667533,
+      15690.0,
+      524.9421574748902
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      18.049920831335065,
+      0.09,
+      1.1
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
+    ]
+  },
+  {
+    "label": "V6_H17_RearFence_Final_25",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      760.0,
+      14500.0,
+      896.2242034130313
+    ],
+    "rotation_degrees": [
+      -0.0,
+      0.0,
+      90.0
+    ],
+    "scale": [
+      23.80000000000001,
+      0.09,
+      1.1
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
+    ]
+  },
+  {
+    "label": "V6_H18_RearFence_Final_5",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      14910.0,
+      12317.590492794323,
+      568.028142200166
+    ],
+    "rotation_degrees": [
+      -0.0,
+      0.0,
+      90.0
+    ],
+    "scale": [
+      16.448190144113568,
+      0.09,
+      1.1
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
+    ]
+  },
+  {
+    "label": "V6_H19_RearFence_Final_0",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      21440.0,
+      11300.0,
+      663.3476178255572
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      -90.0
+    ],
+    "scale": [
+      22.80000000000001,
+      0.09,
+      1.1
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
+    ]
+  },
+  {
+    "label": "V6_H19_RearFence_Final_3",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      18760.0,
+      11382.538136138051,
+      617.4762296071675
+    ],
+    "rotation_degrees": [
+      -0.0,
+      0.0,
+      90.0
+    ],
+    "scale": [
+      21.149237277238953,
+      0.09,
+      1.1
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
+    ]
+  },
+  {
+    "label": "V6_H19_RearFence_Final_4",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      20100.0,
+      12440.0,
+      639.0644213082346
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      26.80000000000001,
+      0.09,
+      1.1
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
+    ]
+  },
+  {
+    "label": "V6_H20_RearFence_Final_0",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      24817.485638413156,
+      13375.405142085114,
+      681.588935122119
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      -15.0
+    ],
+    "scale": [
+      23.336779614905304,
+      0.09,
+      1.1
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
+    ]
+  },
+  {
+    "label": "V6_H20_RearFence_Final_5",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      23171.410322183372,
+      12305.832999127455,
+      683.9040748093261
+    ],
+    "rotation_degrees": [
+      -0.0,
+      0.0,
+      75.0
+    ],
+    "scale": [
+      24.416740050488613,
+      0.09,
+      1.1
+    ],
+    "folder": "V6/03_Residential",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_White.M_V5_White"
+    ]
+  },
+  {
+    "label": "V6_StreetSignPost_0",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      11000.0,
+      14200.0,
+      590.0
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      0.075,
+      0.075,
+      2.5
+    ],
+    "folder": "V6/08_Props",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Metal.M_V5_Metal"
+    ]
+  },
+  {
+    "label": "V6_StreetSign_0",
+    "class_name": "/Script/Engine.TextRenderActor",
+    "location_uu": [
+      11000.0,
+      14200.0,
+      700.0
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      -90.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "folder": "V6/09_Story",
     "tags": []
+  },
+  {
+    "label": "V6_StreetSignPost_1",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      7000.0,
+      9100.0,
+      573.4358974358975
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      0.075,
+      0.075,
+      2.5
+    ],
+    "folder": "V6/08_Props",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Metal.M_V5_Metal"
+    ]
+  },
+  {
+    "label": "V6_StreetSign_1",
+    "class_name": "/Script/Engine.TextRenderActor",
+    "location_uu": [
+      7000.0,
+      9100.0,
+      683.4358974358976
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      -90.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "folder": "V6/09_Story",
+    "tags": []
+  },
+  {
+    "label": "V6_StreetSignPost_2",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      14300.0,
+      13100.0,
+      597.8260869565217
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      0.075,
+      0.075,
+      2.5
+    ],
+    "folder": "V6/08_Props",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Metal.M_V5_Metal"
+    ]
+  },
+  {
+    "label": "V6_StreetSign_2",
+    "class_name": "/Script/Engine.TextRenderActor",
+    "location_uu": [
+      14300.0,
+      13100.0,
+      707.8260869565219
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      -90.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "folder": "V6/09_Story",
+    "tags": []
+  },
+  {
+    "label": "V6_StreetSignPost_3",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      31900.0,
+      16400.0,
+      605.5777460770329
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      0.075,
+      0.075,
+      2.5
+    ],
+    "folder": "V6/08_Props",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Metal.M_V5_Metal"
+    ]
+  },
+  {
+    "label": "V6_StreetSign_3",
+    "class_name": "/Script/Engine.TextRenderActor",
+    "location_uu": [
+      31900.0,
+      16400.0,
+      715.5777460770329
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      -90.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "folder": "V6/09_Story",
+    "tags": []
+  },
+  {
+    "label": "V6_StreetSignPost_4",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      2600.0,
+      13500.0,
+      624.3520562843205
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      0.075,
+      0.075,
+      2.5
+    ],
+    "folder": "V6/08_Props",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Metal.M_V5_Metal"
+    ]
+  },
+  {
+    "label": "V6_StreetSign_4",
+    "class_name": "/Script/Engine.TextRenderActor",
+    "location_uu": [
+      2600.0,
+      13500.0,
+      734.3520562843205
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      -90.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "folder": "V6/09_Story",
+    "tags": []
+  },
+  {
+    "label": "V6_BicycleWheel_0_0",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      6728.923393758659,
+      7600.0,
+      539.6073623793011
+    ],
+    "rotation_degrees": [
+      -0.0,
+      75.0,
+      180.0
+    ],
+    "scale": [
+      0.16046780796356352,
+      0.035,
+      0.035
+    ],
+    "folder": "V6/08_Props",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_BicycleWheel_0_1",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      6721.173393758659,
+      7600.0,
+      553.0307561379599
+    ],
+    "rotation_degrees": [
+      -0.0,
+      45.0,
+      180.0
+    ],
+    "scale": [
+      0.160467807963561,
+      0.035,
+      0.035
+    ],
+    "folder": "V6/08_Props",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_BicycleWheel_0_2",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      6707.75,
+      7600.0,
+      560.7807561379598
+    ],
+    "rotation_degrees": [
+      -1.8278448149636629e-31,
+      15.0,
+      180.0
+    ],
+    "scale": [
+      0.16046780796356291,
+      0.035,
+      0.035
+    ],
+    "folder": "V6/08_Props",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_BicycleWheel_0_3",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      6692.25,
+      7600.0,
+      560.7807561379598
+    ],
+    "rotation_degrees": [
+      1.81605790891277e-15,
+      -15.0,
+      180.0
+    ],
+    "scale": [
+      0.16046780796356291,
+      0.035,
+      0.035
+    ],
+    "folder": "V6/08_Props",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_BicycleWheel_0_4",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      6678.826606241341,
+      7600.0,
+      553.0307561379599
+    ],
+    "rotation_degrees": [
+      4.961562827661371e-15,
+      -45.0,
+      180.0
+    ],
+    "scale": [
+      0.160467807963561,
+      0.035,
+      0.035
+    ],
+    "folder": "V6/08_Props",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_BicycleWheel_0_5",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      6671.076606241341,
+      7600.0,
+      539.6073623793011
+    ],
+    "rotation_degrees": [
+      6.777620524815904e-15,
+      -75.0,
+      180.0
+    ],
+    "scale": [
+      0.16046780796356352,
+      0.035,
+      0.035
+    ],
+    "folder": "V6/08_Props",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_BicycleWheel_0_6",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      6671.076606241341,
+      7600.0,
+      524.107362379301
+    ],
+    "rotation_degrees": [
+      -0.0,
+      -75.0,
+      0.0
+    ],
+    "scale": [
+      0.16046780796356352,
+      0.035,
+      0.035
+    ],
+    "folder": "V6/08_Props",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_BicycleWheel_0_7",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      6678.826606241341,
+      7600.0,
+      510.68396862064225
+    ],
+    "rotation_degrees": [
+      -0.0,
+      -45.0,
+      0.0
+    ],
+    "scale": [
+      0.160467807963561,
+      0.035,
+      0.035
+    ],
+    "folder": "V6/08_Props",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_BicycleWheel_0_8",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      6692.25,
+      7600.0,
+      502.93396862064236
+    ],
+    "rotation_degrees": [
+      -0.0,
+      -15.0,
+      0.0
+    ],
+    "scale": [
+      0.16046780796356291,
+      0.035,
+      0.035
+    ],
+    "folder": "V6/08_Props",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_BicycleWheel_0_9",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      6707.75,
+      7600.0,
+      502.93396862064236
+    ],
+    "rotation_degrees": [
+      -0.0,
+      15.0,
+      0.0
+    ],
+    "scale": [
+      0.16046780796356291,
+      0.035,
+      0.035
+    ],
+    "folder": "V6/08_Props",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_BicycleWheel_0_10",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      6721.173393758659,
+      7600.0,
+      510.68396862064225
+    ],
+    "rotation_degrees": [
+      -0.0,
+      45.0,
+      0.0
+    ],
+    "scale": [
+      0.160467807963561,
+      0.035,
+      0.035
+    ],
+    "folder": "V6/08_Props",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_BicycleWheel_0_11",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      6728.923393758659,
+      7600.0,
+      524.107362379301
+    ],
+    "rotation_degrees": [
+      -0.0,
+      75.0,
+      0.0
+    ],
+    "scale": [
+      0.16046780796356352,
+      0.035,
+      0.035
+    ],
+    "folder": "V6/08_Props",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_BicycleWheel_1.15_0",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      6843.92339375866,
+      7600.0,
+      539.6073623793011
+    ],
+    "rotation_degrees": [
+      -0.0,
+      75.0,
+      180.0
+    ],
+    "scale": [
+      0.16046780796356586,
+      0.035,
+      0.035
+    ],
+    "folder": "V6/08_Props",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_BicycleWheel_1.15_1",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      6836.17339375866,
+      7600.0,
+      553.0307561379599
+    ],
+    "rotation_degrees": [
+      -0.0,
+      45.0,
+      180.0
+    ],
+    "scale": [
+      0.1604678079635546,
+      0.035,
+      0.035
+    ],
+    "folder": "V6/08_Props",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_BicycleWheel_1.15_2",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      6822.750000000001,
+      7600.0,
+      560.7807561379598
+    ],
+    "rotation_degrees": [
+      -1.8278448149636629e-31,
+      15.0,
+      180.0
+    ],
+    "scale": [
+      0.16046780796356291,
+      0.035,
+      0.035
+    ],
+    "folder": "V6/08_Props",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_BicycleWheel_1.15_3",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      6807.250000000001,
+      7600.0,
+      560.7807561379598
+    ],
+    "rotation_degrees": [
+      1.81605790891277e-15,
+      -15.0,
+      180.0
+    ],
+    "scale": [
+      0.1604678079635717,
+      0.035,
+      0.035
+    ],
+    "folder": "V6/08_Props",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_BicycleWheel_1.15_4",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      6793.826606241342,
+      7600.0,
+      553.0307561379599
+    ],
+    "rotation_degrees": [
+      4.961562827661371e-15,
+      -45.0,
+      180.0
+    ],
+    "scale": [
+      0.1604678079635546,
+      0.035,
+      0.035
+    ],
+    "folder": "V6/08_Props",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_BicycleWheel_1.15_5",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      6786.076606241342,
+      7600.0,
+      539.6073623793011
+    ],
+    "rotation_degrees": [
+      6.777620524815904e-15,
+      -75.0,
+      180.0
+    ],
+    "scale": [
+      0.16046780796356586,
+      0.035,
+      0.035
+    ],
+    "folder": "V6/08_Props",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_BicycleWheel_1.15_6",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      6786.076606241342,
+      7600.0,
+      524.107362379301
+    ],
+    "rotation_degrees": [
+      -0.0,
+      -75.0,
+      0.0
+    ],
+    "scale": [
+      0.16046780796356586,
+      0.035,
+      0.035
+    ],
+    "folder": "V6/08_Props",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_BicycleWheel_1.15_7",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      6793.826606241342,
+      7600.0,
+      510.68396862064225
+    ],
+    "rotation_degrees": [
+      -0.0,
+      -45.0,
+      0.0
+    ],
+    "scale": [
+      0.1604678079635546,
+      0.035,
+      0.035
+    ],
+    "folder": "V6/08_Props",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_BicycleWheel_1.15_8",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      6807.250000000001,
+      7600.0,
+      502.93396862064236
+    ],
+    "rotation_degrees": [
+      -0.0,
+      -15.0,
+      0.0
+    ],
+    "scale": [
+      0.1604678079635717,
+      0.035,
+      0.035
+    ],
+    "folder": "V6/08_Props",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_BicycleWheel_1.15_9",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      6822.750000000001,
+      7600.0,
+      502.93396862064236
+    ],
+    "rotation_degrees": [
+      -0.0,
+      15.0,
+      0.0
+    ],
+    "scale": [
+      0.16046780796356291,
+      0.035,
+      0.035
+    ],
+    "folder": "V6/08_Props",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_BicycleWheel_1.15_10",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      6836.17339375866,
+      7600.0,
+      510.68396862064225
+    ],
+    "rotation_degrees": [
+      -0.0,
+      45.0,
+      0.0
+    ],
+    "scale": [
+      0.1604678079635546,
+      0.035,
+      0.035
+    ],
+    "folder": "V6/08_Props",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_BicycleWheel_1.15_11",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      6843.92339375866,
+      7600.0,
+      524.107362379301
+    ],
+    "rotation_degrees": [
+      -0.0,
+      75.0,
+      0.0
+    ],
+    "scale": [
+      0.16046780796356586,
+      0.035,
+      0.035
+    ],
+    "folder": "V6/08_Props",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
+  },
+  {
+    "label": "V6_BicycleFrame_0",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      6722.499999999999,
+      7600.0,
+      552.8573623793011
+    ],
+    "rotation_degrees": [
+      -0.0,
+      43.02506637573242,
+      0.0
+    ],
+    "scale": [
+      0.6155485358604957,
+      0.035,
+      0.035
+    ],
+    "folder": "V6/08_Props",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Metal.M_V5_Metal"
+    ]
+  },
+  {
+    "label": "V6_BicycleFrame_1",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      6757.5,
+      7600.0,
+      552.8573623793011
+    ],
+    "rotation_degrees": [
+      -0.0,
+      -59.237281799316406,
+      0.0
+    ],
+    "scale": [
+      0.48877397639399744,
+      0.035,
+      0.035
+    ],
+    "folder": "V6/08_Props",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Metal.M_V5_Metal"
+    ]
+  },
+  {
+    "label": "V6_BicycleFrame_2",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      6734.999999999999,
+      7600.0,
+      531.8573623793011
+    ],
+    "rotation_degrees": [
+      -0.0,
+      0.0,
+      180.0
+    ],
+    "scale": [
+      0.7,
+      0.035,
+      0.035
+    ],
+    "folder": "V6/08_Props",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Metal.M_V5_Metal"
+    ]
+  },
+  {
+    "label": "V6_BicycleFrame_3",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      6770.0,
+      7600.0,
+      573.8573623793011
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      0.5,
+      0.035,
+      0.035
+    ],
+    "folder": "V6/08_Props",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Metal.M_V5_Metal"
+    ]
+  },
+  {
+    "label": "V6_BicycleFrame_4",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      6805.000000000001,
+      7600.0,
+      552.8573623793011
+    ],
+    "rotation_degrees": [
+      -0.0,
+      -64.53665161132812,
+      0.0
+    ],
+    "scale": [
+      0.46518813398452424,
+      0.035,
+      0.035
+    ],
+    "folder": "V6/08_Props",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Metal.M_V5_Metal"
+    ]
+  },
+  {
+    "label": "V6_BicycleFrame_5",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      6782.5,
+      7600.0,
+      552.8573623793011
+    ],
+    "rotation_degrees": [
+      -0.0,
+      59.237281799316406,
+      0.0
+    ],
+    "scale": [
+      0.48877397639399744,
+      0.035,
+      0.035
+    ],
+    "folder": "V6/08_Props",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Metal.M_V5_Metal"
+    ]
+  },
+  {
+    "label": "V6_BicycleSeat",
+    "class_name": "/Script/Engine.StaticMeshActor",
+    "location_uu": [
+      6743.000000000001,
+      7600.0,
+      581.8573623793011
+    ],
+    "rotation_degrees": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      0.22,
+      0.12,
+      0.06
+    ],
+    "folder": "V6/08_Props",
+    "tags": [],
+    "mesh": "/Engine/BasicShapes/Cube.Cube",
+    "materials": [
+      "/Game/Environment/V6/Materials/M_V5_Dark.M_V5_Dark"
+    ]
   }
 ]
