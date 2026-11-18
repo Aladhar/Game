@@ -2,7 +2,8 @@
 #include "Animation/AnimSequence.h"
 #include "Components/SceneComponent.h"
 #include "Components/SkeletalMeshComponent.h"
-#include "Engine/Engine.h"
+#include "PenanceObjectiveSubsystem.h"
+#include "Engine/GameInstance.h"
 #include "Animation/SkeletalMeshActor.h"
 #include "EngineUtils.h"
 #include "GameFramework/Pawn.h"
@@ -20,6 +21,8 @@ void APenanceV5WorldDirector::BeginPlay()
     SetTaggedActors(TEXT("V5_AfterHouse"), false);
     SetTaggedActors(TEXT("V5_ParkShortcutBarrier"), true);
     SetTaggedActors(TEXT("V5_EstateBarrier"), true);
+    if(GetGameInstance())GetGameInstance()->GetSubsystem<UPenanceObjectiveSubsystem>()->ResetObjectives();
+    PublishObjectives();
 }
 FString APenanceV5WorldDirector::GetObjective() const
 {
@@ -46,16 +49,19 @@ void APenanceV5WorldDirector::ShowEnemy(const FVector& Position, UAnimSequence* 
         Mesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
         Mesh->PlayAnimation(Animation, true);
         EncounterTime = 0.f;
+        SuppressObjectives(true);
     }
 }
 void APenanceV5WorldDirector::Advance()
 {
+    if(Stage==0 && GetGameInstance())GetGameInstance()->GetSubsystem<UPenanceObjectiveSubsystem>()->CompleteSubObjective(TEXT("Ch01.House.Enter"));
     ++Stage;
+    PublishObjectives();
     UE_LOG(LogTemp, Display, TEXT("PENANCE_V5_STAGE %d: %s"), Stage, *GetObjective());
     if (Stage == 1) ShowEnemy(InteriorSilhouette, IdleAnimation, 180.f);
     if (Stage == 2)
     {
-        if (Encounter) Encounter->Destroy(); Encounter = nullptr; EncounterTime = -1.f;
+        if (Encounter) Encounter->Destroy(); Encounter = nullptr; EncounterTime = -1.f; SuppressObjectives(false);
         SetTaggedActors(TEXT("V5_AfterHouse"), true);
     }
     if (Stage == 3) SetTaggedActors(TEXT("V5_ParkShortcutBarrier"), false);
@@ -66,7 +72,7 @@ void APenanceV5WorldDirector::Advance()
     if (Stage == 7)
     {
         SetTaggedActors(TEXT("V5_EstateBarrier"), false);
-        if (Encounter) Encounter->Destroy(); Encounter = nullptr; EncounterTime = -1.f; bChasing = false;
+        if (Encounter) Encounter->Destroy(); Encounter = nullptr; EncounterTime = -1.f; SuppressObjectives(false); bChasing = false;
     }
 }
 void APenanceV5WorldDirector::Tick(float DeltaSeconds)
@@ -74,7 +80,6 @@ void APenanceV5WorldDirector::Tick(float DeltaSeconds)
     Super::Tick(DeltaSeconds);
     APawn* Player = UGameplayStatics::GetPlayerPawn(this,0);
     if (!Player) return;
-    if (GEngine) GEngine->AddOnScreenDebugMessage(12005,0.25f,FColor(225,214,181),GetObjective());
     const FVector Position = Player->GetActorLocation();
     if (Stage == 0 && Position.X > 150000.f) Advance();
     else if (Stage == 1 && Position.X < 100000.f) Advance();
@@ -97,8 +102,37 @@ void APenanceV5WorldDirector::Tick(float DeltaSeconds)
                 }
                 Distance -= Segment;
             }
-            if (!bPlaced) { Encounter->Destroy(); Encounter = nullptr; EncounterTime = -1.f; bChasing = false; }
+            if (!bPlaced) { Encounter->Destroy(); Encounter = nullptr; EncounterTime = -1.f; SuppressObjectives(false); bChasing = false; }
         }
-        else if (EncounterTime > 9.f) { Encounter->Destroy(); Encounter = nullptr; EncounterTime = -1.f; }
+        else if (EncounterTime > 9.f) { Encounter->Destroy(); Encounter = nullptr; EncounterTime = -1.f; SuppressObjectives(false); }
+    }
+}
+
+void APenanceV5WorldDirector::SuppressObjectives(bool bHidden)
+{
+    if(GetGameInstance())GetGameInstance()->GetSubsystem<UPenanceObjectiveSubsystem>()->SetSuppressed(TEXT("PenanceEncounter"),bHidden);
+}
+void APenanceV5WorldDirector::PublishObjectives()
+{
+    if(!GetGameInstance())return;
+    auto* M=GetGameInstance()->GetSubsystem<UPenanceObjectiveSubsystem>();
+    static const TCHAR* Ids[]={TEXT("Ch01.House"),TEXT("Ch02.Exit"),TEXT("Ch03.Neighborhood"),TEXT("Ch04.Park"),TEXT("Ch09.ChurchApproach"),TEXT("Ch10.Church"),TEXT("Ch11.Exit"),TEXT("Ch12.Estate"),TEXT("Ch12.Grounds")};
+    static const TCHAR* Titles[]={TEXT("Investigate the illuminated house"),TEXT("Find a way back outside"),TEXT("Find the school"),TEXT("Explore the park"),TEXT("Reach the church"),TEXT("Explore the church"),TEXT("Find a way outside"),TEXT("Reach the estate"),TEXT("Explore the estate grounds")};
+    static const int32 Chapters[]={1,2,3,4,9,10,11,12,12};
+    const int32 I=FMath::Clamp(Stage,0,8);
+    // Mandatory progression is owned by this existing director. Optional visits
+    // never participate in its progression conditions.
+    for(const auto& E:TArray<FPenanceObjectiveEntry>(M->State.SubObjectives))M->CompleteSubObjective(E.Id);
+    M->AdvanceMainObjective(Ids[I],FText::FromString(Titles[I]),Chapters[I]);
+    if(I==0)
+    {
+        M->AddSubObjective(TEXT("Ch01.House.Enter"),FText::FromString(TEXT("Find a way inside")));
+        M->AddSubObjective(TEXT("Ch01.House.Porch"),FText::FromString(TEXT("Examine the front porch")));
+        M->AddOptionalObjective(TEXT("Ch01.Gas.Search"),FText::FromString(TEXT("Search the gas station forecourt")),1,2);
+    }
+    else
+    {
+        static const TCHAR* Details[]={TEXT(""),TEXT("Find the front door"),TEXT("Follow Orchard Loop"),TEXT("Cross the playground"),TEXT("Cross the creek and follow the old road"),TEXT("Find the service stair"),TEXT("Reach the west stair"),TEXT("Follow the garden path"),TEXT("")};
+        if(I<8)M->AddSubObjective(FName(*(FString(Ids[I])+TEXT(".Route"))),FText::FromString(Details[I]));
     }
 }

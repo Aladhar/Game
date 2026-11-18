@@ -12,7 +12,11 @@ public class PenanceDemoUE : ModuleRules
             "CoreUObject",
             "Engine",
             "EnhancedInput",
-            "InputCore"
+            "InputCore",
+            "UMG",
+            "Slate",
+            "SlateCore",
+            "RenderCore"
         });
 
         if (Target.bBuildEditor)
@@ -24,7 +28,8 @@ public class PenanceDemoUE : ModuleRules
                 "BlueprintGraph",
                 "AnimGraph",
                 "AnimGraphRuntime",
-                "GraphEditor"
+                "GraphEditor",
+                "UMGEditor"
             });
         }
     }

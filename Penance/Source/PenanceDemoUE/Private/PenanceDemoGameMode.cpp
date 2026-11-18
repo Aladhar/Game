@@ -22,6 +22,7 @@ APenanceDemoGameMode::APenanceDemoGameMode()
         DefaultPawnClass = PenancePlayerBlueprint.Class;
     }
     HUDClass = APenanceHUD::StaticClass();
+    bStartPlayersAsSpectators = false;
 }
 
 void APenanceDemoGameMode::BeginPlay()
@@ -101,4 +102,16 @@ void APenanceDemoGameMode::BeginPlay()
     {
         PlayerController->SetControlRotation(FRotator(0.0f, 0.0f, 0.0f));
     }
+}
+
+void APenanceDemoGameMode::HandleStartingNewPlayer_Implementation(APlayerController* NewPlayer)
+{
+    Super::HandleStartingNewPlayer_Implementation(NewPlayer);
+    if(!NewPlayer)return;
+    if(!NewPlayer->GetPawn())RestartPlayer(NewPlayer);
+    if(APawn* Pawn=NewPlayer->GetPawn())
+    {
+        NewPlayer->SetViewTarget(Pawn);NewPlayer->SetInputMode(FInputModeGameOnly());NewPlayer->SetShowMouseCursor(false);
+    }
+    else UE_LOG(LogTemp,Error,TEXT("Penance: player could not spawn. Check PlayerStart collision and the active GameMode."));
 }

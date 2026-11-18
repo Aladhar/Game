@@ -1,0 +1,207 @@
+{
+  "files": [
+    {
+      "path": "Source/PenanceDemoUE/Public/PenanceObjectiveTrackerWidget.h",
+      "status": "created",
+      "bytes": 1940
+    },
+    {
+      "path": "Source/PenanceDemoUE/Public/PenanceObjectiveTrigger.h",
+      "status": "created",
+      "bytes": 727
+    },
+    {
+      "path": "Source/PenanceDemoUE/Public/PenanceObjectiveSubsystem.h",
+      "status": "created",
+      "bytes": 4228
+    },
+    {
+      "path": "Source/PenanceDemoUE/Public/PenanceObjectiveEditorLibrary.h",
+      "status": "created",
+      "bytes": 941
+    },
+    {
+      "path": "Source/PenanceDemoUE/Private/PenanceObjectiveSubsystem.cpp",
+      "status": "created",
+      "bytes": 6979
+    },
+    {
+      "path": "Source/PenanceDemoUE/Private/PenanceObjectiveTrigger.cpp",
+      "status": "created",
+      "bytes": 1142
+    },
+    {
+      "path": "Source/PenanceDemoUE/Private/PenanceObjectiveTrackerWidget.cpp",
+      "status": "created",
+      "bytes": 6107
+    },
+    {
+      "path": "Source/PenanceDemoUE/Private/PenanceObjectiveEditorLibrary.cpp",
+      "status": "created",
+      "bytes": 4325
+    },
+    {
+      "path": "Content/UI/WBP_ObjectiveTracker.uasset",
+      "status": "created",
+      "bytes": 25307
+    },
+    {
+      "path": "Content/UI/Input/IMC_Objectives.uasset",
+      "status": "created",
+      "bytes": 2270
+    },
+    {
+      "path": "Content/UI/Input/IA_ToggleObjectives.uasset",
+      "status": "created",
+      "bytes": 1140
+    },
+    {
+      "path": "Config/DefaultEditorPerProjectUserSettings.ini",
+      "status": "created",
+      "bytes": 176
+    },
+    {
+      "path": "Scripts/Build_Penance_Objective_HUD.py",
+      "status": "created",
+      "bytes": 3474
+    },
+    {
+      "path": "Scripts/Verify_Penance_Objective_HUD.py",
+      "status": "created",
+      "bytes": 10512
+    },
+    {
+      "path": "Source/PenanceDemoUE/PenanceDemoUE.Build.cs",
+      "status": "modified",
+      "bytes": 859
+    },
+    {
+      "path": "Source/PenanceDemoUE/Public/PenanceHUD.h",
+      "status": "modified",
+      "bytes": 928
+    },
+    {
+      "path": "Source/PenanceDemoUE/Private/PenanceHUD.cpp",
+      "status": "modified",
+      "bytes": 6006
+    },
+    {
+      "path": "Source/PenanceDemoUE/Public/PenanceDemoGameMode.h",
+      "status": "modified",
+      "bytes": 399
+    },
+    {
+      "path": "Source/PenanceDemoUE/Private/PenanceDemoGameMode.cpp",
+      "status": "modified",
+      "bytes": 4291
+    },
+    {
+      "path": "Source/PenanceDemoUE/Public/PenanceV5WorldDirector.h",
+      "status": "modified",
+      "bytes": 1894
+    },
+    {
+      "path": "Source/PenanceDemoUE/Private/PenanceV5WorldDirector.cpp",
+      "status": "modified",
+      "bytes": 6874
+    },
+    {
+      "path": "Source/PenanceDemoUE/Public/PenanceProgressionManager.h",
+      "status": "modified",
+      "bytes": 2974
+    },
+    {
+      "path": "Source/PenanceDemoUE/Private/PenanceProgressionManager.cpp",
+      "status": "modified",
+      "bytes": 15382
+    },
+    {
+      "path": "Config/DefaultEngine.ini",
+      "status": "modified",
+      "bytes": 2231
+    },
+    {
+      "path": "Content/Maps/V5/Penance_Town_V5.umap",
+      "status": "modified",
+      "bytes": 1579436
+    },
+    {
+      "path": "Docs/ObjectiveHUD/Preservation.json",
+      "status": "created",
+      "bytes": 78
+    },
+    {
+      "path": "Docs/ObjectiveHUD/README.md",
+      "status": "created",
+      "bytes": 6994
+    },
+    {
+      "path": "Docs/ObjectiveHUD/Validation.json",
+      "status": "created",
+      "bytes": 1783
+    },
+    {
+      "path": "Docs/ObjectiveHUD/Layout_Review.json",
+      "status": "created",
+      "bytes": 2226
+    },
+    {
+      "path": "Docs/ObjectiveHUD/Asset_Setup.json",
+      "status": "created",
+      "bytes": 1101
+    },
+    {
+      "path": "Docs/ObjectiveHUD/Screenshots/4K_Bright.png",
+      "status": "created",
+      "bytes": 225665
+    },
+    {
+      "path": "Docs/ObjectiveHUD/Screenshots/1080p_Dark.png",
+      "status": "created",
+      "bytes": 78897
+    },
+    {
+      "path": "Docs/ObjectiveHUD/Screenshots/PIE_V5_ObjectiveTracker.png",
+      "status": "created",
+      "bytes": 1939425
+    },
+    {
+      "path": "Docs/ObjectiveHUD/Screenshots/1440p_Bright.png",
+      "status": "created",
+      "bytes": 112860
+    },
+    {
+      "path": "Docs/ObjectiveHUD/Screenshots/1440p_Dark.png",
+      "status": "created",
+      "bytes": 112860
+    },
+    {
+      "path": "Docs/ObjectiveHUD/Screenshots/Completed_Steps.png",
+      "status": "created",
+      "bytes": 56458
+    },
+    {
+      "path": "Docs/ObjectiveHUD/Screenshots/PIE_Completed_Porch.png",
+      "status": "created",
+      "bytes": 1743076
+    },
+    {
+      "path": "Docs/ObjectiveHUD/Screenshots/Collapsed.png",
+      "status": "created",
+      "bytes": 56458
+    },
+    {
+      "path": "Docs/ObjectiveHUD/Screenshots/1080p_Bright.png",
+      "status": "created",
+      "bytes": 56458
+    },
+    {
+      "path": "Docs/ObjectiveHUD/Screenshots/4K_Dark.png",
+      "status": "created",
+      "bytes": 225665
+    }
+  ],
+  "backup": "Built/Checkpoints/BeforeObjectiveHUD",
+  "generated_editor_preferences": "Saved/Config/MacEditor/EditorPerProjectUserSettings.ini",
+  "generated_build_outputs_and_caches_not_enumerated": true
+}

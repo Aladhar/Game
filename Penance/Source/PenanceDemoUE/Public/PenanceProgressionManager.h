@@ -58,6 +58,7 @@ public:
 private:
     void SetState(EPenanceProgressionState NewState);
     void ApplyProgressionWorldState();
+    void PublishObjectives();
     void CompleteFirstHouse(AActor* InstigatorActor);
     void UnlockChurch();
     void UnlockFinalHouse(AActor* InstigatorActor);

@@ -13,4 +13,5 @@ public:
     APenanceDemoGameMode();
 
     virtual void BeginPlay() override;
+    virtual void HandleStartingNewPlayer_Implementation(APlayerController* NewPlayer) override;
 };

@@ -4,7 +4,14 @@
 #include "Engine/Canvas.h"
 #include "Engine/Engine.h"
 #include "PenancePlayerCharacter.h"
-#include "PenanceProgressionManager.h"
+#include "PenanceObjectiveSubsystem.h"
+#include "PenanceObjectiveTrackerWidget.h"
+#include "EnhancedInputComponent.h"
+#include "EnhancedInputSubsystems.h"
+#include "InputAction.h"
+#include "InputMappingContext.h"
+#include "Engine/LocalPlayer.h"
+#include "GameFramework/PlayerController.h"
 
 void APenanceHUD::DrawHUD()
 {
@@ -17,16 +24,6 @@ void APenanceHUD::DrawHUD()
     }
 
     DrawStaminaBar(Player);
-    if (APenanceProgressionManager* Manager = APenanceProgressionManager::Find(GetWorld()))
-    {
-        FCanvasTextItem Objective(
-            FVector2D(32.0f, 28.0f),
-            Manager->GetCurrentObjectiveText(),
-            GEngine->GetSmallFont(),
-            FLinearColor(0.82f, 0.82f, 0.76f, 0.95f)
-        );
-        Canvas->DrawItem(Objective);
-    }
     DrawInteractionHint(Player);
     if (Player->IsInventoryOpen())
     {
@@ -113,4 +110,32 @@ void APenanceHUD::DrawInventory(APenancePlayerCharacter* Player)
         Canvas->DrawItem(Line);
         Y += 24.0f;
     }
+}
+
+void APenanceHUD::BeginPlay()
+{
+    Super::BeginPlay();
+    auto* PC=GetOwningPlayerController();if(!PC || !PC->IsLocalController())return;
+    UClass* Class=LoadClass<UPenanceObjectiveTrackerWidget>(nullptr,TEXT("/Game/UI/WBP_ObjectiveTracker.WBP_ObjectiveTracker_C"));
+    if(!Class){UE_LOG(LogTemp,Warning,TEXT("Objective widget asset unavailable; using native UMG fallback."));Class=UPenanceObjectiveTrackerWidget::StaticClass();}
+    ObjectiveTracker=CreateWidget<UPenanceObjectiveTrackerWidget>(PC,Class);
+    if(ObjectiveTracker)ObjectiveTracker->AddToPlayerScreen(20);
+    auto* Action=LoadObject<UInputAction>(nullptr,TEXT("/Game/UI/Input/IA_ToggleObjectives.IA_ToggleObjectives"));
+    ObjectiveContext=LoadObject<UInputMappingContext>(nullptr,TEXT("/Game/UI/Input/IMC_Objectives.IMC_Objectives"));
+    if(Action && ObjectiveContext && PC->GetLocalPlayer())
+    {
+        if(auto* Input=PC->GetLocalPlayer()->GetSubsystem<UEnhancedInputLocalPlayerSubsystem>())Input->AddMappingContext(ObjectiveContext,1);
+        ObjectiveInput=NewObject<UEnhancedInputComponent>(this,TEXT("ObjectiveTrackerInput"));ObjectiveInput->RegisterComponent();ObjectiveInput->bBlockInput=false;
+        ObjectiveInput->BindAction(Action,ETriggerEvent::Started,this,&ThisClass::ToggleObjectives);PC->PushInputComponent(ObjectiveInput);
+    }
+}
+void APenanceHUD::ToggleObjectives(){if(ObjectiveTracker)ObjectiveTracker->ToggleDetails();}
+void APenanceHUD::EndPlay(const EEndPlayReason::Type Reason)
+{
+    if(auto* PC=GetOwningPlayerController())
+    {
+        if(ObjectiveInput)PC->PopInputComponent(ObjectiveInput);
+        if(PC->GetLocalPlayer())if(auto* Input=PC->GetLocalPlayer()->GetSubsystem<UEnhancedInputLocalPlayerSubsystem>())Input->RemoveMappingContext(ObjectiveContext);
+    }
+    if(ObjectiveTracker)ObjectiveTracker->RemoveFromParent();Super::EndPlay(Reason);
 }

@@ -27,6 +27,8 @@ public:
     UFUNCTION(BlueprintCallable, Category="V5|Slice") FString GetObjective() const;
 private:
     void Advance();
+    void PublishObjectives();
+    void SuppressObjectives(bool bHidden);
     void SetTaggedActors(FName Tag, bool bActive);
     void ShowEnemy(const FVector& Position, UAnimSequence* Animation, float Yaw);
     UPROPERTY(Transient) TObjectPtr<ASkeletalMeshActor> Encounter;

@@ -1,0 +1,107 @@
+{
+  "native_UMG_layouts": [
+    {
+      "file": "1080p_Dark.png",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "not_clipped": true,
+      "visible_pixel_bounds_px": [
+        1464,
+        56,
+        1860,
+        188
+      ],
+      "visible_pixel_right_margin_px": 60,
+      "visible_pixel_top_margin_px": 56
+    },
+    {
+      "file": "1080p_Bright.png",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "not_clipped": true,
+      "visible_pixel_bounds_px": [
+        1452,
+        40,
+        1872,
+        201
+      ],
+      "visible_pixel_right_margin_px": 48,
+      "visible_pixel_top_margin_px": 40
+    },
+    {
+      "file": "1440p_Dark.png",
+      "resolution": [
+        2560,
+        1440
+      ],
+      "not_clipped": true,
+      "visible_pixel_bounds_px": [
+        1952,
+        75,
+        2480,
+        253
+      ],
+      "visible_pixel_right_margin_px": 80,
+      "visible_pixel_top_margin_px": 75
+    },
+    {
+      "file": "1440p_Bright.png",
+      "resolution": [
+        2560,
+        1440
+      ],
+      "not_clipped": true,
+      "visible_pixel_bounds_px": [
+        1936,
+        53,
+        2496,
+        270
+      ],
+      "visible_pixel_right_margin_px": 64,
+      "visible_pixel_top_margin_px": 53
+    },
+    {
+      "file": "4K_Dark.png",
+      "resolution": [
+        3840,
+        2160
+      ],
+      "not_clipped": true,
+      "visible_pixel_bounds_px": [
+        2928,
+        111,
+        3720,
+        378
+      ],
+      "visible_pixel_right_margin_px": 120,
+      "visible_pixel_top_margin_px": 111
+    },
+    {
+      "file": "4K_Bright.png",
+      "resolution": [
+        3840,
+        2160
+      ],
+      "not_clipped": true,
+      "visible_pixel_bounds_px": [
+        2904,
+        80,
+        3744,
+        403
+      ],
+      "visible_pixel_right_margin_px": 96,
+      "visible_pixel_top_margin_px": 80
+    }
+  ],
+  "reviewed_dark_and_bright": true,
+  "actual_gameplay_screenshot_includes_window_title_bar": true,
+  "logical_panel_margins": {
+    "top": 40,
+    "right": 48
+  },
+  "measurement_note": "Pixel bounds measure visible ink/tint; dark-background tint may quantize to its surroundings. Canvas panel anchoring remains 40/48 logical units."
+}

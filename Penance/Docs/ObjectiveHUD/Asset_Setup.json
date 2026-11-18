@@ -1,0 +1,33 @@
+{
+  "assets": [
+    "/Game/UI/WBP_ObjectiveTracker.WBP_ObjectiveTracker",
+    "/Game/UI/Input/IA_ToggleObjectives.IA_ToggleObjectives",
+    "/Game/UI/Input/IMC_Objectives.IMC_Objectives"
+  ],
+  "maps": {
+    "/Game/Maps/Penance_Persistent": {
+      "game_mode": "/Script/PenanceDemoUE.PenanceDemoGameMode",
+      "default_pawn": "/Game/Player/BP_PenancePlayer.BP_PenancePlayer_C",
+      "player_starts": 1,
+      "camera_auto_activation": {}
+    },
+    "/Game/Maps/V5/Penance_Town_V5": {
+      "game_mode": "/Script/PenanceDemoUE.PenanceDemoGameMode",
+      "default_pawn": "/Game/Player/BP_PenancePlayer.BP_PenancePlayer_C",
+      "player_starts": 1,
+      "camera_auto_activation": {
+        "V5_Review_Arrival": "-1",
+        "V5_Review_Residential": "-1",
+        "V5_Review_Park": "-1",
+        "V5_Review_MainStreet": "-1",
+        "V5_Review_Graveyard": "-1",
+        "V5_Review_CreekCrossing": "-1",
+        "V5_Review_ChurchApproach": "-1",
+        "V5_Review_FosterApproach": "-1",
+        "V5_Review_Overhead": "-1",
+        "V5_Review_World": "-1"
+      }
+    }
+  },
+  "spawn_fixes": []
+}

@@ -1,4 +1,6 @@
 #include "PenanceProgressionManager.h"
+#include "PenanceObjectiveSubsystem.h"
+#include "Engine/GameInstance.h"
 
 #include "Components/PrimitiveComponent.h"
 #include "EngineUtils.h"
@@ -46,6 +48,7 @@ void APenanceProgressionManager::HandleProgressionEvent(FName EventName, AActor*
         if (State == EPenanceProgressionState::Start && !bFirstHouseComplete)
         {
             bFirstHouseApproached = true;
+            if(GetGameInstance())GetGameInstance()->GetSubsystem<UPenanceObjectiveSubsystem>()->CompleteSubObjective(TEXT("Legacy.House.Porch"));
         }
         return;
     }
@@ -56,6 +59,8 @@ void APenanceProgressionManager::HandleProgressionEvent(FName EventName, AActor*
         {
             bFirstHouseApproached = true;
             bFirstHouseEntered = true;
+            if(GetGameInstance())GetGameInstance()->GetSubsystem<UPenanceObjectiveSubsystem>()->CompleteSubObjective(TEXT("Legacy.House.Enter"));
+            PublishObjectives();
         }
         return;
     }
@@ -161,6 +166,7 @@ void APenanceProgressionManager::HandlePickup(FName PickupName, AActor* Instigat
 
 void APenanceProgressionManager::DebugResetProgression()
 {
+    if(GetGameInstance())GetGameInstance()->GetSubsystem<UPenanceObjectiveSubsystem>()->ResetObjectives();
     State = EPenanceProgressionState::Start;
     FiredEvents.Reset();
     bFirstHouseApproached = false;
@@ -286,6 +292,7 @@ void APenanceProgressionManager::CompleteDemo()
 
 void APenanceProgressionManager::ApplyProgressionWorldState()
 {
+    PublishObjectives();
     const bool bPastHouse = State != EPenanceProgressionState::Start;
     const bool bPastPark = static_cast<uint8>(State) >= static_cast<uint8>(EPenanceProgressionState::ParkDone);
     const bool bPastCulDeSac = static_cast<uint8>(State) >= static_cast<uint8>(EPenanceProgressionState::CulDeSacDone);
@@ -425,4 +432,20 @@ bool APenanceProgressionManager::GetImportedNameFromActor(const AActor* Actor, F
     }
 
     return false;
+}
+
+void APenanceProgressionManager::PublishObjectives()
+{
+    if(!GetGameInstance())return;
+    auto* M=GetGameInstance()->GetSubsystem<UPenanceObjectiveSubsystem>();
+    const int32 Variant=State==EPenanceProgressionState::Start?int32(bFirstHouseEntered):State==EPenanceProgressionState::ChurchDone?int32(bChurchNoticeInspected):State==EPenanceProgressionState::BasementDone?int32(bFinalHouseUnlocked):0;
+    const FName Id(*FString::Printf(TEXT("Legacy.%d.%d"),int32(State),Variant));
+    if(M->State.MainId==Id)return;
+    static const int32 Chapters[]={1,3,4,10,10,11,12};
+    M->AdvanceMainObjective(Id,GetCurrentObjectiveText(),State==EPenanceProgressionState::Start && bFirstHouseEntered?2:Chapters[FMath::Clamp(int32(State),0,6)]);
+    if(State==EPenanceProgressionState::Start && !bFirstHouseEntered)
+    {
+        M->AddSubObjective(TEXT("Legacy.House.Porch"),FText::FromString(TEXT("Examine the front porch")));
+        M->AddSubObjective(TEXT("Legacy.House.Enter"),FText::FromString(TEXT("Find a way inside")));
+    }
 }
