@@ -67,6 +67,14 @@ def spawn(cls,name,folder,xyz,rotation=None):
         raise RuntimeError('Could not spawn ' + name)
     actor.set_actor_label('V5_' + name)
     actor.set_folder_path(ue.Name(plan.FOLDERS[folder]))
+    light=actor.get_component_by_class(ue.LightComponentBase)
+    if light:
+        light.set_mobility(ue.ComponentMobility.MOVABLE)
+        if isinstance(light,ue.DirectionalLightComponent):
+            main=name=='Afternoon_Light'
+            light.set_forward_shading_priority(2 if main else 0)
+            light.set_atmosphere_sun_light(main)
+            if main:light.set_atmosphere_sun_light_index(0)
     return actor
 
 
@@ -437,6 +445,7 @@ def main():
   'chase_path':[ue.Vector(*plan.uu(*p)) for p in[(193,367,5.32),(193,376,5.32),(193,386,5.32),(179,388,5.32)]]})
  spawn(ue.PlayerStart,'Arrival_PlayerStart',9,plan.uu(55,22,6.0),ue.Rotator(yaw=57))
  world=editor_world=ue.get_editor_subsystem(ue.UnrealEditorSubsystem).get_editor_world()
+ world.get_world_settings().set_editor_property('force_no_precomputed_lighting',True)
  world.get_world_settings().set_editor_property('default_game_mode',ue.load_class(None,'/Script/PenanceDemoUE.PenanceDemoGameMode'))
  light=spawn(ue.DirectionalLight,'Afternoon_Light',0,(24000,22000,8000),ue.Rotator(pitch=-42,yaw=-48));light.get_component_by_class(ue.DirectionalLightComponent).set_intensity(4)
  sky=spawn(ue.SkyLight,'SkyFill',0,(24000,22000,12000));sky.get_component_by_class(ue.SkyLightComponent).set_intensity(1.1)

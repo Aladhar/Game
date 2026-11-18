@@ -1,0 +1,69 @@
+{
+  "map": "/Game/Maps/V5/Penance_Town_V5",
+  "lighting_mode": "dynamic / movable",
+  "force_no_precomputed_lighting": true,
+  "lights": [
+    {
+      "actor": "V5_Basement_Lamp_363",
+      "component": "LightComponent0",
+      "mobility_before": "<ComponentMobility.MOVABLE: 2>",
+      "mobility_after": "<ComponentMobility.MOVABLE: 2>"
+    },
+    {
+      "actor": "V5_Basement_Lamp_378",
+      "component": "LightComponent0",
+      "mobility_before": "<ComponentMobility.MOVABLE: 2>",
+      "mobility_after": "<ComponentMobility.MOVABLE: 2>"
+    },
+    {
+      "actor": "V5_Basement_Lamp_397",
+      "component": "LightComponent0",
+      "mobility_before": "<ComponentMobility.MOVABLE: 2>",
+      "mobility_after": "<ComponentMobility.MOVABLE: 2>"
+    },
+    {
+      "actor": "V5_House01_WarmPorch",
+      "component": "LightComponent0",
+      "mobility_before": "<ComponentMobility.MOVABLE: 2>",
+      "mobility_after": "<ComponentMobility.MOVABLE: 2>"
+    },
+    {
+      "actor": "V5_Afternoon_Light",
+      "component": "LightComponent0",
+      "mobility_before": "<ComponentMobility.MOVABLE: 2>",
+      "priority_before": 2,
+      "priority_after": 2,
+      "atmosphere_sun": true,
+      "mobility_after": "<ComponentMobility.MOVABLE: 2>"
+    },
+    {
+      "actor": "V5_SkyFill",
+      "component": "SkyLightComponent0",
+      "mobility_before": "<ComponentMobility.MOVABLE: 2>",
+      "mobility_after": "<ComponentMobility.MOVABLE: 2>"
+    },
+    {
+      "actor": "V5_SouthFill",
+      "component": "LightComponent0",
+      "mobility_before": "<ComponentMobility.MOVABLE: 2>",
+      "priority_before": 0,
+      "priority_after": 0,
+      "atmosphere_sun": false,
+      "mobility_after": "<ComponentMobility.MOVABLE: 2>"
+    },
+    {
+      "actor": "V5_WestFill",
+      "component": "LightComponent0",
+      "mobility_before": "<ComponentMobility.MOVABLE: 2>",
+      "priority_before": 0,
+      "priority_after": 0,
+      "atmosphere_sun": false,
+      "mobility_after": "<ComponentMobility.MOVABLE: 2>"
+    }
+  ],
+  "actor_transforms_preserved": true,
+  "actor_count": 920,
+  "map_sha256": "f92b06e2f3154a051e405218c846c50523d6cccc1a926a5299da1b78894621d9",
+  "backup": "/Users/amritladhar/Documents/GitHub/Game/Penance/Built/Checkpoints/BeforeV5LightingFix",
+  "static_lightmass_bake_performed": false
+}

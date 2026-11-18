@@ -1,0 +1,34 @@
+{
+  "checks": {
+    "no_precomputed_lighting_needed": true,
+    "all_lights_movable": true,
+    "unique_primary_directional_light": true,
+    "player_possessed": true,
+    "player_camera_active": true,
+    "objective_hud_active": true,
+    "player_moves": true,
+    "screenshot_saved": true
+  },
+  "errors": [],
+  "baked_lightmass_build_performed": false,
+  "lighting_mode": "dynamic",
+  "light_count": 8,
+  "directional_priorities": [
+    2,
+    0,
+    0
+  ],
+  "actual_player_movement_cm": 118.3857001834437,
+  "rendered_unbuilt_light_counts": [
+    0,
+    0,
+    0
+  ],
+  "rendered_unbuilt_primitive_counts": [
+    0,
+    0,
+    0
+  ],
+  "map_check_zero_errors_zero_warnings": true,
+  "editor_left_open": true
+}

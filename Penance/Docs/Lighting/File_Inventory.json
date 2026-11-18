@@ -1,0 +1,50 @@
+{
+  "files": [
+    {
+      "path": "Content/Maps/V5/Penance_Town_V5.umap",
+      "bytes": 1578910
+    },
+    {
+      "path": "Scripts/Fix_Penance_V5_Lighting.py",
+      "bytes": 3298
+    },
+    {
+      "path": "Scripts/Verify_Penance_V5_Lighting.py",
+      "bytes": 3842
+    },
+    {
+      "path": "Scripts/Build_Penance_Town_V5.py",
+      "bytes": 25213
+    },
+    {
+      "path": "Docs/ObjectiveHUD/README.md",
+      "bytes": 7034
+    },
+    {
+      "path": "Docs/Lighting/Initial_Light_Settings.json",
+      "bytes": 2337
+    },
+    {
+      "path": "Docs/Lighting/Preservation.json",
+      "bytes": 109
+    },
+    {
+      "path": "Docs/Lighting/README.md",
+      "bytes": 3164
+    },
+    {
+      "path": "Docs/Lighting/V5_Lighting_Gameplay.png",
+      "bytes": 3809816
+    },
+    {
+      "path": "Docs/Lighting/V5_Lighting_Repair.json",
+      "bytes": 2313
+    },
+    {
+      "path": "Docs/Lighting/Rendered_Validation.json",
+      "bytes": 715
+    }
+  ],
+  "backup": "Built/Checkpoints/BeforeV5LightingFix",
+  "no_cpp_or_engine_configuration_changes": true
+}

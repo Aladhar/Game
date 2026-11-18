@@ -52,7 +52,7 @@ See [Validation.json](Validation.json) for the final actual PIE checks and [Layo
 
 The source compiled against the installed Unreal 5.7.4 build. Tests cover main changes, real porch/gas overlaps, optional independence, completion display/expiry, collapse/expand handlers, cutscene suppression/restoration, no idle refreshes, actual SaveGame serialization/restoration, and retained player ownership through House01 streaming. Both playable maps are tested for player possession and the active UMG HUD. Packaged builds, physical gamepad input, and a complete manual game playthrough were not tested.
 
-Existing V5 blockout warnings about unbuilt lighting and competing directional lights remain. They do not prevent spawning or controlling the player. Debug overlays were temporarily hidden only while taking the clean HUD screenshots and then re-enabled; the warnings are retained in the editor log. No global warning suppression or unrelated lighting changes were saved.
+The V5 lighting warnings observed during this HUD pass were subsequently repaired in the separate [V5 lighting fix](../Lighting/README.md). V5 now uses dynamic lights with a unique main-sun priority; fresh rendered checks report zero unbuilt lighting interactions. The original HUD review screenshots temporarily hid debug overlays, while the lighting-fix screenshot was captured with warning overlays enabled.
 
 [Gameplay screenshot](Screenshots/PIE_V5_ObjectiveTracker.png) · [Completed porch in gameplay](Screenshots/PIE_Completed_Porch.png) · [1080p dark layout](Screenshots/1080p_Dark.png) · [1080p bright layout](Screenshots/1080p_Bright.png) · [4K layout](Screenshots/4K_Dark.png)
 
