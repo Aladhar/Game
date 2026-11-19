@@ -1,7 +1,7 @@
 """Render real Blender motion at authored speed, consistent full-body cameras.
 Modes after --: review | videos. Optional action name limits the job.
 """
-import bpy,sys,json,hashlib
+import bpy,sys,json,hashlib,shutil
 from pathlib import Path
 from mathutils import Vector
 R=Path(__file__).resolve().parents[1];args=sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else ['review']
@@ -26,6 +26,12 @@ if mode=='originals':
 if len(args)>1:clips={args[1]:clips[args[1]]}
 for name,spec in clips.items():
  rig.animation_data.action=bpy.data.actions[name]
+ cache_root=R/'Previews'/('Review' if mode=='review' else 'Frames')/name
+ fingerprint={'source_sha256':hashlib.sha256(Path(bpy.data.filepath).read_bytes()).hexdigest(),'camera_sha256':hashlib.sha256(json.dumps(setup,sort_keys=True).encode()).hexdigest()}
+ stamp=cache_root/'.render_source.json'
+ if not stamp.exists() or json.loads(stamp.read_text())!=fingerprint:
+  if cache_root.exists():shutil.rmtree(cache_root)
+  cache_root.mkdir(parents=True,exist_ok=True);stamp.write_text(json.dumps(fingerprint,indent=2)+'\n')
  for view,location in views.items():
   if name.startswith('AN_Penance_') and view=='Front':continue
   cam.location=location;cam.rotation_euler=(target-cam.location).to_track_quat('-Z','Y').to_euler()

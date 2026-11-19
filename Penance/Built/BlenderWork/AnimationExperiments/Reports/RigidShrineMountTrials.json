@@ -1,0 +1,374 @@
+{
+  "sampled_poses": 195,
+  "trials": [
+    {
+      "rigid_backward_offset_cm": 8,
+      "rigid_pitch_degrees": 8,
+      "canonical_placement_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.9902680687415704,
+          -0.13917310096006544,
+          26.84259800775804
+        ],
+        [
+          0.0,
+          0.13917310096006544,
+          0.9902680687415704,
+          -1.7420680513558011
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "upper_shrine_placement_cost_cm": 5.4025502788992945,
+      "maximum_contacts": 401,
+      "total_contacts": 10457,
+      "worst_by_clip": {
+        "AN_EXP_Chase": 88,
+        "AN_EXP_Heavy": 365,
+        "AN_EXP_Limp": 235,
+        "AN_EXP_Lunge": 157,
+        "AN_EXP_Overhead": 401,
+        "AN_EXP_Stalk": 316,
+        "AN_EXP_Sweep": 234,
+        "AN_Penance_Attack": 83,
+        "AN_Penance_Chase": 23,
+        "AN_Penance_Idle": 167,
+        "AN_Penance_StalkWalk": 70
+      }
+    },
+    {
+      "rigid_backward_offset_cm": 12,
+      "rigid_pitch_degrees": 8,
+      "canonical_placement_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.9902680687415704,
+          -0.13917310096006544,
+          30.84259800775804
+        ],
+        [
+          0.0,
+          0.13917310096006544,
+          0.9902680687415704,
+          -1.7420680513558011
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "upper_shrine_placement_cost_cm": 7.0855844994943045,
+      "maximum_contacts": 154,
+      "total_contacts": 2931,
+      "worst_by_clip": {
+        "AN_EXP_Chase": 65,
+        "AN_EXP_Heavy": 137,
+        "AN_EXP_Limp": 154,
+        "AN_EXP_Lunge": 30,
+        "AN_EXP_Overhead": 99,
+        "AN_EXP_Stalk": 64,
+        "AN_EXP_Sweep": 55,
+        "AN_Penance_Attack": 0,
+        "AN_Penance_Chase": 14,
+        "AN_Penance_Idle": 73,
+        "AN_Penance_StalkWalk": 22
+      }
+    },
+    {
+      "rigid_backward_offset_cm": 12,
+      "rigid_pitch_degrees": 12,
+      "canonical_placement_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.9781476007338057,
+          -0.20791169081775934,
+          40.249152195112885
+        ],
+        [
+          0.0,
+          0.20791169081775934,
+          0.9781476007338057,
+          -0.9838160305088479
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "upper_shrine_placement_cost_cm": 7.9471158643571504,
+      "maximum_contacts": 63,
+      "total_contacts": 339,
+      "worst_by_clip": {
+        "AN_EXP_Chase": 21,
+        "AN_EXP_Heavy": 41,
+        "AN_EXP_Limp": 63,
+        "AN_EXP_Lunge": 0,
+        "AN_EXP_Overhead": 42,
+        "AN_EXP_Stalk": 21,
+        "AN_EXP_Sweep": 10,
+        "AN_Penance_Attack": 0,
+        "AN_Penance_Chase": 0,
+        "AN_Penance_Idle": 0,
+        "AN_Penance_StalkWalk": 0
+      }
+    },
+    {
+      "rigid_backward_offset_cm": 8,
+      "rigid_pitch_degrees": 12,
+      "canonical_placement_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.9781476007338057,
+          -0.20791169081775934,
+          36.249152195112885
+        ],
+        [
+          0.0,
+          0.20791169081775934,
+          0.9781476007338057,
+          -0.9838160305088479
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "upper_shrine_placement_cost_cm": 8.754486028748474,
+      "maximum_contacts": 143,
+      "total_contacts": 3409,
+      "worst_by_clip": {
+        "AN_EXP_Chase": 69,
+        "AN_EXP_Heavy": 91,
+        "AN_EXP_Limp": 114,
+        "AN_EXP_Lunge": 107,
+        "AN_EXP_Overhead": 140,
+        "AN_EXP_Stalk": 117,
+        "AN_EXP_Sweep": 143,
+        "AN_Penance_Attack": 18,
+        "AN_Penance_Chase": 0,
+        "AN_Penance_Idle": 57,
+        "AN_Penance_StalkWalk": 0
+      }
+    },
+    {
+      "rigid_backward_offset_cm": 16,
+      "rigid_pitch_degrees": 12,
+      "canonical_placement_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.9781476007338057,
+          -0.20791169081775934,
+          44.249152195112885
+        ],
+        [
+          0.0,
+          0.20791169081775934,
+          0.9781476007338057,
+          -0.9838160305088479
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "upper_shrine_placement_cost_cm": 9.322615700349488,
+      "maximum_contacts": 49,
+      "total_contacts": 80,
+      "worst_by_clip": {
+        "AN_EXP_Chase": 0,
+        "AN_EXP_Heavy": 49,
+        "AN_EXP_Limp": 17,
+        "AN_EXP_Lunge": 0,
+        "AN_EXP_Overhead": 0,
+        "AN_EXP_Stalk": 0,
+        "AN_EXP_Sweep": 0,
+        "AN_Penance_Attack": 0,
+        "AN_Penance_Chase": 0,
+        "AN_Penance_Idle": 0,
+        "AN_Penance_StalkWalk": 0
+      }
+    },
+    {
+      "rigid_backward_offset_cm": 16,
+      "rigid_pitch_degrees": 8,
+      "canonical_placement_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.9902680687415704,
+          -0.13917310096006544,
+          34.84259800775804
+        ],
+        [
+          0.0,
+          0.13917310096006544,
+          0.9902680687415704,
+          -1.7420680513558011
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "upper_shrine_placement_cost_cm": 10.278062878603953,
+      "maximum_contacts": 63,
+      "total_contacts": 274,
+      "worst_by_clip": {
+        "AN_EXP_Chase": 42,
+        "AN_EXP_Heavy": 19,
+        "AN_EXP_Limp": 63,
+        "AN_EXP_Lunge": 0,
+        "AN_EXP_Overhead": 15,
+        "AN_EXP_Stalk": 25,
+        "AN_EXP_Sweep": 0,
+        "AN_Penance_Attack": 0,
+        "AN_Penance_Chase": 0,
+        "AN_Penance_Idle": 0,
+        "AN_Penance_StalkWalk": 0
+      }
+    },
+    {
+      "rigid_backward_offset_cm": 16,
+      "rigid_pitch_degrees": 16,
+      "canonical_placement_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.9612616959383189,
+          -0.27563735581699916,
+          53.584731952201615
+        ],
+        [
+          0.0,
+          0.27563735581699916,
+          0.9612616959383189,
+          0.8997659236267452
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "upper_shrine_placement_cost_cm": 10.365606962907849,
+      "maximum_contacts": 0,
+      "total_contacts": 0,
+      "worst_by_clip": {
+        "AN_EXP_Chase": 0,
+        "AN_EXP_Heavy": 0,
+        "AN_EXP_Limp": 0,
+        "AN_EXP_Lunge": 0,
+        "AN_EXP_Overhead": 0,
+        "AN_EXP_Stalk": 0,
+        "AN_EXP_Sweep": 0,
+        "AN_Penance_Attack": 0,
+        "AN_Penance_Chase": 0,
+        "AN_Penance_Idle": 0,
+        "AN_Penance_StalkWalk": 0
+      }
+    }
+  ],
+  "selected": {
+    "rigid_backward_offset_cm": 16,
+    "rigid_pitch_degrees": 16,
+    "canonical_placement_matrix": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.9612616959383189,
+        -0.27563735581699916,
+        53.584731952201615
+      ],
+      [
+        0.0,
+        0.27563735581699916,
+        0.9612616959383189,
+        0.8997659236267452
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "upper_shrine_placement_cost_cm": 10.365606962907849,
+    "maximum_contacts": 0,
+    "total_contacts": 0,
+    "worst_by_clip": {
+      "AN_EXP_Chase": 0,
+      "AN_EXP_Heavy": 0,
+      "AN_EXP_Limp": 0,
+      "AN_EXP_Lunge": 0,
+      "AN_EXP_Overhead": 0,
+      "AN_EXP_Stalk": 0,
+      "AN_EXP_Sweep": 0,
+      "AN_Penance_Attack": 0,
+      "AN_Penance_Chase": 0,
+      "AN_Penance_Idle": 0,
+      "AN_Penance_StalkWalk": 0
+    }
+  },
+  "method": "Canonical straight shrine with ONE rigid mounting transform. Sorted by upper-shrine placement change; no shape warping or motion edits."
+}

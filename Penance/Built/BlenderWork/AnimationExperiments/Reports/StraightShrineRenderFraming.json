@@ -1,0 +1,19 @@
+{
+  "projected_half_extents": {
+    "Front": [
+      98.8253173828125,
+      116.50016784667969
+    ],
+    "Side": [
+      125.01400756835938,
+      116.29682922363281
+    ],
+    "ThreeQuarter": [
+      106.29446411132812,
+      117.9811019897461
+    ]
+  },
+  "horizontal_limit": 176.0711982815728,
+  "vertical_limit": 234.76159770876373,
+  "all_frames_fit_original_cameras": true
+}

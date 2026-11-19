@@ -1,0 +1,13 @@
+{
+  "maximum_cpu_skinning_vs_blender_error_cm": 4.795807041783781e-05,
+  "control_pose": "AN_EXP_Chase frame 9",
+  "no_asset_saved": true,
+  "cases": [
+    "01_OriginalNeutral",
+    "02_CurrentNeutral",
+    "03_CurrentChase",
+    "04_OriginalGeometryCurrentWeights",
+    "05_CurrentGeometryNoOrnamentMotion",
+    "06_OriginalGeometryRigidShrine"
+  ]
+}

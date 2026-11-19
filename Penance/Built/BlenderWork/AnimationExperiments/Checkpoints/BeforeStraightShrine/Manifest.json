@@ -1,0 +1,24 @@
+{
+  "unchanged_animation_files": {
+    "Built/BlenderWork/AnimationExperiments/FBX/AN_EXP_Limp.fbx": "c448b238813d53f8b1fb7bf33fce19985c4f018ceca2a39f96b57ab434525af9",
+    "Built/BlenderWork/AnimationExperiments/FBX/AN_EXP_Lunge.fbx": "606f9700647b399e5bd2cf61d8625eed9264d2f3b56b431327d74257e97082d5",
+    "Built/BlenderWork/AnimationExperiments/FBX/AN_EXP_Sweep.fbx": "5f1b3d71bd0d52aa5156b2844daf3648082ce7ad2364c396c2d13f2ca815182a",
+    "Built/BlenderWork/AnimationExperiments/FBX/AN_EXP_Overhead.fbx": "8f846561ddaca63b8f2bf9da7784cc8e65ccae193c922e17a1440d763e21e0c5",
+    "Built/BlenderWork/AnimationExperiments/FBX/AN_EXP_Heavy.fbx": "fc6e928754de9799f7abd12264314549d5f3c3c97ddc3ffc4bed6afb33f1e321",
+    "Built/BlenderWork/AnimationExperiments/FBX/AN_EXP_Chase.fbx": "e383a3123aed35facad3a99ee0117d47a28ef1393bf295f8d036ad861ec5af73",
+    "Built/BlenderWork/AnimationExperiments/FBX/AN_EXP_Stalk.fbx": "a81eafc0538e12da28c7c4c3022e3fb1f727017a5b663c0b1d10ce3ac3b7db6a",
+    "Content/Enemies/Penance/Experimental/Animations/AN_EXP_Limp.uasset": "7082a0299d39888b916d2e4038cd0ce7e256820c38287e0a163ac9396411c08d",
+    "Content/Enemies/Penance/Experimental/Animations/AN_EXP_Sweep.uasset": "d262dff4d0d8cd3d4dbe476543db24509669af4a5b285dbb154fa3e52de73a24",
+    "Content/Enemies/Penance/Experimental/Animations/AN_EXP_Stalk.uasset": "a58b1543314b390dc5d3bfe1303a7f7c4f8e2a4053216abb4dd67a023ee668a6",
+    "Content/Enemies/Penance/Experimental/Animations/AN_EXP_Chase.uasset": "a2d47516e85c68e4e27ce0e12ff0e036645c5657f6cc26f94985855d547f8747",
+    "Content/Enemies/Penance/Experimental/Animations/AN_EXP_Overhead.uasset": "a68369018115b9ff432ff950dcb38f1337e09e5d7af133550619ee9402fb956d",
+    "Content/Enemies/Penance/Experimental/Animations/AN_EXP_Lunge.uasset": "a03268106d65fda482aad5e0aa58e3f37d60bf260e6be6989e7575862f6f69cd",
+    "Content/Enemies/Penance/Experimental/Animations/AN_EXP_Heavy.uasset": "564cb9489b1fc3dba972ab9c81407884ba6e75e66e05df7625dc818893f8d5e7"
+  },
+  "backup_files": {
+    "Penance_AnimationExperiments.blend": "cb88e9680e680f73ada321cd34a1c29f7d7aba1b93872487fbe191f06f49ed72",
+    "SK_Penance_Experimental.fbx": "32315336340a0800750f34658051dd88a9db6d162fee1956bfd809fb108c6cb1",
+    "ExperimentalMesh.npz": "152925f6576600123a60562f6d2942411b8df5da6c7e2526cac07e65169fe3d6",
+    "SK_Penance_Experimental.uasset": "20a4e410c033e4fa81ee972ac9805a27c7dd8c3ce24f922826c8921cead32f2f"
+  }
+}

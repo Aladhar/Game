@@ -1,0 +1,97 @@
+{
+  "sampled_poses": 149,
+  "trials": [
+    {
+      "additional_rear_flare_cm": 0,
+      "max_intersecting_triangle_pairs": 726,
+      "total_intersections": 13799,
+      "max_by_clip": {
+        "AN_EXP_Stalk": 509,
+        "AN_EXP_Limp": 0,
+        "AN_EXP_Heavy": 476,
+        "AN_EXP_Chase": 0,
+        "AN_EXP_Lunge": 0,
+        "AN_EXP_Overhead": 0,
+        "AN_EXP_Sweep": 0,
+        "AN_Penance_Idle": 726,
+        "AN_Penance_StalkWalk": 0,
+        "AN_Penance_Chase": 0,
+        "AN_Penance_Attack": 111
+      }
+    },
+    {
+      "additional_rear_flare_cm": 6,
+      "max_intersecting_triangle_pairs": 357,
+      "total_intersections": 4585,
+      "max_by_clip": {
+        "AN_EXP_Stalk": 294,
+        "AN_EXP_Limp": 0,
+        "AN_EXP_Heavy": 357,
+        "AN_EXP_Chase": 0,
+        "AN_EXP_Lunge": 0,
+        "AN_EXP_Overhead": 0,
+        "AN_EXP_Sweep": 0,
+        "AN_Penance_Idle": 228,
+        "AN_Penance_StalkWalk": 0,
+        "AN_Penance_Chase": 0,
+        "AN_Penance_Attack": 0
+      }
+    },
+    {
+      "additional_rear_flare_cm": 12,
+      "max_intersecting_triangle_pairs": 50,
+      "total_intersections": 87,
+      "max_by_clip": {
+        "AN_EXP_Stalk": 37,
+        "AN_EXP_Limp": 0,
+        "AN_EXP_Heavy": 50,
+        "AN_EXP_Chase": 0,
+        "AN_EXP_Lunge": 0,
+        "AN_EXP_Overhead": 0,
+        "AN_EXP_Sweep": 0,
+        "AN_Penance_Idle": 0,
+        "AN_Penance_StalkWalk": 0,
+        "AN_Penance_Chase": 0,
+        "AN_Penance_Attack": 0
+      }
+    },
+    {
+      "additional_rear_flare_cm": 18,
+      "max_intersecting_triangle_pairs": 0,
+      "total_intersections": 0,
+      "max_by_clip": {
+        "AN_EXP_Stalk": 0,
+        "AN_EXP_Limp": 0,
+        "AN_EXP_Heavy": 0,
+        "AN_EXP_Chase": 0,
+        "AN_EXP_Lunge": 0,
+        "AN_EXP_Overhead": 0,
+        "AN_EXP_Sweep": 0,
+        "AN_Penance_Idle": 0,
+        "AN_Penance_StalkWalk": 0,
+        "AN_Penance_Chase": 0,
+        "AN_Penance_Attack": 0
+      }
+    }
+  ],
+  "selected": {
+    "additional_rear_flare_cm": 18,
+    "max_intersecting_triangle_pairs": 0,
+    "total_intersections": 0,
+    "max_by_clip": {
+      "AN_EXP_Stalk": 0,
+      "AN_EXP_Limp": 0,
+      "AN_EXP_Heavy": 0,
+      "AN_EXP_Chase": 0,
+      "AN_EXP_Lunge": 0,
+      "AN_EXP_Overhead": 0,
+      "AN_EXP_Sweep": 0,
+      "AN_Penance_Idle": 0,
+      "AN_Penance_StalkWalk": 0,
+      "AN_Penance_Chase": 0,
+      "AN_Penance_Attack": 0
+    }
+  },
+  "method": "Smooth rear flare anchored at Z142cm; actual body/trim triangles tested on original and experimental motions.",
+  "hierarchy_reference_body_geometry_UVs_unchanged": true
+}

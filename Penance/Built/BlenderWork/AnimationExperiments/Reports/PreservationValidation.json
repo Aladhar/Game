@@ -1,10 +1,10 @@
 {
   "protected_assets_checked": 164,
   "changed_assets": [],
-  "unmodified_backups": {
-    "Penance_Animated.blend": true,
-    "Penance_Rigged_Repaired.blend": true,
-    "Penance_Rigged_Final.blend": true
-  },
-  "final_blend_sha256": "cb88e9680e680f73ada321cd34a1c29f7d7aba1b93872487fbe191f06f49ed72"
+  "all_14_animation_fbx_and_unreal_files_byte_unchanged": true,
+  "all_11_action_pose_matrices_unchanged": true,
+  "body_geometry_and_weights_unchanged": true,
+  "final_blend_sha256": "bf415a99c9db216fff77739806c9f010b436b04c57d8c3c5b68a1a2826cb79ad",
+  "original_backup_folder": "Backups",
+  "pre_fix_checkpoint": "Checkpoints/BeforeStraightShrine"
 }

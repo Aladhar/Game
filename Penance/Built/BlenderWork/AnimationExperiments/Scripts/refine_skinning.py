@@ -44,10 +44,9 @@ for strength in [0,.35,.65,1.]:
  ratios=np.array(ratios);score=float(np.mean(np.maximum(ratios-1.5,0)**2)+.3*np.mean(np.maximum(.5-ratios,0)**2))
  result={'strength':strength,'score':score,'p99':float(np.quantile(ratios,.99)),'max':float(ratios.max()),'over_2_fraction':float(np.mean(ratios>2))};trials.append(result);candidates.append(w);print('BROAD_WEIGHT_TRIAL',result,flush=True)
 best=int(np.argmin([t['score'] for t in trials]));W=candidates[best]
-# Refit lower rear drape in rest space, leaving shrine/shoulder attachment fixed.
-# A continuous 12 cm rear flare plus 5 cm lateral flare gives limbs room without
-# changing height, upper shrine, bone rest transforms or body shape.
-flare=(part==1)*(1-ease(80,142,P[:,2]));P[:,1]+=12*flare;P[:,0]+=5*flare*np.tanh(P[:,0]/12)
+# The rear region is rigid architecture, not cloth. Geometry fitting must use
+# repair_shrine_rigidity.py; never apply vertex-dependent rear/lateral offsets.
+flare=np.zeros(N)
 mesh.data.vertices.foreach_set('co',P.astype(np.float32).ravel());mesh.data.update()
 for g in list(mesh.vertex_groups):mesh.vertex_groups.remove(g)
 groups=[mesh.vertex_groups.new(name=n) for n in B];quant=np.rint(W*100000).astype(np.int32);quant[np.arange(N),quant.argmax(axis=1)]+=100000-quant.sum(axis=1)

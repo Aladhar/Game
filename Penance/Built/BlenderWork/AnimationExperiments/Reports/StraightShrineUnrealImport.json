@@ -1,0 +1,49 @@
+{
+  "engine": "5.7.4-51494982+++UE5+Release-5.7",
+  "mesh": "/Game/Enemies/Penance/Experimental/SK_Penance_Experimental.SK_Penance_Experimental",
+  "height_cm": 229.9999992932893,
+  "skeleton": "/Game/Enemies/Penance/SKEL_Penance.SKEL_Penance",
+  "skeleton_reference_unchanged": true,
+  "physics_asset_compatible": true,
+  "all_14_animation_exports_and_sequences_byte_unchanged": true,
+  "repair": {
+    "rigid_vertices": 82878,
+    "canonical_source": "Reports/SourceMesh.npz from original Penance_Animated.blend",
+    "rigid_backward_mount_placement_cm": 16.0,
+    "rigid_pitch_degrees": 16,
+    "canonical_placement_matrix": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.9612616959383189,
+        -0.27563735581699916,
+        53.584731952201615
+      ],
+      [
+        0.0,
+        0.27563735581699916,
+        0.9612616959383189,
+        0.8997659236267452
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "vertex_weight": {
+      "shrine_mount": 1.0
+    },
+    "hierarchy_reference_pose_changed": false,
+    "actions_changed": false,
+    "body_skinning_changed": false,
+    "shape_deformation_allowed": false,
+    "rigid_shape_contract": "Every shrine vertex equals the single shrine_mount transform applied to canonical geometry after one rigid placement transform."
+  }
+}

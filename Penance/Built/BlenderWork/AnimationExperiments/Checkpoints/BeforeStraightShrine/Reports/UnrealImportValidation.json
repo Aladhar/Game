@@ -1,0 +1,78 @@
+{
+  "engine": "5.7.4-51494982+++UE5+Release-5.7",
+  "mesh_height_cm": 229.99998403450024,
+  "mesh": "/Game/Enemies/Penance/Experimental/SK_Penance_Experimental.SK_Penance_Experimental",
+  "clips": {
+    "AN_EXP_Stalk": {
+      "duration_seconds": 2.799999952316284,
+      "samples_evaluated": 85,
+      "bone_count": 31,
+      "root_deviation": 7.549790126404332e-08,
+      "endpoint_error": 0.0,
+      "root_motion": false,
+      "import_sample_rate": 30,
+      "skeleton": "/Game/Enemies/Penance/SKEL_Penance.SKEL_Penance"
+    },
+    "AN_EXP_Limp": {
+      "duration_seconds": 2.4000000953674316,
+      "samples_evaluated": 73,
+      "bone_count": 31,
+      "root_deviation": 7.549790126404332e-08,
+      "endpoint_error": 0.0,
+      "root_motion": false,
+      "import_sample_rate": 30,
+      "skeleton": "/Game/Enemies/Penance/SKEL_Penance.SKEL_Penance"
+    },
+    "AN_EXP_Heavy": {
+      "duration_seconds": 2.0,
+      "samples_evaluated": 61,
+      "bone_count": 31,
+      "root_deviation": 7.549790126404332e-08,
+      "endpoint_error": 0.0,
+      "root_motion": false,
+      "import_sample_rate": 30,
+      "skeleton": "/Game/Enemies/Penance/SKEL_Penance.SKEL_Penance"
+    },
+    "AN_EXP_Chase": {
+      "duration_seconds": 1.0,
+      "samples_evaluated": 31,
+      "bone_count": 31,
+      "root_deviation": 7.549790126404332e-08,
+      "endpoint_error": 0.0,
+      "root_motion": false,
+      "import_sample_rate": 30,
+      "skeleton": "/Game/Enemies/Penance/SKEL_Penance.SKEL_Penance"
+    },
+    "AN_EXP_Lunge": {
+      "duration_seconds": 1.7999999523162842,
+      "samples_evaluated": 55,
+      "bone_count": 31,
+      "root_deviation": 7.549790126404332e-08,
+      "endpoint_error": 0.0,
+      "root_motion": false,
+      "import_sample_rate": 30,
+      "skeleton": "/Game/Enemies/Penance/SKEL_Penance.SKEL_Penance"
+    },
+    "AN_EXP_Overhead": {
+      "duration_seconds": 2.5999999046325684,
+      "samples_evaluated": 79,
+      "bone_count": 31,
+      "root_deviation": 7.549790126404332e-08,
+      "endpoint_error": 0.0,
+      "root_motion": false,
+      "import_sample_rate": 30,
+      "skeleton": "/Game/Enemies/Penance/SKEL_Penance.SKEL_Penance"
+    },
+    "AN_EXP_Sweep": {
+      "duration_seconds": 2.200000047683716,
+      "samples_evaluated": 67,
+      "bone_count": 31,
+      "root_deviation": 7.549790126404332e-08,
+      "endpoint_error": 0.0,
+      "root_motion": false,
+      "import_sample_rate": 30,
+      "skeleton": "/Game/Enemies/Penance/SKEL_Penance.SKEL_Penance"
+    }
+  },
+  "skeleton_reference_unchanged": true
+}

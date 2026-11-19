@@ -1,0 +1,56 @@
+{
+  "engine": "5.7.4-51494982+++UE5+Release-5.7",
+  "fresh_reload": true,
+  "skeleton": "/Game/Enemies/Penance/SKEL_Penance.SKEL_Penance",
+  "mesh_height_cm": 229.99998403450024,
+  "bone_count": 31,
+  "orientation_forward_x": true,
+  "native_clips": {
+    "AN_Penance_Idle": {
+      "duration": 5.0,
+      "frames_evaluated": 151,
+      "sample_rate": 30.0,
+      "root_stationary": true
+    },
+    "AN_Penance_StalkWalk": {
+      "duration": 2.0,
+      "frames_evaluated": 61,
+      "sample_rate": 30.0,
+      "root_stationary": true
+    },
+    "AN_Penance_Chase": {
+      "duration": 1.0,
+      "frames_evaluated": 31,
+      "sample_rate": 30.0,
+      "root_stationary": true
+    },
+    "AN_Penance_Attack": {
+      "duration": 1.5,
+      "frames_evaluated": 46,
+      "sample_rate": 30.0,
+      "root_stationary": true
+    }
+  },
+  "PIE": {
+    "started": true,
+    "stations": {
+      "AN_Penance_Idle": {
+        "sampled_bone_movement_cm": 0.06553805965994286,
+        "root_deviation_cm": 0.0
+      },
+      "AN_Penance_StalkWalk": {
+        "sampled_bone_movement_cm": 20.46212353488704,
+        "root_deviation_cm": 0.0
+      },
+      "AN_Penance_Chase": {
+        "sampled_bone_movement_cm": 56.94204886828379,
+        "root_deviation_cm": 0.0
+      },
+      "AN_Penance_Attack": {
+        "sampled_bone_movement_cm": 5.126672421401963,
+        "root_deviation_cm": 0.0
+      }
+    },
+    "all_actor_scales_unit": true
+  }
+}

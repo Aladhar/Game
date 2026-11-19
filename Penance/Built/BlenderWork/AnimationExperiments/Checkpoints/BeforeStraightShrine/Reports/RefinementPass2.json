@@ -1,0 +1,47 @@
+{
+  "trials": [
+    {
+      "strength": 0,
+      "score": 0.0054403638442826665,
+      "p99": 1.3496489451874951,
+      "max": 16.965923184680555,
+      "over_2_fraction": 0.0009933277503686576
+    },
+    {
+      "strength": 0.35,
+      "score": 0.0014252787428804805,
+      "p99": 1.2687215569209065,
+      "max": 10.537452563013312,
+      "over_2_fraction": 0.0004989395401336271
+    },
+    {
+      "strength": 0.65,
+      "score": 0.0004940193586554901,
+      "p99": 1.2442238248334527,
+      "max": 9.291067026849147,
+      "over_2_fraction": 0.0003214376740883686
+    },
+    {
+      "strength": 1.0,
+      "score": 0.0010476965044146052,
+      "p99": 1.278784026704395,
+      "max": 11.505890038199261,
+      "over_2_fraction": 0.000675872489941561
+    }
+  ],
+  "selected": {
+    "strength": 0.65,
+    "score": 0.0004940193586554901,
+    "p99": 1.2442238248334527,
+    "max": 9.291067026849147,
+    "over_2_fraction": 0.0003214376740883686
+  },
+  "sampled_poses": 84,
+  "changed_vertices_from_first_pass": 24175,
+  "drape_vertices_refit": 52533,
+  "drape_max_displacement_cm": 12.999408766885555,
+  "rest_skeleton_changed": false,
+  "body_geometry_changed": false,
+  "UVs_changed": false,
+  "max_influences": 4
+}

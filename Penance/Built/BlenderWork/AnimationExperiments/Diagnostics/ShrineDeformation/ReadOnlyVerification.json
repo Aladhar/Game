@@ -1,0 +1,25 @@
+{
+  "saved_asset_hashes_checked": 18,
+  "delivered_video_hashes_checked": 31,
+  "all_unchanged": true,
+  "assets": [
+    "Penance/Built/BlenderWork/AnimationExperiments/Penance_AnimationExperiments.blend",
+    "Penance/Built/BlenderWork/AnimationExperiments/FBX/AN_EXP_Limp.fbx",
+    "Penance/Built/BlenderWork/AnimationExperiments/FBX/SK_Penance_Experimental.fbx",
+    "Penance/Built/BlenderWork/AnimationExperiments/FBX/AN_EXP_Lunge.fbx",
+    "Penance/Built/BlenderWork/AnimationExperiments/FBX/AN_EXP_Sweep.fbx",
+    "Penance/Built/BlenderWork/AnimationExperiments/FBX/AN_EXP_Overhead.fbx",
+    "Penance/Built/BlenderWork/AnimationExperiments/FBX/AN_EXP_Heavy.fbx",
+    "Penance/Built/BlenderWork/AnimationExperiments/FBX/AN_EXP_Chase.fbx",
+    "Penance/Built/BlenderWork/AnimationExperiments/FBX/AN_EXP_Stalk.fbx",
+    "Penance/Content/Enemies/Penance/Experimental/SK_Penance_Experimental.uasset",
+    "Penance/Content/Enemies/Penance/Experimental/Animations/AN_EXP_Limp.uasset",
+    "Penance/Content/Enemies/Penance/Experimental/Animations/AN_EXP_Sweep.uasset",
+    "Penance/Content/Enemies/Penance/Experimental/Animations/AN_EXP_Stalk.uasset",
+    "Penance/Content/Enemies/Penance/Experimental/Animations/AN_EXP_Chase.uasset",
+    "Penance/Content/Enemies/Penance/Experimental/Animations/AN_EXP_Overhead.uasset",
+    "Penance/Content/Enemies/Penance/Experimental/Animations/AN_EXP_Lunge.uasset",
+    "Penance/Content/Enemies/Penance/Experimental/Animations/AN_EXP_Heavy.uasset",
+    "Penance/Content/Enemies/Penance/Experimental/L_Penance_ExperimentShowcase.umap"
+  ]
+}

@@ -10,6 +10,11 @@ from mathutils.bvhtree import BVHTree
 R=Path(__file__).resolve().parents[1];scene=bpy.context.scene
 rig=next(o for o in scene.objects if o.type=='ARMATURE');mesh=next(o for o in scene.objects if o.type=='MESH')
 q=np.load(R/'Reports/ExperimentalMesh.npz');P=q['points'];W=q['weights'];B=list(q['names']);E=q['edges'];part=q['part'];L=np.linalg.norm(P[E[:,0]]-P[E[:,1]],axis=1)
+rigid_ids=np.flatnonzero(part==1)
+assert mesh.data.attributes.get('penance_rigid_shrine'), 'Rigid-shrine contract missing; run repair_shrine_rigidity.py'
+repair=json.loads((R/'Reports/StraightShrineRepair.json').read_text());placement=np.array(repair['canonical_placement_matrix']);canonical=np.load(R/'Reports/SourceMesh.npz')['points'][rigid_ids];expected=np.column_stack((canonical,np.ones(len(canonical))))@placement[:3,:].T
+assert np.max(np.linalg.norm(P[rigid_ids]-expected,axis=1))<.001,'Shrine rest geometry was warped'
+rigid_hom=np.column_stack((P[rigid_ids],np.ones(len(rigid_ids))));rigid_invref=np.linalg.inv(q['rest'][B.index('shrine_mount')])
 valid=L>.35;mesh.data.calc_loop_triangles();tri=np.array([t.vertices[:] for t in mesh.data.loop_triangles]);poly=np.array([t.polygon_index for t in mesh.data.loop_triangles]);owner=np.empty(len(mesh.data.polygons),np.int32);mesh.data.attributes['penance_part_owner'].data.foreach_get('value',owner);owner=owner[poly]
 # Body and hanging trim below shoulder; keep BVH indexes compact.
 legmass=sum(W[:,i] for i,n in enumerate(B) if n.startswith(('thigh','calf','foot','ball')) or n=='pelvis')
@@ -33,11 +38,12 @@ for name,spec in allclips.items():
  for f in range(1,spec['frames']+2):
   scene.frame_set(f);bpy.context.view_layer.update();ev=mesh.evaluated_get(bpy.context.evaluated_depsgraph_get());p=np.empty(P.size,np.float32);ev.data.vertices.foreach_get('co',p);p=p.reshape(-1,3)
   assert np.isfinite(p).all(),(name,f,'Nonfinite mesh')
+  rigid_skin=np.array(rig.pose.bones['shrine_mount'].matrix)@rigid_invref;rigid_expected=rigid_hom@rigid_skin[:3,:].T;rigid_error=float(np.linalg.norm(p[rigid_ids]-rigid_expected,axis=1).max());assert rigid_error<.001,(name,f,'Shrine bent',rigid_error)
   ratio=np.linalg.norm(p[E[:,0]]-p[E[:,1]],axis=1)/np.maximum(L,1e-6)
   matrices.append(np.array([np.array(b.matrix) for b in rig.pose.bones]))
   for n,mask in regions.items():
    if np.any(mask):regmax[n]=max(regmax[n],float(np.quantile(ratio[mask],.99)))
-  stats.append({'frame':f,'sole_min_z_cm':{s:float(p[ids,2].min()) for s,ids in sole.items()},'edge_stretch_p99':float(np.quantile(ratio[valid],.99)),'edge_stretch_max':float(ratio[valid].max()),'edges_over_2':int(np.sum(ratio[valid]>2))})
+  stats.append({'frame':f,'rigid_shrine_error_cm':rigid_error,'sole_min_z_cm':{s:float(p[ids,2].min()) for s,ids in sole.items()},'edge_stretch_p99':float(np.quantile(ratio[valid],.99)),'edge_stretch_max':float(ratio[valid].max()),'edges_over_2':int(np.sum(ratio[valid]>2))})
   feet.append({s:np.median(p[ids],axis=0).tolist() for s,ids in sole.items()})
   if f in tests:
    verts=[Vector(v) for v in p];a=BVHTree.FromPolygons(verts,body_tri.tolist(),all_triangles=True);b=BVHTree.FromPolygons(verts,trim_tri.tolist(),all_triangles=True);pairs=a.overlap(b);count=0
@@ -61,5 +67,6 @@ for name,spec in allclips.items():
  assert rootdev<.001,(name,'Root moved',rootdev)
  if spec['loop']:assert looperr<.001,(name,'Loop endpoint mismatch',looperr)
  print('DEFORMATION',name,'loop',looperr,'contact max',max(x['body_trim_intersecting_triangle_pairs'] for x in contact),'regions',regmax,flush=True)
+assert all(c['body_trim_intersecting_triangle_pairs']==0 for n,v in report['clips'].items() if n.startswith('AN_EXP_') for c in v['contacts_sampled']), 'Rigid shrine/leg collision regression'
 (R/'Reports/DeformationValidation.json').write_text(json.dumps(report,indent=2)+'\n')
 print('DEFORMATION_VALIDATION_COMPLETE',flush=True)
