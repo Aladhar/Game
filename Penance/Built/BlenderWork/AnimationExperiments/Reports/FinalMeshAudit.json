@@ -1,0 +1,41 @@
+{
+  "source_topology": {
+    "vertices": 121837,
+    "triangles": 155282,
+    "boundary_edges": 0,
+    "nonmanifold_edges": 1162,
+    "near_zero_area_faces": 0
+  },
+  "final_topology": {
+    "vertices": 121837,
+    "triangles": 155282,
+    "boundary_edges": 0,
+    "nonmanifold_edges": 489,
+    "near_zero_area_faces": 0
+  },
+  "triangles_and_vertex_order_unchanged": true,
+  "UVs_and_packed_textures_unchanged": true,
+  "skeleton_hierarchy_and_reference_unchanged": true,
+  "non_drape_geometry_unchanged": true,
+  "height_cm": 229.99998403450024,
+  "object_scales": [
+    [
+      1.0,
+      1.0,
+      1.0
+    ],
+    [
+      1.0,
+      1.0,
+      1.0
+    ]
+  ],
+  "maximum_weight_sum_error": 4.7264620661735535e-08,
+  "root_weight_max": 0.0,
+  "max_influences": 4,
+  "changed_weight_vertices": 72100,
+  "changed_geometry_vertices": 52531,
+  "maximum_geometry_adjustment_cm": 30.41355995495071,
+  "geometric_weld_grid_cm": 0.0001,
+  "zero_area_threshold_cm2": 1e-08
+}

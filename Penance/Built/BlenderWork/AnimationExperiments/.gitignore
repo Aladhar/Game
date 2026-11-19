@@ -2,3 +2,5 @@ Previews/Frames/
 Previews/Review/
 *.blend1
 __pycache__/
+
+Previews/BeforeWeights/

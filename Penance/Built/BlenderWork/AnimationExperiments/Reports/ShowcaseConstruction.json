@@ -1,0 +1,89 @@
+{
+  "map": "/Game/Enemies/Penance/Experimental/L_Penance_ExperimentShowcase",
+  "stations": {
+    "AN_EXP_Stalk": {
+      "actor": "AN_EXP_Stalk",
+      "asset": "/Game/Enemies/Penance/Experimental/Animations/AN_EXP_Stalk.AN_EXP_Stalk",
+      "position": [
+        0,
+        -630.0,
+        0
+      ],
+      "loop_in_showcase": true,
+      "clip_loop": true
+    },
+    "AN_EXP_Limp": {
+      "actor": "AN_EXP_Limp",
+      "asset": "/Game/Enemies/Penance/Experimental/Animations/AN_EXP_Limp.AN_EXP_Limp",
+      "position": [
+        0,
+        -210.0,
+        0
+      ],
+      "loop_in_showcase": true,
+      "clip_loop": true
+    },
+    "AN_EXP_Heavy": {
+      "actor": "AN_EXP_Heavy",
+      "asset": "/Game/Enemies/Penance/Experimental/Animations/AN_EXP_Heavy.AN_EXP_Heavy",
+      "position": [
+        0,
+        210.0,
+        0
+      ],
+      "loop_in_showcase": true,
+      "clip_loop": true
+    },
+    "AN_EXP_Chase": {
+      "actor": "AN_EXP_Chase",
+      "asset": "/Game/Enemies/Penance/Experimental/Animations/AN_EXP_Chase.AN_EXP_Chase",
+      "position": [
+        0,
+        630.0,
+        0
+      ],
+      "loop_in_showcase": true,
+      "clip_loop": true
+    },
+    "AN_EXP_Lunge": {
+      "actor": "AN_EXP_Lunge",
+      "asset": "/Game/Enemies/Penance/Experimental/Animations/AN_EXP_Lunge.AN_EXP_Lunge",
+      "position": [
+        650,
+        -630.0,
+        0
+      ],
+      "loop_in_showcase": true,
+      "clip_loop": false
+    },
+    "AN_EXP_Overhead": {
+      "actor": "AN_EXP_Overhead",
+      "asset": "/Game/Enemies/Penance/Experimental/Animations/AN_EXP_Overhead.AN_EXP_Overhead",
+      "position": [
+        650,
+        -210.0,
+        0
+      ],
+      "loop_in_showcase": true,
+      "clip_loop": false
+    },
+    "AN_EXP_Sweep": {
+      "actor": "AN_EXP_Sweep",
+      "asset": "/Game/Enemies/Penance/Experimental/Animations/AN_EXP_Sweep.AN_EXP_Sweep",
+      "position": [
+        650,
+        210.0,
+        0
+      ],
+      "loop_in_showcase": true,
+      "clip_loop": false
+    }
+  },
+  "original_stations": [
+    "StalkWalk",
+    "Chase",
+    "Attack"
+  ],
+  "camera": "Experiment_Camera",
+  "note": "Attack stations repeat only for review; attack clips are authored as one-shots."
+}

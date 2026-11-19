@@ -1,0 +1,65 @@
+{
+  "AN_EXP_Stalk": {
+    "mp4": "/Users/amritladhar/Documents/GitHub/Game/Penance/Built/BlenderWork/AnimationExperiments/Previews/01_Stalk.mp4",
+    "delivery": "/Users/amritladhar/Documents/ChatGPT/Penance/Advanced_Enemy_Animations/01_Stalk.mp4",
+    "views": [
+      "/Users/amritladhar/Documents/GitHub/Game/Penance/Built/BlenderWork/AnimationExperiments/Previews/AN_EXP_Stalk_Front.mp4",
+      "/Users/amritladhar/Documents/GitHub/Game/Penance/Built/BlenderWork/AnimationExperiments/Previews/AN_EXP_Stalk_Side.mp4",
+      "/Users/amritladhar/Documents/GitHub/Game/Penance/Built/BlenderWork/AnimationExperiments/Previews/AN_EXP_Stalk_ThreeQuarter.mp4"
+    ]
+  },
+  "AN_EXP_Limp": {
+    "mp4": "/Users/amritladhar/Documents/GitHub/Game/Penance/Built/BlenderWork/AnimationExperiments/Previews/02_Limp.mp4",
+    "delivery": "/Users/amritladhar/Documents/ChatGPT/Penance/Advanced_Enemy_Animations/02_Limp.mp4",
+    "views": [
+      "/Users/amritladhar/Documents/GitHub/Game/Penance/Built/BlenderWork/AnimationExperiments/Previews/AN_EXP_Limp_Front.mp4",
+      "/Users/amritladhar/Documents/GitHub/Game/Penance/Built/BlenderWork/AnimationExperiments/Previews/AN_EXP_Limp_Side.mp4",
+      "/Users/amritladhar/Documents/GitHub/Game/Penance/Built/BlenderWork/AnimationExperiments/Previews/AN_EXP_Limp_ThreeQuarter.mp4"
+    ]
+  },
+  "AN_EXP_Heavy": {
+    "mp4": "/Users/amritladhar/Documents/GitHub/Game/Penance/Built/BlenderWork/AnimationExperiments/Previews/03_Heavy.mp4",
+    "delivery": "/Users/amritladhar/Documents/ChatGPT/Penance/Advanced_Enemy_Animations/03_Heavy.mp4",
+    "views": [
+      "/Users/amritladhar/Documents/GitHub/Game/Penance/Built/BlenderWork/AnimationExperiments/Previews/AN_EXP_Heavy_Front.mp4",
+      "/Users/amritladhar/Documents/GitHub/Game/Penance/Built/BlenderWork/AnimationExperiments/Previews/AN_EXP_Heavy_Side.mp4",
+      "/Users/amritladhar/Documents/GitHub/Game/Penance/Built/BlenderWork/AnimationExperiments/Previews/AN_EXP_Heavy_ThreeQuarter.mp4"
+    ]
+  },
+  "AN_EXP_Chase": {
+    "mp4": "/Users/amritladhar/Documents/GitHub/Game/Penance/Built/BlenderWork/AnimationExperiments/Previews/04_Chase.mp4",
+    "delivery": "/Users/amritladhar/Documents/ChatGPT/Penance/Advanced_Enemy_Animations/04_Chase.mp4",
+    "views": [
+      "/Users/amritladhar/Documents/GitHub/Game/Penance/Built/BlenderWork/AnimationExperiments/Previews/AN_EXP_Chase_Front.mp4",
+      "/Users/amritladhar/Documents/GitHub/Game/Penance/Built/BlenderWork/AnimationExperiments/Previews/AN_EXP_Chase_Side.mp4",
+      "/Users/amritladhar/Documents/GitHub/Game/Penance/Built/BlenderWork/AnimationExperiments/Previews/AN_EXP_Chase_ThreeQuarter.mp4"
+    ]
+  },
+  "AN_EXP_Lunge": {
+    "mp4": "/Users/amritladhar/Documents/GitHub/Game/Penance/Built/BlenderWork/AnimationExperiments/Previews/05_Lunge.mp4",
+    "delivery": "/Users/amritladhar/Documents/ChatGPT/Penance/Advanced_Enemy_Animations/05_Lunge.mp4",
+    "views": [
+      "/Users/amritladhar/Documents/GitHub/Game/Penance/Built/BlenderWork/AnimationExperiments/Previews/AN_EXP_Lunge_Front.mp4",
+      "/Users/amritladhar/Documents/GitHub/Game/Penance/Built/BlenderWork/AnimationExperiments/Previews/AN_EXP_Lunge_Side.mp4",
+      "/Users/amritladhar/Documents/GitHub/Game/Penance/Built/BlenderWork/AnimationExperiments/Previews/AN_EXP_Lunge_ThreeQuarter.mp4"
+    ]
+  },
+  "AN_EXP_Overhead": {
+    "mp4": "/Users/amritladhar/Documents/GitHub/Game/Penance/Built/BlenderWork/AnimationExperiments/Previews/06_Overhead.mp4",
+    "delivery": "/Users/amritladhar/Documents/ChatGPT/Penance/Advanced_Enemy_Animations/06_Overhead.mp4",
+    "views": [
+      "/Users/amritladhar/Documents/GitHub/Game/Penance/Built/BlenderWork/AnimationExperiments/Previews/AN_EXP_Overhead_Front.mp4",
+      "/Users/amritladhar/Documents/GitHub/Game/Penance/Built/BlenderWork/AnimationExperiments/Previews/AN_EXP_Overhead_Side.mp4",
+      "/Users/amritladhar/Documents/GitHub/Game/Penance/Built/BlenderWork/AnimationExperiments/Previews/AN_EXP_Overhead_ThreeQuarter.mp4"
+    ]
+  },
+  "AN_EXP_Sweep": {
+    "mp4": "/Users/amritladhar/Documents/GitHub/Game/Penance/Built/BlenderWork/AnimationExperiments/Previews/07_Sweep.mp4",
+    "delivery": "/Users/amritladhar/Documents/ChatGPT/Penance/Advanced_Enemy_Animations/07_Sweep.mp4",
+    "views": [
+      "/Users/amritladhar/Documents/GitHub/Game/Penance/Built/BlenderWork/AnimationExperiments/Previews/AN_EXP_Sweep_Front.mp4",
+      "/Users/amritladhar/Documents/GitHub/Game/Penance/Built/BlenderWork/AnimationExperiments/Previews/AN_EXP_Sweep_Side.mp4",
+      "/Users/amritladhar/Documents/GitHub/Game/Penance/Built/BlenderWork/AnimationExperiments/Previews/AN_EXP_Sweep_ThreeQuarter.mp4"
+    ]
+  }
+}

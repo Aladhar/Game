@@ -1,0 +1,15 @@
+{
+  "changed_vertices": 18687,
+  "left_right_blend_width_cm": 28,
+  "lower_segment_blend_z_cm": [
+    69,
+    97
+  ],
+  "shrine_attachment_blend_z_cm": [
+    112,
+    162
+  ],
+  "maximum_influences": 4,
+  "geometry_changed": false,
+  "reason": "Connected drape triangles were assigned rigidly to opposing chains at X=0, producing 27x edge stretch. Continuous cross-panel and two-segment weights remove the discontinuity."
+}

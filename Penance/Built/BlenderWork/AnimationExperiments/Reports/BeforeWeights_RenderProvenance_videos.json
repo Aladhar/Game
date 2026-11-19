@@ -1,0 +1,50 @@
+{
+  "source": "/Users/amritladhar/Documents/GitHub/Game/Penance/Built/BlenderWork/AnimationExperiments/Penance_AnimationExperiments.blend",
+  "source_sha256": "cb88e9680e680f73ada321cd34a1c29f7d7aba1b93872487fbe191f06f49ed72",
+  "cameras": {
+    "target": [
+      0.0,
+      -25.0,
+      115.0
+    ],
+    "views": {
+      "Front": [
+        0,
+        -650,
+        145
+      ],
+      "Side": [
+        650,
+        -25,
+        145
+      ],
+      "ThreeQuarter": [
+        440,
+        -600,
+        230
+      ]
+    },
+    "ortho_scale": 469.52319541752746,
+    "projected_half_extents": {
+      "Front": [
+        98.8253173828125,
+        120.50322771072388
+      ],
+      "Side": [
+        146.27382643503552,
+        119.43405628204346
+      ],
+      "ThreeQuarter": [
+        163.0288872977526,
+        136.73737144470215
+      ]
+    },
+    "width": 600,
+    "height": 800,
+    "fps": 30,
+    "fit": "Every frame of all seven Actions; 8 percent framing margin."
+  },
+  "rendered_actions": [
+    "AN_EXP_Overhead"
+  ]
+}

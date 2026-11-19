@@ -27,7 +27,7 @@ for name,frames in [('AN_Penance_Idle',150),('AN_Penance_StalkWalk',60),('AN_Pen
 report={'mesh_height_cm':float(np.ptp(P[:,2])),'bone_count':len(B),'max_influences':int(np.max(np.sum(W>.00001,axis=1))),'weight_sum_max_error':float(np.max(abs(W.sum(axis=1)-1))),'clips':{}}
 for name,spec in allclips.items():
  rig.animation_data.action=bpy.data.actions[name];matrices=[];stats=[];regmax={n:0 for n in regions};contact=[]
- tests=set(np.rint(np.linspace(1,spec['frames']+1,9)).astype(int))
+ tests=set(range(1,spec['frames']+2)) if name.startswith('AN_EXP_') else set(np.rint(np.linspace(1,spec['frames']+1,17)).astype(int))
  if 'impact' in spec:tests.update([spec['impact'],spec['anticipation'],spec['recovery']])
  feet=[]
  for f in range(1,spec['frames']+2):

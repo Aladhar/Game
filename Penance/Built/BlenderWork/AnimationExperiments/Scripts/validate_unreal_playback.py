@@ -13,11 +13,12 @@ foot=u.AnimPoseExtensions.get_bone_pose(ref,'foot_l',u.AnimPoseSpaces.WORLD).tra
 report={'engine':u.SystemLibrary.get_engine_version(),'fresh_reload':True,'skeleton':skel.get_path_name(),'mesh_height_cm':mesh.get_imported_bounds().box_extent.z*2,'bone_count':len(names),'orientation_forward_x':True,'native_clips':{}}
 for name,s in manifest.items():
  clip=A.load_asset(F+'/Animations/'+name);assert clip.get_editor_property('skeleton')==skel;assert not clip.get_editor_property('enable_root_motion');assert abs(clip.get_play_length()-s['frames']/30)<.001
+ frames=u.AnimationLibrary.get_num_frames(clip);assert frames==s['frames'],(name,'Unexpected native frame count',frames,s['frames'])
  opt=u.AnimPoseEvaluationOptions();root=[]
  for f in range(s['frames']+1):
   pose=u.AnimPoseExtensions.get_anim_pose_at_time(clip,f/30,opt);t=u.AnimPoseExtensions.get_bone_pose(pose,'root',u.AnimPoseSpaces.LOCAL);root.append(list(t.translation.to_tuple())+list(t.rotation.to_tuple())+list(t.scale3d.to_tuple()))
  assert max(abs(a-b) for row in root for a,b in zip(row,root[0]))<.001
- report['native_clips'][name]={'duration':clip.get_play_length(),'frames_evaluated':len(root),'root_stationary':True}
+ report['native_clips'][name]={'duration':clip.get_play_length(),'frames_evaluated':len(root),'sample_rate':frames/clip.get_play_length(),'root_stationary':True}
 cap=E.spawn_actor_from_class(u.SceneCapture2D,u.Vector());cap.set_actor_label('Transient_Experiment_Capture')
 u.EditorPythonScripting.set_keep_python_script_alive(True);started=time.monotonic();last=started;phase='start';busy=False;world=None;found=None;first=None;capture=None;cc=None;rt=None;index=0;pending=None
 

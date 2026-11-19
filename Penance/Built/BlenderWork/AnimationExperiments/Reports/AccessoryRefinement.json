@@ -1,0 +1,72 @@
+{
+  "AN_EXP_Stalk": {
+    "trials": [
+      {
+        "additional_outward_degrees": 0,
+        "maximum_contacts": 504,
+        "total_contacts": 990
+      },
+      {
+        "additional_outward_degrees": 3,
+        "maximum_contacts": 693,
+        "total_contacts": 1553
+      },
+      {
+        "additional_outward_degrees": 6,
+        "maximum_contacts": 891,
+        "total_contacts": 2401
+      },
+      {
+        "additional_outward_degrees": 9,
+        "maximum_contacts": 968,
+        "total_contacts": 2942
+      },
+      {
+        "additional_outward_degrees": 12,
+        "maximum_contacts": 1026,
+        "total_contacts": 3127
+      }
+    ],
+    "selected": {
+      "additional_outward_degrees": 0,
+      "maximum_contacts": 504,
+      "total_contacts": 990
+    },
+    "note": "Export and Blender save completed. Recovered trial report after JSON serialization failure; rejected extra outward rotation."
+  },
+  "AN_EXP_Heavy": {
+    "trials": [
+      {
+        "additional_outward_degrees": 0,
+        "maximum_contacts": 466,
+        "total_contacts": 1155
+      },
+      {
+        "additional_outward_degrees": 3,
+        "maximum_contacts": 644,
+        "total_contacts": 1612
+      },
+      {
+        "additional_outward_degrees": 6,
+        "maximum_contacts": 970,
+        "total_contacts": 2613
+      },
+      {
+        "additional_outward_degrees": 9,
+        "maximum_contacts": 1050,
+        "total_contacts": 3140
+      },
+      {
+        "additional_outward_degrees": 12,
+        "maximum_contacts": 1043,
+        "total_contacts": 3082
+      }
+    ],
+    "selected": {
+      "additional_outward_degrees": 0,
+      "maximum_contacts": 466,
+      "total_contacts": 1155
+    },
+    "note": "Export and Blender save completed. Recovered trial report after JSON serialization failure; rejected extra outward rotation."
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "method": "Projected gradient optimization on welded anatomical skin; four local influences, strain and compression penalties, pose and source-weight regularization.",
+  "pose_samples": [
+    "AN_EXP_Stalk:1",
+    "AN_EXP_Stalk:18",
+    "AN_EXP_Stalk:35",
+    "AN_EXP_Stalk:51",
+    "AN_EXP_Stalk:68",
+    "AN_EXP_Stalk:85",
+    "AN_EXP_Limp:1",
+    "AN_EXP_Limp:15",
+    "AN_EXP_Limp:30",
+    "AN_EXP_Limp:44",
+    "AN_EXP_Limp:59",
+    "AN_EXP_Limp:73",
+    "AN_EXP_Heavy:1",
+    "AN_EXP_Heavy:13",
+    "AN_EXP_Heavy:25",
+    "AN_EXP_Heavy:37",
+    "AN_EXP_Heavy:49",
+    "AN_EXP_Heavy:61",
+    "AN_EXP_Chase:1",
+    "AN_EXP_Chase:7",
+    "AN_EXP_Chase:13",
+    "AN_EXP_Chase:19",
+    "AN_EXP_Chase:25",
+    "AN_EXP_Chase:31",
+    "AN_EXP_Lunge:1",
+    "AN_EXP_Lunge:12",
+    "AN_EXP_Lunge:23",
+    "AN_EXP_Lunge:33",
+    "AN_EXP_Lunge:44",
+    "AN_EXP_Lunge:55",
+    "AN_EXP_Overhead:1",
+    "AN_EXP_Overhead:17",
+    "AN_EXP_Overhead:25",
+    "AN_EXP_Overhead:32",
+    "AN_EXP_Overhead:34",
+    "AN_EXP_Overhead:48",
+    "AN_EXP_Overhead:63",
+    "AN_EXP_Overhead:79",
+    "AN_EXP_Sweep:1",
+    "AN_EXP_Sweep:14",
+    "AN_EXP_Sweep:27",
+    "AN_EXP_Sweep:41",
+    "AN_EXP_Sweep:54",
+    "AN_EXP_Sweep:67"
+  ],
+  "trace": [
+    {
+      "iteration": 0,
+      "loss": 0.0010361868246926713,
+      "p99": 1.2684250450759673,
+      "max": 9.29935604874569,
+      "fraction_over_2": 0.0005462183496584189
+    },
+    {
+      "iteration": 10,
+      "loss": 0.00021770922652992328,
+      "p99": 1.2765745720445096,
+      "max": 4.15984679958649,
+      "fraction_over_2": 0.00015612092364580466
+    },
+    {
+      "iteration": 20,
+      "loss": 0.00011685613813622813,
+      "p99": 1.27548222222712,
+      "max": 3.4589136693591027,
+      "fraction_over_2": 8.27727731665421e-05
+    },
+    {
+      "iteration": 30,
+      "loss": 6.833096691269438e-05,
+      "p99": 1.2720435399827685,
+      "max": 3.062664604743108,
+      "fraction_over_2": 3.319106250737579e-05
+    },
+    {
+      "iteration": 40,
+      "loss": 4.7034977429653264e-05,
+      "p99": 1.2726973230126835,
+      "max": 2.4320132941033803,
+      "fraction_over_2": 1.598088194799575e-05
+    },
+    {
+      "iteration": 50,
+      "loss": 3.7812337442357995e-05,
+      "p99": 1.2734590865713793,
+      "max": 2.4089182382030057,
+      "fraction_over_2": 1.2292986113842886e-05
+    },
+    {
+      "iteration": 60,
+      "loss": 3.548286340611001e-05,
+      "p99": 1.2728983334670885,
+      "max": 2.4680492048065896,
+      "fraction_over_2": 1.3112518521432411e-05
+    },
+    {
+      "iteration": 70,
+      "loss": 3.114519035747536e-05,
+      "p99": 1.2740339189923793,
+      "max": 2.446445070977087,
+      "fraction_over_2": 9.83438889107431e-06
+    },
+    {
+      "iteration": 80,
+      "loss": 2.9463470641484957e-05,
+      "p99": 1.2762068450910324,
+      "max": 2.4403972097505395,
+      "fraction_over_2": 9.83438889107431e-06
+    },
+    {
+      "iteration": 90,
+      "loss": 3.129307951462079e-05,
+      "p99": 1.277465005288098,
+      "max": 2.7253226400493826,
+      "fraction_over_2": 1.3112518521432411e-05
+    },
+    {
+      "iteration": 100,
+      "loss": 2.9323694118121674e-05,
+      "p99": 1.277349753882595,
+      "max": 2.389698298543408,
+      "fraction_over_2": 1.0653921298663835e-05
+    }
+  ],
+  "selected": {
+    "loss": 2.9323694118121674e-05,
+    "p99": 1.277349753882595,
+    "max": 2.389698298543408,
+    "fraction_over_2": 1.0653921298663835e-05
+  },
+  "changed_vertices": 15155,
+  "max_influences": 4
+}

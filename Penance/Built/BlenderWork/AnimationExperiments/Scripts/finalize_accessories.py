@@ -39,7 +39,7 @@ for name in ['AN_EXP_Stalk','AN_EXP_Heavy']:
   scene.frame_set(f)
   for side,sign in [('l',-1),('r',1)]:
    n='ornament_01_'+side;b=rig.pose.bones[n];axis=rig.data.bones[n].matrix_local.to_quaternion().inverted()@Vector((0,1,0));b.rotation_quaternion=Quaternion(axis,radians(sign*extra))@base[f][n];b.keyframe_insert('rotation_quaternion',frame=f,group=n)
- report[name]={'trials':trials,'selected':best,'collision_test_frames':frames}
+ report[name]={'trials':trials,'selected':best,'collision_test_frames':[int(f) for f in frames]}
 # Make the final recovery pose exactly match the first ready pose, retaining
 # the authored anticipation, impact and follow-through throughout each attack.
 for name,s in manifest.items():
